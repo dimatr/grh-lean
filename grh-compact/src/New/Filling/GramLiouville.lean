@@ -1,4 +1,4 @@
-import Lib.General.Algebra.LatticeComplement
+import Lib.Weil.LatticeComplement
 import New.Filling.LatticeChart
 
 /-! General lemmas of algebraic number theory (textbook or folklore).

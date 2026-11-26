@@ -1,0 +1,2521 @@
+{
+ "report": {
+  "modules_before": 794,
+  "modules_after": 460,
+  "merged_groups": 153,
+  "largest_group": 13,
+  "decls_per_file": 21.532608695652176
+ },
+ "module_map": {
+  "Lib.Adelic.Adeles.AdditiveCharBasic": "Lib.Weil.AdditiveCharBasic",
+  "Lib.Adelic.Adeles.AdditiveCharDefs": "Lib.Adelic.AdditiveCharDefs",
+  "Lib.Adelic.Adeles.AdeleIdempotent": "Lib.Adelic.AdeleIdempotent",
+  "Lib.Adelic.Adeles.AdeleSelfDual": "Lib.Weil.AdeleSelfDual",
+  "Lib.Adelic.Adeles.AdeleTopology": "Lib.Adelic.AdeleTopology",
+  "Lib.Adelic.Adeles.AdelicAbs": "Lib.Adelic.AdelicModulus",
+  "Lib.Adelic.Adeles.AdelicModulus": "Lib.Adelic.AdelicModulus",
+  "Lib.Adelic.Adeles.CoprimeValuation": "Lib.Adelic.CoprimeValuation",
+  "Lib.Adelic.Adeles.ExtensionByZero": "New.Filling.ExtensionByZero",
+  "Lib.Adelic.Adeles.FinitePlaceDensity": "New.Filling.FinitePlaceDensity",
+  "Lib.Adelic.Adeles.IdeleHilbert90": "Lib.Adelic.IdeleHilbert90",
+  "Lib.Adelic.Adeles.LocalComponents": "Lib.Adelic.LocalComponents",
+  "Lib.Adelic.Adeles.MatrixApprox": "Lib.Adelic.MatrixApprox",
+  "Lib.Adelic.Adeles.NormAbsValue": "Lib.GaloisRep.NormAbsValue",
+  "Lib.Adelic.Adeles.OneSidedPoisson": "Lib.Weil.OneSidedPoisson",
+  "Lib.Adelic.Adeles.RationalPoints": "Lib.Adelic.RationalPoints",
+  "Lib.Adelic.Cartan.ProjectiveModules": "Lib.ClassField.RealPlaceSymbols",
+  "Lib.Adelic.CuspForms.AlgebraicForms": "Lib.Weil.BranchingPeriod",
+  "Lib.Adelic.CuspForms.BaseLevel": "Lib.PadicHodge.BaseLevel",
+  "Lib.Adelic.CuspForms.ClassReps": "New.Weil.ClassReps",
+  "Lib.Adelic.CuspForms.CuspStep": "Lib.GaloisRep.ReproducingKernel",
+  "Lib.Adelic.CuspForms.Definite": "Lib.Weil.RealConvolution",
+  "Lib.Adelic.CuspForms.DeltaForms": "Lib.DiscreteSeries.DeltaForms",
+  "Lib.Adelic.CuspForms.FormRepresentation": "Lib.GaloisRep.LocalTranslates",
+  "Lib.Adelic.CuspForms.HeckePolyEval": "Lib.Weil.BranchingPeriod",
+  "Lib.Adelic.CuspForms.LevelForms": "Lib.DiscreteSeries.LevelForms",
+  "Lib.Adelic.CuspForms.Petersson": "Lib.GaloisRep.Petersson",
+  "Lib.Adelic.CuspForms.RealConvolution": "Lib.Weil.RealConvolution",
+  "Lib.Adelic.CuspForms.ReproducingKernel": "Lib.GaloisRep.ReproducingKernel",
+  "Lib.Adelic.CuspForms.SmoothFormPairing": "Lib.DiscreteSeries.SmoothFormPairing",
+  "Lib.Adelic.CuspForms.WeightParameter": "Lib.GaloisRep.WeightParameter",
+  "Lib.Adelic.Hecke.ClassMean": "Lib.DiscreteSeries.ClassMean",
+  "Lib.Adelic.Hecke.ClassSumBounds": "New.Weil.LineCoordinates",
+  "Lib.Adelic.Hecke.HeckeBasic": "Lib.DiscreteSeries.ColumnLattices",
+  "Lib.Adelic.Landherr.Landherr": "Lib.GaloisRep.Landherr",
+  "Lib.Adelic.Landherr.SumOfTwoSquares": "Lib.GaloisRep.Landherr",
+  "Lib.Adelic.Landherr.WeakApprox": "New.Weil.WeakApprox",
+  "Lib.Adelic.Poincare.BesselSubgroup": "Lib.DiscreteSeries.BesselSubgroup",
+  "Lib.Adelic.Poincare.MiddleGroupEmbedding": "Lib.DiscreteSeries.UnipotentCoords",
+  "Lib.Adelic.QuotientMeasure.CocompactIntegrable": "Lib.DiscreteSeries.HaarMass",
+  "Lib.Adelic.QuotientMeasure.IwasawaIntegration": "Lib.DiscreteSeries.HaarMass",
+  "Lib.Adelic.QuotientMeasure.Packing": "Lib.DiscreteSeries.Unimodular",
+  "Lib.Adelic.QuotientMeasure.PeriodicMean": "Lib.Adelic.FundamentalDomain",
+  "Lib.Adelic.QuotientMeasure.Unimodular": "Lib.DiscreteSeries.Unimodular",
+  "Lib.Adelic.Reduction.Defs": "Lib.Weil.Defs",
+  "Lib.Adelic.Reduction.FirstMinimum": "Lib.Weil.FirstMinimum",
+  "Lib.Adelic.Reduction.MahlerForms": "Lib.Weil.MahlerForms",
+  "Lib.Adelic.Reduction.MinkowskiSecond": "Lib.Weil.MinkowskiSecond",
+  "Lib.Adelic.Transference.MassBasic": "Lib.Weil.MassBasic",
+  "Lib.Adelic.Unitary.CongruenceLevel": "Lib.Adelic.CongruenceLevel",
+  "Lib.Adelic.Unitary.SpaceBasic": "Lib.Weil.SpaceBasic",
+  "Lib.Adelic.Unitary.SpaceDefs": "Lib.Adelic.SpaceDefs",
+  "Lib.Adelic.Unitary.SpaceGram": "Lib.Adelic.SpaceGram",
+  "Lib.Adelic.Witt.FrameAction": "Lib.DiscreteSeries.FrameAction",
+  "Lib.Adelic.Witt.MaximalCompact": "Lib.Weil.LatticeComplement",
+  "Lib.Adelic.Witt.SpaceOperations": "Lib.Weil.SpaceOperations",
+  "Lib.Analytic.DirichletTheta.MellinTheta": "Lib.ClassField.Main",
+  "Lib.Analytic.Landau.PolarLandau": "Lib.ClassField.PolarLandau",
+  "Lib.Analytic.PolyaVinogradov.PolyaVinogradov": "Lib.ClassField.Main",
+  "Lib.Analytic.Primes.AuxiliaryPrimes": "Lib.ClassField.Main",
+  "Lib.Analytic.QuadraticTwist.ZeroFreeTwist": "Lib.ClassField.Main",
+  "Lib.CM.FormalGroup.FormalHeight": "Lib.ClassField.FormalHeight",
+  "Lib.CM.Genus.QuadraticZeta": "Lib.ClassField.QuadraticZeta",
+  "Lib.CM.KroneckerLimit.LogTheta": "Lib.ClassField.LogTheta",
+  "Lib.CM.LocalHeight.EulerAdditionFormula": "New.Weil.MonomialCoefficientVector",
+  "Lib.CM.LocalHeight.IntegralParameter": "Lib.ClassField.IntegralParameter",
+  "Lib.CM.LocalHeight.IsogenyIntegrality": "Lib.ClassField.IsogenyIntegrality",
+  "Lib.CM.MainTheorem.ConjugateCurve": "Lib.ClassField.FormalHeight",
+  "Lib.CM.Reciprocity.SemilinearWeilLaw": "New.Weil.CrudeModularData",
+  "Lib.CM.Sigma.CurveTheta": "Lib.Adelic.CurveTheta",
+  "Lib.CM.Sigma.PadicSeriesDefs": "New.Weil.PadicSeriesDefs",
+  "Lib.CM.Sigma.SigmaFunction": "Lib.Adelic.SigmaFunction",
+  "Lib.ClassField.Chebotarev.FrobeniusFilter": "Lib.GaloisRep.FrobeniusFilter",
+  "Lib.ClassField.GaloisCohomology.ContinuousCocycles": "Lib.Adelic.CyclicClass",
+  "Lib.ClassField.GaloisCohomology.CupProduct": "Lib.ClassField.CupProduct",
+  "Lib.ClassField.GaloisCohomology.CyclicClass": "Lib.Adelic.CyclicClass",
+  "Lib.ClassField.GaloisCohomology.CyclicNorm": "Lib.ClassField.RealPlaceSymbols",
+  "Lib.ClassField.GaloisCohomology.DiscreteUnits": "Lib.ClassField.DiscreteUnits",
+  "Lib.ClassField.GaloisCohomology.SylowReduction": "Lib.ClassField.SylowReduction",
+  "Lib.ClassField.GaloisCohomology.TameCocycles": "Lib.PadicHodge.TameCocycles",
+  "Lib.ClassField.Global.AlbertBrauerHasseNoether": "Lib.GaloisRep.NormTheorems",
+  "Lib.ClassField.Global.ArtinReciprocity": "Lib.GaloisRep.NormTheorems",
+  "Lib.ClassField.Global.Avatars": "Lib.GaloisRep.Avatars",
+  "Lib.ClassField.Global.CMNorms": "Lib.GaloisRep.CMNorms",
+  "Lib.ClassField.Global.NormTheorems": "Lib.GaloisRep.NormTheorems",
+  "Lib.ClassField.GreenbergWiles.EquivariantUnits": "Lib.PadicHodge.TameCocycles",
+  "Lib.ClassField.GreenbergWiles.ExtendCharacter": "Lib.ClassField.ExtendCharacter",
+  "Lib.ClassField.GreenbergWiles.GreenbergWilesBound": "Lib.PadicHodge.TameCocycles",
+  "Lib.ClassField.GreenbergWiles.ProjectiveCount": "Lib.PadicHodge.TameCocycles",
+  "Lib.ClassField.GreenbergWiles.SelmerBasic": "Lib.PadicHodge.TameCocycles",
+  "Lib.ClassField.GreenbergWiles.SelmerMembership": "Lib.PadicHodge.TameCocycles",
+  "Lib.ClassField.GreenbergWiles.SelmerRelations": "Lib.PadicHodge.TameCocycles",
+  "Lib.ClassField.GreenbergWiles.SplitPrimeReciprocity": "Lib.PadicHodge.TameCocycles",
+  "Lib.ClassField.Grunwald.Grunwald": "Lib.GaloisRep.AvatarCompatibility",
+  "Lib.ClassField.HeckeCharacter.CharOfDet": "New.Weil.ThetaIntegralLaws",
+  "Lib.ClassField.HeckeCharacter.CharacterConjugates": "Lib.ClassField.SplittingCharOnU1",
+  "Lib.ClassField.HeckeCharacter.CharacterDefs": "Lib.Adelic.CharacterDefs",
+  "Lib.ClassField.HeckeCharacter.CharacterLevels": "Lib.ClassField.CharacterLevels",
+  "Lib.ClassField.HeckeCharacter.LevelModulus": "New.Weil.LevelModulus",
+  "Lib.ClassField.HeckeCharacter.LineParabolic": "New.Filling.LineParabolic",
+  "Lib.ClassField.HeckeCharacter.LocalCharacters": "New.Weil.ThetaIntegralLaws",
+  "Lib.ClassField.HeckeCharacter.SplittingCharExists": "Lib.ClassField.PeriodDefs",
+  "Lib.ClassField.HeckeCharacter.SplittingCharOnU1": "Lib.ClassField.SplittingCharOnU1",
+  "Lib.ClassField.HeckeL.AutCharLFunction": "Lib.ClassField.AutCharLFunction",
+  "Lib.ClassField.HeckeL.EulerProduct": "Lib.Adelic.EulerProduct",
+  "Lib.ClassField.HeckeL.HeckeContinuation": "Lib.Adelic.HeckeContinuation",
+  "Lib.ClassField.HeckeL.IdelicThetaSum": "Lib.Adelic.HeckeContinuation",
+  "Lib.ClassField.Local.ArtinMapAtPlace": "Lib.GaloisRep.ArtinMapAtPlace",
+  "Lib.ClassField.LocalDuality.CrystallineDuality": "Lib.PadicHodge.CrystallineRank",
+  "Lib.ClassField.LocalDuality.RealPlaceSymbols": "Lib.ClassField.RealPlaceSymbols",
+  "Lib.ClassField.Places.AdeleNorm": "Lib.GaloisRep.AdeleNorm",
+  "Lib.ClassField.Places.Conjugation": "Lib.GaloisRep.Conjugation",
+  "Lib.ClassField.Places.CyclotomicCharacter": "Lib.ClassField.CyclotomicCharacter",
+  "Lib.ClassField.Places.CyclotomicRamification": "Lib.ClassField.DeRhamFiltration",
+  "Lib.ClassField.Places.DecompositionLocal": "Lib.ClassField.DecompositionLocal",
+  "Lib.ClassField.Places.FrobeniusOnRoots": "Lib.ClassField.FrobeniusOnRoots",
+  "Lib.ClassField.Places.GaloisDefs": "Lib.Adelic.CyclicClass",
+  "Lib.ClassField.Places.LocalBasics": "Lib.GaloisRep.GaussSums",
+  "Lib.ClassField.Places.LocalDefs": "Lib.Adelic.LocalDefs",
+  "Lib.ClassField.Places.LocalExtension": "Lib.ClassField.UnramifiedCharacters",
+  "Lib.ClassField.Places.LocalFrobenius": "Lib.ClassField.UnramifiedCharacters",
+  "Lib.ClassField.Places.PadicDecomposition": "Lib.ClassField.PadicDecomposition",
+  "Lib.ClassField.Places.Places": "Lib.Adelic.Places",
+  "Lib.ClassField.Places.ProfiniteGalois": "Lib.ClassField.ProfiniteGalois",
+  "Lib.ClassField.Places.SelmerDefs": "Lib.ClassField.SelmerDefs",
+  "Lib.ClassField.Places.TameInertia": "Lib.ClassField.TameInertia",
+  "Lib.ClassField.Places.UnramifiedCharacters": "Lib.ClassField.UnramifiedCharacters",
+  "Lib.Cohomology.Duality.Contraction": "Lib.Cohomology.Contraction",
+  "Lib.Cohomology.Etale.AcyclicTests": "Lib.Cohomology.AcyclicTests",
+  "Lib.Cohomology.Etale.BijectiveComparisons": "Lib.Cohomology.BijectiveComparisons",
+  "Lib.Cohomology.Etale.ClosedClasses": "Lib.Cohomology.OpenSubfunctors",
+  "Lib.Cohomology.Etale.ConnectedComponents": "Lib.Cohomology.ConnectedComponents",
+  "Lib.Cohomology.Etale.ContinuityAtlas": "Lib.Cohomology.ConnectedComponents",
+  "Lib.Cohomology.Etale.Defs": "Lib.Cohomology.Defs",
+  "Lib.Cohomology.Etale.EllAdicCohomology": "Lib.Cohomology.EllAdicCohomology",
+  "Lib.Cohomology.Etale.FilteredColimits": "Lib.Cohomology.AcyclicTests",
+  "Lib.Cohomology.Etale.Functoriality": "Lib.Cohomology.Functoriality",
+  "Lib.Cohomology.Etale.GluingWithSupports": "Lib.Cohomology.EtaleCharts",
+  "Lib.Cohomology.Etale.Partitions": "Lib.Cohomology.Partitions",
+  "Lib.Cohomology.Etale.ProperFunctors": "Lib.Cohomology.ProperSchemes",
+  "Lib.Cohomology.Etale.Relations": "Lib.Cohomology.RelativeChains",
+  "Lib.Cohomology.Etale.RelativeChains": "Lib.Cohomology.RelativeChains",
+  "Lib.Cohomology.Etale.TestCohomology": "New.Weil.TestRings",
+  "Lib.Cohomology.Etale.TestEnvelope": "Lib.Cohomology.AcyclicTests",
+  "Lib.Cohomology.Etale.TestRings": "New.Weil.TestRings",
+  "Lib.Cohomology.Hodge.CupProduct": "Lib.Cohomology.CupProduct",
+  "Lib.Cohomology.Hodge.DepthVanishing": "Lib.Cohomology.PointClass",
+  "Lib.Cohomology.Hodge.DiagonalClass": "Lib.Cohomology.GaloisRep",
+  "Lib.Cohomology.Hodge.FixedPointFormula": "Lib.Cohomology.GaloisRep",
+  "Lib.Cohomology.Hodge.GrothendieckSymbol": "Lib.Cohomology.PointClass",
+  "Lib.Cohomology.Hodge.HodgeSite": "Lib.Cohomology.HodgeSite",
+  "Lib.Cohomology.Hodge.Kunneth": "Lib.Cohomology.PointClass",
+  "Lib.Cohomology.Hodge.PointClass": "Lib.Cohomology.PointClass",
+  "Lib.Cohomology.Hodge.WitnessCocycles": "Lib.Cohomology.WitnessCocycles",
+  "Lib.Cohomology.Kunneth.LerayHirschBasis": "Lib.Cohomology.NormalizationPullback",
+  "Lib.Cohomology.PointClass.GaloisRep": "Lib.Cohomology.GaloisRep",
+  "Lib.Cohomology.PointClass.HomogeneousCoords": "Lib.Cohomology.HomogeneousCoords",
+  "Lib.Cohomology.PointClass.LinePointClass": "Lib.Cohomology.GaloisRep",
+  "Lib.Cohomology.PointClass.LocusEquations": "Lib.Cohomology.LocusEquations",
+  "Lib.Cohomology.PointClass.PointClassProduct": "Lib.Cohomology.GaloisRep",
+  "Lib.Cohomology.PointClass.ProjectivePointClass": "Lib.Cohomology.GaloisRep",
+  "Lib.Cohomology.ProjectiveLine.LineChernClass": "Lib.Cohomology.LineChernClass",
+  "Lib.Cohomology.ProjectiveLine.NormalizationPullback": "Lib.Cohomology.NormalizationPullback",
+  "Lib.Cohomology.ProjectiveLine.PerfectLine": "Lib.Cohomology.PerfectLine",
+  "Lib.Cohomology.ProperBaseChange.FieldExtension": "Lib.Cohomology.PointwiseTests",
+  "Lib.Cohomology.ProperBaseChange.KummerLine": "Lib.Cohomology.ProperSchemes",
+  "Lib.Cohomology.ProperBaseChange.PointwiseTests": "Lib.Cohomology.PointwiseTests",
+  "Lib.Cohomology.ProperBaseChange.ProperBaseChange": "Lib.Cohomology.ProperSchemes",
+  "Lib.Cohomology.ProperBaseChange.SubringSplitting": "Lib.Cohomology.ProperSchemes",
+  "Lib.Cohomology.ProperBaseChange.ValuativeDensity": "Lib.Cohomology.ValuativeDensity",
+  "Lib.Cohomology.SmoothBaseChange.SmoothBaseChange": "Lib.Cohomology.CrystallineCohomology",
+  "Lib.Cohomology.WoodsHole.IsolatedCoincidences": "Lib.Cohomology.PointClass",
+  "Lib.Cyclotomic.Kolyvagin.ComponentBound": "Lib.PadicHodge.OddShaBound",
+  "Lib.Cyclotomic.Kolyvagin.Components": "Lib.GaloisRep.GaussSums",
+  "Lib.Cyclotomic.OddSha.OddShaBound": "Lib.PadicHodge.OddShaBound",
+  "Lib.Cyclotomic.Stickelberger.GaussSums": "Lib.GaloisRep.GaussSums",
+  "Lib.Cyclotomic.Voronoi.StickelbergerInteger": "Lib.GaloisRep.GaussSums",
+  "Lib.DiscreteSeries.Bessel.BesselNormInvariance": "New.Filling.BesselOrthonormal",
+  "Lib.DiscreteSeries.Bessel.RealMeasures": "Lib.DiscreteSeries.RealMeasures",
+  "Lib.DiscreteSeries.Bessel.UnipotentCoords": "Lib.DiscreteSeries.UnipotentCoords",
+  "Lib.DiscreteSeries.Bruhat.BigCell": "Lib.DiscreteSeries.BigCell",
+  "Lib.DiscreteSeries.Bruhat.ComplexFloorMeasure": "New.Filling.FillingData",
+  "Lib.DiscreteSeries.Bruhat.ComplexPlace": "Lib.DiscreteSeries.ComplexPlace",
+  "Lib.DiscreteSeries.Bruhat.EichlerMaps": "Lib.Weil.EichlerMaps",
+  "Lib.DiscreteSeries.Bruhat.FloorGroups": "Lib.DiscreteSeries.FloorGroups",
+  "Lib.DiscreteSeries.Character.FormalDegree": "Lib.GaloisRep.TraceComparison",
+  "Lib.DiscreteSeries.Character.KTypeMultiplicity": "Lib.GaloisRep.TraceComparison",
+  "Lib.DiscreteSeries.Character.LaurentAlternants": "Lib.GaloisRep.LaurentAlternants",
+  "Lib.DiscreteSeries.Character.SectorBound": "Lib.GaloisRep.TraceComparison",
+  "Lib.DiscreteSeries.Character.WeylTrace": "Lib.GaloisRep.AvatarCompatibility",
+  "Lib.DiscreteSeries.CuspKernel.BesselSchurBound": "New.Filling.BesselSchurBound",
+  "Lib.DiscreteSeries.CuspKernel.BumpConvolution": "Lib.DiscreteSeries.SchurOrthogonality",
+  "Lib.DiscreteSeries.CuspKernel.CircleMean": "Lib.DiscreteSeries.CircleMean",
+  "Lib.DiscreteSeries.CuspKernel.SchurOrthogonality": "Lib.DiscreteSeries.SchurOrthogonality",
+  "Lib.DiscreteSeries.FlenstedJensen.CasimirOnPsi": "Lib.DiscreteSeries.SchurOrthogonality",
+  "Lib.DiscreteSeries.FlenstedJensen.FlenstedJensenInvariance": "Lib.DiscreteSeries.FlenstedJensenInvariance",
+  "Lib.DiscreteSeries.FlenstedJensen.KTypeProjection": "Lib.DiscreteSeries.SchurOrthogonality",
+  "Lib.DiscreteSeries.FlenstedJensen.PsiBasic": "Lib.DiscreteSeries.SchurOrthogonality",
+  "Lib.DiscreteSeries.FlenstedJensen.PsiDecay": "Lib.DiscreteSeries.SchurOrthogonality",
+  "Lib.DiscreteSeries.FlenstedJensen.PsiSmooth": "Lib.DiscreteSeries.SchurOrthogonality",
+  "Lib.DiscreteSeries.FlenstedJensen.RepresentationDefs": "Lib.DiscreteSeries.RepresentationDefs",
+  "Lib.DiscreteSeries.FlenstedJensen.RightDerivatives": "Lib.DiscreteSeries.HaarMass",
+  "Lib.DiscreteSeries.FlenstedJensen.TailBounds": "Lib.DiscreteSeries.TailBounds",
+  "Lib.DiscreteSeries.Haar.CompactDualMeasure": "Lib.DiscreteSeries.CompactDualMeasure",
+  "Lib.DiscreteSeries.Haar.HaarColumnChart": "Lib.DiscreteSeries.HaarMass",
+  "Lib.DiscreteSeries.Haar.HaarMass": "Lib.DiscreteSeries.HaarMass",
+  "Lib.DiscreteSeries.Haar.LogDerivative": "Lib.DiscreteSeries.CompactDualMeasure",
+  "Lib.DiscreteSeries.Haar.RegularRepL2": "Lib.DiscreteSeries.RegularRepL2",
+  "Lib.DiscreteSeries.Haar.SkewCoordinates": "Lib.DiscreteSeries.CompactDualMeasure",
+  "Lib.DiscreteSeries.Haar.SphereFibreIntegral": "Lib.DiscreteSeries.HaarMass",
+  "Lib.DiscreteSeries.Haar.UnitaryNorm": "Lib.DiscreteSeries.UnitaryNorm",
+  "Lib.DiscreteSeries.Holomorphic.HolomorphicChamber": "Lib.DiscreteSeries.LevelForms",
+  "Lib.DiscreteSeries.Holomorphic.HolomorphicExtension": "Lib.DiscreteSeries.HolomorphicExtension",
+  "Lib.DiscreteSeries.Holomorphic.HolomorphicMinor": "Lib.DiscreteSeries.LevelForms",
+  "Lib.DiscreteSeries.Holomorphic.MinorEquivariance": "Lib.DiscreteSeries.MinorEquivariance",
+  "Lib.DiscreteSeries.Holomorphic.NearMaximum": "New.Weil.Separation",
+  "Lib.DiscreteSeries.Rigidity.AnalyticVectors": "Lib.DiscreteSeries.AnalyticVectors",
+  "Lib.DiscreteSeries.Rigidity.CasimirBound": "Lib.DiscreteSeries.CasimirBound",
+  "Lib.DiscreteSeries.Rigidity.CasimirGrowth": "Lib.DiscreteSeries.AnalyticVectors",
+  "Lib.DiscreteSeries.Rigidity.HighestVectors": "Lib.DiscreteSeries.HighestVectors",
+  "Lib.DiscreteSeries.Rigidity.KernelFixes": "Lib.DiscreteSeries.KernelFixes",
+  "Lib.DiscreteSeries.Theta.FischerDecomposition": "Lib.DiscreteSeries.JointHarmonicUnique",
+  "Lib.DiscreteSeries.Theta.HoweArgument": "Lib.DiscreteSeries.LocalThetaCorrespondence",
+  "Lib.DiscreteSeries.Theta.JointHarmonicExists": "New.Weil.Edge",
+  "Lib.DiscreteSeries.Theta.JointHarmonicUnique": "Lib.DiscreteSeries.JointHarmonicUnique",
+  "Lib.DiscreteSeries.Theta.LocalThetaCorrespondence": "Lib.DiscreteSeries.LocalThetaCorrespondence",
+  "Lib.DiscreteSeries.Theta.OscillatorDefs": "Lib.DiscreteSeries.OscillatorDefs",
+  "Lib.GLn.Branching.Branching": "Lib.DiscreteSeries.Branching",
+  "Lib.GLn.Branching.BranchingVector": "Lib.DiscreteSeries.BranchingVector",
+  "Lib.GLn.Dual.ClassSum": "Lib.DiscreteSeries.ClassSum",
+  "Lib.GLn.Dual.DualWeights": "New.Weil.PairTensorData",
+  "Lib.GLn.Dual.MixedCartan": "Lib.DiscreteSeries.ClassSum",
+  "Lib.GLn.SchurModule.Bordering": "Lib.DiscreteSeries.Bordering",
+  "Lib.GLn.SchurModule.Gram": "Lib.Weil.Gram",
+  "Lib.GLn.SchurModule.Hook": "Lib.Weil.Gram",
+  "Lib.GLn.SchurModule.Interlacing": "Lib.Weil.RationalRep",
+  "Lib.GLn.SchurModule.MinorBasis": "Lib.Weil.RationalRep",
+  "Lib.GLn.SchurModule.Nabla": "Lib.DiscreteSeries.Nabla",
+  "Lib.GLn.SchurModule.RationalRep": "Lib.Weil.RationalRep",
+  "Lib.GLn.SchurModule.SchurContinuous": "Lib.DiscreteSeries.SchurOrthogonality2",
+  "Lib.GLn.SchurModule.SchurMatrix": "Lib.Weil.RationalRep",
+  "Lib.GLn.SchurModule.SchurOrthogonality": "Lib.DiscreteSeries.SchurOrthogonality2",
+  "Lib.GLn.SchurModule.WeightRepBasic": "Lib.DiscreteSeries.WeightRepBasic",
+  "Lib.GaloisRep.BaseChange.BaseChangeEigenchar": "Lib.GaloisRep.BaseChangeEigenchar",
+  "Lib.GaloisRep.BaseChange.BaseChangeLabel": "Lib.GaloisRep.LabelCompatibility",
+  "Lib.GaloisRep.BaseChange.BaseChangeLevel": "Lib.GaloisRep.BaseChangeEigenchar",
+  "Lib.GaloisRep.BaseChange.BaseChangePlaces": "Lib.GaloisRep.BaseChangePlaces",
+  "Lib.GaloisRep.BaseChange.BaseChangeWeight": "Lib.GaloisRep.BaseChangeEigenchar",
+  "Lib.GaloisRep.BaseChange.OrbitClassSum": "Lib.Adelic.OrbitClassSum",
+  "Lib.GaloisRep.BaseChange.ParahoricColumns": "Lib.GaloisRep.ParahoricColumns",
+  "Lib.GaloisRep.BaseChange.TwistedTraceSum": "Lib.GaloisRep.BaseChangeEigenchar",
+  "Lib.GaloisRep.BaseChange.UnitaryRoots": "Lib.GaloisRep.BaseChangeEigenchar",
+  "Lib.GaloisRep.BaseChange.WeilDataExtension": "Lib.GaloisRep.BaseChangeEigenchar",
+  "Lib.GaloisRep.Division.MultiplicityFreeSum": "Lib.GaloisRep.AvatarCompatibility",
+  "Lib.GaloisRep.EvenRank.ThetaLift": "Lib.GaloisRep.ThetaLift",
+  "Lib.GaloisRep.Hilbert90.TameDescent": "Lib.Adelic.TameDescent",
+  "Lib.GaloisRep.Hilbert90.UnitaryHilbert90": "Lib.Adelic.UnitaryHilbert90",
+  "Lib.GaloisRep.HodgeTateCocharacter.HodgeTateCocharacter": "Lib.GaloisRep.AvatarCompatibility",
+  "Lib.GaloisRep.LocalGlobal.EigencharCompatibility": "Lib.GaloisRep.EigencharCompatibility",
+  "Lib.GaloisRep.LocalGlobal.LabelCompatibility": "Lib.GaloisRep.LabelCompatibility",
+  "Lib.GaloisRep.LocalGlobal.LocalTranslates": "Lib.GaloisRep.LocalTranslates",
+  "Lib.GaloisRep.LocalGlobal.ParahoricTypeLabel": "Lib.GaloisRep.LabelCompatibility",
+  "Lib.GaloisRep.LocalGlobal.TameExponent": "Lib.GaloisRep.AvatarCompatibility",
+  "Lib.GaloisRep.LocalGlobal.TypeFrobenius": "Lib.PadicHodge.OnePrimeTie",
+  "Lib.GaloisRep.Main.AttachedDefs": "Lib.GaloisRep.SplitPlaceCount",
+  "Lib.GaloisRep.Main.AttachedDeterminant": "Lib.GaloisRep.AvatarCompatibility",
+  "Lib.GaloisRep.Main.AvatarCompatibility": "Lib.GaloisRep.AvatarCompatibility",
+  "Lib.GaloisRep.Main.HeckeOperatorOfFunction": "Lib.GaloisRep.HeckeOperatorOfFunction",
+  "Lib.GaloisRep.Main.LocalEmbedding": "Lib.ClassField.LocalEmbedding",
+  "Lib.GaloisRep.Main.SeedRepresentation": "Lib.GaloisRep.AvatarCompatibility",
+  "Lib.GaloisRep.Main.SphericalAllRanks": "Lib.GaloisRep.SphericalAllRanks",
+  "Lib.GaloisRep.Main.SplitPlaceCount": "Lib.GaloisRep.SplitPlaceCount",
+  "Lib.GaloisRep.Pseudocharacter.FibreSum": "Lib.GaloisRep.FibreSum",
+  "Lib.GaloisRep.Pseudocharacter.SemisimpleReps": "Lib.GaloisRep.FibreSum",
+  "Lib.GaloisRep.WeightCongruence.WeightCongruence": "Lib.GaloisRep.WeightCongruence",
+  "Lib.General.Algebra.AdicRingHomExt": "Lib.ClassField.AdicRingHomExt",
+  "Lib.General.Algebra.BlockFittingBound": "Lib.PadicHodge.RibetFirstOrder",
+  "Lib.General.Algebra.CechDescent": "Lib.Cohomology.CechDescent",
+  "Lib.General.Algebra.DepthBounds": "Lib.ClassField.FormalParameter",
+  "Lib.General.Algebra.DisjointUnions": "Lib.Cohomology.BijectiveComparisons",
+  "Lib.General.Algebra.FaithfulChar": "Lib.Adelic.LabelDegree",
+  "Lib.General.Algebra.FittingDuality": "Lib.DiscreteSeries.FittingDuality",
+  "Lib.General.Algebra.GeneralisedIndex": "Lib.PadicHodge.GeneralisedIndex",
+  "Lib.General.Algebra.InertResidue": "Lib.Adelic.AdelicModulus",
+  "Lib.General.Algebra.JetChainRule": "Lib.ClassField.JetChainRule",
+  "Lib.General.Algebra.JetRename": "Lib.Weil.BranchingPeriod",
+  "Lib.General.Algebra.LatticeComplement": "Lib.Weil.LatticeComplement",
+  "Lib.General.Algebra.MultivariateHensel": "Lib.Cohomology.ReductionModP",
+  "Lib.General.Algebra.RingActions": "Lib.DiscreteSeries.RingActions",
+  "Lib.General.Algebra.SuccessiveApprox": "Lib.ClassField.SuccessiveApprox",
+  "Lib.General.Algebra.SumOverUnits": "Lib.GaloisRep.ZeroSymmetry",
+  "Lib.General.Algebra.TangentNakayama": "Lib.Adelic.TangentNakayama",
+  "Lib.General.Algebra.TensorCohomology": "Lib.Cohomology.ConnectedComponents",
+  "Lib.General.Algebra.ZerosCostDegree": "Lib.DiscreteSeries.ZerosCostDegree",
+  "Lib.General.Analysis.FundamentalDomain": "Lib.Adelic.FundamentalDomain",
+  "Lib.General.Analysis.HolomorphicIntegral": "Lib.Adelic.HolomorphicIntegral",
+  "Lib.General.Analysis.OstrowskiTaussky": "Lib.Adelic.OstrowskiTaussky",
+  "Lib.General.Analysis.ZpowSum": "Lib.Adelic.ZpowSum",
+  "Lib.General.Combinatorics.Average": "Lib.Adelic.Average",
+  "Lib.General.Geometry.ChartedSchemes": "Lib.Cohomology.ChartedSchemes",
+  "Lib.General.Geometry.ConstantFunctions": "Lib.Shimura.ConstantFunctions",
+  "Lib.General.Geometry.EtaleCharts": "Lib.Cohomology.EtaleCharts",
+  "Lib.General.Geometry.Lefschetz": "Lib.GaloisRep.Lefschetz",
+  "Lib.General.Geometry.LocalTerms": "Lib.Cohomology.LocalTerms",
+  "Lib.General.Geometry.OpenSubfunctors": "Lib.Cohomology.OpenSubfunctors",
+  "Lib.General.Geometry.PointFunctions": "Lib.Shimura.PointFunctions",
+  "Lib.General.Geometry.ProjectiveSpace": "Lib.Shimura.ProjectiveSpace",
+  "Lib.General.Geometry.ProperAtlas": "Lib.Cohomology.ProperAtlas",
+  "Lib.General.Geometry.ProperSchemes": "Lib.Cohomology.ProperSchemes",
+  "Lib.General.Geometry.ReducedClosure": "Lib.Shimura.ReducedClosure",
+  "Lib.General.Geometry.SeparatingPoints": "Lib.Shimura.SeparatingPoints",
+  "Lib.General.Geometry.SerreSaturation": "Lib.Shimura.ModelAlongArc",
+  "Lib.General.Geometry.SmoothnessCriterion": "Lib.GaloisRep.Lefschetz",
+  "Lib.General.Geometry.TensorPowers": "Lib.Shimura.KernelRing",
+  "Lib.General.Groups.ArtinDefs": "Lib.Adelic.ArtinDefs",
+  "Lib.General.Groups.CentralConvolution": "New.Weil.BadShare",
+  "Lib.General.Groups.CentralProjections": "Lib.Adelic.IrreducibleCharacters",
+  "Lib.General.Groups.CompactMean": "Lib.DiscreteSeries.CompactMean",
+  "Lib.General.Groups.CyclicSubrep": "Lib.GaloisRep.IwahoriInjective",
+  "Lib.General.Groups.IndexOfProduct": "New.Weil.SharpData",
+  "Lib.General.Groups.IrreducibleCharacters": "Lib.Adelic.IrreducibleCharacters",
+  "Lib.General.Groups.RatModInt": "Lib.Adelic.RatModInt",
+  "Lib.General.Groups.ResidualIrreducibility": "Lib.PadicHodge.KummerChart",
+  "Lib.General.Groups.ValuationPair": "Lib.Adelic.ValuationPair",
+  "Lib.General.Groups.VirtualCharacters": "Lib.Adelic.IrreducibleCharacters",
+  "Lib.General.LinearAlgebra.AdelicRingDefs": "Lib.Adelic.AdelicRingDefs",
+  "Lib.General.LinearAlgebra.Base": "Lib.Adelic.Base",
+  "Lib.General.LinearAlgebra.BlockDiagonalDet": "Lib.DiscreteSeries.SchurOrthogonality",
+  "Lib.General.LinearAlgebra.BlockMatrices": "New.Weil.BlockMatrices",
+  "Lib.General.LinearAlgebra.ColumnLattices": "Lib.DiscreteSeries.ColumnLattices",
+  "Lib.General.LinearAlgebra.CommonEigenvectors": "Lib.DiscreteSeries.CommonEigenvectors",
+  "Lib.General.LinearAlgebra.ElementOfMatrix": "Lib.Weil.FiniteVacuum",
+  "Lib.General.LinearAlgebra.ExpSurjective": "Lib.DiscreteSeries.ExpSurjective",
+  "Lib.General.LinearAlgebra.ExtendColumns": "Lib.Adelic.ExtendColumns",
+  "Lib.General.LinearAlgebra.FramedCoefficient": "Lib.DiscreteSeries.TwoFactorSetup",
+  "Lib.General.LinearAlgebra.HaarUnique": "Lib.Adelic.HaarUnique",
+  "Lib.General.LinearAlgebra.HuaIntegral": "Lib.Adelic.HuaIntegral",
+  "Lib.General.LinearAlgebra.PartialDerivComm": "Lib.DiscreteSeries.PartialDerivComm",
+  "Lib.General.LinearAlgebra.PartnerAlgebra": "New.Filling.PartnerAlgebra",
+  "Lib.General.LinearAlgebra.SmoothMatrices": "Lib.DiscreteSeries.SmoothMatrices",
+  "Lib.General.LinearAlgebra.SubmersionZero": "Lib.DiscreteSeries.SubmersionZero",
+  "Lib.General.LinearAlgebra.ValuedMatrix": "Lib.Adelic.ValuedMatrix",
+  "Lib.General.Measure.HaarModulus": "Lib.DiscreteSeries.HaarModulus",
+  "Lib.General.Measure.Place": "Lib.DiscreteSeries.Place",
+  "Lib.General.Measure.SubgroupIntegral": "Lib.DiscreteSeries.SubgroupIntegral",
+  "Lib.General.NumberTheory.ClassNumberBound": "Lib.GaloisRep.ZeroSymmetry",
+  "Lib.General.NumberTheory.Embeddings": "Lib.Adelic.Embeddings",
+  "Lib.General.NumberTheory.FundamentalDomains": "New.Filling.AmplitudeSums",
+  "Lib.General.NumberTheory.LocalProduct": "New.Filling.ExtensionByZero",
+  "Lib.General.NumberTheory.ProcyclicImage": "Lib.GaloisRep.ZeroSymmetry",
+  "Lib.General.NumberTheory.QuadField": "Lib.Adelic.QuadField",
+  "Lib.General.NumberTheory.QuadFieldSplitting": "Lib.Adelic.QuadFieldSplitting",
+  "Lib.General.NumberTheory.StableLattice": "Lib.ClassField.SelmerDefs",
+  "Lib.General.NumberTheory.UpsilonValues": "Lib.GaloisRep.UpsilonValues",
+  "Lib.General.NumberTheory.Valuation": "Lib.PadicHodge.Valuation",
+  "Lib.General.NumberTheory.ZeroSymmetry": "Lib.GaloisRep.ZeroSymmetry",
+  "Lib.General.Topology.LocalDefs": "New.Filling.LocalDefs",
+  "Lib.LocalGL.Green.CuspidalAtScalars": "Lib.Adelic.CuspidalAtScalars",
+  "Lib.LocalGL.Green.CuspidalFunction": "Lib.Adelic.CuspidalFunction",
+  "Lib.LocalGL.Green.CuspidalInnerProduct": "Lib.Adelic.GreenTau",
+  "Lib.LocalGL.Green.CuspidalSupport": "Lib.Adelic.CuspidalAtScalars",
+  "Lib.LocalGL.Green.FrobeniusOrbits": "Lib.Adelic.CuspidalAtScalars",
+  "Lib.LocalGL.Green.GreenTau": "Lib.Adelic.GreenTau",
+  "Lib.LocalGL.Green.InductionMean": "Lib.Adelic.CuspidalFunction",
+  "Lib.LocalGL.Green.LabelDegree": "Lib.Adelic.LabelDegree",
+  "Lib.LocalGL.Green.LabelIdempotents": "New.Weil.LabelIdempotents",
+  "Lib.LocalGL.Green.MackeyFormula": "Lib.Adelic.MackeyFormula",
+  "Lib.LocalGL.Iwahori.ExponentOfLabel": "Lib.GaloisRep.AvatarCompatibility",
+  "Lib.LocalGL.Iwahori.HeckeCounts": "Lib.GaloisRep.ParahoricColumns",
+  "Lib.LocalGL.Iwahori.HeckeOnLineStabiliser": "Lib.GaloisRep.HeckeOnLineStabiliser",
+  "Lib.LocalGL.Iwahori.IwahoriConjugation": "Lib.GaloisRep.IwahoriInjective",
+  "Lib.LocalGL.Iwahori.IwahoriInjective": "Lib.GaloisRep.IwahoriInjective",
+  "Lib.LocalGL.Iwahori.SortedExponents": "Lib.GaloisRep.SortedExponents",
+  "Lib.LocalGL.Shintani.LabelCharacters": "Lib.Adelic.LabelCharacters",
+  "Lib.LocalGL.Shintani.ShintaniLifting": "Lib.GaloisRep.ShintaniLifting",
+  "Lib.LocalGL.Tadic.ChainLemma": "Lib.GaloisRep.ThetaLift",
+  "Lib.LocalGL.TaylorWiles.AuxPlaceOperators": "Lib.PadicHodge.OnePrimeTie",
+  "Lib.LocalGL.TaylorWiles.HeckeAlgebra": "Lib.PadicHodge.HeckeAlgebra",
+  "Lib.LocalGL.TraceFormula.ChangingSigns": "Lib.GaloisRep.ChangingSigns",
+  "Lib.LocalGL.TraceFormula.TraceComparison": "Lib.GaloisRep.TraceComparison",
+  "Lib.PadicComparison.Completion.RootSystems": "Lib.Cohomology.RootSystems",
+  "Lib.PadicComparison.Crystalline.CrystallineClasses": "Lib.Cohomology.CrystallineCohomology",
+  "Lib.PadicComparison.Crystalline.CrystallineEtale": "Lib.Cohomology.CrystallineEtale",
+  "Lib.PadicComparison.Crystalline.CrystallineTests": "Lib.Cohomology.CrystallineTests",
+  "Lib.PadicComparison.Crystalline.PeriodLifting": "Lib.Cohomology.PeriodLifting",
+  "Lib.PadicComparison.Crystalline.TestGenericFibre": "Lib.Cohomology.TestGenericFibre",
+  "Lib.PadicComparison.CrystallineFrobenius.CrystallineCohomology": "Lib.Cohomology.CrystallineCohomology",
+  "Lib.PadicComparison.CrystallineFrobenius.DenseRelation": "Lib.Cohomology.CrystallineCohomology",
+  "Lib.PadicComparison.Descent.AlmostAcyclic": "Lib.Cohomology.AlmostAcyclic",
+  "Lib.PadicComparison.Descent.ReductionModP": "Lib.Cohomology.ReductionModP",
+  "Lib.PadicComparison.Descent.TestCover": "Lib.Cohomology.AlmostAcyclic",
+  "Lib.PadicComparison.Descent.VDescent": "Lib.Cohomology.AlmostAcyclic",
+  "Lib.PadicComparison.Duality.IntegrationOverLine": "Lib.Cohomology.IntegrationOverLine",
+  "Lib.PadicComparison.Duality.MovingKernel": "Lib.Cohomology.IntegrationOverLine",
+  "Lib.PadicComparison.HodgeTate.GaloisTwist": "Lib.Cohomology.GaloisTwist",
+  "Lib.PadicComparison.HodgeTate.GaloisWeight": "Lib.Cohomology.CrystallineCohomology",
+  "Lib.PadicComparison.HodgeTate.GenericFibreTests": "Lib.Cohomology.GenericFibreTests",
+  "Lib.PadicComparison.HodgeTate.HodgeTateMap": "Lib.Cohomology.GaloisTwist",
+  "Lib.PadicComparison.HodgeTate.HodgeTatePairs": "Lib.Cohomology.HodgeTatePairs",
+  "Lib.PadicComparison.HodgeTate.HodgeTateVectors": "Lib.Cohomology.GaloisRep",
+  "Lib.PadicComparison.Primitive.PrimitiveComparison": "Lib.Cohomology.CrystallineCohomology",
+  "Lib.PadicComparison.Primitive.PrimitivePeriods": "Lib.Cohomology.CrystallineCohomology",
+  "Lib.PadicComparison.Primitive.TiltedTheory": "Lib.Cohomology.TiltedTheory",
+  "Lib.PadicComparison.ToricTower.CrystallineLines": "Lib.Cohomology.CrystallineCohomology",
+  "Lib.PadicHodge.BlochKato.BlochKato": "Lib.PadicHodge.BlochKato",
+  "Lib.PadicHodge.BlochKato.CocycleContinuity": "Lib.PadicHodge.CrystallineLimit",
+  "Lib.PadicHodge.Characters.LocalCharacters": "Lib.GaloisRep.LocalCharacters",
+  "Lib.PadicHodge.Characters.UnramifiedPeriods": "Lib.GaloisRep.LocalCharacters",
+  "Lib.PadicHodge.Comparison.CrystallineLimit": "Lib.PadicHodge.CrystallineLimit",
+  "Lib.PadicHodge.Crystalline.Defs": "Lib.ClassField.Defs",
+  "Lib.PadicHodge.Crystalline.GoodCriterion": "Lib.PadicHodge.GoodCriterion",
+  "Lib.PadicHodge.Crystalline.HodgeTateFrame": "Lib.PadicHodge.HodgeTateFrame",
+  "Lib.PadicHodge.Crystalline.Jumps": "Lib.PadicHodge.Jumps",
+  "Lib.PadicHodge.Crystalline.NonUnitalUnits": "Lib.Adelic.NonUnitalUnits",
+  "Lib.PadicHodge.Crystalline.PairingDefs": "Lib.PadicHodge.BlochKato",
+  "Lib.PadicHodge.Crystalline.RegularityFrobenius": "Lib.PadicHodge.RegularityFrobenius",
+  "Lib.PadicHodge.Herr.GaloisLattices": "Lib.PadicHodge.GaloisLattices",
+  "Lib.PadicHodge.Limit.HodgeTateProjectors": "Lib.PadicHodge.HodgeTateProjectors",
+  "Lib.PadicHodge.Limit.LimitDefs": "Lib.PadicHodge.Jumps",
+  "Lib.PadicHodge.Limit.LocalLimit": "Lib.PadicHodge.GoodCriterion",
+  "Lib.PadicHodge.PeriodRings.Ainf": "Lib.ClassField.Ainf",
+  "Lib.PadicHodge.PeriodRings.AmaxStructure": "Lib.ClassField.AmaxStructure",
+  "Lib.PadicHodge.PeriodRings.BdR": "Lib.ClassField.BdR",
+  "Lib.PadicHodge.PeriodRings.BdRPlus": "Lib.ClassField.BdRPlus",
+  "Lib.PadicHodge.PeriodRings.CpIntegers": "Lib.ClassField.CpIntegers",
+  "Lib.PadicHodge.PeriodRings.FundamentalKernel": "Lib.PadicHodge.CrystallineLimit",
+  "Lib.PadicHodge.PeriodRings.ThetaKernel": "Lib.ClassField.ThetaKernel",
+  "Lib.PadicHodge.TateSen.DeRhamFiltration": "Lib.ClassField.DeRhamFiltration",
+  "Lib.PadicHodge.TateSen.NearOne": "Lib.ClassField.DeRhamFiltration",
+  "Lib.PadicHodge.WachGamma.GaloisOnFrames": "Lib.PadicHodge.ExponentLattices",
+  "Lib.PadicHodge.WachGamma.KisinModuleDefs": "Lib.PadicHodge.KisinModuleDefs",
+  "Lib.PadicHodge.WachGamma.Letters": "Lib.PadicHodge.Letters",
+  "Lib.PadicHodge.WachKisin.ChartScalars": "Lib.PadicHodge.ChartScalars",
+  "Lib.PadicHodge.WachKisin.CrystallinePeriodMatrix": "Lib.PadicHodge.CrystallineLimit",
+  "Lib.PadicHodge.WachKisin.DeRhamValues": "Lib.PadicHodge.DeRhamValues",
+  "Lib.PadicHodge.WachKisin.FrameTheorem": "Lib.PadicHodge.ExponentLattices",
+  "Lib.PadicHodge.WachKisin.HodgeFrame": "Lib.PadicHodge.HodgeFrame",
+  "Lib.PadicHodge.WachKisin.KummerChart": "Lib.PadicHodge.KummerChart",
+  "Lib.PadicHodge.WachKisin.KummerChartExists": "Lib.PadicHodge.KummerChartExists",
+  "Lib.PadicHodge.WachKisin.PeriodMatrixBasis": "Lib.PadicHodge.PeriodMatrixBasis",
+  "Lib.PadicHodge.WachKisin.PeriodMatrixFrame": "Lib.PadicHodge.CrystallineLimit",
+  "Lib.Shimura.AbelianScheme.KernelRing": "Lib.Shimura.KernelRing",
+  "Lib.Shimura.AbelianScheme.Specialisation": "Lib.Shimura.Specialisation",
+  "Lib.Shimura.AbelianScheme.TangentCoords": "Lib.Shimura.TangentCoords",
+  "Lib.Shimura.AbelianScheme.ThetaFamily": "Lib.Shimura.ThetaFamily",
+  "Lib.Shimura.ComplexTheta.CanonicalMultiplier": "Lib.Adelic.CanonicalMultiplier",
+  "Lib.Shimura.ComplexTheta.PeriodVanishing": "New.Weil.MemberOrthogonality",
+  "Lib.Shimura.ComplexTheta.ThetaDimension": "Lib.Adelic.ThetaDimension",
+  "Lib.Shimura.CongruenceRelation.CongruenceStep": "Lib.GaloisRep.AvatarCompatibility",
+  "Lib.Shimura.CongruenceRelation.KernelReduction": "Lib.Shimura.DrinfeldLifting",
+  "Lib.Shimura.Deformation.DrinfeldLifting": "Lib.Shimura.DrinfeldLifting",
+  "Lib.Shimura.Deformation.TangentBound": "Lib.Shimura.UniversalFamily",
+  "Lib.Shimura.Eigenspace.EigenQuotient": "Lib.Cohomology.GaloisRep",
+  "Lib.Shimura.Extension.ArcExtension": "Lib.Shimura.ModelAlongArc",
+  "Lib.Shimura.GoodReduction.ArcReduction": "Lib.Shimura.UniversalFamily",
+  "Lib.Shimura.GoodReduction.GaussUnfolding": "Lib.Shimura.PeakContraction",
+  "Lib.Shimura.GoodReduction.HermitianAction": "Lib.Shimura.PeakContraction",
+  "Lib.Shimura.GoodReduction.PeakContraction": "Lib.Shimura.PeakContraction",
+  "Lib.Shimura.GoodReduction.ThetaOrthogonality": "Lib.Shimura.ThetaOrthogonality",
+  "Lib.Shimura.HeckeTower.GroupRingOperators": "Lib.Adelic.GroupRingOperators",
+  "Lib.Shimura.HeckeTower.WildType": "Lib.GaloisRep.WildType",
+  "Lib.Shimura.IntegralModel.GroupBaseChange": "Lib.Shimura.GroupBaseChange",
+  "Lib.Shimura.IntegralModel.ModelExistence": "Lib.GaloisRep.AvatarCompatibility",
+  "Lib.Shimura.IntegralModel.NeatLevel": "Lib.GaloisRep.NeatLevel",
+  "Lib.Shimura.IntegralModel.UniversalPoints": "Lib.Shimura.UniversalPoints",
+  "Lib.Shimura.ThetaGroup.ComplexComparison": "Lib.Shimura.ComplexComparison",
+  "Lib.Shimura.ThetaGroup.RigidFibres": "Lib.Shimura.UniversalPoints",
+  "Lib.Shimura.ThetaGroup.SectionLifts": "Lib.Shimura.ThetaStructure",
+  "Lib.Shimura.ThetaGroup.ThetaStructure": "Lib.Shimura.ThetaStructure",
+  "Lib.Shimura.ThetaModuli.CutOutIdeals": "Lib.Shimura.GroupBaseChange",
+  "Lib.Shimura.ThetaModuli.FamilyFromPoints": "Lib.Shimura.UniversalFamily",
+  "Lib.Shimura.ThetaModuli.FlatClosure": "Lib.Shimura.ModelAlongArc",
+  "Lib.Shimura.ThetaModuli.ThetaTorus": "Lib.Shimura.ThetaTorus",
+  "Lib.Shimura.ThetaModuli.UniversalFamily": "Lib.Shimura.UniversalFamily",
+  "Lib.Shimura.ThetaNormality.NormalGeneration": "Lib.Shimura.NormalGeneration",
+  "Lib.Shimura.ThetaNormality.RiemannRelation": "Lib.Shimura.ModelAlongArc",
+  "Lib.Shimura.TraceFormula.DefiniteTrace": "Lib.GaloisRep.AvatarCompatibility",
+  "Lib.Shimura.TraceFormula.MarkedEqDefinite": "Lib.GaloisRep.Lefschetz",
+  "Lib.Shimura.TraceFormula.TraceFormula": "Lib.GaloisRep.NeatLevel",
+  "Lib.Shimura.Transfer.MarkedPairs": "Lib.GaloisRep.MarkedPairs",
+  "Lib.Shimura.Transfer.PELDataExistence": "Lib.GaloisRep.AvatarCompatibility",
+  "Lib.Shimura.Uniformisation.AppellHumbert": "Lib.Shimura.ModelAlongArc",
+  "Lib.Shimura.Uniformisation.BallModel": "Lib.Shimura.UniversalPoints",
+  "Lib.Shimura.Uniformisation.Frames": "Lib.Adelic.Frames",
+  "Lib.Shimura.Uniformisation.HolomorphicFamily": "Lib.Shimura.SeparatingPoints",
+  "Lib.Shimura.Uniformisation.LieExponential": "Lib.Adelic.LieExponential",
+  "Lib.Shimura.Uniformisation.LiftedIsogenies": "Lib.Shimura.LiftedIsogenies",
+  "Lib.Shimura.Uniformisation.ModelAlongArc": "Lib.Shimura.ModelAlongArc",
+  "Lib.Shimura.Uniformisation.ModuliPoint": "Lib.Adelic.PeriodLattice",
+  "Lib.Shimura.Uniformisation.PeriodLattice": "Lib.Adelic.PeriodLattice",
+  "Lib.Shimura.Uniformisation.RiemannFormAdelic": "Lib.Cohomology.RiemannFormAdelic",
+  "Lib.Shimura.Uniformisation.ThetaCoords": "Lib.Shimura.ComplexComparison",
+  "Lib.Shimura.Uniformisation.UniformisationExists": "Lib.Shimura.UniformisationExists",
+  "Lib.SiegelWeil.Formula.SiegelSets": "New.Weil.SiegelWeilFormula",
+  "Lib.SiegelWeil.Formula.SiegelWeilFormula": "New.Weil.SiegelWeilFormula",
+  "Lib.SiegelWeil.Formula.ZeroTermHeight": "New.Weil.ZeroTermHeight",
+  "Lib.SiegelWeil.Mass.MassRatio": "New.Weil.RallisFormula",
+  "Lib.SiegelWeil.Mass.TorusMajorant": "Lib.Weil.TorusMajorant",
+  "Lib.SiegelWeil.OneVector.OneVector": "New.Weil.OneVector",
+  "Lib.SiegelWeil.RallisInner.SharpData": "New.Weil.SharpData",
+  "Lib.SiegelWeil.SingularForms.AdaptedHom": "New.Weil.AdaptedHom",
+  "Lib.SiegelWeil.SingularForms.SingularForms": "New.Weil.SingularForms",
+  "Lib.SiegelWeil.StrongApproximation.EqualRankConstant": "New.Weil.EquivariantCoefficients",
+  "Lib.SiegelWeil.Tower.ConstantTerm": "New.Weil.ExchangeTheorem",
+  "Lib.SiegelWeil.Tower.LargeSideConstantTerm": "New.Weil.ExchangeTheorem",
+  "Lib.SiegelWeil.Tower.LineGaussSum": "New.Weil.ExchangeTheorem",
+  "Lib.Weil.CompactLift.BranchingPeriod": "Lib.Weil.BranchingPeriod",
+  "Lib.Weil.CompactLift.RallisFormula": "New.Weil.RallisFormula",
+  "Lib.Weil.Construction.AdelicHeisenberg": "Lib.Weil.FiniteVacuum",
+  "Lib.Weil.Construction.ConjugateJetDefs": "Lib.Shimura.FockThetaFunctions",
+  "Lib.Weil.Construction.DataProduct": "Lib.Weil.DataProduct",
+  "Lib.Weil.Construction.FiniteHeisenberg": "Lib.Weil.FiniteVacuum",
+  "Lib.Weil.Construction.FiniteMultiplier": "Lib.Weil.FiniteMultiplier",
+  "Lib.Weil.Construction.FinitePart": "Lib.Weil.NameWeilAction",
+  "Lib.Weil.Construction.FiniteVacuum": "Lib.Weil.FiniteVacuum",
+  "Lib.Weil.Construction.FockThetaFunctions": "Lib.Shimura.FockThetaFunctions",
+  "Lib.Weil.Construction.GaussSumSign": "Lib.Adelic.AdelicModulus",
+  "Lib.Weil.Construction.Model": "Lib.Adelic.Model",
+  "Lib.Weil.Construction.OrthogonalSum": "Lib.DiscreteSeries.OrthogonalSum",
+  "Lib.Weil.Construction.PairDefs": "Lib.Weil.PairDefs",
+  "Lib.Weil.Construction.Projections": "Lib.Weil.Projections",
+  "Lib.Weil.Construction.SubmoduleNormedSpace": "Lib.Adelic.SubmoduleNormedSpace",
+  "Lib.Weil.Construction.ThetaFunctional": "Lib.Weil.ThetaFunctional",
+  "Lib.Weil.Construction.WeilOperators": "Lib.DiscreteSeries.OrthogonalSum",
+  "Lib.Weil.DualPair.DatumLevel": "New.Weil.DatumLevel",
+  "Lib.Weil.DualPair.DescentsVanishDef": "New.Weil.KernelDecay",
+  "Lib.Weil.DualPair.Flip": "New.Weil.Flip",
+  "Lib.Weil.DualPair.FourierCoefficient": "New.Weil.FourierCoefficient",
+  "Lib.Weil.DualPair.KernelDecay": "New.Weil.KernelDecay",
+  "Lib.Weil.DualPair.Kronecker": "Lib.Adelic.Kronecker",
+  "Lib.Weil.DualPair.Lift": "New.Weil.KernelDecay",
+  "Lib.Weil.DualPair.ModularDataDecay": "New.Weil.ModularDataDecay",
+  "Lib.Weil.DualPair.PairReal": "New.Weil.PairReal",
+  "Lib.Weil.DualPair.PairSplitting": "New.Weil.PairSplitting",
+  "Lib.Weil.DualPair.PairSumNegation": "New.Weil.PairSumNegation",
+  "Lib.Weil.DualPair.ThetaIntegralLaws": "New.Weil.ThetaIntegralLaws",
+  "Lib.Weil.DualPair.TwoEdgesOnePair": "New.Weil.TwoEdgesOnePair",
+  "Lib.Weil.DualPair.TwoLineTerms": "New.Weil.ThetaIntegralLaws",
+  "Lib.Weil.Fock.EntireTheta": "Lib.Weil.EntireTheta",
+  "Lib.Weil.Fock.FockAction": "Lib.DiscreteSeries.FockTensor",
+  "Lib.Weil.Fock.FockHarmonicCoeff": "Lib.DiscreteSeries.FockHarmonicCoeff",
+  "Lib.Weil.Fock.FockTensor": "Lib.DiscreteSeries.FockTensor",
+  "Lib.Weil.Fock.FockVacuum": "Lib.DiscreteSeries.FockTensor",
+  "Lib.Weil.Fock.MixedFockModel": "Lib.DiscreteSeries.MixedFockModel",
+  "Lib.Weil.Fock.OscillatorPair": "Lib.DiscreteSeries.OscillatorPair",
+  "Lib.Weil.Fock.RealData": "Lib.Weil.EntireTheta",
+  "Lib.Weil.Fock.ReproducingFormula": "New.Weil.Separation",
+  "Lib.Weil.GaussSum.LocalHomUnit": "Lib.Adelic.LocalHomUnit",
+  "Lib.Weil.GaussSum.ShearInvariance": "New.Filling.ShearInvariance",
+  "Lib.Weil.Lift.Arrow": "New.Weil.SiegelWeilFormula",
+  "Lib.Weil.Lift.Edge": "New.Weil.Edge",
+  "Lib.Weil.Lift.Staircase": "New.Weil.Staircase",
+  "Lib.Weil.MixedModel.AdaptedSplitting": "Lib.GaloisRep.AdaptedSplitting",
+  "Lib.Weil.MixedModel.AdelicSum": "Lib.Weil.AdelicSum",
+  "Lib.Weil.MixedModel.EquivariantCoefficients": "New.Weil.EquivariantCoefficients",
+  "Lib.Weil.MixedModel.HyperbolicSpace": "Lib.Weil.HyperbolicSpace",
+  "Lib.Weil.MixedModel.HyperbolicSplitting": "Lib.GaloisRep.AdaptedSplitting",
+  "Lib.Weil.MixedModel.MixedModelIntegrable": "Lib.GaloisRep.AdaptedSplitting",
+  "Lib.Weil.MixedModel.NameModulus": "New.Weil.PairReal",
+  "Lib.Weil.MixedModel.NameWeilAction": "Lib.Weil.NameWeilAction",
+  "Lib.Weil.MixedModel.Names": "Lib.Weil.Names",
+  "Lib.Weil.MixedModel.RapidSections": "New.Weil.ExchangeTheorem",
+  "Lib.Weil.MixedModel.ZeroTerm": "Lib.Weil.ZeroTerm",
+  "Lib.Weil.MixedModel.ZeroTermLaw": "Lib.GaloisRep.AdaptedSplitting",
+  "Lib.Weil.Periods.BesselIntegral": "New.Weil.BesselIntegral",
+  "Lib.Weil.Periods.DegreeAndUnipotent": "Lib.Weil.DegreeAndUnipotent",
+  "Lib.Weil.Periods.DegreeOfT": "New.Weil.DegreeOfT",
+  "Lib.Weil.Periods.FiniteBesselGroup": "Lib.GaloisRep.FiniteBesselGroup",
+  "Lib.Weil.Periods.UnfoldingStep": "New.Weil.UnfoldingStep",
+  "Lib.Weil.Unramified.HeckeGL": "Lib.Adelic.HeckeGL",
+  "Lib.Weil.Unramified.HeckeTransfer": "New.Weil.SiegelWeilFormula",
+  "Lib.Weil.Unramified.SphericalHecke": "Lib.Adelic.SphericalHecke",
+  "Lib.Weil.Unramified.UniformiserScalar": "Lib.ClassField.UniformiserScalar",
+  "Main": "Main",
+  "New.Columns.ChainValuation": "New.Weil.ChainValuation",
+  "New.Columns.ColumnDefs": "New.Weil.ColumnDefs",
+  "New.Columns.JetExponentBound": "New.Weil.JetExponentBound",
+  "New.Columns.LocalStatement": "New.Weil.ShortAndEnough",
+  "New.Columns.MarkedPrimeType": "New.Weil.ShortAndEnough",
+  "New.Columns.SizeEstimates": "New.Weil.SizeEstimates",
+  "New.Columns.TwistedHeckeType": "New.Weil.TwistedHeckeType",
+  "New.Core.ClassCountBound": "New.Weil.SizeEstimates",
+  "New.Core.ModuleIndex": "New.Weil.TwistedHeckeType",
+  "New.Curve.ConjugateGenerator": "Lib.ClassField.AdmissibleData",
+  "New.Curve.ConjugatesOfJets": "New.Weil.CrudeModularData",
+  "New.Curve.DepthPairs": "New.Weil.ColumnDefs",
+  "New.Curve.FormalParameter": "Lib.ClassField.FormalParameter",
+  "New.Curve.FrameSections": "Lib.ClassField.AdmissibleData",
+  "New.Curve.IntegralVacuum": "New.Weil.IntegralVacuum",
+  "New.Curve.JetDivisibility": "New.Weil.TwistedHeckeType",
+  "New.Curve.KatzDivisibility": "New.Weil.MonomialCoefficientVector",
+  "New.Curve.LiveSum": "New.Weil.LiveSum",
+  "New.Curve.PeriodDefs": "Lib.ClassField.PeriodDefs",
+  "New.Curve.ThetaProducts": "Lib.ClassField.AdmissibleData",
+  "New.Curve.TightFrameExists": "Lib.ClassField.TightFrameExists",
+  "New.Data.AdmissibleData": "Lib.ClassField.AdmissibleData",
+  "New.Data.ChosenPlaceLevels": "New.Weil.ChosenPlaceLevels",
+  "New.Data.DataExist": "Lib.ClassField.Main",
+  "New.Data.Different": "Lib.ClassField.Different",
+  "New.Data.Magnitudes": "Lib.ClassField.Magnitudes",
+  "New.Data.Weights": "New.Weil.Weights",
+  "New.Data.WeilDataOfE": "Lib.ClassField.PeriodDefs",
+  "New.DiscreteSeries.BesselExistence": "New.Filling.BesselExistence",
+  "New.DiscreteSeries.GaussianShape": "Lib.DiscreteSeries.TwoFactorSetup",
+  "New.DiscreteSeries.MinorExpansion": "Lib.DiscreteSeries.TwoFactorSetup",
+  "New.DiscreteSeries.RestrictionLemma": "New.Weil.SteepParameters",
+  "New.DiscreteSeries.TwoFactorSetup": "Lib.DiscreteSeries.TwoFactorSetup",
+  "New.Endgame.LongForms": "Lib.PadicHodge.LongForms",
+  "New.Endgame.OneSidedCriterion": "Lib.ClassField.Main",
+  "New.Endgame.PrimeError": "Lib.ClassField.PrimeError",
+  "New.Endgame.ShortAndEnough": "New.Weil.ShortAndEnough",
+  "New.Exchange.AlgebraicPartConjugates": "New.Weil.Separation",
+  "New.Exchange.AlgebraicPartDefs": "New.Weil.AlgebraicPartDefs",
+  "New.Exchange.BlockPartners": "New.Weil.BlockPartners",
+  "New.Exchange.ChainNorms": "New.Weil.LabelRigidity",
+  "New.Exchange.CharacterLiftNorm": "New.Weil.TriangleLevelExponent",
+  "New.Exchange.CostOfSquares": "New.Weil.CostOfSquares",
+  "New.Exchange.CrudeModularData": "New.Weil.CrudeModularData",
+  "New.Exchange.CrudeRows": "New.Weil.CrudeRows",
+  "New.Exchange.DeterminantVectors": "New.Weil.SquareLawFourier",
+  "New.Exchange.EqualRankValue": "New.Weil.ExchangeTheorem",
+  "New.Exchange.ExchangeDifference": "New.Weil.ExchangeTheorem",
+  "New.Exchange.ExchangeTheorem": "New.Weil.ExchangeTheorem",
+  "New.Exchange.GridFirstColumns": "New.Weil.CrudeRows",
+  "New.Exchange.GridModuli": "New.Weil.GridModuli",
+  "New.Exchange.GridMove": "New.Weil.RowLadder",
+  "New.Exchange.GridParameters": "New.Weil.GridParameters",
+  "New.Exchange.LValueRatio": "New.Weil.ColumnDefs",
+  "New.Exchange.LowRankIdentity": "New.Weil.ExchangeTheorem",
+  "New.Exchange.NonnegativeVanishing": "New.Weil.ExchangeTheorem",
+  "New.Exchange.OneSquare": "New.Weil.OneSquare",
+  "New.Exchange.PartnersMatch": "New.Weil.ExchangeTheorem",
+  "New.Exchange.RealPair": "New.Weil.ExchangeTheorem",
+  "New.Exchange.RowLadder": "New.Weil.RowLadder",
+  "New.Exchange.RowsReached": "New.Weil.CrudeRows",
+  "New.Exchange.SquareLawFourier": "New.Weil.SquareLawFourier",
+  "New.Exchange.StableSpaces": "New.Weil.ExchangeTheorem",
+  "New.Exchange.StandardCoefficients": "New.Weil.ExchangeTheorem",
+  "New.Exchange.SteepParameters": "New.Weil.SteepParameters",
+  "New.Exchange.TriangleArrows": "New.Weil.TriangleArrows",
+  "New.Exchange.TriangleLevelExponent": "New.Weil.TriangleLevelExponent",
+  "New.Exchange.TriangleNorms": "New.Weil.CostOfSquares",
+  "New.Filling.AmplitudeSums": "New.Filling.AmplitudeSums",
+  "New.Filling.BesselSystem": "New.Filling.BesselSystem",
+  "New.Filling.BlockBound": "New.Weil.Moments",
+  "New.Filling.BoxPartition": "New.Filling.BoxPartition",
+  "New.Filling.ColumnCoords": "New.Filling.FillingData",
+  "New.Filling.CrudeBoundDefs": "New.Filling.CrudeBoundDefs",
+  "New.Filling.CrudeEnergy": "New.Weil.Moments",
+  "New.Filling.DegreeBounds": "New.Weil.DegreeBounds",
+  "New.Filling.EichlerFlag": "New.Filling.EichlerFlag",
+  "New.Filling.FillingAdmissible": "New.Weil.FillingTheorem",
+  "New.Filling.FillingData": "New.Filling.FillingData",
+  "New.Filling.FillingTheorem": "New.Weil.FillingTheorem",
+  "New.Filling.FiniteSystem": "New.Weil.Moments",
+  "New.Filling.FixedLines": "New.Weil.Moments",
+  "New.Filling.GlobalSieve": "New.Filling.GlobalToLocal",
+  "New.Filling.GlobalToLocal": "New.Filling.GlobalToLocal",
+  "New.Filling.GramLiouville": "New.Filling.GramLiouville",
+  "New.Filling.LatticeChart": "New.Filling.LatticeChart",
+  "New.Filling.LevelBridge": "New.Filling.LevelBridge",
+  "New.Filling.LinkPairing": "New.Filling.SchurTest",
+  "New.Filling.Moments": "New.Weil.Moments",
+  "New.Filling.NearTerms": "New.Filling.NearTerms",
+  "New.Filling.PoincareSeries": "New.Filling.PoincareSeries",
+  "New.Filling.RowDimension": "New.Weil.RowDimension",
+  "New.Filling.SchurTest": "New.Filling.SchurTest",
+  "New.Filling.Setup": "New.Filling.Setup",
+  "New.Filling.StableCells": "New.Filling.StableCells",
+  "New.Filling.StandardLevel": "New.Filling.StandardLevel",
+  "New.Filling.ThinClasses": "New.Weil.Moments",
+  "New.Filling.TopFloor": "New.Filling.TopFloor",
+  "New.Filling.UnipotentCovolume": "New.Filling.AmplitudeSums",
+  "New.Forms.AuxiliaryPair": "New.Weil.AuxiliaryPair",
+  "New.GaloisRep.LabelUniqueness": "New.Weil.LabelRigidity",
+  "New.Heights.Heights": "New.Weil.Heights",
+  "New.Heights.OneDeterminant": "New.Weil.Moments",
+  "New.Lift.CokernelKillers": "Lib.PadicHodge.CokernelKillers",
+  "New.Lift.CupProductBound": "Lib.PadicHodge.CokernelKillers",
+  "New.Lift.ExponentLattices": "Lib.PadicHodge.ExponentLattices",
+  "New.Lift.ExponentTheorems": "Lib.PadicHodge.ExponentTheorems",
+  "New.Lift.FewLowJumps": "Lib.PadicHodge.ExponentTheorems",
+  "New.Lift.HodgeExpansion": "Lib.PadicHodge.HodgeExpansion",
+  "New.Lift.LongGap": "Lib.PadicHodge.LongGap",
+  "New.Lift.SparseThickLetters": "Lib.PadicHodge.ExponentTheorems",
+  "New.Main": "Lib.ClassField.Main",
+  "New.Patching.OnePrime": "Lib.PadicHodge.OnePrimeTie",
+  "New.Patching.OnePrimeTie": "Lib.PadicHodge.OnePrimeTie",
+  "New.RealPlace.BandLimits": "New.Filling.FillingData",
+  "New.RealPlace.BesselCut": "New.Filling.FillingData",
+  "New.RealPlace.BesselOrthonormal": "New.Filling.BesselOrthonormal",
+  "New.RealPlace.CellNeighbourhood": "New.Filling.BesselOrthonormal",
+  "New.RealPlace.ComplexGauge": "New.Filling.FillingData",
+  "New.RealPlace.ComplexShells": "New.Filling.FillingData",
+  "New.RealPlace.FlatCharts": "Lib.DiscreteSeries.FlatCharts",
+  "New.RealPlace.FloorKernels": "Lib.DiscreteSeries.WeightPlancherel",
+  "New.RealPlace.FrameNorm": "New.Filling.FrameNorm",
+  "New.RealPlace.GramSection": "New.Filling.BesselOrthonormal",
+  "New.RealPlace.GramSectionBounds": "New.Filling.BesselOrthonormal",
+  "New.RealPlace.LevelGauge": "Lib.DiscreteSeries.LevelGauge",
+  "New.RealPlace.LocalTheorem": "New.Filling.LocalTheorem",
+  "New.RealPlace.OpenCellBound": "New.Filling.OpenCellBound",
+  "New.RealPlace.Size": "Lib.DiscreteSeries.Size",
+  "New.RealPlace.SobolevCell": "New.Filling.SobolevCell",
+  "New.RealPlace.VolumeKernel": "New.Filling.SchurTest",
+  "New.RealPlace.WeightPlancherel": "Lib.DiscreteSeries.WeightPlancherel",
+  "New.Rows.Carrier": "New.Weil.Carrier",
+  "New.Rows.CartanIntegrality": "New.Weil.ComparisonForms",
+  "New.Rows.ComparisonForms": "New.Weil.ComparisonForms",
+  "New.Rows.GluedFormTheta": "New.Weil.MonomialCoefficientVector",
+  "New.Rows.HeckeValueHeight": "Lib.PadicHodge.LongForms",
+  "New.Rows.LiftVolumeHeight": "Lib.PadicHodge.LongForms",
+  "New.Rows.LineArithmetic": "New.Weil.TriangleLevelExponent",
+  "New.Rows.LineCoordinates": "New.Weil.LineCoordinates",
+  "New.Rows.MemberKernels": "New.Weil.MemberKernels",
+  "New.Rows.MemberOrthogonality": "New.Weil.MemberOrthogonality",
+  "New.Rows.MonomialCoefficientVector": "New.Weil.MonomialCoefficientVector",
+  "New.Rows.NaturalFormNear": "New.Weil.Separation",
+  "New.Rows.PartnerCut": "New.Weil.StackedDeterminants",
+  "New.Rows.RealMatching": "New.Weil.Carrier",
+  "New.Rows.RowVolume": "New.Weil.RowVolume",
+  "New.Rows.SemiInvariantNorm": "New.Weil.StackedDeterminants",
+  "New.Rows.Separation": "New.Weil.Separation",
+  "New.Rows.SparseThetaSum": "New.Weil.Separation",
+  "New.Rows.StackedDeterminants": "New.Weil.StackedDeterminants",
+  "New.Seesaw.AdmissibleComb": "New.Weil.AdmissibleComb",
+  "New.Seesaw.AdmissibleEvaluation": "New.Weil.BesselGeneric",
+  "New.Seesaw.BesselGeneric": "New.Weil.BesselGeneric",
+  "New.Seesaw.DoubleLiftValue": "New.Weil.GradingsOfY",
+  "New.Seesaw.EdgePair": "New.Weil.EdgePair",
+  "New.Seesaw.EqualLinesOrbit": "New.Weil.FillingTheorem",
+  "New.Seesaw.FramesForY": "New.Weil.GoodIdempotent",
+  "New.Seesaw.GoodDatumExists": "New.Weil.BesselGeneric",
+  "New.Seesaw.GradingsOfY": "New.Weil.GradingsOfY",
+  "New.Seesaw.IndexTypes": "New.Weil.IndexTypes",
+  "New.Seesaw.IntegralAsCosetSum": "New.Weil.GradingsOfY",
+  "New.Seesaw.IntegralAway": "New.Weil.AdmissibleComb",
+  "New.Seesaw.LatticeAndTorsionDefs": "New.Weil.LatticeAndTorsionDefs",
+  "New.Seesaw.LiftCharacters": "New.Weil.TwistedHeckeType",
+  "New.Seesaw.LinesStep": "New.Weil.FillingTheorem",
+  "New.Seesaw.MovedVacuumComb": "New.Weil.MovedVacuumComb",
+  "New.Seesaw.NamesAtSplitLevel": "New.Weil.NamesAtSplitLevel",
+  "New.Seesaw.PairTensorData": "New.Weil.PairTensorData",
+  "New.Seesaw.SeesawTheorem": "New.Weil.ShortAndEnough",
+  "New.Seesaw.StandardLatticeLevel": "New.Weil.FillingTheorem",
+  "New.Seesaw.UnfoldingStages": "New.Weil.FillingTheorem",
+  "New.Selmer.AptTupleDefs": "Lib.PadicHodge.AptTuples",
+  "New.Selmer.AptTuples": "Lib.PadicHodge.AptTuples",
+  "New.Selmer.BaseLevelOfLabel": "Lib.PadicHodge.LongForms",
+  "New.Selmer.BlocksAndCocycles": "Lib.PadicHodge.BlocksAndCocycles",
+  "New.Selmer.Corepresentable": "Lib.PadicHodge.Corepresentable",
+  "New.Selmer.CrystallineBound": "Lib.PadicHodge.RibetElement",
+  "New.Selmer.CrystallineRank": "Lib.PadicHodge.CrystallineRank",
+  "New.Selmer.DenominatorBound": "Lib.PadicHodge.LongForms",
+  "New.Selmer.DeterminantBound": "Lib.PadicHodge.DeterminantBound",
+  "New.Selmer.FitTwists": "New.Weil.FitTwists",
+  "New.Selmer.FitTwistsExist": "Lib.PadicHodge.LongForms",
+  "New.Selmer.HeckeStableSubspaces": "Lib.PadicHodge.HeckeStableSubspaces",
+  "New.Selmer.HeckeString": "Lib.PadicHodge.LongForms",
+  "New.Selmer.LabelledColumns": "Lib.PadicHodge.LabelledColumns",
+  "New.Selmer.LevelPlacesChosen": "New.Weil.LevelPlacesChosen",
+  "New.Selmer.LinePointPowers": "Lib.PadicHodge.TiltingLemma",
+  "New.Selmer.OnePlaceDefect": "Lib.PadicHodge.RibetElement",
+  "New.Selmer.RankOneDenominator": "New.Weil.MonomialCoefficientVector",
+  "New.Selmer.ReciprocityLaw": "Lib.PadicHodge.LongForms",
+  "New.Selmer.RibetCramer": "Lib.PadicHodge.RibetFirstOrder",
+  "New.Selmer.RibetElement": "Lib.PadicHodge.RibetElement",
+  "New.Selmer.RibetFirstOrder": "Lib.PadicHodge.RibetFirstOrder",
+  "New.Selmer.RootsOfUnityPoints": "Lib.PadicHodge.RowBalanced",
+  "New.Selmer.RowBalanced": "Lib.PadicHodge.RowBalanced",
+  "New.Selmer.RowsExist": "Lib.PadicHodge.LongForms",
+  "New.Selmer.TateTwistSteps": "Lib.PadicHodge.RibetElement",
+  "New.Selmer.ThickSpacing": "Lib.PadicHodge.CrystallineRank",
+  "New.Selmer.TiltingLemma": "Lib.PadicHodge.TiltingLemma",
+  "New.Selmer.TrianglePrimes": "Lib.PadicHodge.LongForms",
+  "New.Selmer.TwistForRows": "Lib.PadicHodge.LongForms",
+  "New.Selmer.TwistTheorem": "Lib.PadicHodge.RowBalanced",
+  "New.Selmer.ValueFamilies": "Lib.PadicHodge.ValueFamilies",
+  "New.SiegelWeil.AuxPairVanishing": "New.Weil.CostOfSquares",
+  "New.SiegelWeil.DescentsVanishPlanes": "New.Weil.CostOfSquares",
+  "New.Trace.BadShare": "New.Weil.BadShare",
+  "New.Trace.GoodFormTransfer": "New.Weil.GoodFormTransfer",
+  "New.Trace.GoodIdempotent": "New.Weil.GoodIdempotent",
+  "New.Trace.LabelRigidity": "New.Weil.LabelRigidity",
+  "New.TwistedHecke.ClassMeans": "Lib.Adelic.RootLemma",
+  "New.TwistedHecke.Counting": "Lib.Adelic.Counting",
+  "New.TwistedHecke.DeepFormCost": "Lib.Adelic.RootLemma",
+  "New.TwistedHecke.ElementaryDivisors": "New.Weil.TwistedHeckeType",
+  "New.TwistedHecke.FrobeniusFactors": "Lib.Adelic.Counting",
+  "New.TwistedHecke.InterlacingCone": "Lib.Adelic.Counting",
+  "New.TwistedHecke.RootLemma": "Lib.Adelic.RootLemma",
+  "New.TwistedHecke.TwistingData": "Lib.Adelic.RootLemma",
+  "New.Weil.FockCoeffDecay": "New.Weil.Separation",
+  "Statements": "Statements"
+ },
+ "groups": {
+  "Lib.Weil.AdditiveCharBasic": [
+   "Lib.Adelic.Adeles.AdditiveCharBasic"
+  ],
+  "Lib.Adelic.AdditiveCharDefs": [
+   "Lib.Adelic.Adeles.AdditiveCharDefs"
+  ],
+  "Lib.Adelic.AdeleIdempotent": [
+   "Lib.Adelic.Adeles.AdeleIdempotent"
+  ],
+  "Lib.Weil.AdeleSelfDual": [
+   "Lib.Adelic.Adeles.AdeleSelfDual"
+  ],
+  "Lib.Adelic.AdeleTopology": [
+   "Lib.Adelic.Adeles.AdeleTopology"
+  ],
+  "Lib.Adelic.AdelicModulus": [
+   "Lib.Adelic.Adeles.AdelicAbs",
+   "Lib.Weil.Construction.GaussSumSign",
+   "Lib.General.Algebra.InertResidue",
+   "Lib.Adelic.Adeles.AdelicModulus"
+  ],
+  "Lib.Adelic.CoprimeValuation": [
+   "Lib.Adelic.Adeles.CoprimeValuation"
+  ],
+  "New.Filling.ExtensionByZero": [
+   "Lib.General.NumberTheory.LocalProduct",
+   "Lib.Adelic.Adeles.ExtensionByZero"
+  ],
+  "New.Filling.FinitePlaceDensity": [
+   "Lib.Adelic.Adeles.FinitePlaceDensity"
+  ],
+  "Lib.Adelic.IdeleHilbert90": [
+   "Lib.Adelic.Adeles.IdeleHilbert90"
+  ],
+  "Lib.Adelic.LocalComponents": [
+   "Lib.Adelic.Adeles.LocalComponents"
+  ],
+  "Lib.Adelic.MatrixApprox": [
+   "Lib.Adelic.Adeles.MatrixApprox"
+  ],
+  "Lib.GaloisRep.NormAbsValue": [
+   "Lib.Adelic.Adeles.NormAbsValue"
+  ],
+  "Lib.Weil.OneSidedPoisson": [
+   "Lib.Adelic.Adeles.OneSidedPoisson"
+  ],
+  "Lib.Adelic.RationalPoints": [
+   "Lib.Adelic.Adeles.RationalPoints"
+  ],
+  "Lib.PadicHodge.BaseLevel": [
+   "Lib.Adelic.CuspForms.BaseLevel"
+  ],
+  "New.Weil.ClassReps": [
+   "Lib.Adelic.CuspForms.ClassReps"
+  ],
+  "Lib.DiscreteSeries.DeltaForms": [
+   "Lib.Adelic.CuspForms.DeltaForms"
+  ],
+  "Lib.DiscreteSeries.LevelForms": [
+   "Lib.DiscreteSeries.Holomorphic.HolomorphicMinor",
+   "Lib.DiscreteSeries.Holomorphic.HolomorphicChamber",
+   "Lib.Adelic.CuspForms.LevelForms"
+  ],
+  "Lib.GaloisRep.Petersson": [
+   "Lib.Adelic.CuspForms.Petersson"
+  ],
+  "Lib.Weil.RealConvolution": [
+   "Lib.Adelic.CuspForms.Definite",
+   "Lib.Adelic.CuspForms.RealConvolution"
+  ],
+  "Lib.GaloisRep.ReproducingKernel": [
+   "Lib.Adelic.CuspForms.CuspStep",
+   "Lib.Adelic.CuspForms.ReproducingKernel"
+  ],
+  "Lib.DiscreteSeries.SmoothFormPairing": [
+   "Lib.Adelic.CuspForms.SmoothFormPairing"
+  ],
+  "Lib.GaloisRep.WeightParameter": [
+   "Lib.Adelic.CuspForms.WeightParameter"
+  ],
+  "Lib.DiscreteSeries.ClassMean": [
+   "Lib.Adelic.Hecke.ClassMean"
+  ],
+  "Lib.GaloisRep.Landherr": [
+   "Lib.Adelic.Landherr.SumOfTwoSquares",
+   "Lib.Adelic.Landherr.Landherr"
+  ],
+  "New.Weil.WeakApprox": [
+   "Lib.Adelic.Landherr.WeakApprox"
+  ],
+  "Lib.DiscreteSeries.BesselSubgroup": [
+   "Lib.Adelic.Poincare.BesselSubgroup"
+  ],
+  "Lib.DiscreteSeries.Unimodular": [
+   "Lib.Adelic.QuotientMeasure.Packing",
+   "Lib.Adelic.QuotientMeasure.Unimodular"
+  ],
+  "Lib.Weil.Defs": [
+   "Lib.Adelic.Reduction.Defs"
+  ],
+  "Lib.Weil.FirstMinimum": [
+   "Lib.Adelic.Reduction.FirstMinimum"
+  ],
+  "Lib.Weil.MahlerForms": [
+   "Lib.Adelic.Reduction.MahlerForms"
+  ],
+  "Lib.Weil.MinkowskiSecond": [
+   "Lib.Adelic.Reduction.MinkowskiSecond"
+  ],
+  "Lib.Weil.MassBasic": [
+   "Lib.Adelic.Transference.MassBasic"
+  ],
+  "Lib.Adelic.CongruenceLevel": [
+   "Lib.Adelic.Unitary.CongruenceLevel"
+  ],
+  "Lib.Weil.SpaceBasic": [
+   "Lib.Adelic.Unitary.SpaceBasic"
+  ],
+  "Lib.Adelic.SpaceDefs": [
+   "Lib.Adelic.Unitary.SpaceDefs"
+  ],
+  "Lib.Adelic.SpaceGram": [
+   "Lib.Adelic.Unitary.SpaceGram"
+  ],
+  "Lib.DiscreteSeries.FrameAction": [
+   "Lib.Adelic.Witt.FrameAction"
+  ],
+  "Lib.Weil.SpaceOperations": [
+   "Lib.Adelic.Witt.SpaceOperations"
+  ],
+  "Lib.ClassField.PolarLandau": [
+   "Lib.Analytic.Landau.PolarLandau"
+  ],
+  "Lib.ClassField.FormalHeight": [
+   "Lib.CM.MainTheorem.ConjugateCurve",
+   "Lib.CM.FormalGroup.FormalHeight"
+  ],
+  "Lib.ClassField.QuadraticZeta": [
+   "Lib.CM.Genus.QuadraticZeta"
+  ],
+  "Lib.ClassField.LogTheta": [
+   "Lib.CM.KroneckerLimit.LogTheta"
+  ],
+  "Lib.ClassField.IntegralParameter": [
+   "Lib.CM.LocalHeight.IntegralParameter"
+  ],
+  "Lib.ClassField.IsogenyIntegrality": [
+   "Lib.CM.LocalHeight.IsogenyIntegrality"
+  ],
+  "Lib.Adelic.CurveTheta": [
+   "Lib.CM.Sigma.CurveTheta"
+  ],
+  "New.Weil.PadicSeriesDefs": [
+   "Lib.CM.Sigma.PadicSeriesDefs"
+  ],
+  "Lib.Adelic.SigmaFunction": [
+   "Lib.CM.Sigma.SigmaFunction"
+  ],
+  "Lib.GaloisRep.FrobeniusFilter": [
+   "Lib.ClassField.Chebotarev.FrobeniusFilter"
+  ],
+  "Lib.ClassField.CupProduct": [
+   "Lib.ClassField.GaloisCohomology.CupProduct"
+  ],
+  "Lib.Adelic.CyclicClass": [
+   "Lib.ClassField.Places.GaloisDefs",
+   "Lib.ClassField.GaloisCohomology.ContinuousCocycles",
+   "Lib.ClassField.GaloisCohomology.CyclicClass"
+  ],
+  "Lib.ClassField.DiscreteUnits": [
+   "Lib.ClassField.GaloisCohomology.DiscreteUnits"
+  ],
+  "Lib.ClassField.SylowReduction": [
+   "Lib.ClassField.GaloisCohomology.SylowReduction"
+  ],
+  "Lib.PadicHodge.TameCocycles": [
+   "Lib.ClassField.GreenbergWiles.SelmerBasic",
+   "Lib.ClassField.GreenbergWiles.EquivariantUnits",
+   "Lib.ClassField.GreenbergWiles.SplitPrimeReciprocity",
+   "Lib.ClassField.GreenbergWiles.ProjectiveCount",
+   "Lib.ClassField.GreenbergWiles.GreenbergWilesBound",
+   "Lib.ClassField.GreenbergWiles.SelmerRelations",
+   "Lib.ClassField.GreenbergWiles.SelmerMembership",
+   "Lib.ClassField.GaloisCohomology.TameCocycles"
+  ],
+  "Lib.GaloisRep.Avatars": [
+   "Lib.ClassField.Global.Avatars"
+  ],
+  "Lib.GaloisRep.CMNorms": [
+   "Lib.ClassField.Global.CMNorms"
+  ],
+  "Lib.GaloisRep.NormTheorems": [
+   "Lib.ClassField.Global.AlbertBrauerHasseNoether",
+   "Lib.ClassField.Global.ArtinReciprocity",
+   "Lib.ClassField.Global.NormTheorems"
+  ],
+  "Lib.ClassField.ExtendCharacter": [
+   "Lib.ClassField.GreenbergWiles.ExtendCharacter"
+  ],
+  "Lib.Adelic.CharacterDefs": [
+   "Lib.ClassField.HeckeCharacter.CharacterDefs"
+  ],
+  "Lib.ClassField.CharacterLevels": [
+   "Lib.ClassField.HeckeCharacter.CharacterLevels"
+  ],
+  "New.Weil.LevelModulus": [
+   "Lib.ClassField.HeckeCharacter.LevelModulus"
+  ],
+  "New.Filling.LineParabolic": [
+   "Lib.ClassField.HeckeCharacter.LineParabolic"
+  ],
+  "Lib.ClassField.SplittingCharOnU1": [
+   "Lib.ClassField.HeckeCharacter.CharacterConjugates",
+   "Lib.ClassField.HeckeCharacter.SplittingCharOnU1"
+  ],
+  "Lib.ClassField.AutCharLFunction": [
+   "Lib.ClassField.HeckeL.AutCharLFunction"
+  ],
+  "Lib.Adelic.EulerProduct": [
+   "Lib.ClassField.HeckeL.EulerProduct"
+  ],
+  "Lib.Adelic.HeckeContinuation": [
+   "Lib.ClassField.HeckeL.IdelicThetaSum",
+   "Lib.ClassField.HeckeL.HeckeContinuation"
+  ],
+  "Lib.GaloisRep.ArtinMapAtPlace": [
+   "Lib.ClassField.Local.ArtinMapAtPlace"
+  ],
+  "Lib.ClassField.RealPlaceSymbols": [
+   "Lib.Adelic.Cartan.ProjectiveModules",
+   "Lib.ClassField.GaloisCohomology.CyclicNorm",
+   "Lib.ClassField.LocalDuality.RealPlaceSymbols"
+  ],
+  "Lib.GaloisRep.AdeleNorm": [
+   "Lib.ClassField.Places.AdeleNorm"
+  ],
+  "Lib.GaloisRep.Conjugation": [
+   "Lib.ClassField.Places.Conjugation"
+  ],
+  "Lib.ClassField.CyclotomicCharacter": [
+   "Lib.ClassField.Places.CyclotomicCharacter"
+  ],
+  "Lib.ClassField.DecompositionLocal": [
+   "Lib.ClassField.Places.DecompositionLocal"
+  ],
+  "Lib.ClassField.FrobeniusOnRoots": [
+   "Lib.ClassField.Places.FrobeniusOnRoots"
+  ],
+  "Lib.Adelic.LocalDefs": [
+   "Lib.ClassField.Places.LocalDefs"
+  ],
+  "Lib.ClassField.PadicDecomposition": [
+   "Lib.ClassField.Places.PadicDecomposition"
+  ],
+  "Lib.Adelic.Places": [
+   "Lib.ClassField.Places.Places"
+  ],
+  "Lib.ClassField.ProfiniteGalois": [
+   "Lib.ClassField.Places.ProfiniteGalois"
+  ],
+  "Lib.ClassField.SelmerDefs": [
+   "Lib.General.NumberTheory.StableLattice",
+   "Lib.ClassField.Places.SelmerDefs"
+  ],
+  "Lib.ClassField.TameInertia": [
+   "Lib.ClassField.Places.TameInertia"
+  ],
+  "Lib.ClassField.UnramifiedCharacters": [
+   "Lib.ClassField.Places.LocalFrobenius",
+   "Lib.ClassField.Places.LocalExtension",
+   "Lib.ClassField.Places.UnramifiedCharacters"
+  ],
+  "Lib.Cohomology.Contraction": [
+   "Lib.Cohomology.Duality.Contraction"
+  ],
+  "Lib.Cohomology.AcyclicTests": [
+   "Lib.Cohomology.Etale.TestEnvelope",
+   "Lib.Cohomology.Etale.FilteredColimits",
+   "Lib.Cohomology.Etale.AcyclicTests"
+  ],
+  "Lib.Cohomology.BijectiveComparisons": [
+   "Lib.General.Algebra.DisjointUnions",
+   "Lib.Cohomology.Etale.BijectiveComparisons"
+  ],
+  "Lib.Cohomology.ConnectedComponents": [
+   "Lib.Cohomology.Etale.ContinuityAtlas",
+   "Lib.General.Algebra.TensorCohomology",
+   "Lib.Cohomology.Etale.ConnectedComponents"
+  ],
+  "Lib.Cohomology.Defs": [
+   "Lib.Cohomology.Etale.Defs"
+  ],
+  "Lib.Cohomology.EllAdicCohomology": [
+   "Lib.Cohomology.Etale.EllAdicCohomology"
+  ],
+  "Lib.Cohomology.Functoriality": [
+   "Lib.Cohomology.Etale.Functoriality"
+  ],
+  "Lib.Cohomology.Partitions": [
+   "Lib.Cohomology.Etale.Partitions"
+  ],
+  "Lib.Cohomology.RelativeChains": [
+   "Lib.Cohomology.Etale.Relations",
+   "Lib.Cohomology.Etale.RelativeChains"
+  ],
+  "New.Weil.TestRings": [
+   "Lib.Cohomology.Etale.TestCohomology",
+   "Lib.Cohomology.Etale.TestRings"
+  ],
+  "Lib.Cohomology.CupProduct": [
+   "Lib.Cohomology.Hodge.CupProduct"
+  ],
+  "Lib.Cohomology.HodgeSite": [
+   "Lib.Cohomology.Hodge.HodgeSite"
+  ],
+  "Lib.Cohomology.PointClass": [
+   "Lib.Cohomology.Hodge.DepthVanishing",
+   "Lib.Cohomology.Hodge.Kunneth",
+   "Lib.Cohomology.Hodge.GrothendieckSymbol",
+   "Lib.Cohomology.WoodsHole.IsolatedCoincidences",
+   "Lib.Cohomology.Hodge.PointClass"
+  ],
+  "Lib.Cohomology.WitnessCocycles": [
+   "Lib.Cohomology.Hodge.WitnessCocycles"
+  ],
+  "Lib.Cohomology.GaloisRep": [
+   "Lib.Cohomology.PointClass.LinePointClass",
+   "Lib.Cohomology.Hodge.DiagonalClass",
+   "Lib.Cohomology.Hodge.FixedPointFormula",
+   "Lib.Shimura.Eigenspace.EigenQuotient",
+   "Lib.Cohomology.PointClass.PointClassProduct",
+   "Lib.Cohomology.PointClass.ProjectivePointClass",
+   "Lib.PadicComparison.HodgeTate.HodgeTateVectors",
+   "Lib.Cohomology.PointClass.GaloisRep"
+  ],
+  "Lib.Cohomology.HomogeneousCoords": [
+   "Lib.Cohomology.PointClass.HomogeneousCoords"
+  ],
+  "Lib.Cohomology.LocusEquations": [
+   "Lib.Cohomology.PointClass.LocusEquations"
+  ],
+  "Lib.Cohomology.LineChernClass": [
+   "Lib.Cohomology.ProjectiveLine.LineChernClass"
+  ],
+  "Lib.Cohomology.NormalizationPullback": [
+   "Lib.Cohomology.Kunneth.LerayHirschBasis",
+   "Lib.Cohomology.ProjectiveLine.NormalizationPullback"
+  ],
+  "Lib.Cohomology.PerfectLine": [
+   "Lib.Cohomology.ProjectiveLine.PerfectLine"
+  ],
+  "Lib.Cohomology.PointwiseTests": [
+   "Lib.Cohomology.ProperBaseChange.FieldExtension",
+   "Lib.Cohomology.ProperBaseChange.PointwiseTests"
+  ],
+  "Lib.Cohomology.ValuativeDensity": [
+   "Lib.Cohomology.ProperBaseChange.ValuativeDensity"
+  ],
+  "Lib.PadicHodge.OddShaBound": [
+   "Lib.Cyclotomic.Kolyvagin.ComponentBound",
+   "Lib.Cyclotomic.OddSha.OddShaBound"
+  ],
+  "Lib.GaloisRep.GaussSums": [
+   "Lib.Cyclotomic.Voronoi.StickelbergerInteger",
+   "Lib.Cyclotomic.Kolyvagin.Components",
+   "Lib.ClassField.Places.LocalBasics",
+   "Lib.Cyclotomic.Stickelberger.GaussSums"
+  ],
+  "Lib.DiscreteSeries.RealMeasures": [
+   "Lib.DiscreteSeries.Bessel.RealMeasures"
+  ],
+  "Lib.DiscreteSeries.UnipotentCoords": [
+   "Lib.Adelic.Poincare.MiddleGroupEmbedding",
+   "Lib.DiscreteSeries.Bessel.UnipotentCoords"
+  ],
+  "Lib.DiscreteSeries.BigCell": [
+   "Lib.DiscreteSeries.Bruhat.BigCell"
+  ],
+  "Lib.DiscreteSeries.ComplexPlace": [
+   "Lib.DiscreteSeries.Bruhat.ComplexPlace"
+  ],
+  "Lib.Weil.EichlerMaps": [
+   "Lib.DiscreteSeries.Bruhat.EichlerMaps"
+  ],
+  "Lib.DiscreteSeries.FloorGroups": [
+   "Lib.DiscreteSeries.Bruhat.FloorGroups"
+  ],
+  "Lib.GaloisRep.LaurentAlternants": [
+   "Lib.DiscreteSeries.Character.LaurentAlternants"
+  ],
+  "New.Filling.BesselSchurBound": [
+   "Lib.DiscreteSeries.CuspKernel.BesselSchurBound"
+  ],
+  "Lib.DiscreteSeries.CircleMean": [
+   "Lib.DiscreteSeries.CuspKernel.CircleMean"
+  ],
+  "Lib.DiscreteSeries.SchurOrthogonality": [
+   "Lib.DiscreteSeries.FlenstedJensen.PsiBasic",
+   "Lib.DiscreteSeries.CuspKernel.BumpConvolution",
+   "Lib.General.LinearAlgebra.BlockDiagonalDet",
+   "Lib.DiscreteSeries.FlenstedJensen.PsiDecay",
+   "Lib.DiscreteSeries.FlenstedJensen.PsiSmooth",
+   "Lib.DiscreteSeries.FlenstedJensen.CasimirOnPsi",
+   "Lib.DiscreteSeries.FlenstedJensen.KTypeProjection",
+   "Lib.DiscreteSeries.CuspKernel.SchurOrthogonality"
+  ],
+  "Lib.DiscreteSeries.FlenstedJensenInvariance": [
+   "Lib.DiscreteSeries.FlenstedJensen.FlenstedJensenInvariance"
+  ],
+  "Lib.DiscreteSeries.RepresentationDefs": [
+   "Lib.DiscreteSeries.FlenstedJensen.RepresentationDefs"
+  ],
+  "Lib.DiscreteSeries.TailBounds": [
+   "Lib.DiscreteSeries.FlenstedJensen.TailBounds"
+  ],
+  "Lib.DiscreteSeries.CompactDualMeasure": [
+   "Lib.DiscreteSeries.Haar.SkewCoordinates",
+   "Lib.DiscreteSeries.Haar.LogDerivative",
+   "Lib.DiscreteSeries.Haar.CompactDualMeasure"
+  ],
+  "Lib.DiscreteSeries.HaarMass": [
+   "Lib.DiscreteSeries.FlenstedJensen.RightDerivatives",
+   "Lib.Adelic.QuotientMeasure.IwasawaIntegration",
+   "Lib.Adelic.QuotientMeasure.CocompactIntegrable",
+   "Lib.DiscreteSeries.Haar.HaarColumnChart",
+   "Lib.DiscreteSeries.Haar.SphereFibreIntegral",
+   "Lib.DiscreteSeries.Haar.HaarMass"
+  ],
+  "Lib.DiscreteSeries.RegularRepL2": [
+   "Lib.DiscreteSeries.Haar.RegularRepL2"
+  ],
+  "Lib.DiscreteSeries.UnitaryNorm": [
+   "Lib.DiscreteSeries.Haar.UnitaryNorm"
+  ],
+  "Lib.DiscreteSeries.HolomorphicExtension": [
+   "Lib.DiscreteSeries.Holomorphic.HolomorphicExtension"
+  ],
+  "Lib.DiscreteSeries.MinorEquivariance": [
+   "Lib.DiscreteSeries.Holomorphic.MinorEquivariance"
+  ],
+  "Lib.DiscreteSeries.AnalyticVectors": [
+   "Lib.DiscreteSeries.Rigidity.CasimirGrowth",
+   "Lib.DiscreteSeries.Rigidity.AnalyticVectors"
+  ],
+  "Lib.DiscreteSeries.CasimirBound": [
+   "Lib.DiscreteSeries.Rigidity.CasimirBound"
+  ],
+  "Lib.DiscreteSeries.HighestVectors": [
+   "Lib.DiscreteSeries.Rigidity.HighestVectors"
+  ],
+  "Lib.DiscreteSeries.KernelFixes": [
+   "Lib.DiscreteSeries.Rigidity.KernelFixes"
+  ],
+  "Lib.DiscreteSeries.JointHarmonicUnique": [
+   "Lib.DiscreteSeries.Theta.FischerDecomposition",
+   "Lib.DiscreteSeries.Theta.JointHarmonicUnique"
+  ],
+  "Lib.DiscreteSeries.LocalThetaCorrespondence": [
+   "Lib.DiscreteSeries.Theta.HoweArgument",
+   "Lib.DiscreteSeries.Theta.LocalThetaCorrespondence"
+  ],
+  "Lib.DiscreteSeries.OscillatorDefs": [
+   "Lib.DiscreteSeries.Theta.OscillatorDefs"
+  ],
+  "Lib.DiscreteSeries.Branching": [
+   "Lib.GLn.Branching.Branching"
+  ],
+  "Lib.DiscreteSeries.BranchingVector": [
+   "Lib.GLn.Branching.BranchingVector"
+  ],
+  "Lib.DiscreteSeries.ClassSum": [
+   "Lib.GLn.Dual.MixedCartan",
+   "Lib.GLn.Dual.ClassSum"
+  ],
+  "Lib.DiscreteSeries.Bordering": [
+   "Lib.GLn.SchurModule.Bordering"
+  ],
+  "Lib.Weil.Gram": [
+   "Lib.GLn.SchurModule.Hook",
+   "Lib.GLn.SchurModule.Gram"
+  ],
+  "Lib.DiscreteSeries.Nabla": [
+   "Lib.GLn.SchurModule.Nabla"
+  ],
+  "Lib.Weil.RationalRep": [
+   "Lib.GLn.SchurModule.Interlacing",
+   "Lib.GLn.SchurModule.MinorBasis",
+   "Lib.GLn.SchurModule.SchurMatrix",
+   "Lib.GLn.SchurModule.RationalRep"
+  ],
+  "Lib.DiscreteSeries.SchurOrthogonality2": [
+   "Lib.GLn.SchurModule.SchurContinuous",
+   "Lib.GLn.SchurModule.SchurOrthogonality"
+  ],
+  "Lib.DiscreteSeries.WeightRepBasic": [
+   "Lib.GLn.SchurModule.WeightRepBasic"
+  ],
+  "Lib.GaloisRep.BaseChangeEigenchar": [
+   "Lib.GaloisRep.BaseChange.TwistedTraceSum",
+   "Lib.GaloisRep.BaseChange.BaseChangeWeight",
+   "Lib.GaloisRep.BaseChange.BaseChangeLevel",
+   "Lib.GaloisRep.BaseChange.UnitaryRoots",
+   "Lib.GaloisRep.BaseChange.WeilDataExtension",
+   "Lib.GaloisRep.BaseChange.BaseChangeEigenchar"
+  ],
+  "Lib.GaloisRep.BaseChangePlaces": [
+   "Lib.GaloisRep.BaseChange.BaseChangePlaces"
+  ],
+  "Lib.Adelic.OrbitClassSum": [
+   "Lib.GaloisRep.BaseChange.OrbitClassSum"
+  ],
+  "Lib.GaloisRep.ParahoricColumns": [
+   "Lib.LocalGL.Iwahori.HeckeCounts",
+   "Lib.GaloisRep.BaseChange.ParahoricColumns"
+  ],
+  "Lib.GaloisRep.ThetaLift": [
+   "Lib.LocalGL.Tadic.ChainLemma",
+   "Lib.GaloisRep.EvenRank.ThetaLift"
+  ],
+  "Lib.Adelic.TameDescent": [
+   "Lib.GaloisRep.Hilbert90.TameDescent"
+  ],
+  "Lib.Adelic.UnitaryHilbert90": [
+   "Lib.GaloisRep.Hilbert90.UnitaryHilbert90"
+  ],
+  "Lib.GaloisRep.EigencharCompatibility": [
+   "Lib.GaloisRep.LocalGlobal.EigencharCompatibility"
+  ],
+  "Lib.GaloisRep.LabelCompatibility": [
+   "Lib.GaloisRep.LocalGlobal.ParahoricTypeLabel",
+   "Lib.GaloisRep.BaseChange.BaseChangeLabel",
+   "Lib.GaloisRep.LocalGlobal.LabelCompatibility"
+  ],
+  "Lib.GaloisRep.LocalTranslates": [
+   "Lib.Adelic.CuspForms.FormRepresentation",
+   "Lib.GaloisRep.LocalGlobal.LocalTranslates"
+  ],
+  "Lib.GaloisRep.AvatarCompatibility": [
+   "Lib.Shimura.TraceFormula.DefiniteTrace",
+   "Lib.DiscreteSeries.Character.WeylTrace",
+   "Lib.LocalGL.Iwahori.ExponentOfLabel",
+   "Lib.Shimura.Transfer.PELDataExistence",
+   "Lib.ClassField.Grunwald.Grunwald",
+   "Lib.GaloisRep.Main.AttachedDeterminant",
+   "Lib.GaloisRep.Division.MultiplicityFreeSum",
+   "Lib.GaloisRep.LocalGlobal.TameExponent",
+   "Lib.Shimura.CongruenceRelation.CongruenceStep",
+   "Lib.Shimura.IntegralModel.ModelExistence",
+   "Lib.GaloisRep.HodgeTateCocharacter.HodgeTateCocharacter",
+   "Lib.GaloisRep.Main.SeedRepresentation",
+   "Lib.GaloisRep.Main.AvatarCompatibility"
+  ],
+  "Lib.GaloisRep.HeckeOperatorOfFunction": [
+   "Lib.GaloisRep.Main.HeckeOperatorOfFunction"
+  ],
+  "Lib.ClassField.LocalEmbedding": [
+   "Lib.GaloisRep.Main.LocalEmbedding"
+  ],
+  "Lib.GaloisRep.SphericalAllRanks": [
+   "Lib.GaloisRep.Main.SphericalAllRanks"
+  ],
+  "Lib.GaloisRep.SplitPlaceCount": [
+   "Lib.GaloisRep.Main.AttachedDefs",
+   "Lib.GaloisRep.Main.SplitPlaceCount"
+  ],
+  "Lib.GaloisRep.FibreSum": [
+   "Lib.GaloisRep.Pseudocharacter.SemisimpleReps",
+   "Lib.GaloisRep.Pseudocharacter.FibreSum"
+  ],
+  "Lib.GaloisRep.WeightCongruence": [
+   "Lib.GaloisRep.WeightCongruence.WeightCongruence"
+  ],
+  "Lib.ClassField.AdicRingHomExt": [
+   "Lib.General.Algebra.AdicRingHomExt"
+  ],
+  "Lib.Cohomology.CechDescent": [
+   "Lib.General.Algebra.CechDescent"
+  ],
+  "Lib.DiscreteSeries.FittingDuality": [
+   "Lib.General.Algebra.FittingDuality"
+  ],
+  "Lib.PadicHodge.GeneralisedIndex": [
+   "Lib.General.Algebra.GeneralisedIndex"
+  ],
+  "Lib.ClassField.JetChainRule": [
+   "Lib.General.Algebra.JetChainRule"
+  ],
+  "Lib.Weil.LatticeComplement": [
+   "Lib.Adelic.Witt.MaximalCompact",
+   "Lib.General.Algebra.LatticeComplement"
+  ],
+  "Lib.DiscreteSeries.RingActions": [
+   "Lib.General.Algebra.RingActions"
+  ],
+  "Lib.ClassField.SuccessiveApprox": [
+   "Lib.General.Algebra.SuccessiveApprox"
+  ],
+  "Lib.Adelic.TangentNakayama": [
+   "Lib.General.Algebra.TangentNakayama"
+  ],
+  "Lib.DiscreteSeries.ZerosCostDegree": [
+   "Lib.General.Algebra.ZerosCostDegree"
+  ],
+  "Lib.Adelic.FundamentalDomain": [
+   "Lib.Adelic.QuotientMeasure.PeriodicMean",
+   "Lib.General.Analysis.FundamentalDomain"
+  ],
+  "Lib.Adelic.HolomorphicIntegral": [
+   "Lib.General.Analysis.HolomorphicIntegral"
+  ],
+  "Lib.Adelic.OstrowskiTaussky": [
+   "Lib.General.Analysis.OstrowskiTaussky"
+  ],
+  "Lib.Adelic.ZpowSum": [
+   "Lib.General.Analysis.ZpowSum"
+  ],
+  "Lib.Adelic.Average": [
+   "Lib.General.Combinatorics.Average"
+  ],
+  "Lib.Cohomology.ChartedSchemes": [
+   "Lib.General.Geometry.ChartedSchemes"
+  ],
+  "Lib.Shimura.ConstantFunctions": [
+   "Lib.General.Geometry.ConstantFunctions"
+  ],
+  "Lib.Cohomology.EtaleCharts": [
+   "Lib.Cohomology.Etale.GluingWithSupports",
+   "Lib.General.Geometry.EtaleCharts"
+  ],
+  "Lib.GaloisRep.Lefschetz": [
+   "Lib.Shimura.TraceFormula.MarkedEqDefinite",
+   "Lib.General.Geometry.SmoothnessCriterion",
+   "Lib.General.Geometry.Lefschetz"
+  ],
+  "Lib.Cohomology.LocalTerms": [
+   "Lib.General.Geometry.LocalTerms"
+  ],
+  "Lib.Cohomology.OpenSubfunctors": [
+   "Lib.Cohomology.Etale.ClosedClasses",
+   "Lib.General.Geometry.OpenSubfunctors"
+  ],
+  "Lib.Shimura.PointFunctions": [
+   "Lib.General.Geometry.PointFunctions"
+  ],
+  "Lib.Shimura.ProjectiveSpace": [
+   "Lib.General.Geometry.ProjectiveSpace"
+  ],
+  "Lib.Cohomology.ProperAtlas": [
+   "Lib.General.Geometry.ProperAtlas"
+  ],
+  "Lib.Cohomology.ProperSchemes": [
+   "Lib.Cohomology.ProperBaseChange.KummerLine",
+   "Lib.Cohomology.ProperBaseChange.SubringSplitting",
+   "Lib.Cohomology.Etale.ProperFunctors",
+   "Lib.Cohomology.ProperBaseChange.ProperBaseChange",
+   "Lib.General.Geometry.ProperSchemes"
+  ],
+  "Lib.Shimura.ReducedClosure": [
+   "Lib.General.Geometry.ReducedClosure"
+  ],
+  "Lib.Shimura.SeparatingPoints": [
+   "Lib.Shimura.Uniformisation.HolomorphicFamily",
+   "Lib.General.Geometry.SeparatingPoints"
+  ],
+  "Lib.Adelic.ArtinDefs": [
+   "Lib.General.Groups.ArtinDefs"
+  ],
+  "Lib.DiscreteSeries.CompactMean": [
+   "Lib.General.Groups.CompactMean"
+  ],
+  "Lib.Adelic.IrreducibleCharacters": [
+   "Lib.General.Groups.VirtualCharacters",
+   "Lib.General.Groups.CentralProjections",
+   "Lib.General.Groups.IrreducibleCharacters"
+  ],
+  "Lib.Adelic.RatModInt": [
+   "Lib.General.Groups.RatModInt"
+  ],
+  "Lib.Adelic.ValuationPair": [
+   "Lib.General.Groups.ValuationPair"
+  ],
+  "Lib.Adelic.AdelicRingDefs": [
+   "Lib.General.LinearAlgebra.AdelicRingDefs"
+  ],
+  "Lib.Adelic.Base": [
+   "Lib.General.LinearAlgebra.Base"
+  ],
+  "New.Weil.BlockMatrices": [
+   "Lib.General.LinearAlgebra.BlockMatrices"
+  ],
+  "Lib.DiscreteSeries.ColumnLattices": [
+   "Lib.Adelic.Hecke.HeckeBasic",
+   "Lib.General.LinearAlgebra.ColumnLattices"
+  ],
+  "Lib.DiscreteSeries.CommonEigenvectors": [
+   "Lib.General.LinearAlgebra.CommonEigenvectors"
+  ],
+  "Lib.DiscreteSeries.ExpSurjective": [
+   "Lib.General.LinearAlgebra.ExpSurjective"
+  ],
+  "Lib.Adelic.ExtendColumns": [
+   "Lib.General.LinearAlgebra.ExtendColumns"
+  ],
+  "Lib.Adelic.HaarUnique": [
+   "Lib.General.LinearAlgebra.HaarUnique"
+  ],
+  "Lib.Adelic.HuaIntegral": [
+   "Lib.General.LinearAlgebra.HuaIntegral"
+  ],
+  "Lib.DiscreteSeries.PartialDerivComm": [
+   "Lib.General.LinearAlgebra.PartialDerivComm"
+  ],
+  "New.Filling.PartnerAlgebra": [
+   "Lib.General.LinearAlgebra.PartnerAlgebra"
+  ],
+  "Lib.DiscreteSeries.SmoothMatrices": [
+   "Lib.General.LinearAlgebra.SmoothMatrices"
+  ],
+  "Lib.DiscreteSeries.SubmersionZero": [
+   "Lib.General.LinearAlgebra.SubmersionZero"
+  ],
+  "Lib.Adelic.ValuedMatrix": [
+   "Lib.General.LinearAlgebra.ValuedMatrix"
+  ],
+  "Lib.DiscreteSeries.HaarModulus": [
+   "Lib.General.Measure.HaarModulus"
+  ],
+  "Lib.DiscreteSeries.Place": [
+   "Lib.General.Measure.Place"
+  ],
+  "Lib.DiscreteSeries.SubgroupIntegral": [
+   "Lib.General.Measure.SubgroupIntegral"
+  ],
+  "Lib.Adelic.Embeddings": [
+   "Lib.General.NumberTheory.Embeddings"
+  ],
+  "Lib.Adelic.QuadField": [
+   "Lib.General.NumberTheory.QuadField"
+  ],
+  "Lib.Adelic.QuadFieldSplitting": [
+   "Lib.General.NumberTheory.QuadFieldSplitting"
+  ],
+  "Lib.GaloisRep.UpsilonValues": [
+   "Lib.General.NumberTheory.UpsilonValues"
+  ],
+  "Lib.PadicHodge.Valuation": [
+   "Lib.General.NumberTheory.Valuation"
+  ],
+  "Lib.GaloisRep.ZeroSymmetry": [
+   "Lib.General.NumberTheory.ProcyclicImage",
+   "Lib.General.NumberTheory.ClassNumberBound",
+   "Lib.General.Algebra.SumOverUnits",
+   "Lib.General.NumberTheory.ZeroSymmetry"
+  ],
+  "New.Filling.LocalDefs": [
+   "Lib.General.Topology.LocalDefs"
+  ],
+  "Lib.Adelic.CuspidalAtScalars": [
+   "Lib.LocalGL.Green.FrobeniusOrbits",
+   "Lib.LocalGL.Green.CuspidalSupport",
+   "Lib.LocalGL.Green.CuspidalAtScalars"
+  ],
+  "Lib.Adelic.CuspidalFunction": [
+   "Lib.LocalGL.Green.InductionMean",
+   "Lib.LocalGL.Green.CuspidalFunction"
+  ],
+  "Lib.Adelic.GreenTau": [
+   "Lib.LocalGL.Green.CuspidalInnerProduct",
+   "Lib.LocalGL.Green.GreenTau"
+  ],
+  "Lib.Adelic.LabelDegree": [
+   "Lib.General.Algebra.FaithfulChar",
+   "Lib.LocalGL.Green.LabelDegree"
+  ],
+  "New.Weil.LabelIdempotents": [
+   "Lib.LocalGL.Green.LabelIdempotents"
+  ],
+  "Lib.Adelic.MackeyFormula": [
+   "Lib.LocalGL.Green.MackeyFormula"
+  ],
+  "Lib.GaloisRep.HeckeOnLineStabiliser": [
+   "Lib.LocalGL.Iwahori.HeckeOnLineStabiliser"
+  ],
+  "Lib.GaloisRep.IwahoriInjective": [
+   "Lib.General.Groups.CyclicSubrep",
+   "Lib.LocalGL.Iwahori.IwahoriConjugation",
+   "Lib.LocalGL.Iwahori.IwahoriInjective"
+  ],
+  "Lib.GaloisRep.SortedExponents": [
+   "Lib.LocalGL.Iwahori.SortedExponents"
+  ],
+  "Lib.Adelic.LabelCharacters": [
+   "Lib.LocalGL.Shintani.LabelCharacters"
+  ],
+  "Lib.GaloisRep.ShintaniLifting": [
+   "Lib.LocalGL.Shintani.ShintaniLifting"
+  ],
+  "Lib.PadicHodge.HeckeAlgebra": [
+   "Lib.LocalGL.TaylorWiles.HeckeAlgebra"
+  ],
+  "Lib.GaloisRep.ChangingSigns": [
+   "Lib.LocalGL.TraceFormula.ChangingSigns"
+  ],
+  "Lib.GaloisRep.TraceComparison": [
+   "Lib.DiscreteSeries.Character.KTypeMultiplicity",
+   "Lib.DiscreteSeries.Character.SectorBound",
+   "Lib.DiscreteSeries.Character.FormalDegree",
+   "Lib.LocalGL.TraceFormula.TraceComparison"
+  ],
+  "Lib.Cohomology.RootSystems": [
+   "Lib.PadicComparison.Completion.RootSystems"
+  ],
+  "Lib.Cohomology.CrystallineEtale": [
+   "Lib.PadicComparison.Crystalline.CrystallineEtale"
+  ],
+  "Lib.Cohomology.CrystallineTests": [
+   "Lib.PadicComparison.Crystalline.CrystallineTests"
+  ],
+  "Lib.Cohomology.PeriodLifting": [
+   "Lib.PadicComparison.Crystalline.PeriodLifting"
+  ],
+  "Lib.Cohomology.TestGenericFibre": [
+   "Lib.PadicComparison.Crystalline.TestGenericFibre"
+  ],
+  "Lib.Cohomology.CrystallineCohomology": [
+   "Lib.PadicComparison.ToricTower.CrystallineLines",
+   "Lib.PadicComparison.Crystalline.CrystallineClasses",
+   "Lib.PadicComparison.Primitive.PrimitivePeriods",
+   "Lib.Cohomology.SmoothBaseChange.SmoothBaseChange",
+   "Lib.PadicComparison.Primitive.PrimitiveComparison",
+   "Lib.PadicComparison.CrystallineFrobenius.DenseRelation",
+   "Lib.PadicComparison.HodgeTate.GaloisWeight",
+   "Lib.PadicComparison.CrystallineFrobenius.CrystallineCohomology"
+  ],
+  "Lib.Cohomology.AlmostAcyclic": [
+   "Lib.PadicComparison.Descent.TestCover",
+   "Lib.PadicComparison.Descent.VDescent",
+   "Lib.PadicComparison.Descent.AlmostAcyclic"
+  ],
+  "Lib.Cohomology.ReductionModP": [
+   "Lib.General.Algebra.MultivariateHensel",
+   "Lib.PadicComparison.Descent.ReductionModP"
+  ],
+  "Lib.Cohomology.IntegrationOverLine": [
+   "Lib.PadicComparison.Duality.MovingKernel",
+   "Lib.PadicComparison.Duality.IntegrationOverLine"
+  ],
+  "Lib.Cohomology.GaloisTwist": [
+   "Lib.PadicComparison.HodgeTate.HodgeTateMap",
+   "Lib.PadicComparison.HodgeTate.GaloisTwist"
+  ],
+  "Lib.Cohomology.GenericFibreTests": [
+   "Lib.PadicComparison.HodgeTate.GenericFibreTests"
+  ],
+  "Lib.Cohomology.HodgeTatePairs": [
+   "Lib.PadicComparison.HodgeTate.HodgeTatePairs"
+  ],
+  "Lib.Cohomology.TiltedTheory": [
+   "Lib.PadicComparison.Primitive.TiltedTheory"
+  ],
+  "Lib.PadicHodge.BlochKato": [
+   "Lib.PadicHodge.Crystalline.PairingDefs",
+   "Lib.PadicHodge.BlochKato.BlochKato"
+  ],
+  "Lib.GaloisRep.LocalCharacters": [
+   "Lib.PadicHodge.Characters.UnramifiedPeriods",
+   "Lib.PadicHodge.Characters.LocalCharacters"
+  ],
+  "Lib.PadicHodge.CrystallineLimit": [
+   "Lib.PadicHodge.BlochKato.CocycleContinuity",
+   "Lib.PadicHodge.WachKisin.PeriodMatrixFrame",
+   "Lib.PadicHodge.PeriodRings.FundamentalKernel",
+   "Lib.PadicHodge.WachKisin.CrystallinePeriodMatrix",
+   "Lib.PadicHodge.Comparison.CrystallineLimit"
+  ],
+  "Lib.ClassField.Defs": [
+   "Lib.PadicHodge.Crystalline.Defs"
+  ],
+  "Lib.PadicHodge.GoodCriterion": [
+   "Lib.PadicHodge.Limit.LocalLimit",
+   "Lib.PadicHodge.Crystalline.GoodCriterion"
+  ],
+  "Lib.PadicHodge.HodgeTateFrame": [
+   "Lib.PadicHodge.Crystalline.HodgeTateFrame"
+  ],
+  "Lib.PadicHodge.Jumps": [
+   "Lib.PadicHodge.Limit.LimitDefs",
+   "Lib.PadicHodge.Crystalline.Jumps"
+  ],
+  "Lib.Adelic.NonUnitalUnits": [
+   "Lib.PadicHodge.Crystalline.NonUnitalUnits"
+  ],
+  "Lib.PadicHodge.RegularityFrobenius": [
+   "Lib.PadicHodge.Crystalline.RegularityFrobenius"
+  ],
+  "Lib.PadicHodge.GaloisLattices": [
+   "Lib.PadicHodge.Herr.GaloisLattices"
+  ],
+  "Lib.PadicHodge.HodgeTateProjectors": [
+   "Lib.PadicHodge.Limit.HodgeTateProjectors"
+  ],
+  "Lib.ClassField.Ainf": [
+   "Lib.PadicHodge.PeriodRings.Ainf"
+  ],
+  "Lib.ClassField.AmaxStructure": [
+   "Lib.PadicHodge.PeriodRings.AmaxStructure"
+  ],
+  "Lib.ClassField.BdR": [
+   "Lib.PadicHodge.PeriodRings.BdR"
+  ],
+  "Lib.ClassField.BdRPlus": [
+   "Lib.PadicHodge.PeriodRings.BdRPlus"
+  ],
+  "Lib.ClassField.CpIntegers": [
+   "Lib.PadicHodge.PeriodRings.CpIntegers"
+  ],
+  "Lib.ClassField.ThetaKernel": [
+   "Lib.PadicHodge.PeriodRings.ThetaKernel"
+  ],
+  "Lib.ClassField.DeRhamFiltration": [
+   "Lib.ClassField.Places.CyclotomicRamification",
+   "Lib.PadicHodge.TateSen.NearOne",
+   "Lib.PadicHodge.TateSen.DeRhamFiltration"
+  ],
+  "Lib.PadicHodge.KisinModuleDefs": [
+   "Lib.PadicHodge.WachGamma.KisinModuleDefs"
+  ],
+  "Lib.PadicHodge.Letters": [
+   "Lib.PadicHodge.WachGamma.Letters"
+  ],
+  "Lib.PadicHodge.ChartScalars": [
+   "Lib.PadicHodge.WachKisin.ChartScalars"
+  ],
+  "Lib.PadicHodge.DeRhamValues": [
+   "Lib.PadicHodge.WachKisin.DeRhamValues"
+  ],
+  "Lib.PadicHodge.HodgeFrame": [
+   "Lib.PadicHodge.WachKisin.HodgeFrame"
+  ],
+  "Lib.PadicHodge.KummerChart": [
+   "Lib.General.Groups.ResidualIrreducibility",
+   "Lib.PadicHodge.WachKisin.KummerChart"
+  ],
+  "Lib.PadicHodge.KummerChartExists": [
+   "Lib.PadicHodge.WachKisin.KummerChartExists"
+  ],
+  "Lib.PadicHodge.PeriodMatrixBasis": [
+   "Lib.PadicHodge.WachKisin.PeriodMatrixBasis"
+  ],
+  "Lib.Shimura.KernelRing": [
+   "Lib.General.Geometry.TensorPowers",
+   "Lib.Shimura.AbelianScheme.KernelRing"
+  ],
+  "Lib.Shimura.Specialisation": [
+   "Lib.Shimura.AbelianScheme.Specialisation"
+  ],
+  "Lib.Shimura.TangentCoords": [
+   "Lib.Shimura.AbelianScheme.TangentCoords"
+  ],
+  "Lib.Shimura.ThetaFamily": [
+   "Lib.Shimura.AbelianScheme.ThetaFamily"
+  ],
+  "Lib.Adelic.CanonicalMultiplier": [
+   "Lib.Shimura.ComplexTheta.CanonicalMultiplier"
+  ],
+  "Lib.Adelic.ThetaDimension": [
+   "Lib.Shimura.ComplexTheta.ThetaDimension"
+  ],
+  "Lib.Shimura.DrinfeldLifting": [
+   "Lib.Shimura.CongruenceRelation.KernelReduction",
+   "Lib.Shimura.Deformation.DrinfeldLifting"
+  ],
+  "Lib.Shimura.PeakContraction": [
+   "Lib.Shimura.GoodReduction.HermitianAction",
+   "Lib.Shimura.GoodReduction.GaussUnfolding",
+   "Lib.Shimura.GoodReduction.PeakContraction"
+  ],
+  "Lib.Shimura.ThetaOrthogonality": [
+   "Lib.Shimura.GoodReduction.ThetaOrthogonality"
+  ],
+  "Lib.Adelic.GroupRingOperators": [
+   "Lib.Shimura.HeckeTower.GroupRingOperators"
+  ],
+  "Lib.GaloisRep.WildType": [
+   "Lib.Shimura.HeckeTower.WildType"
+  ],
+  "Lib.Shimura.GroupBaseChange": [
+   "Lib.Shimura.ThetaModuli.CutOutIdeals",
+   "Lib.Shimura.IntegralModel.GroupBaseChange"
+  ],
+  "Lib.GaloisRep.NeatLevel": [
+   "Lib.Shimura.TraceFormula.TraceFormula",
+   "Lib.Shimura.IntegralModel.NeatLevel"
+  ],
+  "Lib.Shimura.UniversalPoints": [
+   "Lib.Shimura.Uniformisation.BallModel",
+   "Lib.Shimura.ThetaGroup.RigidFibres",
+   "Lib.Shimura.IntegralModel.UniversalPoints"
+  ],
+  "Lib.Shimura.ComplexComparison": [
+   "Lib.Shimura.Uniformisation.ThetaCoords",
+   "Lib.Shimura.ThetaGroup.ComplexComparison"
+  ],
+  "Lib.Shimura.ThetaStructure": [
+   "Lib.Shimura.ThetaGroup.SectionLifts",
+   "Lib.Shimura.ThetaGroup.ThetaStructure"
+  ],
+  "Lib.Shimura.ThetaTorus": [
+   "Lib.Shimura.ThetaModuli.ThetaTorus"
+  ],
+  "Lib.Shimura.UniversalFamily": [
+   "Lib.Shimura.Deformation.TangentBound",
+   "Lib.Shimura.ThetaModuli.FamilyFromPoints",
+   "Lib.Shimura.GoodReduction.ArcReduction",
+   "Lib.Shimura.ThetaModuli.UniversalFamily"
+  ],
+  "Lib.Shimura.NormalGeneration": [
+   "Lib.Shimura.ThetaNormality.NormalGeneration"
+  ],
+  "Lib.GaloisRep.MarkedPairs": [
+   "Lib.Shimura.Transfer.MarkedPairs"
+  ],
+  "Lib.Adelic.Frames": [
+   "Lib.Shimura.Uniformisation.Frames"
+  ],
+  "Lib.Adelic.LieExponential": [
+   "Lib.Shimura.Uniformisation.LieExponential"
+  ],
+  "Lib.Shimura.LiftedIsogenies": [
+   "Lib.Shimura.Uniformisation.LiftedIsogenies"
+  ],
+  "Lib.Shimura.ModelAlongArc": [
+   "Lib.Shimura.ThetaModuli.FlatClosure",
+   "Lib.Shimura.ThetaNormality.RiemannRelation",
+   "Lib.Shimura.Extension.ArcExtension",
+   "Lib.General.Geometry.SerreSaturation",
+   "Lib.Shimura.Uniformisation.AppellHumbert",
+   "Lib.Shimura.Uniformisation.ModelAlongArc"
+  ],
+  "Lib.Adelic.PeriodLattice": [
+   "Lib.Shimura.Uniformisation.ModuliPoint",
+   "Lib.Shimura.Uniformisation.PeriodLattice"
+  ],
+  "Lib.Cohomology.RiemannFormAdelic": [
+   "Lib.Shimura.Uniformisation.RiemannFormAdelic"
+  ],
+  "Lib.Shimura.UniformisationExists": [
+   "Lib.Shimura.Uniformisation.UniformisationExists"
+  ],
+  "New.Weil.SiegelWeilFormula": [
+   "Lib.Weil.Lift.Arrow",
+   "Lib.Weil.Unramified.HeckeTransfer",
+   "Lib.SiegelWeil.Formula.SiegelSets",
+   "Lib.SiegelWeil.Formula.SiegelWeilFormula"
+  ],
+  "New.Weil.ZeroTermHeight": [
+   "Lib.SiegelWeil.Formula.ZeroTermHeight"
+  ],
+  "Lib.Weil.TorusMajorant": [
+   "Lib.SiegelWeil.Mass.TorusMajorant"
+  ],
+  "New.Weil.OneVector": [
+   "Lib.SiegelWeil.OneVector.OneVector"
+  ],
+  "New.Weil.SharpData": [
+   "Lib.General.Groups.IndexOfProduct",
+   "Lib.SiegelWeil.RallisInner.SharpData"
+  ],
+  "New.Weil.AdaptedHom": [
+   "Lib.SiegelWeil.SingularForms.AdaptedHom"
+  ],
+  "New.Weil.SingularForms": [
+   "Lib.SiegelWeil.SingularForms.SingularForms"
+  ],
+  "Lib.Weil.BranchingPeriod": [
+   "Lib.Adelic.CuspForms.HeckePolyEval",
+   "Lib.Adelic.CuspForms.AlgebraicForms",
+   "Lib.General.Algebra.JetRename",
+   "Lib.Weil.CompactLift.BranchingPeriod"
+  ],
+  "New.Weil.RallisFormula": [
+   "Lib.SiegelWeil.Mass.MassRatio",
+   "Lib.Weil.CompactLift.RallisFormula"
+  ],
+  "Lib.Weil.DataProduct": [
+   "Lib.Weil.Construction.DataProduct"
+  ],
+  "Lib.Weil.FiniteMultiplier": [
+   "Lib.Weil.Construction.FiniteMultiplier"
+  ],
+  "Lib.Weil.FiniteVacuum": [
+   "Lib.General.LinearAlgebra.ElementOfMatrix",
+   "Lib.Weil.Construction.AdelicHeisenberg",
+   "Lib.Weil.Construction.FiniteHeisenberg",
+   "Lib.Weil.Construction.FiniteVacuum"
+  ],
+  "Lib.Shimura.FockThetaFunctions": [
+   "Lib.Weil.Construction.ConjugateJetDefs",
+   "Lib.Weil.Construction.FockThetaFunctions"
+  ],
+  "Lib.Adelic.Model": [
+   "Lib.Weil.Construction.Model"
+  ],
+  "Lib.DiscreteSeries.OrthogonalSum": [
+   "Lib.Weil.Construction.WeilOperators",
+   "Lib.Weil.Construction.OrthogonalSum"
+  ],
+  "Lib.Weil.PairDefs": [
+   "Lib.Weil.Construction.PairDefs"
+  ],
+  "Lib.Weil.Projections": [
+   "Lib.Weil.Construction.Projections"
+  ],
+  "Lib.Adelic.SubmoduleNormedSpace": [
+   "Lib.Weil.Construction.SubmoduleNormedSpace"
+  ],
+  "Lib.Weil.ThetaFunctional": [
+   "Lib.Weil.Construction.ThetaFunctional"
+  ],
+  "New.Weil.DatumLevel": [
+   "Lib.Weil.DualPair.DatumLevel"
+  ],
+  "New.Weil.Flip": [
+   "Lib.Weil.DualPair.Flip"
+  ],
+  "New.Weil.FourierCoefficient": [
+   "Lib.Weil.DualPair.FourierCoefficient"
+  ],
+  "New.Weil.KernelDecay": [
+   "Lib.Weil.DualPair.Lift",
+   "Lib.Weil.DualPair.DescentsVanishDef",
+   "Lib.Weil.DualPair.KernelDecay"
+  ],
+  "Lib.Adelic.Kronecker": [
+   "Lib.Weil.DualPair.Kronecker"
+  ],
+  "New.Weil.ModularDataDecay": [
+   "Lib.Weil.DualPair.ModularDataDecay"
+  ],
+  "New.Weil.PairReal": [
+   "Lib.Weil.MixedModel.NameModulus",
+   "Lib.Weil.DualPair.PairReal"
+  ],
+  "New.Weil.PairSplitting": [
+   "Lib.Weil.DualPair.PairSplitting"
+  ],
+  "New.Weil.PairSumNegation": [
+   "Lib.Weil.DualPair.PairSumNegation"
+  ],
+  "New.Weil.ThetaIntegralLaws": [
+   "Lib.ClassField.HeckeCharacter.CharOfDet",
+   "Lib.ClassField.HeckeCharacter.LocalCharacters",
+   "Lib.Weil.DualPair.TwoLineTerms",
+   "Lib.Weil.DualPair.ThetaIntegralLaws"
+  ],
+  "New.Weil.TwoEdgesOnePair": [
+   "Lib.Weil.DualPair.TwoEdgesOnePair"
+  ],
+  "Lib.Weil.EntireTheta": [
+   "Lib.Weil.Fock.RealData",
+   "Lib.Weil.Fock.EntireTheta"
+  ],
+  "Lib.DiscreteSeries.FockHarmonicCoeff": [
+   "Lib.Weil.Fock.FockHarmonicCoeff"
+  ],
+  "Lib.DiscreteSeries.FockTensor": [
+   "Lib.Weil.Fock.FockVacuum",
+   "Lib.Weil.Fock.FockAction",
+   "Lib.Weil.Fock.FockTensor"
+  ],
+  "Lib.DiscreteSeries.MixedFockModel": [
+   "Lib.Weil.Fock.MixedFockModel"
+  ],
+  "Lib.DiscreteSeries.OscillatorPair": [
+   "Lib.Weil.Fock.OscillatorPair"
+  ],
+  "Lib.Adelic.LocalHomUnit": [
+   "Lib.Weil.GaussSum.LocalHomUnit"
+  ],
+  "New.Filling.ShearInvariance": [
+   "Lib.Weil.GaussSum.ShearInvariance"
+  ],
+  "New.Weil.Edge": [
+   "Lib.DiscreteSeries.Theta.JointHarmonicExists",
+   "Lib.Weil.Lift.Edge"
+  ],
+  "New.Weil.Staircase": [
+   "Lib.Weil.Lift.Staircase"
+  ],
+  "Lib.GaloisRep.AdaptedSplitting": [
+   "Lib.Weil.MixedModel.MixedModelIntegrable",
+   "Lib.Weil.MixedModel.ZeroTermLaw",
+   "Lib.Weil.MixedModel.HyperbolicSplitting",
+   "Lib.Weil.MixedModel.AdaptedSplitting"
+  ],
+  "Lib.Weil.AdelicSum": [
+   "Lib.Weil.MixedModel.AdelicSum"
+  ],
+  "New.Weil.EquivariantCoefficients": [
+   "Lib.SiegelWeil.StrongApproximation.EqualRankConstant",
+   "Lib.Weil.MixedModel.EquivariantCoefficients"
+  ],
+  "Lib.Weil.HyperbolicSpace": [
+   "Lib.Weil.MixedModel.HyperbolicSpace"
+  ],
+  "Lib.Weil.NameWeilAction": [
+   "Lib.Weil.Construction.FinitePart",
+   "Lib.Weil.MixedModel.NameWeilAction"
+  ],
+  "Lib.Weil.Names": [
+   "Lib.Weil.MixedModel.Names"
+  ],
+  "Lib.Weil.ZeroTerm": [
+   "Lib.Weil.MixedModel.ZeroTerm"
+  ],
+  "New.Weil.BesselIntegral": [
+   "Lib.Weil.Periods.BesselIntegral"
+  ],
+  "Lib.Weil.DegreeAndUnipotent": [
+   "Lib.Weil.Periods.DegreeAndUnipotent"
+  ],
+  "New.Weil.DegreeOfT": [
+   "Lib.Weil.Periods.DegreeOfT"
+  ],
+  "Lib.GaloisRep.FiniteBesselGroup": [
+   "Lib.Weil.Periods.FiniteBesselGroup"
+  ],
+  "New.Weil.UnfoldingStep": [
+   "Lib.Weil.Periods.UnfoldingStep"
+  ],
+  "Lib.Adelic.HeckeGL": [
+   "Lib.Weil.Unramified.HeckeGL"
+  ],
+  "Lib.Adelic.SphericalHecke": [
+   "Lib.Weil.Unramified.SphericalHecke"
+  ],
+  "Lib.ClassField.UniformiserScalar": [
+   "Lib.Weil.Unramified.UniformiserScalar"
+  ],
+  "Main": [
+   "Main"
+  ],
+  "New.Weil.ChainValuation": [
+   "New.Columns.ChainValuation"
+  ],
+  "New.Weil.ColumnDefs": [
+   "New.Exchange.LValueRatio",
+   "New.Curve.DepthPairs",
+   "New.Columns.ColumnDefs"
+  ],
+  "New.Weil.JetExponentBound": [
+   "New.Columns.JetExponentBound"
+  ],
+  "New.Weil.SizeEstimates": [
+   "New.Core.ClassCountBound",
+   "New.Columns.SizeEstimates"
+  ],
+  "New.Weil.TwistedHeckeType": [
+   "New.Core.ModuleIndex",
+   "New.Curve.JetDivisibility",
+   "New.Seesaw.LiftCharacters",
+   "New.TwistedHecke.ElementaryDivisors",
+   "New.Columns.TwistedHeckeType"
+  ],
+  "Lib.ClassField.FormalParameter": [
+   "Lib.General.Algebra.DepthBounds",
+   "New.Curve.FormalParameter"
+  ],
+  "New.Weil.IntegralVacuum": [
+   "New.Curve.IntegralVacuum"
+  ],
+  "New.Weil.LiveSum": [
+   "New.Curve.LiveSum"
+  ],
+  "Lib.ClassField.PeriodDefs": [
+   "Lib.ClassField.HeckeCharacter.SplittingCharExists",
+   "New.Data.WeilDataOfE",
+   "New.Curve.PeriodDefs"
+  ],
+  "Lib.ClassField.TightFrameExists": [
+   "New.Curve.TightFrameExists"
+  ],
+  "Lib.ClassField.AdmissibleData": [
+   "New.Curve.FrameSections",
+   "New.Curve.ThetaProducts",
+   "New.Curve.ConjugateGenerator",
+   "New.Data.AdmissibleData"
+  ],
+  "New.Weil.ChosenPlaceLevels": [
+   "New.Data.ChosenPlaceLevels"
+  ],
+  "Lib.ClassField.Different": [
+   "New.Data.Different"
+  ],
+  "Lib.ClassField.Magnitudes": [
+   "New.Data.Magnitudes"
+  ],
+  "New.Weil.Weights": [
+   "New.Data.Weights"
+  ],
+  "New.Filling.BesselExistence": [
+   "New.DiscreteSeries.BesselExistence"
+  ],
+  "Lib.DiscreteSeries.TwoFactorSetup": [
+   "Lib.General.LinearAlgebra.FramedCoefficient",
+   "New.DiscreteSeries.MinorExpansion",
+   "New.DiscreteSeries.GaussianShape",
+   "New.DiscreteSeries.TwoFactorSetup"
+  ],
+  "Lib.PadicHodge.LongForms": [
+   "New.Rows.HeckeValueHeight",
+   "New.Rows.LiftVolumeHeight",
+   "New.Selmer.ReciprocityLaw",
+   "New.Selmer.HeckeString",
+   "New.Selmer.TrianglePrimes",
+   "New.Selmer.BaseLevelOfLabel",
+   "New.Selmer.DenominatorBound",
+   "New.Selmer.RowsExist",
+   "New.Selmer.TwistForRows",
+   "New.Selmer.FitTwistsExist",
+   "New.Endgame.LongForms"
+  ],
+  "Lib.ClassField.PrimeError": [
+   "New.Endgame.PrimeError"
+  ],
+  "New.Weil.ShortAndEnough": [
+   "New.Columns.MarkedPrimeType",
+   "New.Columns.LocalStatement",
+   "New.Seesaw.SeesawTheorem",
+   "New.Endgame.ShortAndEnough"
+  ],
+  "New.Weil.AlgebraicPartDefs": [
+   "New.Exchange.AlgebraicPartDefs"
+  ],
+  "New.Weil.BlockPartners": [
+   "New.Exchange.BlockPartners"
+  ],
+  "New.Weil.CostOfSquares": [
+   "New.SiegelWeil.AuxPairVanishing",
+   "New.SiegelWeil.DescentsVanishPlanes",
+   "New.Exchange.TriangleNorms",
+   "New.Exchange.CostOfSquares"
+  ],
+  "New.Weil.CrudeModularData": [
+   "Lib.CM.Reciprocity.SemilinearWeilLaw",
+   "New.Curve.ConjugatesOfJets",
+   "New.Exchange.CrudeModularData"
+  ],
+  "New.Weil.CrudeRows": [
+   "New.Exchange.GridFirstColumns",
+   "New.Exchange.RowsReached",
+   "New.Exchange.CrudeRows"
+  ],
+  "New.Weil.ExchangeTheorem": [
+   "Lib.SiegelWeil.Tower.ConstantTerm",
+   "Lib.SiegelWeil.Tower.LineGaussSum",
+   "Lib.SiegelWeil.Tower.LargeSideConstantTerm",
+   "New.Exchange.PartnersMatch",
+   "New.Exchange.StableSpaces",
+   "New.Exchange.ExchangeDifference",
+   "New.Exchange.StandardCoefficients",
+   "New.Exchange.NonnegativeVanishing",
+   "New.Exchange.LowRankIdentity",
+   "Lib.Weil.MixedModel.RapidSections",
+   "New.Exchange.RealPair",
+   "New.Exchange.EqualRankValue",
+   "New.Exchange.ExchangeTheorem"
+  ],
+  "New.Weil.GridModuli": [
+   "New.Exchange.GridModuli"
+  ],
+  "New.Weil.GridParameters": [
+   "New.Exchange.GridParameters"
+  ],
+  "New.Weil.OneSquare": [
+   "New.Exchange.OneSquare"
+  ],
+  "New.Weil.RowLadder": [
+   "New.Exchange.GridMove",
+   "New.Exchange.RowLadder"
+  ],
+  "New.Weil.SquareLawFourier": [
+   "New.Exchange.DeterminantVectors",
+   "New.Exchange.SquareLawFourier"
+  ],
+  "New.Weil.SteepParameters": [
+   "New.DiscreteSeries.RestrictionLemma",
+   "New.Exchange.SteepParameters"
+  ],
+  "New.Weil.TriangleArrows": [
+   "New.Exchange.TriangleArrows"
+  ],
+  "New.Weil.TriangleLevelExponent": [
+   "New.Exchange.CharacterLiftNorm",
+   "New.Rows.LineArithmetic",
+   "New.Exchange.TriangleLevelExponent"
+  ],
+  "New.Filling.AmplitudeSums": [
+   "Lib.General.NumberTheory.FundamentalDomains",
+   "New.Filling.UnipotentCovolume",
+   "New.Filling.AmplitudeSums"
+  ],
+  "New.Filling.BesselSystem": [
+   "New.Filling.BesselSystem"
+  ],
+  "New.Filling.BoxPartition": [
+   "New.Filling.BoxPartition"
+  ],
+  "New.Filling.CrudeBoundDefs": [
+   "New.Filling.CrudeBoundDefs"
+  ],
+  "New.Weil.DegreeBounds": [
+   "New.Filling.DegreeBounds"
+  ],
+  "New.Filling.EichlerFlag": [
+   "New.Filling.EichlerFlag"
+  ],
+  "New.Filling.FillingData": [
+   "Lib.DiscreteSeries.Bruhat.ComplexFloorMeasure",
+   "New.RealPlace.ComplexGauge",
+   "New.RealPlace.ComplexShells",
+   "New.Filling.ColumnCoords",
+   "New.RealPlace.BandLimits",
+   "New.RealPlace.BesselCut",
+   "New.Filling.FillingData"
+  ],
+  "New.Weil.FillingTheorem": [
+   "New.Seesaw.EqualLinesOrbit",
+   "New.Filling.FillingAdmissible",
+   "New.Seesaw.StandardLatticeLevel",
+   "New.Seesaw.LinesStep",
+   "New.Seesaw.UnfoldingStages",
+   "New.Filling.FillingTheorem"
+  ],
+  "New.Filling.GlobalToLocal": [
+   "New.Filling.GlobalSieve",
+   "New.Filling.GlobalToLocal"
+  ],
+  "New.Filling.GramLiouville": [
+   "New.Filling.GramLiouville"
+  ],
+  "New.Filling.LatticeChart": [
+   "New.Filling.LatticeChart"
+  ],
+  "New.Filling.LevelBridge": [
+   "New.Filling.LevelBridge"
+  ],
+  "New.Weil.Moments": [
+   "New.Filling.ThinClasses",
+   "New.Filling.BlockBound",
+   "New.Heights.OneDeterminant",
+   "New.Filling.FixedLines",
+   "New.Filling.FiniteSystem",
+   "New.Filling.CrudeEnergy",
+   "New.Filling.Moments"
+  ],
+  "New.Filling.NearTerms": [
+   "New.Filling.NearTerms"
+  ],
+  "New.Filling.PoincareSeries": [
+   "New.Filling.PoincareSeries"
+  ],
+  "New.Weil.RowDimension": [
+   "New.Filling.RowDimension"
+  ],
+  "New.Filling.SchurTest": [
+   "New.Filling.LinkPairing",
+   "New.RealPlace.VolumeKernel",
+   "New.Filling.SchurTest"
+  ],
+  "New.Filling.Setup": [
+   "New.Filling.Setup"
+  ],
+  "New.Filling.StableCells": [
+   "New.Filling.StableCells"
+  ],
+  "New.Filling.StandardLevel": [
+   "New.Filling.StandardLevel"
+  ],
+  "New.Filling.TopFloor": [
+   "New.Filling.TopFloor"
+  ],
+  "New.Weil.AuxiliaryPair": [
+   "New.Forms.AuxiliaryPair"
+  ],
+  "New.Weil.Heights": [
+   "New.Heights.Heights"
+  ],
+  "Lib.PadicHodge.CokernelKillers": [
+   "New.Lift.CupProductBound",
+   "New.Lift.CokernelKillers"
+  ],
+  "Lib.PadicHodge.ExponentLattices": [
+   "Lib.PadicHodge.WachKisin.FrameTheorem",
+   "Lib.PadicHodge.WachGamma.GaloisOnFrames",
+   "New.Lift.ExponentLattices"
+  ],
+  "Lib.PadicHodge.ExponentTheorems": [
+   "New.Lift.SparseThickLetters",
+   "New.Lift.FewLowJumps",
+   "New.Lift.ExponentTheorems"
+  ],
+  "Lib.PadicHodge.HodgeExpansion": [
+   "New.Lift.HodgeExpansion"
+  ],
+  "Lib.PadicHodge.LongGap": [
+   "New.Lift.LongGap"
+  ],
+  "Lib.ClassField.Main": [
+   "Lib.Analytic.PolyaVinogradov.PolyaVinogradov",
+   "Lib.Analytic.DirichletTheta.MellinTheta",
+   "Lib.Analytic.Primes.AuxiliaryPrimes",
+   "Lib.Analytic.QuadraticTwist.ZeroFreeTwist",
+   "New.Endgame.OneSidedCriterion",
+   "New.Data.DataExist",
+   "New.Main"
+  ],
+  "Lib.PadicHodge.OnePrimeTie": [
+   "Lib.LocalGL.TaylorWiles.AuxPlaceOperators",
+   "New.Patching.OnePrime",
+   "Lib.GaloisRep.LocalGlobal.TypeFrobenius",
+   "New.Patching.OnePrimeTie"
+  ],
+  "New.Filling.BesselOrthonormal": [
+   "New.RealPlace.GramSectionBounds",
+   "New.RealPlace.GramSection",
+   "Lib.DiscreteSeries.Bessel.BesselNormInvariance",
+   "New.RealPlace.CellNeighbourhood",
+   "New.RealPlace.BesselOrthonormal"
+  ],
+  "Lib.DiscreteSeries.FlatCharts": [
+   "New.RealPlace.FlatCharts"
+  ],
+  "New.Filling.FrameNorm": [
+   "New.RealPlace.FrameNorm"
+  ],
+  "Lib.DiscreteSeries.LevelGauge": [
+   "New.RealPlace.LevelGauge"
+  ],
+  "New.Filling.LocalTheorem": [
+   "New.RealPlace.LocalTheorem"
+  ],
+  "New.Filling.OpenCellBound": [
+   "New.RealPlace.OpenCellBound"
+  ],
+  "Lib.DiscreteSeries.Size": [
+   "New.RealPlace.Size"
+  ],
+  "New.Filling.SobolevCell": [
+   "New.RealPlace.SobolevCell"
+  ],
+  "Lib.DiscreteSeries.WeightPlancherel": [
+   "New.RealPlace.FloorKernels",
+   "New.RealPlace.WeightPlancherel"
+  ],
+  "New.Weil.Carrier": [
+   "New.Rows.RealMatching",
+   "New.Rows.Carrier"
+  ],
+  "New.Weil.ComparisonForms": [
+   "New.Rows.CartanIntegrality",
+   "New.Rows.ComparisonForms"
+  ],
+  "New.Weil.LineCoordinates": [
+   "Lib.Adelic.Hecke.ClassSumBounds",
+   "New.Rows.LineCoordinates"
+  ],
+  "New.Weil.MemberKernels": [
+   "New.Rows.MemberKernels"
+  ],
+  "New.Weil.MemberOrthogonality": [
+   "Lib.Shimura.ComplexTheta.PeriodVanishing",
+   "New.Rows.MemberOrthogonality"
+  ],
+  "New.Weil.MonomialCoefficientVector": [
+   "Lib.CM.LocalHeight.EulerAdditionFormula",
+   "New.Curve.KatzDivisibility",
+   "New.Rows.GluedFormTheta",
+   "New.Selmer.RankOneDenominator",
+   "New.Rows.MonomialCoefficientVector"
+  ],
+  "New.Weil.RowVolume": [
+   "New.Rows.RowVolume"
+  ],
+  "New.Weil.Separation": [
+   "New.Weil.FockCoeffDecay",
+   "Lib.DiscreteSeries.Holomorphic.NearMaximum",
+   "New.Rows.SparseThetaSum",
+   "Lib.Weil.Fock.ReproducingFormula",
+   "New.Rows.NaturalFormNear",
+   "New.Exchange.AlgebraicPartConjugates",
+   "New.Rows.Separation"
+  ],
+  "New.Weil.StackedDeterminants": [
+   "New.Rows.PartnerCut",
+   "New.Rows.SemiInvariantNorm",
+   "New.Rows.StackedDeterminants"
+  ],
+  "New.Weil.AdmissibleComb": [
+   "New.Seesaw.IntegralAway",
+   "New.Seesaw.AdmissibleComb"
+  ],
+  "New.Weil.BesselGeneric": [
+   "New.Seesaw.AdmissibleEvaluation",
+   "New.Seesaw.GoodDatumExists",
+   "New.Seesaw.BesselGeneric"
+  ],
+  "New.Weil.EdgePair": [
+   "New.Seesaw.EdgePair"
+  ],
+  "New.Weil.GradingsOfY": [
+   "New.Seesaw.IntegralAsCosetSum",
+   "New.Seesaw.DoubleLiftValue",
+   "New.Seesaw.GradingsOfY"
+  ],
+  "New.Weil.IndexTypes": [
+   "New.Seesaw.IndexTypes"
+  ],
+  "New.Weil.LatticeAndTorsionDefs": [
+   "New.Seesaw.LatticeAndTorsionDefs"
+  ],
+  "New.Weil.MovedVacuumComb": [
+   "New.Seesaw.MovedVacuumComb"
+  ],
+  "New.Weil.NamesAtSplitLevel": [
+   "New.Seesaw.NamesAtSplitLevel"
+  ],
+  "New.Weil.PairTensorData": [
+   "Lib.GLn.Dual.DualWeights",
+   "New.Seesaw.PairTensorData"
+  ],
+  "Lib.PadicHodge.AptTuples": [
+   "New.Selmer.AptTupleDefs",
+   "New.Selmer.AptTuples"
+  ],
+  "Lib.PadicHodge.BlocksAndCocycles": [
+   "New.Selmer.BlocksAndCocycles"
+  ],
+  "Lib.PadicHodge.Corepresentable": [
+   "New.Selmer.Corepresentable"
+  ],
+  "Lib.PadicHodge.CrystallineRank": [
+   "New.Selmer.ThickSpacing",
+   "Lib.ClassField.LocalDuality.CrystallineDuality",
+   "New.Selmer.CrystallineRank"
+  ],
+  "Lib.PadicHodge.DeterminantBound": [
+   "New.Selmer.DeterminantBound"
+  ],
+  "New.Weil.FitTwists": [
+   "New.Selmer.FitTwists"
+  ],
+  "Lib.PadicHodge.HeckeStableSubspaces": [
+   "New.Selmer.HeckeStableSubspaces"
+  ],
+  "Lib.PadicHodge.LabelledColumns": [
+   "New.Selmer.LabelledColumns"
+  ],
+  "New.Weil.LevelPlacesChosen": [
+   "New.Selmer.LevelPlacesChosen"
+  ],
+  "Lib.PadicHodge.RibetElement": [
+   "New.Selmer.TateTwistSteps",
+   "New.Selmer.CrystallineBound",
+   "New.Selmer.OnePlaceDefect",
+   "New.Selmer.RibetElement"
+  ],
+  "Lib.PadicHodge.RibetFirstOrder": [
+   "New.Selmer.RibetCramer",
+   "Lib.General.Algebra.BlockFittingBound",
+   "New.Selmer.RibetFirstOrder"
+  ],
+  "Lib.PadicHodge.RowBalanced": [
+   "New.Selmer.RootsOfUnityPoints",
+   "New.Selmer.TwistTheorem",
+   "New.Selmer.RowBalanced"
+  ],
+  "Lib.PadicHodge.TiltingLemma": [
+   "New.Selmer.LinePointPowers",
+   "New.Selmer.TiltingLemma"
+  ],
+  "Lib.PadicHodge.ValueFamilies": [
+   "New.Selmer.ValueFamilies"
+  ],
+  "New.Weil.BadShare": [
+   "Lib.General.Groups.CentralConvolution",
+   "New.Trace.BadShare"
+  ],
+  "New.Weil.GoodFormTransfer": [
+   "New.Trace.GoodFormTransfer"
+  ],
+  "New.Weil.GoodIdempotent": [
+   "New.Seesaw.FramesForY",
+   "New.Trace.GoodIdempotent"
+  ],
+  "New.Weil.LabelRigidity": [
+   "New.Exchange.ChainNorms",
+   "New.GaloisRep.LabelUniqueness",
+   "New.Trace.LabelRigidity"
+  ],
+  "Lib.Adelic.Counting": [
+   "New.TwistedHecke.FrobeniusFactors",
+   "New.TwistedHecke.InterlacingCone",
+   "New.TwistedHecke.Counting"
+  ],
+  "Lib.Adelic.RootLemma": [
+   "New.TwistedHecke.TwistingData",
+   "New.TwistedHecke.DeepFormCost",
+   "New.TwistedHecke.ClassMeans",
+   "New.TwistedHecke.RootLemma"
+  ],
+  "Statements": [
+   "Statements"
+  ]
+ }
+}

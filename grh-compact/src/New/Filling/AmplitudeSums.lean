@@ -1,5 +1,189 @@
-import New.Filling.UnipotentCovolume
+import Lib.Adelic.PeriodLattice
+import New.Filling.BesselOrthonormal
+import New.Filling.BoxPartition
 
+section
+/-! General lemmas of algebraic number theory (textbook or folklore).
+
+Part of: Adeles of a number field: base change, discreteness and compact quotient, modulus (known
+result; see Lib.Adelic.Adeles.IdeleHilbert90).
+
+This file: Fundamental domains and covolumes of adelic lattices; box domain for filtered discrete
+subgroups. -/
+
+
+open NumberField MeasureTheory Matrix Finset ZSpan MeasurableEquiv mixedEmbedding
+variable {E n} [Field E] [CMType E] [Fintype n]
+
+/-- Let t ∈ (E ⊗ ℝ)ⁿ and the finite adelic matrix m be invertible. The group of vectors
+(t_{j,v}Φ_v(x_j)), x ∈ Eⁿ with mx integral, has a measurable strict fundamental domain of
+volume |(∏_j t_j, det m)|_𝔸 divided by the n-th power of `volÔ`. -/
+lemma exists_fundamental_domain_classLattice (t : RealVectors E n) (ht :
+  IsUnit t) (m : GL n (𝔸f E)) : ∃ F, MeasurableSet F ∧ volume.real F =
+  (∏ w, ‖∏ j, t j w‖ ^ 2) / genIndex m.1.det / volÔ E ^ Fintype.card n ∧ ∀ x, ∃! l :
+  classLattice m⁻¹ ⊥ (.smulLeft ht.unit), l.1 + x ∈ F := .imp (fun F (And.intro f u) ↦ ⟨f, by
+  have T z : ∀ w, ∃! y, t * toRealVectors y + z ∈ F ∧ frameTorsionClass m⁻¹ y = w :=
+    frameTorsionClass_surjective (g := m⁻¹).forall.2 (Equiv.addRight · |>.existsUnique_congr_right.1
+    (by simpa [ExistsUnique, mul_add, ht.mul_right_inj, add_assoc, mem_classLattice,
+    toRealVectors_injective.eq_iff, and_assoc, @imp.swap (_ ∈ F)] using u _))
+  erw [genIndex_eq_inv_finIdeleAbs m.det]
+  simpa [field, ideleAbs_det_mkAdelicGL] using!
+    (by simpa [field, volume_pi_pi, Measure.volume_eq_prod,
+    (volume_measurePreserving_arrowProdEquivProdArrow ..).measure_preimage_equiv] using
+    (congr($((lintegral_encard_rat_points (mkAdelicGL (((diagGL (ht.apply · |>.unit)).map <|
+    Pi.evalRingHom _ ·), m))⁻¹ ((arrowProdEquivProdArrow ..).measurable (f.prod (.univ_pi fun _ ↦
+    isOpen_Ô.measurableSet)))).trans (lintegral_congr fun _ ↦ congrArg _ (Set.encard_eq_one.2 (by
+    simpa [diagonal, Set.singleton_iff_unique_mem, mulVec_eq_sum, frameTorsionClass, mul_add,
+      torsionClass_eq_iff, ← prod_mk_sum, -map_neg, arrowProdEquivProdArrow] using!
+      T _ (torsionClass (-_)))))).toReal)) :), u⟩) ⟨_, fundamentalDomain_measurableSet _, by
+    rw [← (Module.finBasis ..).ofZLatticeBasis_span ℝ (classLattice ..)]
+    apply exist_unique_vadd_mem_fundamentalDomain⟩
+
+/-- Injective graded coordinates c on G: suppose each γ ∈ Γ vanishing below deg i shifts c_i by
+c(γ)_i ∈ L_i, and all of L_i arises with the other coordinates of degree ≤ deg i zero. For
+fundamental domains F_i of L_i, each x has a unique γ ∈ Γ with c(xγ) ∈ ∏F_i. -/
+lemma Filling.existsUnique_mul_mem_box {G ι} [Group G] [Fintype ι] {V : ι → AddGrpCat} (deg : ι → ℕ)
+    (c : G → ∀ i, V i) (inj : c.Injective) (Γ : Subgroup G) (L : ∀ _, AddSubmonoid _) F (hF : ∀ i
+  v, ∃! l : L i, l.1 + v ∈ F i) (hL' : ∀ i, ∀ l ∈ L i, ∃ γ : Γ, c γ i = l ∧ ∀ j ≠ i, deg j ≤ deg i →
+  c γ j = c 1 j) (hL : ∀ (γ : Γ) i, (∀ j, deg j < deg i → c γ j = c 1 j) → c γ i ∈ L i ∧ ∀ x, c
+  (x * γ) i = c γ i + c x i) x : ∃! γ : Γ, c (x * γ) ∈ Set.univ.pi F := have := by simpa using hL 1
+  .imp (fun γ h ↦ ⟨h, (mul_left_surjective γ).forall.2 fun δ _ ↦ by simpa using @inj δ 1 (funext
+    ((measure deg).2.fix fun i ih ↦ have := @(hF _ (c (x * γ) _)).unique _ _ ⟨_, (hL _ _ ih).1⟩ 0
+    by simp_all [← (hL _ _ ih).2, mul_assoc]))⟩) (@coe_univ .. ▸ univ.induction_on_max_value deg
+    (by simp) fun a _ _ _ ⟨γ, h⟩ ↦ (hF a (c (x * γ) a)).rec fun l _ ↦ (hL' a _ l.2).imp' (γ * ·)
+    fun δ o i _ ↦ by erw [← mul_assoc, (hL ..).2] <;> grind [eq_or_ne i a])
+
+/-- For E stably unramified and nonzero reals t_v, the group of vectors (t_v Im Φ_v(s))_v, s an
+integer of E with s̄ = −s, has a measurable fundamental domain in ℝ^(infinite places) of
+volume ∏|t_v|·√|disc E⁺|. -/
+lemma Filling.exists_fundamental_domain_im_skew [StablyUnram E] (t : _ → ℝ) (ht : ∀ v, t v ≠ 0) :
+  ∃ F, MeasurableSet F ∧
+  volume.real F = (∏ v, |t v|) * √√|NumberField.discr E| ∧ ∀ x, ∃! l : (skewAdjoint (𝓞 E)).map
+  (.mk' (fun s v ↦ t v * (Φ v s.val).im) (by simp [funext_iff, mul_add])), l.1 + x ∈ F := by
+  obtain ⟨⟨ι, _, h⟩, f, hf, _⟩ := ‹StablyUnram E›.exists_i_c₀,
+    exists_mixedEquiv_maximalReal (E := E)
+  have {v} : (Φ v ι.val).re = 0 ∧ |(Φ v ι).im| = 1 := by
+    cases mul_self_eq_mul_self_iff.1 (by simp [h, ← map_mul] : Φ v ι * _ = _ * .I) <;> aesop
+  have k := isUnit_of_mul_isUnit_left (h.1 ▸ isUnit_neg_one)
+  refine ⟨_, ?_, ?_, ((Equiv.subtypeEquivRight fun l ↦ .trans ?_ k.unit.mulLeft.exists_congr_right
+    ).existsUnique_congr_right.1 <| exist_unique_vadd_mem_fundamentalDomain (((latticeBasis _).map
+    f).map ((diagonal fun v ↦ t v * (Φ v ι).im).toLin'.equivOfDetNeZero
+    (by simp_all [prod_eq_zero_iff, ← abs_pos]))) ·)⟩
+  repeat (try erw [← map_fundamentalDomain, Measure.real, volume.addHaar_image_linearMap, ←
+    hf.measure_preimage, ← map_fundamentalDomain, f.preimage_image]) <;> simp [← Int.cast_abs,
+    abs_discr_eq_discr_sq, Real.sqrt_sq_eq_abs, norm, k.ne_zero, *, abs_prod, prod_nonneg,
+    fundamentalDomain_measurableSet, volume_fundamentalDomain_latticeBasis, ← ZSpan.map,
+    mem_span_latticeBasis, funext_iff, mul_assoc, skewAdjoint.mem_iff]
+  simp [star, IsCMField.ringOfIntegersComplexConj_eq_self_iff, ← funext_iff]; rfl
+end
+
+section
+/-! Set-up for this proof: size bookkeeping for the data of this proof.
+
+This file: Explicit covolume of the level-g arithmetic unipotent group in scaled real
+coordinates. -/
+
+open Classical ENNReal Finset Fintype Function Matrix MeasureTheory NumberField Sum
+
+attribute [-instance] Pi.instMeasurableConstSMul Pi.measurableSMul
+
+attribute [-simp] Complex.ofReal_div Nat.cast_mul
+
+attribute [local grind] IsFreeEntry
+
+attribute [local simp] FI.level Filling.frameScaleSq prod_eq_zero_iff prod_pow Matrix.mul_apply
+  vecMul_fromBlocks div_pow funext_iff mul_assoc mul_sub pow_mul' sub_mul tsub_add_eq_tsub_tsub_swap
+
+/-- Under the standing hypotheses, for every class c and archimedean point y, the integral of
+the cutoff β_c(uy) over u in 𝖴_∞, for the product Haar measure, equals the covolume ν, which
+does not depend on c. -/
+lemma Filling.lintegral_classCutoff_eq_unipCovolume {E} [Field E] [CMType E] [StablyUnram E] {𝔰}
+  (S : Filling E 𝔰) c [S.IsAdmissible] (y : _ → _) :
+  ∫⁻ u, S.classCutoff c fun v ↦ u v * y v ∂(.pi fun _ ↦ 𝔰.besselHaar) = .ofReal S.unipCovolume := by
+  let φ := MonoidHom.mk' (fun (γ : S.classUnip c) v ↦
+    (⟨_, γ.2.1.ratToInf_mem_unitriangularOn v⟩ : besselU)) (by aesop)
+  have n a (j : Subtype (@IsFreeEntry 𝔰 ⟨a, ·⟩)) : inl a ≠ j.1 ∧ j.1 ≠ eStar a := by grind
+  let b := (classBasis c).1
+  have ⟨M, e, u⟩ : ∃ m, b = fromBlocks 1 0 0 (fromBlocks m 0 0 1) ∧
+    genIndex m.det = 1 / S.N ^ numInfPlaces E := by
+    use ?_, by simp [b, classBasis, toBesselH, besselLatticeBasis]; rfl
+    obtain _ := congr(genIndex $(c.out.2).det), congr(genIndex $S.piBar_mul_star),
+      genIndex_pos c.out.1.det, genIndex_pos S.piBar
+    simp_all [genIndex_natCast, ← sq, le_of_lt]
+    grind
+  let m a := (b.toSquareBlockProp (IsFreeEntry ⟨a, ·⟩))ᵀ
+  have d a : (m a).det =
+    b.det := by simp [b.twoBlockTriangular_det (IsFreeEntry ⟨a, ·⟩) (by simp [e]; omega), m,
+    (by simp [toSquareBlockProp, ← ext_iff, e] : b.toSquareBlockProp (¬IsFreeEntry ⟨a, ·⟩) = 1)]
+  have B a l j : (m a *ᵥ l ∘ (↑)) j = (l ᵥ* b) j :=
+    sum_of_injective _ Subtype.val_injective _ _ (by revert j; simp [e]; lia) (mul_comm _ <| l ·)
+  choose F hF vF uF using fun a ↦ exists_fundamental_domain_classLattice (fun j v ↦
+    S.g / S.basisScale v (inl a) * S.basisScale v j.1)
+    (by simp [Pi.isUnit_iff]) (.mk'' (m a) (by simp [d, b]))
+  choose F' hF' vF' uF' using fun a ↦
+    exists_fundamental_domain_im_skew (S.g / S.frameScaleSq · (Fin.val a)) (by simp)
+  have p := ((((measurePreserving_sigma (.symm (.subtypeProdEquivSigmaSubtype
+    (@IsFreeEntry 𝔰 ⟨·, ·⟩)))).comp measurePreserving_flip).prod measurePreserving_flip).comp
+    (measurePreserving_arrowProdEquivProdArrow ..)).comp
+    (measurePreserving_pi _ _ fun _ : InfinitePlace E ↦ measurePreserving_freeEntries_besselHaar)
+  have hB := (MeasurableSet.univ_pi hF).prod (.univ_pi hF')
+  have o := existsUnique_mul_mem_box (V := (fun a ↦ .of (Subtype (IsFreeEntry ⟨a, ·⟩) →
+    _)) ⊕ᵥ fun _ ↦ .of _) ((2 * ·.rev) ⊕ᵥ (2 * ·.rev + 1)) (fun u : InfinitePlace E → (𝔰.middleGram
+    1).besselU ↦ Sum.rec (fun a j v ↦ (u v).1.1 (inl a) j) fun a v ↦ (freeEntries IsFreeEntry
+    (u v).1.1.1).2 a) (fun _ _ e ↦ funext fun v ↦ injective_freeEntries_besselU congr((($e (inl _)
+    ⟨_, ·.2⟩ v), swap ($e <| inr ·) v))) φ.range (Sum.rec _ _) (Sum.rec _ _) (Sum.rec uF uF') (by
+    rintro (a | a) l ⟨x, hx⟩
+    rw [← extend_comp Subtype.val_injective x 0] at hx
+    have ⟨γ, H⟩ := exists_eichler_classUnip c a (@extend_val_apply' _ _ _ x 0) (fun j ↦ byCases
+      (B a _ ⟨j, ·⟩ ▸ torsionClass_eq_zero.1 hx.1 _) (by revert j; simp +contextual [b, e])) 0
+    swap; have ⟨γ, H⟩ := exists_eichler_classUnip c a (l := 0) (by simp) (by simp) ⟨x, hx.1⟩
+    all_goals
+      use ⟨_, γ, rfl⟩, by simp [← hx.2, φ, basisScale, field, *]
+      rintro (b | b) k l <;> simp (disch := clear * - l k; grind) [φ, ite_eq_right, H]) (by
+    rintro ⟨u, γ, G⟩ i h
+    have R a j : (finAdeleMat ((S.g : E)⁻¹ • (γ.1.1.1 - 1)) (inl a) ᵥ* b) j ∈ Ô E := by
+      rw [← mul_apply_eq_vecMul, show _ * _ = b * S.gIdele⁻¹ • ((S.termPosition c ..).1 - 1) by
+        simp [b, coe_termPosition, Matrix.map_sub]; rfl]
+      simpa [e] using (S.principalLevel_eq_unitaryLevel.le (x := termPosition ..) γ.2.2).2 _ j
+    have w v x ⦃a j⦄ (d : i = inr a ∧ j = eStar a ∨ i = inl a ∧ IsFreeEntry (a, j)) :
+      (x * u v).1.1 (inl a) j = (u v).1.1 (inl a) j + x.1.1 (inl a) j := by
+      simp at h
+      clear * - h d
+      have r k l : (∀ b, k = inl b → a < b ∨ j = eStar b) → (∀ d, l ≠ eStar d) →
+          (u v).1.1 k l = ite (k = l) 1 0 := by simp; grind [by simpa using mem_besselU.1 (u v).2]
+      simpa [(by grind : inl a ≠ j), sub_eq_iff_eq_add'] using (sum_eq_zero fun k _ ↦
+          mul_eq_zero.2 (or_not.imp (sub_eq_zero_of_eq ∘ x.2 _ k) fun n ↦ by
+        have A c (_ : j = eStar c) :=
+          congrFun₂ (U.coe_inv IsHermInvolution.mul_self (u v).1 ▸ (u v).1.1.mul_inv) k j
+        simp +contextual -dsimp [splitGram, r] at A
+        rcases j, k with ⟨_ | _ | _, _ | _ | _⟩ <;> simp at n <;> simp [r, n] at A <;> simp [*]
+        grind [Complex.conj_eq_iff_im]) : ((x.1.1.1 - 1) * (_ - 1)) (inl a) j = 0)
+    obtain ⟨rfl, a | a⟩ := G, i
+    use ⟨_, torsionClass_eq_zero.2 (B a _ · ▸ R a _), by simp [φ, n, field]⟩,
+      fun _ ↦ funext₂ fun j ↦ (w · _ (.inr ⟨rfl, j.2⟩))
+    use ⟨IsIntegralClosure.mk' _ (_ * _ : E) (algebraMap_mem_Ô.1 (by
+      simpa [e] using! R a (eStar a))), RingOfIntegers.ext ((Φ ofNonempty).injective (by
+      simpa [φ, basisScale, Complex.ext_iff, self_eq_neg, ← two_mul] using (w ofNonempty
+        (φ γ ofNonempty)⁻¹ (.inl ⟨rfl, rfl⟩)).trans congr(_ + $(U.coe_inv IsHermInvolution.mul_self
+        _) _ _))), by simp [φ, basisScale, field]⟩, fun x ↦ funext (congr($(w · _ (by simp)).im)))
+  have := φ.rangeRestrict_surjective.countable
+  apply ((toReal_eq_toReal_iff ..).1 _).resolve_right (by simp [unipCovolume_pos])
+  rw [(IsFundamentalDomain.mk' (p.1 hB).inv.nullMeasurableSet (((Equiv.inv _).existsUnique_congr fun
+    _ ↦ Sum.forall).1 <| o ·⁻¹)).lintegral_eq_tsum'', ← lintegral_tsum (by fun_prop),
+    lintegral_congr fun u ↦ ((φ.ofInjective fun _ ↦ by simp [φ, ← SetLike.coe_eq_coe,
+    GeneralLinearGroup.ext_iff, (RingHom.injective _).eq_iff]).tsum_eq _).symm.trans (congr(∑' _,
+    S.classCutoff c $(mul_assoc ..)).trans (tsum_classCutoff_eq_one ..)),
+    toReal_ofReal S.unipCovolume_pos.le, unipCovolume, ← sum_range_reflect,
+    sum_range, frameScaleProd, prod_comm, Fin.prod_univ_castSucc]
+  simp [*, volume_pi_pi, ← measureReal_def, Fintype.card_subtype, card_filter,
+    basisScale, ↓prod_sum_type, ←
+    prod_subtype _ mem_filter_univ, ↓sum_sum_type, prod_filter, filter_lt_eq_Ioi, mul_pow, abs_div,
+    pow_right_comm _ _ 2, pow_succ _ (_ + _), prod_pow_eq_pow_sum, ↓p.measure_preimage, prod_ite,
+    (by simp; omega : ∀ k (a : Fin 𝔰.ϱ), k + 2 * (𝔰.ϱ - a) = a.rev + (k + 1 + a.rev) + 1)]
+  field
+end
+
+section
 /-! Part of: Second moment of the Poincaré series with constant one (see New.Filling.Moments).
 
 Part of: Incoherent and degenerate pairs are negligible (see New.Filling.CrudeEnergy).
@@ -218,3 +402,5 @@ lemma amplitudeSum_besselS_one i j : S.amplitudeSum (σ := .full) (S.ratMiddle E
     (ae_lt_top (by fun_prop) (S.lintegral_classCutoff_eq_unipCovolume c _ ▸ ofReal_ne_top)),
     lintegral_classCutoff_eq_unipCovolume, Fintype.prod_boole, (integral_fintype_prod_eq_prod
     _).trans congr(∏ v, $((S.besselSys v).orthonormal ..)), S.unipCovolume_pos.le, funext_iff]
+end Filling
+end

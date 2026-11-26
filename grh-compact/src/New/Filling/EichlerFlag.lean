@@ -1,5 +1,5 @@
-import Lib.General.Topology.LocalDefs
-import Lib.DiscreteSeries.Bruhat.BigCell
+import New.Filling.LocalDefs
+import Lib.DiscreteSeries.BigCell
 
 /-! Part of: Positive kernels and a sieve losing almost nothing (see New.Filling.GlobalSieve).
 

@@ -1,6 +1,6 @@
-import New.DiscreteSeries.BesselExistence
+import New.Filling.BesselExistence
 import New.Filling.AmplitudeSums
-import New.Seesaw.GradingsOfY
+import New.Weil.GradingsOfY
 
 /-! Set-up for this proof: dictionaries between two encodings of the same objects.
 

@@ -1,4 +1,5 @@
-import New.Main
+import Lib.ClassField.Main
+
 -- The proof is Levent Alpöge's, with Claude.
 
 theorem riemannHypothesis : RiemannHypothesis := New.zeta_zeros_on_line New.grh

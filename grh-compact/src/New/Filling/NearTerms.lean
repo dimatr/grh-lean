@@ -1,5 +1,5 @@
-import Lib.Shimura.IntegralModel.NeatLevel
-import New.RealPlace.FrameNorm
+import Lib.GaloisRep.NeatLevel
+import New.Filling.FrameNorm
 import New.Filling.GramLiouville
 import New.Filling.StableCells
 
