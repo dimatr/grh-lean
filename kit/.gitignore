@@ -1,0 +1,5 @@
+baseline/
+logs/
+submission/
+submission-*.tar.gz
+__pycache__/
