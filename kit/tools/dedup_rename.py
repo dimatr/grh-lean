@@ -15,8 +15,11 @@ at every usage too. New leaves are made
 globally unique against every declaration leaf in the project.
 
 Safety: per constant, ALL its ranges (definition + usages) are checked to end with the old leaf
-before anything is edited; one mismatch skips the constant. Skipped too: @[to_additive]
-(its generated name derives from the source name) and declarations in Main/Statements.
+before anything is edited; one mismatch skips the constant. Also skipped (learned from D's first
+apply, 2026-11-27): name-generating attributes (@[ext] -> X.ext_iff, @[simps] -> X_apply,
+reassoc, elementwise, mk_iff, to_additive); declarations that have declarations in their own
+namespace (renaming def IsNear breaks h.foo for IsNear.foo); leaves with a `.leaf` occurrence in
+code that .ilean did not record (e.g. `(.refl ·.2)`); declarations in Main/Statements.
 Run it right after a successful build: a usage added after the build is not in the index.
 Positions in .ilean are (0-based line, UTF-16 column).
 Without --apply only the plan is printed.
@@ -73,6 +76,29 @@ if stale:
           f"every range is verified against the text, mismatching constants are skipped)")
 
 lines = {mod: f.read_text().split("\n") for mod, f in mods.items()}
+
+
+def blank_comments(text: str) -> str:
+    """comments -> spaces, newlines kept, so positions stay valid"""
+    out, i, d, n = list(text), 0, 0, len(text)
+    while i < n:
+        if text.startswith("/-", i):
+            d += 1; out[i] = out[i + 1] = " "; i += 2; continue
+        if d and text.startswith("-/", i):
+            d -= 1; out[i] = out[i + 1] = " "; i += 2; continue
+        if d:
+            if text[i] != "\n":
+                out[i] = " "
+            i += 1; continue
+        if text.startswith("--", i):
+            while i < n and text[i] != "\n":
+                out[i] = " "; i += 1
+            continue
+        i += 1
+    return "".join(out)
+
+
+code_lines = {mod: blank_comments("\n".join(L)).split("\n") for mod, L in lines.items()}
 
 
 def cp_index(line: str, utf16_col: int) -> int:
@@ -142,19 +168,61 @@ dups = {l: ns for l, ns in groups.items() if len(ns) > 1}
 N = len(thm)
 before = 100 * (N - len(groups)) / max(N, 1)
 
+# ---- positions .ilean recorded (any constant): an unrecorded `.leaf` is a usage Lean did not index
+covered = collections.defaultdict(list)          # (mod, line) -> [(start_cp, end_cp)]
+for name, r in refs.items():
+    for m_, rg in ([r["def"]] if r["def"] else []) + r["uses"]:
+        if rg[0] == rg[2]:
+            L = lines[m_][rg[0]]
+            covered[(m_, rg[0])].append((cp_index(L, rg[1]), cp_index(L, rg[3])))
+IDC = r"[\w'!?]"
+
+
+def unindexed_dot_uses(lf):
+    rx = re.compile(rf"\.{re.escape(lf)}(?!{IDC})")
+    hits = []
+    for m_, CL in code_lines.items():
+        for k, L in enumerate(CL):
+            if lf not in L:
+                continue
+            for mm in rx.finditer(L):
+                s0, e0 = mm.start(), mm.end()
+                if not any(a <= s0 + 1 and e0 <= b for a, b in covered.get((m_, k), [])):
+                    hits.append(f"{m_}:{k + 1}")
+    return hits
+
+
+GENERATING = re.compile(r"@\[[^\]]*\b(ext|simps!?|reassoc|elementwise|mk_iff|to_additive)\b")
+has_children = {n for n in decls if any(o.startswith(n + ".") for o in decls)}
+unindexed_cache = {}
+
 # ---- plan --------------------------------------------------------------------------------------
 PROTECTED = {"Main", "Statements"}
 taken = set(all_leaves)
 plan, skipped = {}, []
+def blocked(n, lf):
+    """reason why n must keep its name, or None"""
+    if refs[n]["defmod"] in PROTECTED:
+        return "in Main/Statements"
+    g = GENERATING.search(thm[n][1])
+    if g:   # the attribute derives other names (X.ext_iff, X_apply, X_assoc, …) from this one
+        return f"@[{g.group(1)}] generates names from it"
+    if n in has_children:   # X.foo lemmas are reached by field notation on terms of type X
+        return "has declarations in its namespace (field notation)"
+    if lf not in unindexed_cache:
+        unindexed_cache[lf] = unindexed_dot_uses(lf)
+    if unindexed_cache[lf]:
+        return f"`.{lf}` used where .ilean has no record, e.g. {unindexed_cache[lf][0]}"
+    return None
+
+
 for lf, names in sorted(dups.items()):
-    # keeper: a declaration in Main/Statements (names checked by the challenge) if any, else most used
-    names.sort(key=lambda n: (refs[n]["defmod"] not in PROTECTED, -len(refs[n]["uses"]), n))
+    why = {n: blocked(n, lf) for n in names}
+    # keeper: one that cannot be renamed if any (protected first), else the most used
+    names.sort(key=lambda n: (refs[n]["defmod"] not in PROTECTED, why[n] is None, -len(refs[n]["uses"]), n))
     for n in names[1:]:                    # names[0] keeps its name
-        if refs[n]["defmod"] in PROTECTED:
-            skipped.append((n, "in Main/Statements")); continue
-        kind, attrs = thm[n]
-        if "to_additive" in attrs:
-            skipped.append((n, "to_additive")); continue
+        if why[n]:
+            skipped.append((n, why[n])); continue
         ns = namespace(n) or [refs[n]["defmod"].split(".")[-1]]   # root decl: module name as prefix
         cand = None
         for depth in range(1, len(ns) + 1):
@@ -196,7 +264,11 @@ print(f"renames {len(plan)} ({collections.Counter(thm[n][0] for n in plan)}), "
       f"edits {sum(len(r) for _, r in plan.values())}, skipped {len(skipped)}")
 print(f"dup rate theorem+lemma {rate(tl):.3f}% -> {rate(tl, plan):.3f}%   "
       f"theorem+lemma+def {rate(tld):.3f}% -> {rate(tld, plan):.3f}%")
-for n, why in skipped[:25]:
+why_count = collections.Counter(w.split(" e.g.")[0].split(" at ")[0] if not w.startswith("`.") else "`.leaf` unindexed use"
+                                for _, w in skipped)
+for w, c in why_count.most_common():
+    print(f"  skipped {c:4d}: {w}")
+for n, why in skipped[:15]:
     print(f"  skip {n}: {why}")
 
 report = dict(dup_rate_before=before, dup_rate_after=after, renames={n: (n.rsplit('.', 1)[0] + '.' if '.' in n else '') + c for n, (c, _) in plan.items()},

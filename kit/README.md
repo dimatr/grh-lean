@@ -26,6 +26,8 @@ Upstream does not accept contributions; nothing is sent to lsernau/grh-lean.
                                  rebuild; repeat (MAX_ROUNDS=6). Commits each round locally.
     ./kit/run/60_dedup.sh        P4: plan renames of duplicate lemma names (needs a finished build);
                                  --apply renames via the .ilean index, rebuilds, checks, commits
+    ./kit/run/65_dedup_fix_loop.sh  if the build after --apply failed: undo the renames the errors
+                                 point at (whole-identifier text undo), rebuild, repeat; commit
     ./kit/run/30_check.sh        static guard + all 5 theorems use only propext/Classical.choice/Quot.sound
     ./kit/run/40_score.sh        local 5-pillar score, baseline vs grh-compact
     ./kit/run/50_package.sh      submission/proof/src/** + tarball; prints the submit command
