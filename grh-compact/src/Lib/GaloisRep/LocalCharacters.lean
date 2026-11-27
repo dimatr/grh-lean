@@ -3,6 +3,7 @@ import Lib.PadicHodge.GoodCriterion
 import Lib.GaloisRep.Avatars
 import Lib.ClassField.AutCharLFunction
 
+-- part: Lib.PadicHodge.Characters.UnramifiedPeriods
 section
 /-! Part of: Characters with finite image on inertia are potentially crystalline of weight 0 (known
 result; see Lib.PadicHodge.Characters.LocalCharacters).
@@ -196,6 +197,7 @@ lemma isPotCrys_of_unramified_char [Algebra (PadicAlgCl p) T] [IsScalarTower ℤ
   simp [linearFrob_apply, P _ s, *]
 end
 
+-- part: Lib.PadicHodge.Characters.LocalCharacters
 section
 /-! Known result: Characters with finite image on inertia are potentially crystalline of weight 0.
 This file treats only the potentially unramified case of the theorem on locally algebraic

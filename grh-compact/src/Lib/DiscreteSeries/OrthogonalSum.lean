@@ -1,5 +1,6 @@
 import Lib.Adelic.Model
 
+-- part: Lib.Weil.Construction.WeilOperators
 section
 /-! Part of: Adelic Weil representation of a unitary group and the invariant theta functional (known
 result; see Lib.Weil.DualPair.PairSplitting).
@@ -92,6 +93,7 @@ end Heisenberg.IsVacuum
 end
 end
 
+-- part: Lib.Weil.Construction.OrthogonalSum
 section
 /-! Part of: Adelic Weil representation of a unitary group and the invariant theta functional (known
 result; see Lib.Weil.DualPair.PairSplitting).

@@ -2,6 +2,7 @@ import Lib.Adelic.SpaceGram
 import Lib.GaloisRep.UpsilonValues
 import Lib.Weil.AdeleSelfDual
 
+-- part: Lib.General.LinearAlgebra.ElementOfMatrix
 section
 /-! General lemmas of linear algebra and matrices (textbook or folklore).
 
@@ -20,6 +21,7 @@ noncomputable def G.ofMat m h := (toUnitary.symm (U.of isUnit_stdForm m h) : G E
 @[simp] lemma G.mat_ofMat m h : (ofMat m h : G E s).mat = m := rfl
 end
 
+-- part: Lib.Weil.Construction.AdelicHeisenberg
 section
 /-! Part of: Adelic Weil representation of a unitary group and the invariant theta functional (known
 result; see Lib.Weil.DualPair.PairSplitting).
@@ -43,6 +45,7 @@ noncomputable def adelicHeis E [Field E] [CMType E]
   AddChar.map_add_eq_mul, ← star_dotProduct, star_mulVec_dotProduct, Circle.norm_coe]
 end
 
+-- part: Lib.Weil.Construction.FiniteHeisenberg
 section
 /-! Part of: Adelic Weil representation of a unitary group and the invariant theta functional (known
 result; see Lib.Weil.DualPair.PairSplitting).
@@ -128,6 +131,7 @@ end stdLattice
 end
 end
 
+-- part: Lib.Weil.Construction.FiniteVacuum
 section
 /-! Part of: Adelic Weil representation of a unitary group and the invariant theta functional (known
 result; see Lib.Weil.DualPair.PairSplitting).

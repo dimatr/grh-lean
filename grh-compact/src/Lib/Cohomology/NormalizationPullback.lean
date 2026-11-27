@@ -5,6 +5,7 @@ import Lib.Cohomology.IntegrationOverLine
 import Lib.Cohomology.LocusEquations
 import Lib.Cohomology.HomogeneousCoords
 
+-- part: Lib.Cohomology.Kunneth.LerayHirschBasis
 section
 /-! Known result: The Künneth formula over a field for mod-ℓ étale cohomology, in Leray–Hirsch form.
 Here it is stated only over the special fibre of an absolutely integrally closed local domain. A
@@ -100,6 +101,7 @@ lemma isDetectedAtPoints_projLine : IsDetectedAtPoints (testOfPoint A _)
     _).toIso).2) (f := 𝟙 _) ⟨rfl⟩) h (𝟙 _) rfl) (𝟙 _) (fun _ _ ↦ Function.bijective_id) .of_top_le
 end
 
+-- part: Lib.Cohomology.ProjectiveLine.NormalizationPullback
 section
 /-! Known result: The Kummer sequence, the Chern class of O(1) and the projective line formula
 (tilted O/p coefficients). Here the formula H(P¹×S) = H(S) ⊕ H(S)·η is given in Leray–Hirsch form

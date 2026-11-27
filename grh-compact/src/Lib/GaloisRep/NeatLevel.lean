@@ -4,6 +4,7 @@ import Lib.Weil.OneSidedPoisson
 import Lib.GaloisRep.NormAbsValue
 import Lib.Weil.MahlerForms
 
+-- part: Lib.Shimura.TraceFormula.TraceFormula
 section
 /-! Part of: Simple trace formula: Hecke trace on a definite group; non-elliptic terms vanish (known
 result; see Lib.Shimura.TraceFormula.MarkedEqDefinite).
@@ -40,6 +41,7 @@ lemma trace_eq_weighted_sum {A G Γ W M I} [Group G] [Group Γ] {e : Γ →* G} 
   simp [sum_filter, sum_sigma, mul_assoc, ← QuotientGroup.eq, ↓K.mem_comap, hσ ▸ hS]
 end
 
+-- part: Lib.Shimura.IntegralModel.NeatLevel
 section
 /-! Part of: Integral Kuga–Sato models for GU(1,n−1) with level covers and congruence relation
 (known result; see Lib.Shimura.IntegralModel.ModelExistence).

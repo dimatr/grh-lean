@@ -2,6 +2,7 @@ import Lib.Weil.Defs
 import Lib.Weil.MassBasic
 import Lib.DiscreteSeries.KernelFixes
 
+-- part: Lib.Adelic.CuspForms.Definite
 section
 /-! Part of: Cusp forms: rapid decay, finite dimension, Poincaré series; algebraic modular forms
 (known result; see Lib.Adelic.CuspForms.Petersson).
@@ -78,6 +79,7 @@ lemma Space.IsAutomorphic.mem_rapidFunctions (h : V.IsAutomorphic F) (d : ∀ i 
   F ∈ V.rapidFunctions := ⟨h, isRapid_of_isCocompact h.1 h.2 (V.exists_isCompact_of_definite d)⟩
 end
 
+-- part: Lib.Adelic.CuspForms.RealConvolution
 section
 /-! Part of: Cusp forms: rapid decay, finite dimension, Poincaré series; algebraic modular forms
 (known result; see Lib.Adelic.CuspForms.Petersson).

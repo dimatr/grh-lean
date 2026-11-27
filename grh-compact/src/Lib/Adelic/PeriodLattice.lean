@@ -3,6 +3,7 @@ import Lib.Adelic.Frames
 import Lib.Adelic.MatrixApprox
 import Lib.Weil.SpaceBasic
 
+-- part: Lib.Shimura.Uniformisation.ModuliPoint
 section
 /-! Part of: Complex uniformisation of PEL abelian varieties; Appell–Humbert; finite class number
 (known result; see Lib.Shimura.Uniformisation.AppellHumbert).
@@ -112,6 +113,7 @@ zP_i ≡ P'_i modulo Eⁿ ∩ x'Ôⁿ. -/
   sub_mem_lattice i : realVecAction z (a.P i) - b.P i ∈ frameLattice b.x
 end
 
+-- part: Lib.Shimura.Uniformisation.PeriodLattice
 section
 /-! Part of: Complex uniformisation of PEL abelian varieties; Appell–Humbert; finite class number
 (known result; see Lib.Shimura.Uniformisation.AppellHumbert).

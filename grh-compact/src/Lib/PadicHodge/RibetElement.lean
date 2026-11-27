@@ -6,6 +6,7 @@ import Lib.PadicHodge.LabelledColumns
 import Lib.PadicHodge.RowBalanced
 import Lib.PadicHodge.OddShaBound
 
+-- part: New.Selmer.CrystallineBound
 section
 /-! Part of: Crystalline losses above ℓ are affordable (see New.Selmer.RibetElement).
 
@@ -80,6 +81,7 @@ lemma crystalline_defect_le {ℓ} [hp : ThePrime ℓ] [Γ : GroupOverGp ℓ] [To
   else by simp [relLength_eq_zero.2 (F (by clear * - n c; grind))]
 end
 
+-- part: New.Selmer.OnePlaceDefect
 section
 /-! Part of: Crystalline losses above ℓ are affordable (see New.Selmer.RibetElement).
 
@@ -165,6 +167,7 @@ lemma block_defect_le_at_place {P ℓ Γ} {D : Data P} [hp : ThePrime ℓ] [Padi
   grind
 end
 
+-- part: New.Selmer.TateTwistSteps
 section
 /-! Part of: Ribet's method with congruent blocks and tied auxiliary primes (see
 New.Selmer.RibetElement).
@@ -224,6 +227,7 @@ lemma hasTriangleCost_tateTwist [Fintype J] [LinearOrder J] {ν w τ φ t γ h c
       simpa [cocycle_apply_inv (C (hS k).1), F, Subtype.ext_iff] using (a z k).2)) g + t • z g)))⟩
 end
 
+-- part: New.Selmer.RibetElement
 section
 /-! Ribet's method with congruent blocks and tied auxiliary primes. In any rank the method gives a
 Hecke element, polynomial in the tie parameters, that kills a determinant vanishing on lifts modulo

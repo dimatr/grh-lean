@@ -2,6 +2,7 @@ import New.Weil.SingularForms
 import New.Weil.FourierCoefficient
 import New.Weil.MonomialCoefficientVector
 
+-- part: Lib.Shimura.ComplexTheta.PeriodVanishing
 section
 /-! Known result: Fourier coefficients of theta lifts as periods over stabilisers. Here one
 non-degenerate coefficient of a theta lift to a split unitary group is unfolded once by Witt's
@@ -108,6 +109,7 @@ lemma period_eq_zero {E n n₁ n₂} [Field E] [CMType E] [WeilData E] [Fintype 
     (vacElem _)) (by simp +contextual)) (A.levi (scaleIdele E • h₁.toUnitary, 1))).symm.trans
 end
 
+-- part: New.Rows.MemberOrthogonality
 section
 /-! Non-lifts sharing one Hecke root have zero theta periods. A form on a definite U(V) killed by
 theta descent, by reflection sums at the level (as good forms are), and by a Hecke polynomial at one

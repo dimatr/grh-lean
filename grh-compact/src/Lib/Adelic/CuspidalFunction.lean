@@ -1,5 +1,6 @@
 import Lib.Adelic.MackeyFormula
 
+-- part: Lib.LocalGL.Green.InductionMean
 section
 /-! Part of: Green's characters of GL_n(F_q) and the parabolic-induction ring (known result; see
 Lib.LocalGL.Green.LabelDegree).
@@ -59,6 +60,7 @@ lemma Hall.rankInner_mul_eq_sum_skew (X A B : Hall k) :
     (by simp [← e ⟨·, ·⟩]) H⟩] <;> simp [e, StableSubspace.endOnSub, restrict_apply, add_comm]
 end
 
+-- part: Lib.LocalGL.Green.CuspidalFunction
 section
 /-! Part of: The Brauer lift is a virtual character; cuspidal times Steinberg is induced from a
 torus (known result; see Lib.LocalGL.Green.CuspidalInnerProduct).

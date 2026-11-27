@@ -1,6 +1,7 @@
 import Lib.GaloisRep.Petersson
 import New.Weil.PairReal
 
+-- part: Lib.Weil.DualPair.Lift
 section
 /-! Part of: Theta kernels of unitary dual pairs: functoriality, seesaw, growth, rapid decay (known
 result; see Lib.Weil.DualPair.KernelDecay).
@@ -124,6 +125,7 @@ end ThetaKernel
 end
 end
 
+-- part: Lib.Weil.DualPair.DescentsVanishDef
 section
 /-! A step of the proof of: Theta kernels of unitary dual pairs: functoriality, seesaw, growth,
 rapid decay.
@@ -137,6 +139,7 @@ def DescentsVanish {E n m} [Field E] [CMType E] [WeilData E] [Fintype n] [Fintyp
   Space.lift (pairThetaKer W V a 1).swap f Y = 0
 end
 
+-- part: Lib.Weil.DualPair.KernelDecay
 section
 /-! Known result: Functoriality, seesaw, growth and rapid decay for theta kernels of unitary dual
 pairs. Here both spaces are hermitian and act on the maps between them. Decay is proved for data

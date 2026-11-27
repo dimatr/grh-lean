@@ -4,6 +4,7 @@ import Lib.GaloisRep.ChangingSigns
 import Lib.GaloisRep.FiniteBesselGroup
 import Lib.GaloisRep.ReproducingKernel
 
+-- part: Lib.DiscreteSeries.Character.KTypeMultiplicity
 section
 /-! Known result: Weyl character and dimension formulas for U(n) and products of unitary groups. The
 character formula is stated for Schur modules of products of general linear groups at elements with
@@ -187,6 +188,7 @@ lemma Orbital.exists_kType_multiplicity [Nonempty n] [hg : l.HasLargeGap A] (hν
     simpa [← key, N, q, (mt (by simp [·, rootCone]) q : ν ≠ l.lowestKType)] using M⟩⟩)
 end
 
+-- part: Lib.DiscreteSeries.Character.SectorBound
 section
 /-! Part of: Discrete series character on the compact Cartan by orbital integrals; formal degree
 (known result; see Lib.DiscreteSeries.Character.FormalDegree).
@@ -358,6 +360,7 @@ lemma le_norm_weightMinors_twoPowDiagConj i j m (hu : uᴴ = u.1⁻¹) (k : ∀ 
   gcongr <;> grind
 end
 
+-- part: Lib.DiscreteSeries.Character.FormalDegree
 section
 /-! Known result: Discrete series character on the compact Cartan by orbital integrals, and the
 formal degree. The form here is only for U(p,q) and parameters with large gaps, for the explicit
@@ -701,6 +704,7 @@ lemma Orbital.harish_chandra_degree_and_orbital {n : Type} [Fintype n] {ε} {l :
     dotProduct_neg]
 end
 
+-- part: Lib.LocalGL.TraceFormula.TraceComparison
 section
 /-! Known result: Comparison of simple trace formulas for unitary groups that differ only at real
 places. The form here uses integrable idempotent kernels of very regular discrete series in place of

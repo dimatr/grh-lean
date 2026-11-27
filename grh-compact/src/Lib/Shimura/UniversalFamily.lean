@@ -3,6 +3,7 @@ import Lib.Shimura.ModelAlongArc
 import Lib.Shimura.PeakContraction
 import Lib.Shimura.UniversalPoints
 
+-- part: Lib.Shimura.Deformation.TangentBound
 section
 /-! Known result: Deformations of the PEL object have at most n-1 parameters. Only the upper bound
 for first-order deformations is proved here, at every good place. The proof works on the finite
@@ -133,6 +134,7 @@ lemma tangent_bound [IsAlgClosed k] (hw : D.IsGoodAt (ker x₀.baseHom)) {V : Va
 end
 end
 
+-- part: Lib.Shimura.ThetaModuli.FamilyFromPoints
 section
 /-! Part of: Moduli of abelian varieties by theta values (theta-null embedding, universal family)
 (known result; see Lib.Shimura.ThetaModuli.UniversalFamily).
@@ -335,6 +337,7 @@ theorem exists_thetaFamily_of_points {E} [Field E] [CMBase E] {D : PEL E} {R} {�
     c (e i ((x i).Q w))), (by simpa [t] using! congr(L i $(hσ · i))), (t i).2.2.1⟩, rfl⟩⟩
 end
 
+-- part: Lib.Shimura.GoodReduction.ArcReduction
 section
 /-! Known result: Good reduction of unitary PEL abelian varieties, in analytic form (no toric
 degeneration). Here a torus with polarisation prime to p is assumed to have arbitrarily expanding
@@ -388,6 +391,7 @@ lemma ThetaTorus.hasGoodReduction_and_val_card_eq_one {E} [Field E] [CMBase E] {
       D.emb_beta_eq_of_ne] using .inl (h (star _) q (by simpa))⟩))⟩
 end
 
+-- part: Lib.Shimura.ThetaModuli.UniversalFamily
 section
 /-! Known result: Moduli of abelian varieties by theta values (theta-null embedding, universal
 family). Here the base is the closure of theta values at level points of PEL tori rather than being

@@ -5,6 +5,7 @@ import Lib.ClassField.FormalHeight
 import New.Weil.BesselIntegral
 import New.Weil.SharpData
 
+-- part: Lib.SiegelWeil.Mass.MassRatio
 section
 /-! Known result: Mass formula for unimodular hermitian lattices, ratio of consecutive masses. This
 file gives only the ratio of consecutive masses in large rank, up to an explicit error uniform among
@@ -54,6 +55,7 @@ lemma abs_log_mass_ratio_sub_le E [Field.{0} E] [CMType E] [WeilData E] j u (hu 
     simp [field, one_le_pow₀]))]
 end
 
+-- part: Lib.Weil.CompactLift.RallisFormula
 section
 /-! Known result: Theta lift for a definite unitary pair as a class sum on algebraic modular forms.
 The pair here is U(n)×U(n′) over a CM field with n < n′. The kernel is the matrix of Taylor

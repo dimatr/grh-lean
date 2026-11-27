@@ -89,6 +89,11 @@ def main():
     ap.add_argument("--cap", type=int, default=40, help="max declarations in a merged file")
     ap.add_argument("--seeds", type=int, default=20)
     ap.add_argument("--no-refolder", action="store_true")
+    ap.add_argument("--isolate", type=pathlib.Path, default=HERE.parent / "isolate.txt",
+                    help="original modules never merged (one per line); grown by isolate_failures.py")
+    ap.add_argument("--layout", type=pathlib.Path, default=HERE.parent / "layout.json",
+                    help="persisted folder of every original module; created on first run")
+    ap.add_argument("--recluster", action="store_true", help="ignore --layout and run Louvain again")
     ap.add_argument("--dry-run", action="store_true")
     a = ap.parse_args()
 
@@ -102,6 +107,13 @@ def main():
     ext_imports = {m: [i for i in imp if i not in text] for m, (imp, _) in parsed.items()}
     decls = {m: len(DECL.findall(strip_comments(t))) for m, t in text.items()}
 
+    iso = set()
+    if a.isolate.exists():
+        iso = {l.split("#")[0].strip() for l in a.isolate.read_text().splitlines()} - {""}
+        unknown = iso - set(text)
+        if unknown:
+            print("warning: isolate entries not in baseline:", sorted(unknown))
+
     # ---- merge to fixed point ------------------------------------------------------------
     owner = {m: m for m in text}                 # original module -> surviving module
     members = {m: [m] for m in text}             # surviving module -> original members
@@ -114,6 +126,7 @@ def main():
                 importers[i].append(m)
         cand = [(size[x], order[x], x, ims[0]) for x, ims in importers.items()
                 if len(ims) == 1 and x not in PROTECTED and ims[0] not in PROTECTED
+                and x not in iso and ims[0] not in iso
                 and size[x] + size[ims[0]] <= a.cap]
         if not cand:
             break
@@ -127,13 +140,14 @@ def main():
             imp[m] = list(dict.fromkeys(b if i == x else i for i in imp[m] if not (m == b and i == x)))
             imp[m] = [i for i in imp[m] if i != m]
 
-    # ---- re-folder -----------------------------------------------------------------------
-    G = nx.Graph(); G.add_nodes_from(imp)
-    G.add_edges_from((m, i) for m, v in imp.items() for i in v)
-    newname = {}
-    if a.no_refolder:
-        newname = {m: m for m in imp}
-    else:
+    # ---- re-folder ----------------------------------------------------------------------
+    # folder of every ORIGINAL module ("Top.Cluster"), persisted so regeneration is stable
+    folder = {}
+    if a.layout.exists() and not a.recluster and not a.no_refolder:
+        folder = json.loads(a.layout.read_text())
+    elif not a.no_refolder:
+        G = nx.Graph(); G.add_nodes_from(imp)
+        G.add_edges_from((m, i) for m, v in imp.items() for i in v)
         best = max((louvain_communities(G, seed=s) for s in range(a.seeds)), key=lambda c: modularity(G, c))
         used = set()
         for comm in sorted(best, key=lambda c: (-sum(size[m] for m in c), min(c))):
@@ -152,15 +166,21 @@ def main():
             while (top, name) in used:
                 name, k = f"{base}{k}", k + 1
             used.add((top, name))
-            leaves = set()
-            for m in sorted(movable, key=lambda m: order[m]):
-                leaf, j = m.split(".")[-1], 2
-                while leaf in leaves:
-                    leaf, j = f"{m.split('.')[-1]}{j}", j + 1
-                leaves.add(leaf)
-                newname[m] = f"{top}.{name}.{leaf}"
-        for m in imp:
-            newname.setdefault(m, m)
+            for m in movable:
+                for o in members[m]:
+                    folder[o] = f"{top}.{name}"
+        if not a.dry_run:
+            a.layout.write_text(json.dumps(dict(sorted(folder.items())), indent=0))
+    newname, leaves = {}, collections.defaultdict(set)
+    for m in sorted(imp, key=lambda m: order[m]):
+        if m in PROTECTED or not folder:
+            newname[m] = m; continue
+        f = folder.get(m) or ".".join(m.split(".")[:2])   # module unseen in layout: keep its old folder
+        leaf, j = m.split(".")[-1], 2
+        while leaf in leaves[f]:
+            leaf, j = f"{m.split('.')[-1]}{j}", j + 1
+        leaves[f].add(leaf)
+        newname[m] = f"{f}.{leaf}"
     final = {o: newname[owner[o]] for o in text}
 
     # ---- emit ----------------------------------------------------------------------------
@@ -192,7 +212,7 @@ def main():
             for m in topo:
                 body = parsed[m][1].strip("\n")
                 cl = closers(open_scopes(body))
-                parts.append(f"section\n{body}\n" + "".join(c + "\n" for c in cl) + "end\n")
+                parts.append(f"-- part: {m}\nsection\n{body}\n" + "".join(c + "\n" for c in cl) + "end\n")
             out = head + "\n" + "\n".join(parts)
         out_files[me] = out
 

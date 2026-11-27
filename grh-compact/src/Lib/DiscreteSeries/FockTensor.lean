@@ -3,6 +3,7 @@ import Lib.DiscreteSeries.HaarModulus
 import Lib.DiscreteSeries.OrthogonalSum
 import Lib.Adelic.HolomorphicIntegral
 
+-- part: Lib.Weil.Fock.FockVacuum
 section
 /-! Part of: Bargmann–Fock model of the harmonic (oscillator) representation of U(p,q) (known
 result; see Lib.Weil.Fock.OscillatorPair).
@@ -72,6 +73,7 @@ lemma exists_norm_eval_le_exp : ∃ k C, ∀ l, ‖eval l P‖ ≤ |C| * .exp ((
     prod_pow_eq_pow_sum] <;> bound⟩
 end
 
+-- part: Lib.Weil.Fock.FockAction
 section
 /-! Part of: Bargmann–Fock model of the harmonic (oscillator) representation of U(p,q) (known
 result; see Lib.Weil.Fock.OscillatorPair).
@@ -122,6 +124,7 @@ noncomputable def realAction ε : (realHeis ε).MultiplierAction (realMeasure ι
     simp [J, ← ext_iff, mulVec_injective_iff_isUnit]; grind⟩
 end
 
+-- part: Lib.Weil.Fock.FockTensor
 section
 /-! Part of: Bargmann–Fock model of the harmonic (oscillator) representation of U(p,q) (known
 result; see Lib.Weil.Fock.OscillatorPair).

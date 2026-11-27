@@ -3,6 +3,7 @@ import New.Weil.IndexTypes
 import New.Weil.GridParameters
 import New.Weil.ColumnDefs
 
+-- part: New.Seesaw.FramesForY
 section
 /-! Set-up for this proof: records of the data and parameters of this proof, names for its objects.
 
@@ -39,6 +40,7 @@ lemma exists_frame_gradedGram (φ : R →+* ℂ) (hN : 0 < N) {ε} (h : negCount
     star, apply_ite φ] <;> intros <;> split_ifs <;> (try lia) <;> norm_cast <;> grind [Nat.cast_pos]
 end
 
+-- part: New.Trace.GoodIdempotent
 section
 /-! Set-up for this proof: records of the data and parameters of this proof, names for its objects.
 

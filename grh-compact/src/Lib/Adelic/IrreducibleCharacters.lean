@@ -1,5 +1,6 @@
 import Lib.Adelic.Average
 
+-- part: Lib.General.Groups.VirtualCharacters
 section
 /-! General lemmas of group theory (textbook or folklore).
 
@@ -79,6 +80,7 @@ lemma isClassFunction_of_mem_virtualChars : IsClassFunction f := by induction v 
   span_induction <;> simp_all [IsChar.isClassFunction]
 end
 
+-- part: Lib.General.Groups.CentralProjections
 section
 /-! General lemmas of group theory (textbook or folklore).
 
@@ -132,6 +134,7 @@ lemma piTensorElem (h : ∀ i, IsCentralProj (x i)) :
 end IsCentralProj
 end
 
+-- part: Lib.General.Groups.IrreducibleCharacters
 section
 /-! General lemmas of group theory (textbook or folklore).
 

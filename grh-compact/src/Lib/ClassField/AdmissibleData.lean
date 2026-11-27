@@ -2,6 +2,7 @@ import Lib.ClassField.TightFrameExists
 import Lib.ClassField.FormalParameter
 import Lib.ClassField.PeriodDefs
 
+-- part: New.Curve.FrameSections
 section
 /-! Tight frames and an integral standard theta function. The lattice of the standard theta function
 has tight frames (substitutes for an orthonormal basis) of every large length, Fourier inversion
@@ -129,6 +130,7 @@ lemma Parameters.exists_finitePart_of_isTightFrame {M N : ℕ} {I} [Fintype I] {
       simp [entireTheta_translate_finiteImage _ V B, *]; simp [A, sum_prod_type, mul_sum]; grind)
 end
 
+-- part: New.Curve.ThetaProducts
 section
 /-! Part of: Normal form of theta series at non-split primes (see New.Curve.FormalParameter).
 
@@ -273,6 +275,7 @@ lemma thetaProducts_normal_form (hp : chiK P.d p ≠ 1) : ∃ ϖ π, ‖ϖ‖ = 
 end Parameters
 end
 
+-- part: New.Curve.ConjugateGenerator
 section
 /-! Known results stated on this proof's data: Galois action on CM theta functions and on the finite
 Weil representation (known result; see Lib.CM.Reciprocity.SemilinearWeilLaw).
@@ -359,6 +362,7 @@ lemma exists_isJetConjugate_generator P : ∃ C : ℕ, ∀ s, ∃ B : _ → 𝔸
 end Parameters
 end
 
+-- part: New.Data.AdmissibleData
 section
 /-! Set-up for this proof: records of the data and parameters of this proof, names for its objects.
 

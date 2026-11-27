@@ -2,6 +2,7 @@ import Lib.Cohomology.ChartedSchemes
 import Lib.Cohomology.Contraction
 import Lib.Cohomology.LocusEquations
 
+-- part: Lib.Cohomology.Hodge.DepthVanishing
 section
 /-! Part of: Class of the diagonal and Künneth surjectivity in Hodge cohomology (Grothendieck
 symbols) (known result; see Lib.Cohomology.Hodge.FixedPointFormula).
@@ -107,6 +108,7 @@ lemma hasZariskiDescent_hodgeCoeff : HasZariskiDescent (@HodgeTest.sqZeroExt k _
   l i.2 _ _ (TrivSqZeroExt.isUnit_iff_isUnit_fst.2 u)).isCohomEquiv
 end
 
+-- part: Lib.Cohomology.Hodge.Kunneth
 section
 /-! Part of: Class of the diagonal and Künneth surjectivity in Hodge cohomology (Grothendieck
 symbols) (known result; see Lib.Cohomology.Hodge.FixedPointFormula).
@@ -188,6 +190,7 @@ lemma kunneth {k} [Field k] [CharZero k] {X d n} [hX : HasAtlas d X] (z : HodgeH
     ((cup_map (h := freeAb.hom_ext) ..).trans (congrArg _ (comp_assoc_of_third_deg_zero ..)))⟩
 end
 
+-- part: Lib.Cohomology.Hodge.GrothendieckSymbol
 section
 /-! Part of: Class of the diagonal and Künneth surjectivity in Hodge cohomology (Grothendieck
 symbols) (known result; see Lib.Cohomology.Hodge.FixedPointFormula).
@@ -367,6 +370,7 @@ lemma symbolClass_succ [CharZero k] : ∃ h, HodgeH.map (relFreeAb.prod ..)
 end
 end
 
+-- part: Lib.Cohomology.WoodsHole.IsolatedCoincidences
 section
 /-! Part of: Half of the holomorphic Lefschetz (Woods Hole) formula for h-forms and correspondences
 (known result; see Lib.Cohomology.PointClass.GaloisRep).
@@ -453,6 +457,7 @@ lemma IsTangentPoly.hasJacobianRatio {X} {c u : W ⟶ restrictAlg E k ⋙ X} {w 
     rintro ⟨φ, ⟨⟩⟩ a b; simp [G φ _ b, G _ _ (hu φ ▸ a), ↓map_neg] ∘ V v
 end
 
+-- part: Lib.Cohomology.Hodge.PointClass
 section
 /-! Part of: Class of the diagonal and Künneth surjectivity in Hodge cohomology (Grothendieck
 symbols) (known result; see Lib.Cohomology.Hodge.FixedPointFormula).

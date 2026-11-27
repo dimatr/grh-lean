@@ -5,6 +5,7 @@ import New.Weil.Flip
 import New.Weil.Staircase
 import New.Weil.SiegelWeilFormula
 
+-- part: Lib.General.Groups.IndexOfProduct
 section
 /-! General lemmas of group theory (textbook or folklore).
 
@@ -15,6 +16,7 @@ lemma index_pi_univ {I G} [Fintype I] [∀ i, Group (G i)] H :
   (Nat.card_congr (QuotientGroup.leftRel_pi H ▸ Setoid.piQuotientEquiv _) ▸ Nat.card_pi :)
 end
 
+-- part: Lib.SiegelWeil.RallisInner.SharpData
 section
 /-! Known result: Rallis inner product formula by doubling. Only Weil's range is treated here, and
 the forms are rapidly decreasing, not cuspidal. The boundary orbits are removed by the test datum,

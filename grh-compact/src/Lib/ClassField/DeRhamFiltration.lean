@@ -2,6 +2,7 @@ import Lib.ClassField.FrobeniusOnRoots
 import Lib.ClassField.TameInertia
 import Lib.ClassField.Defs
 
+-- part: Lib.ClassField.Places.CyclotomicRamification
 section
 /-! Part of: Hilbert ramification theory for infinite Galois extensions; ideles and ideal classes
 (known result; see Lib.ClassField.Places.LocalFrobenius).
@@ -32,6 +33,7 @@ lemma exists_inertia_cyclotomicGp_eq (c : p.Coprime a) : ∃ g ∈ inertiaGroup 
   h.map_of_injective, AlgEquiv.injective, NeZero.pos, h.pow_of_coprime, c.symm.pow_right]
 end
 
+-- part: Lib.PadicHodge.TateSen.NearOne
 section
 /-! Known result: Ax–Sen–Tate theorem and Tate's vanishing of the invariants of C_p(i). Ax's theorem
 is given for any subgroup, without the constant, and Tate's for H⁰ only, on any open subgroup, from
@@ -161,6 +163,7 @@ variable (Γ) in lemma nhds_one_le_map_nearOne : 𝓝 1 ≤ Filter.map toGp (nea
   (map_comap_of_mem (𝒥.2.1.mem_nhds (one_mem _))).ge
 end
 
+-- part: Lib.PadicHodge.TateSen.DeRhamFiltration
 section
 /-! Part of: Ax–Sen–Tate theorem and Tate's vanishing of the invariants of C_p(i) (known result; see
 Lib.PadicHodge.TateSen.NearOne).

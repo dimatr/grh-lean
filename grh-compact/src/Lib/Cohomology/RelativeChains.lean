@@ -1,6 +1,7 @@
 import Lib.Cohomology.Partitions
 import Lib.Cohomology.CupProduct
 
+-- part: Lib.Cohomology.Etale.Relations
 section
 /-! Part of: Descent of torsion étale cohomology along v-covers; excision, transfer, limits (known
 result; see Lib.Cohomology.Etale.ContinuityAtlas).
@@ -26,6 +27,7 @@ lemma H.sum_map_eq_zero_of_relationLocus (h : IsCohomEquiv F (freeAb.map (relati
   (by simpa [comp_sum, ← map_comp] using! congr((mapHom ..) $(relationLocus_sum_eq_zero ..) x))
 end
 
+-- part: Lib.Cohomology.Etale.RelativeChains
 section
 /-! Part of: Descent of torsion étale cohomology along v-covers; excision, transfer, limits (known
 result; see Lib.Cohomology.Etale.ContinuityAtlas).

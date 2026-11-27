@@ -5,6 +5,7 @@ import New.Weil.GradingsOfY
 import New.Weil.ChainValuation
 import New.Weil.GridModuli
 
+-- part: Lib.GLn.Dual.DualWeights
 section
 /-! Part of: Dual of a Weyl module by Jacobi's complementary minors; Cartan component (known result;
 see Lib.GLn.Branching.Branching).
@@ -45,6 +46,7 @@ lemma exists_dual_pairing_of_isHCParam {E n} [Field E] [CMType E] [Fintype n] {Î
     Function.comp_def]
 end
 
+-- part: New.Seesaw.PairTensorData
 section
 /-! Set-up for this proof: records of the data and parameters of this proof, names for its objects.
 

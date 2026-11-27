@@ -3,6 +3,7 @@ import Lib.GaloisRep.ShintaniLifting
 import Lib.GaloisRep.BaseChangeEigenchar
 import Lib.GaloisRep.EigencharCompatibility
 
+-- part: Lib.GaloisRep.LocalGlobal.ParahoricTypeLabel
 section
 /-! Part of: Local-global compatibility at tame level, away from and at l (known result; see
 Lib.GaloisRep.LocalGlobal.LabelCompatibility).
@@ -59,6 +60,7 @@ lemma HasParahoricType.hasProductLabel {f hw e y b c ψ} {χ : Fin s → _} (L :
     Units.ext (extendGL_spec ..).1⟩) _).symm.trans (mul_eq_zero_of_left this _)))))⟩
 end
 
+-- part: Lib.GaloisRep.BaseChange.BaseChangeLabel
 section
 /-! Part of: Cyclic base change of prime degree for definite unitary groups (weak lift, local
 matching) (known result; see Lib.GaloisRep.BaseChange.BaseChangeEigenchar).
@@ -169,6 +171,7 @@ lemma exists_baseChange_hasLabel [StablyUnram E'] {κ f} (hf : f ∈ (stdSpace E
       ⟨v, hv, ⟨⟩⟩))))⟩
 end
 
+-- part: Lib.GaloisRep.LocalGlobal.LabelCompatibility
 section
 /-! Known result: Local-global compatibility at tame level, away from and at l. It is treated at
 split places only, for sorted tame Iwahori eigencharacters and for depth-zero types induced from a

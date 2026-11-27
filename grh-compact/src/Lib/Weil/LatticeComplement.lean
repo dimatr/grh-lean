@@ -1,6 +1,7 @@
 import Lib.Weil.SpaceOperations
 import Lib.DiscreteSeries.ExpSurjective
 
+-- part: Lib.Adelic.Witt.MaximalCompact
 section
 /-! General lemmas of group theory (textbook or folklore).
 
@@ -27,6 +28,7 @@ lemma isCompact_maxCompact : IsCompact (maxCompact E s : Set (G E s)) := (isComp
   isCompact_iff_compactSpace.2 ⟨@isCompact_univ (maxCompactU s) _ _⟩).prod isCompact_Kf
 end
 
+-- part: Lib.General.Algebra.LatticeComplement
 section
 /-! General lemmas of commutative and general algebra (textbook or folklore).
 

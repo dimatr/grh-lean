@@ -4,6 +4,7 @@ import Lib.Weil.RealConvolution
 import New.Filling.TopFloor
 import New.Filling.AmplitudeSums
 
+-- part: New.Filling.GlobalSieve
 section
 /-! Positive kernels and a sieve losing almost nothing. Systems of positive kernels, of one kind at
 real and finite places and with each kernel the integral of the next over a common last entry,
@@ -217,6 +218,7 @@ lemma sieve [WeilData E] [T.StarStable]
 end Filling
 end
 
+-- part: New.Filling.GlobalToLocal
 section
 /-! Set-up for this proof: dictionaries between two encodings of the same objects.
 

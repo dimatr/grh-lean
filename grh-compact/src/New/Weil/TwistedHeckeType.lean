@@ -3,6 +3,7 @@ import New.Weil.LiveSum
 import New.Weil.ChainValuation
 import Lib.Adelic.Counting
 
+-- part: New.Core.ModuleIndex
 section
 /-! General lemmas on `IndexDvd` and `HasType`: bookkeeping for the index of a submodule.
 
@@ -77,6 +78,7 @@ lemma IndexDvd.of_det_dvd [IsDomain O] [ValuationRing O] [Fintype ι] {A : Matri
   toBlocks₁₁, mul_apply, mulVec_eq_sum, neg_add_eq_sub] using (@t (.inl i) <| .inr ·))⟩⟩
 end
 
+-- part: New.Curve.JetDivisibility
 section
 /-! Divisibility of matrix jets at non-split primes. The jet of a series Θ along a polynomial Q is
 (Q(∂)Θ)(0); the partners of a place σ are the −p^eσ. For p inert or ramified in K, jets of theta
@@ -188,6 +190,7 @@ lemma norm_schurJet_le {p : ℕ} [Fact p.Prime] {Φ n n'} [Fintype Φ] [Fintype 
     @sum_comm n, apply_ite, mul_assoc, mul_comm (X _), mul_left_comm (C (M ..).1)]
 end
 
+-- part: New.Seesaw.LiftCharacters
 section
 /-! Set-up for this proof: dictionaries between two encodings of the same objects.
 
@@ -368,6 +371,7 @@ lemma Data.spaceChar_rankTwist {P} (D : Data P) ϑ j i :
   (D.chainChar ϑ i).baseChange := _root_.spaceChar_rankTwist (Even.two_dvd (by grind [card_X, n]))
 end
 
+-- part: New.TwistedHecke.ElementaryDivisors
 section
 /-! An approximate projector from averages over generic matrices. Conjugation-invariant linear forms
 on polynomials in a generic Levi matrix split evaluation at the identity by weight, up to a
@@ -630,6 +634,7 @@ lemma hasType_twisted_hecke (hp : ¬IsUnit (T.p : O)) {r ℓ κ y z} (big : Heck
 end TwistingData
 end
 
+-- part: New.Columns.TwistedHeckeType
 section
 /-! A Frobenius-twisted Hecke operator has small elementary divisors. An integrally scaled Hecke
 operator above p, on forms at tops linked in a circle by Frobenius and conjugation, has elementary

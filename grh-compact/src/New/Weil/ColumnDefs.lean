@@ -5,6 +5,7 @@ import New.Weil.NamesAtSplitLevel
 import New.Weil.IntegralVacuum
 import New.Weil.ChosenPlaceLevels
 
+-- part: New.Curve.DepthPairs
 section
 /-! Part of: Some jet is no more divisible than predicted (see New.Rows.GluedFormTheta).
 
@@ -151,6 +152,7 @@ lemma exists_hasLargeSplit_of_pairs {P s p} [hp : Fact p.Prime] [PadicPlace p] (
     mul_right_inj]
 end
 
+-- part: New.Exchange.LValueRatio
 section
 /-! Set-up for this proof: records of the data and parameters of this proof, names for its objects.
 
@@ -200,6 +202,7 @@ noncomputable def Data.Pair.ratio (p : D.Pair) (ϑ : D.TameChar) (s : ℤˣ := 1
   ϑ.toAutChar ^ s.1)⁻¹.L ({w | D.IsChosen w} ∪ ϑ.Q) p.z‖ / ‖p.ν⁻¹.L {w | D.IsChosen w} p.z‖ : ℂ)
 end
 
+-- part: New.Columns.ColumnDefs
 section
 /-! Set-up for this proof: records of the data and parameters of this proof, names for its objects.
 

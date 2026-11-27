@@ -1,6 +1,7 @@
 import New.Weil.StackedDeterminants
 import New.Weil.ExchangeTheorem
 
+-- part: New.Rows.RealMatching
 section
 /-! Part of: Exchange of theta kernels with explicit determinant polynomials (see New.Rows.Carrier).
 
@@ -116,6 +117,7 @@ lemma real_matching : ∃ Q₀, ∀ v, ∃ κ, ∀ (ℓ : _ → _ →L[ℂ] ℂ)
 end
 end
 
+-- part: New.Rows.Carrier
 section
 /-! Exchange of theta kernels with explicit determinant polynomials. A fixed multiple of a theta
 kernel summed over a definite unitary group equals a kernel integrated over a unitary group of no

@@ -3,6 +3,7 @@ import Lib.GaloisRep.MarkedPairs
 import Lib.Shimura.ModelAlongArc
 import Lib.GaloisRep.Lefschetz
 
+-- part: Lib.Shimura.ThetaGroup.RigidFibres
 section
 /-! Known result: the theta group of an ample line bundle, with the span of sections, K(L) and
 symmetric theta structures. Here it is stated for a given system of coordinates with a Heisenberg
@@ -81,6 +82,7 @@ lemma ThetaObject.TorusModel.isRigid_pullback {E O W} [Field E] [CMBase E] [Comm
   simpa using K (g • n 0) 1
 end
 
+-- part: Lib.Shimura.Uniformisation.BallModel
 section
 /-! Part of: Complex uniformisation of PEL abelian varieties; Appell–Humbert; finite class number
 (known result; see Lib.Shimura.Uniformisation.AppellHumbert).
@@ -281,6 +283,7 @@ lemma exists_ball_family {ν} (o : ModuliPoint E D.Index ν) : ∃ f : AnalyticF
 end
 end
 
+-- part: Lib.Shimura.IntegralModel.UniversalPoints
 section
 /-! Part of: Integral Kuga–Sato models for GU(1,n−1) with level covers and congruence relation
 (known result; see Lib.Shimura.IntegralModel.ModelExistence).

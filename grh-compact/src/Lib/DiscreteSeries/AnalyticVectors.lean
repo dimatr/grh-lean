@@ -1,6 +1,7 @@
 import Lib.DiscreteSeries.HighestVectors
 import Lib.DiscreteSeries.ExpSurjective
 
+-- part: Lib.DiscreteSeries.Rigidity.CasimirGrowth
 section
 /-! Known result: Lowest K-type and Casimir value determine a discrete series coefficient; analytic
 vectors. The statement here is for U(p,q) and parameters with large gaps, assumes no irreducibility,
@@ -145,6 +146,7 @@ lemma mem_orthogonal_filtration_of_casimirK {n} [Fintype n] {H} [NormedAddCommGr
     [by simpa [ha] using congr(re $(h2.sum_inner_casimirK h a a))]
 end
 
+-- part: Lib.DiscreteSeries.Rigidity.AnalyticVectors
 section
 /-! Part of: Lowest K-type and Casimir value determine a discrete series coefficient; analytic
 vectors (known result; see Lib.DiscreteSeries.Rigidity.CasimirGrowth). -/

@@ -1,6 +1,7 @@
 import Lib.GaloisRep.Conjugation
 import Lib.GaloisRep.ZeroSymmetry
 
+-- part: Lib.Cyclotomic.Kolyvagin.Components
 section
 /-! Part of: Stickelberger annihilation and Kolyvagin–Rubin bound for odd twisted components (known
 result; see Lib.Cyclotomic.Kolyvagin.ComponentBound).
@@ -36,6 +37,7 @@ noncomputable abbrev component ν := vanishingCocycles (cycPowDirichlet l e ψ)�
   O)) (insert cmConj (cycloGalGroup N ∩ (inertiaAbove (placesDividing ℚ l)ᶜ ∪ shaLocalSet l ℚ 1)))
 end
 
+-- part: Lib.Cyclotomic.Voronoi.StickelbergerInteger
 section
 /-! Known result: Voronoi's congruence for twisted power sums and trivial zeros of Dirichlet
 L-functions. The form here is twisted by a possibly imprimitive character and stated for power sums.
@@ -154,6 +156,7 @@ lemma exists_isStickelbergerBound (he : e ≠ 0) : ∃ X ≠ 0, X ≤ 2 ^ (N + e
     ← mul_assoc, ← sum_mul, ↓sum_range_add, two_mul]; grind
 end
 
+-- part: Lib.ClassField.Places.LocalBasics
 section
 /-! Part of: Hilbert ramification theory for infinite Galois extensions; ideles and ideal classes
 (known result; see Lib.ClassField.Places.LocalFrobenius).
@@ -183,6 +186,7 @@ lemma decompGroup_le_cycloGalGroup (h : B q < 1) (k : q ≡ 1 [MOD m]) : decompG
     (cycCharMod_of_mem_inertiaGroup · c)) ((f.mem_ker_cycCharMod_iff c).2 k)
 end
 
+-- part: Lib.Cyclotomic.Stickelberger.GaussSums
 section
 /-! Known result: Stickelberger's factorisation of Gauss sums and the Davenport–Hasse product
 relation. Only prime fields are treated, and characters are named by the valuation of their Gauss

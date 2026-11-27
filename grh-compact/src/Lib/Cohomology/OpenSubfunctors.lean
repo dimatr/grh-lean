@@ -1,6 +1,7 @@
 import Lib.Cohomology.Partitions
 import Lib.Cohomology.CupProduct
 
+-- part: Lib.Cohomology.Etale.ClosedClasses
 section
 /-! Part of: Descent of torsion étale cohomology along v-covers; excision, transfer, limits (known
 result; see Lib.Cohomology.Etale.ContinuityAtlas).
@@ -33,6 +34,7 @@ lemma IsClosedClass.comap (h : IsClosedClass P) (Φ : AbFunctor D ⥤ _) [IsExac
   ⟨by simp_all [← Φ.3, IsClosedClass], fun _ e ↦ h.2 _ (e.map_of_exact Φ)⟩
 end
 
+-- part: Lib.General.Geometry.OpenSubfunctors
 section
 /-! General lemmas of algebraic geometry (textbook or folklore).
 

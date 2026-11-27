@@ -2,6 +2,7 @@ import New.Weil.ClassReps
 import New.Filling.BoxPartition
 import New.Weil.ColumnDefs
 
+-- part: New.Core.ClassCountBound
 section
 /-! Part of: Reduction theory: Mahler-Godement compactness, finite covolume, adelic Minkowski
 theorems (known result; see Lib.Adelic.Reduction.Defs).
@@ -39,6 +40,7 @@ lemma Space.card_classes_le {E} [Field E] [CMType E] {N}
       using! IsIntMatrix.one.add ((o g g').sub (o g' g')), eq_mul_of_inv_mul_eq rfl⟩
 end
 
+-- part: New.Columns.SizeEstimates
 section
 /-! Set-up for this proof: size bookkeeping for the data of this proof.
 

@@ -5,6 +5,7 @@ import New.Weil.PairSumNegation
 import New.Weil.ZeroTermHeight
 import New.Weil.EquivariantCoefficients
 
+-- part: Lib.Weil.Lift.Arrow
 section
 /-! Part of: Joint harmonics and global theta lifts between discrete series types (known result; see
 Lib.Weil.Lift.Edge).
@@ -96,6 +97,7 @@ end IsArrow
 end
 end
 
+-- part: Lib.Weil.Unramified.HeckeTransfer
 section
 /-! Part of: Commutativity of the spherical Hecke algebra of GL_n; Eichler commutation relation
 (known result; see Lib.General.LinearAlgebra.ColumnLattices).
@@ -214,6 +216,7 @@ lemma isSphericalWith_formLift {e e' y} (A : IsArrow (pairThetaKer S T a b) e e'
   (by simp [← A.formRep_formLift]) h.1).imp_right (by simp [h.2, mul_smul])
 end
 
+-- part: Lib.SiegelWeil.Formula.SiegelSets
 section
 /-! Part of: Siegel–Weil formula in the convergent range (known result; see
 Lib.SiegelWeil.Formula.SiegelWeilFormula).
@@ -398,6 +401,7 @@ lemma exists_summable_zeroTerm_bound (hm : 2 * card p < card m) :
     zeroTerm_homSource_comp, ← zeroTerm_lagrangian_eq_theta, -θ_apply] using hR _ (E₁ L) x x rfl
 end
 
+-- part: Lib.SiegelWeil.Formula.SiegelWeilFormula
 section
 /-! Known result: Siegel–Weil formula in the convergent range. Here a split space of rank 2p is
 paired with a hermitian space of rank above 2p, both unimodular at every finite place, over a CM

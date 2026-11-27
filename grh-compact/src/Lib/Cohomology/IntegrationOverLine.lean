@@ -1,5 +1,6 @@
 import Lib.Cohomology.LineChernClass
 
+-- part: Lib.PadicComparison.Duality.MovingKernel
 section
 /-! Part of: Comparison of cohomology theories by duality: a diagonal kernel on products of P¹
 (known result; see Lib.Cohomology.ProjectiveLine.NormalizationPullback).
@@ -82,6 +83,7 @@ lemma exists_move_kernel (K : TorsionCoeff g) (hQ : ∀ c m, m.IsMaximal → ∃
 end IdealFamily
 end
 
+-- part: Lib.PadicComparison.Duality.IntegrationOverLine
 section
 /-! Part of: Comparison of cohomology theories by duality: a diagonal kernel on products of P¹
 (known result; see Lib.Cohomology.ProjectiveLine.NormalizationPullback).

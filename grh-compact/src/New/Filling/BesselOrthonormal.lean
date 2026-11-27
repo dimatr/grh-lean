@@ -3,6 +3,7 @@ import Lib.Adelic.HolomorphicIntegral
 import New.Filling.FrameNorm
 import Lib.DiscreteSeries.RealMeasures
 
+-- part: Lib.DiscreteSeries.Bessel.BesselNormInvariance
 section
 /-! Part of: Bessel subgroup of a real unitary group: coordinates, Haar measure, Bessel functions
 (known result; see Lib.DiscreteSeries.Bessel.RealMeasures).
@@ -28,6 +29,7 @@ lemma enorm_besselS_mul y : ‖W (s * y)‖ₑ = ‖W
 end IsBesselFunction
 end
 
+-- part: New.RealPlace.GramSectionBounds
 section
 /-! Part of: Real-place Bessel integrals: band limits, energy and open-cell bound (see
 New.Filling.FillingData).
@@ -143,6 +145,7 @@ lemma norm_sectionMatrix_le (_ : Z ∈ 𝔰.openCell) {P r} (hr : 0 < r) (hP : 8
 end
 end
 
+-- part: New.RealPlace.GramSection
 section
 /-! Part of: Real-place Bessel integrals: band limits, energy and open-cell bound (see
 New.Filling.FillingData).
@@ -224,6 +227,7 @@ lemma exists_eq_mul_gramSection_mul {γ} (y : realFrameGram γ = Z) :
   use q, k⁻¹, p, l⁻¹, by simp_rw [map_inv, ← a, ← b]; group
 end
 
+-- part: New.RealPlace.CellNeighbourhood
 section
 /-! Part of: Real-place Bessel integrals: band limits, energy and open-cell bound (see
 New.Filling.FillingData).
@@ -390,6 +394,7 @@ lemma euclidean_enorm_sq_eq_sum {I} [Fintype I] (u : EuclideanSpace ℂ I) : ‖
   ∑ i, ‖u i‖ₑ ^ 2 := by simp [enorm, u.nnnorm_eq, ← ENNReal.coe_pow]
 end
 
+-- part: New.RealPlace.BesselOrthonormal
 section
 /-! This file: the coordinates of the full function of a Bessel system are orthonormal. -/
 

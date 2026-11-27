@@ -5,6 +5,7 @@ import Lib.PadicHodge.ValueFamilies
 import Lib.PadicHodge.ExponentTheorems
 import Lib.PadicHodge.CrystallineRank
 
+-- part: New.Selmer.RootsOfUnityPoints
 section
 /-! Roots of unity keeping polynomial valuations low, in any degree. One polynomial in the values of
 a twist on tame inertia bounds the twisted Selmer length at all points and is sharp at a chosen one,
@@ -111,6 +112,7 @@ lemma exists_roots_of_unity_ellVal_le [Finite κ] {δ : NNReal} (hδ : 0 < δ) (
     (W k).trans congr(‖$(aeval_algebraMap_apply _ (z - 1) _)‖).ge
 end
 
+-- part: New.Selmer.TwistTheorem
 section
 /-! Tied conditions at new primes shrink Selmer groups. At new split primes a slope ties a cocycle's
 value on tame inertia to its value at Frobenius, as the twist chosen later nearly imposes, and by
@@ -305,6 +307,7 @@ lemma exists_anticyclotomic_twist {κ T : Type} [Finite κ] [Finite T] {O : Coef
     (ϕ i _ (inclusion h).1 _)).trans (by simpa [eval₂_eq', eval_eq'] using f ⟨.inl i, d, e⟩)⟩⟩⟩
 end
 
+-- part: New.Selmer.RowBalanced
 section
 /-! Set-up for this proof: dictionaries between two encodings of the same objects.
 

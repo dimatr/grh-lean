@@ -1,5 +1,6 @@
 import Lib.DiscreteSeries.CommonEigenvectors
 
+-- part: Lib.GaloisRep.Pseudocharacter.SemisimpleReps
 section
 /-! Part of: Pseudocharacters, Brauer–Nesbitt, Clifford; compact subgroups of GL_n stabilise a
 lattice (known result; see Lib.GaloisRep.Pseudocharacter.FibreSum).
@@ -166,6 +167,7 @@ lemma IsTraceNondeg.continuous_of_trace [TopologicalSpace k] [IsTopologicalRing 
   (.pi (applyₗ ⟨r ·, by aesop⟩))) (by simpa using! hc.comp' ∘' continuous_mul_const))
 end
 
+-- part: Lib.GaloisRep.Pseudocharacter.FibreSum
 section
 /-! Known result: pseudocharacters, Brauer–Nesbitt, Clifford, and the fact that compact subgroups of
 GL_n stabilise a lattice. The hypothesis of `exists_rep_of_pseudo` asks for all polynomial

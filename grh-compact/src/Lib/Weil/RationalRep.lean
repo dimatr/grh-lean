@@ -1,5 +1,6 @@
 import Lib.DiscreteSeries.Bordering
 
+-- part: Lib.GLn.SchurModule.Interlacing
 section
 /-! Part of: Standard basis theorem for Schur (dual Weyl) modules over any ring, with character
 (known result; see Lib.GLn.SchurModule.MinorBasis).
@@ -58,6 +59,7 @@ lemma HasLeadingTerm.leadingCoeff_mem_nabla (hf :
 end PolyRep
 end
 
+-- part: Lib.GLn.SchurModule.MinorBasis
 section
 /-! Known result: Standard basis theorem for Schur (dual Weyl) modules over any ring, with
 character. The module here consists of the polynomials on matrices semi-invariant under a triangular
@@ -117,6 +119,7 @@ lemma PolyRep.exists_minorProduct_basis {Φ J m} [Fintype m] [Fintype J] c τ h 
 termination_by Nat.card m
 end
 
+-- part: Lib.GLn.SchurModule.SchurMatrix
 section
 /-! Part of: Standard basis theorem for Schur (dual Weyl) modules over any ring, with character
 (known result; see Lib.GLn.SchurModule.MinorBasis).
@@ -298,6 +301,7 @@ lemma schur_smul : (schur κ fun τ ↦ t τ • z τ) = (∏ τ, t τ ^ ∑ i �
     schur κ z := by simp [smul_eq_diagonal_mul, schur_mul_left h, sum_range]
 end
 
+-- part: Lib.GLn.SchurModule.RationalRep
 section
 /-! Part of: Standard basis theorem for Schur (dual Weyl) modules over any ring, with character
 (known result; see Lib.GLn.SchurModule.MinorBasis).

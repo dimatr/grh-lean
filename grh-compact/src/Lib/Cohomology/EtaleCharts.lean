@@ -1,6 +1,7 @@
 import Lib.Cohomology.RelativeChains
 import Lib.Cohomology.OpenSubfunctors
 
+-- part: Lib.Cohomology.Etale.GluingWithSupports
 section
 /-! Part of: Descent of torsion étale cohomology along v-covers; excision, transfer, limits (known
 result; see Lib.Cohomology.Etale.ContinuityAtlas).
@@ -55,6 +56,7 @@ def relFreeAb.prod W : relFreeAb (U.preimage (fst _ X) ⊔ preimage W (snd ..)) 
   show mk .. ⊗ₜ mk .. = 0 by cases x.2 <;> [rw [mk_eq_zero]; nth_rw 2 [mk_eq_zero]] <;> aesop)
 end
 
+-- part: Lib.General.Geometry.EtaleCharts
 section
 /-! General lemmas of algebraic geometry (textbook or folklore).
 

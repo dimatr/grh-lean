@@ -5,6 +5,7 @@ import Lib.Shimura.UniformisationExists
 import Lib.Shimura.ThetaTorus
 import Lib.Shimura.ThetaFamily
 
+-- part: Lib.General.Geometry.SerreSaturation
 section
 /-! General lemmas of algebraic geometry (textbook or folklore).
 
@@ -72,6 +73,7 @@ lemma eventually_span_coordSection [Field F] {A : Over (Spec ⟨F⟩)} [IsIntegr
     simp [eval₂_mul_of_isHomogeneous q, ← aeval_def, E, transition_self, hj]; ring!)⟩)⟩
 end
 
+-- part: Lib.Shimura.Extension.ArcExtension
 section
 /-! Known result: Homomorphisms and line bundles of abelian schemes extend from the generic fibre.
 The form here holds over any valuation ring of the complex numbers (not noetherian, any rank), but
@@ -161,6 +163,7 @@ lemma exists_hom_of_hasThetaCoords (hN : N.IsProjEmbedding A.hom) (c : N.picClas
     c.nsmul_class_pairing, ← comp_nsmul, ← map_nsmul]
 end
 
+-- part: Lib.Shimura.ThetaModuli.FlatClosure
 section
 /-! General lemmas of algebraic geometry (textbook or folklore).
 
@@ -310,6 +313,7 @@ lemma exists_flat_closure {J W ι I κ S r i σ} [Finite J] [Finite ι] [IsReduc
     d.mono (by simp [fun w ↦ M.eq_of_isHomogCoords ((x ..).w ▸ o w) (g w) (q _ _)])⟩
 end
 
+-- part: Lib.Shimura.ThetaNormality.RiemannRelation
 section
 /-! Known result: Normal generation of sections on abelian varieties, kept under good reduction.
 Only degrees that are powers of one integer r are treated here, over a rank-one valuation ring of
@@ -478,6 +482,7 @@ noncomputable def _root_.paddingTuple bicharacter := @Sum.elim Bool _ _ (fun _ �
 end ThetaTorus
 end
 
+-- part: Lib.Shimura.Uniformisation.AppellHumbert
 section
 /-! Known result: complex uniformisation of PEL abelian varieties, Appell–Humbert and finite class
 number. Here the signature is (1,n-1) at one place and definite elsewhere. The torus comes from the
@@ -584,6 +589,7 @@ lemma Uniformisation.appell_humbert {A} [AddObj A] {ι V} [Finite ι] [FinComple
     apply ext <;> simp [riemannForm, *, -ofReal_div] <;> ring
 end
 
+-- part: Lib.Shimura.Uniformisation.ModelAlongArc
 section
 /-! Part of: Complex uniformisation of PEL abelian varieties; Appell–Humbert; finite class number
 (known result; see Lib.Shimura.Uniformisation.AppellHumbert).

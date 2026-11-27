@@ -1,6 +1,7 @@
 import Lib.GaloisRep.Petersson
 import Lib.GaloisRep.AdaptedSplitting
 
+-- part: Lib.Adelic.CuspForms.CuspStep
 section
 /-! Part of: Cusp forms: rapid decay, finite dimension, Poincaré series; algebraic modular forms
 (known result; see Lib.Adelic.CuspForms.Petersson).
@@ -151,6 +152,7 @@ lemma _root_.Space.IsForm.norm_le_of_firstMinimum_lt (hF : V.IsForm e F) (he :
 end Reduction
 end
 
+-- part: Lib.Adelic.CuspForms.ReproducingKernel
 section
 /-! Part of: Cusp forms: rapid decay, finite dimension, Poincaré series; algebraic modular forms
 (known result; see Lib.Adelic.CuspForms.Petersson).

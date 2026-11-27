@@ -1,6 +1,7 @@
 import Lib.DiscreteSeries.BigCell
 import Lib.DiscreteSeries.HaarMass
 
+-- part: Lib.Adelic.Poincare.MiddleGroupEmbedding
 section
 /-! Part of: Poincaré series along a Bessel subgroup, unfolding; unipotent strong approximation
 (known result; see Lib.Adelic.Poincare.BesselSubgroup).
@@ -36,6 +37,7 @@ lemma exists_besselU_mul_toBesselH [TraceOne A] [IsHermUnit (𝔰.middleGram N).
   ∃ u ∈ besselU, ∃ g, s = u * toBesselH 𝔰 N g := by grind [mem_besselS, exists_toBesselH_eq]
 end
 
+-- part: Lib.DiscreteSeries.Bessel.UnipotentCoords
 section
 /-! General lemmas of measure and integration (textbook or folklore).
 

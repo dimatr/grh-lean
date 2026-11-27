@@ -1,6 +1,7 @@
 import Lib.PadicHodge.BlochKato
 import Lib.PadicHodge.HodgeExpansion
 
+-- part: New.Lift.CupProductBound
 section
 /-! Part of: Cokernel bounds and vanishing cup products for Kisin modules (see New.Lift.LongGap).
 
@@ -126,6 +127,7 @@ end Lift
 end
 end
 
+-- part: New.Lift.CokernelKillers
 section
 /-! Part of: Cokernel bounds and vanishing cup products for Kisin modules (see New.Lift.LongGap).
 

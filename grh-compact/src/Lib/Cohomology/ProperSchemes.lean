@@ -2,6 +2,7 @@ import Lib.Cohomology.ValuativeDensity
 import Lib.Cohomology.ReductionModP
 import Lib.Shimura.ConstantFunctions
 
+-- part: Lib.Cohomology.Etale.ProperFunctors
 section
 /-! Part of: Descent of torsion étale cohomology along v-covers; excision, transfer, limits (known
 result; see Lib.Cohomology.Etale.ContinuityAtlas).
@@ -86,6 +87,7 @@ lemma isCohomContinuous : IsCohomContinuous Λ Z := h.2.elim fun _ ⟨a, ha⟩ �
 end IsProperOver
 end
 
+-- part: Lib.Cohomology.ProperBaseChange.KummerLine
 section
 /-! Part of: Proper base change; invariance under extension of algebraically closed fields (known
 result; see Lib.Cohomology.ProperBaseChange.ProperBaseChange).
@@ -248,6 +250,7 @@ lemma line_mayer_vietoris [IsDomain A] [IsDomain D] {ℓ} [ThePrime ℓ] (u : Is
     ← eq_zero_iff_mem, ↓Ideal.mem_prod])
 end
 
+-- part: Lib.Cohomology.ProperBaseChange.SubringSplitting
 section
 /-! Part of: Proper base change; invariance under extension of algebraically closed fields (known
 result; see Lib.Cohomology.ProperBaseChange.ProperBaseChange).
@@ -346,6 +349,7 @@ lemma aicSubrings.exists_split_mayer_vietoris [PreValuationRing D] (u : IsUnit (
     coe_inclusion] at *; grind [→ sub_mem B.one_mem]
 end
 
+-- part: Lib.Cohomology.ProperBaseChange.ProperBaseChange
 section
 /-! Known result: Proper base change and invariance under extension of algebraically closed fields.
 Here the coefficients are constant F_ℓ, the base is an absolutely integrally closed valuation ring,
@@ -467,6 +471,7 @@ lemma IsProperOver.proper_base_change {ℓ} [ThePrime ℓ] {Y A} [CommRing A] [I
     _)))) (homOfLe (by tauto)) (G _ B)).comp_iff.2 (IsCohomDense.isCohomEquiv .of_top_le))))).eqv
 end
 
+-- part: Lib.General.Geometry.ProperSchemes
 section
 /-! General lemmas of algebraic geometry (textbook or folklore).
 

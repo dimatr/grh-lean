@@ -3,6 +3,7 @@ import New.Filling.LineParabolic
 import New.Weil.PairSumNegation
 import New.Weil.FourierCoefficient
 
+-- part: Lib.ClassField.HeckeCharacter.CharOfDet
 section
 /-! Part of: Algebraic Hecke characters (type A₀); extension of the quadratic character of a CM
 field (known result; see Lib.ClassField.HeckeCharacter.SplittingCharExists).
@@ -29,6 +30,7 @@ lemma apply_det_eq_one (h : μ.HasWeight e 1) {k} (hk : k ∈ Kf ..) : μ.1 (det
 end AutChar.HasWeight
 end
 
+-- part: Lib.ClassField.HeckeCharacter.LocalCharacters
 section
 /-! Part of: Algebraic Hecke characters (type A₀); extension of the quadratic character of a CM
 field (known result; see Lib.ClassField.HeckeCharacter.SplittingCharExists).
@@ -68,6 +70,7 @@ lemma SplitTameChar.nu_det_of_mem_Kf (h : k ∈ Kf ..) : 𝔠.ν.1 (detFin s k) 
   simp [nu_apply_of_integral, IsIntMatrix.det_mem (mem_Kf.1 h), RingHom.map_det, atPlaces]
 end
 
+-- part: Lib.Weil.DualPair.TwoLineTerms
 section
 /-! Part of: Theta kernels of unitary dual pairs: functoriality, seesaw, growth, rapid decay (known
 result; see Lib.Weil.DualPair.KernelDecay).
@@ -296,6 +299,7 @@ lemma tsum_lineTerm [hA : IsBaseAdapted A] [hX : IsBaseAdapted X] : ∀ β,
 end
 end
 
+-- part: Lib.Weil.DualPair.ThetaIntegralLaws
 section
 /-! Part of: Theta kernels of unitary dual pairs: functoriality, seesaw, growth, rapid decay (known
 result; see Lib.Weil.DualPair.KernelDecay).

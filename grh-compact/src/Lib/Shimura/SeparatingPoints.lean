@@ -1,6 +1,7 @@
 import Lib.Adelic.CanonicalMultiplier
 import Lib.Shimura.TangentCoords
 
+-- part: Lib.Shimura.Uniformisation.HolomorphicFamily
 section
 /-! Part of: Complex uniformisation of PEL abelian varieties; Appell–Humbert; finite class number
 (known result; see Lib.Shimura.Uniformisation.AppellHumbert).
@@ -278,6 +279,7 @@ lemma Uniformisation.hasSignature_iff {O g} [CommRing O] [ModuleObj O A] {F : O 
 end
 end
 
+-- part: Lib.General.Geometry.SeparatingPoints
 section
 /-! General lemmas of algebraic geometry (textbook or folklore).
 

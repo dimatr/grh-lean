@@ -3,6 +3,7 @@ import Lib.ClassField.FormalHeight
 import Lib.Shimura.FockThetaFunctions
 import Lib.PadicHodge.DeterminantBound
 
+-- part: Lib.ClassField.LocalDuality.CrystallineDuality
 section
 /-! Known result: Local Tate duality in degree 1, as an upper bound for orthogonal groups of
 cocycles. Only the inequality is proved, not perfectness or the Euler characteristic formula. It is
@@ -134,6 +135,7 @@ lemma IsPotCrys.relIndex_dvd_of_orthogonal [IsTopologicalGroup Γ]
     index_mul_index_dual (L := ⟨_, _⟩) (L' := ⟨_, _⟩) (t.comp U.subtype) (t'.comp _) _ (B ·), c]
 end
 
+-- part: New.Selmer.ThickSpacing
 section
 /-! Part of: Crystalline losses above ℓ are affordable (see New.Selmer.RibetElement).
 
@@ -210,6 +212,7 @@ lemma cmSign_eq_of_thick (c : ℓ ∣ D.cycloConductor) : cmSign (complexEmbOf e
   [pow_d_ne_neg_one])
 end
 
+-- part: New.Selmer.CrystallineRank
 section
 /-! Part of: Crystalline losses above ℓ are affordable (see New.Selmer.RibetElement).
 

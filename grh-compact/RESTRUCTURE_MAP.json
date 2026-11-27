@@ -1,10 +1,10 @@
 {
  "report": {
   "modules_before": 794,
-  "modules_after": 460,
-  "merged_groups": 153,
+  "modules_after": 466,
+  "merged_groups": 151,
   "largest_group": 13,
-  "decls_per_file": 21.532608695652176
+  "decls_per_file": 21.255364806866954
  },
  "module_map": {
   "Lib.Adelic.Adeles.AdditiveCharBasic": "Lib.Weil.AdditiveCharBasic",
@@ -238,7 +238,7 @@
   "Lib.GLn.Branching.BranchingVector": "Lib.DiscreteSeries.BranchingVector",
   "Lib.GLn.Dual.ClassSum": "Lib.DiscreteSeries.ClassSum",
   "Lib.GLn.Dual.DualWeights": "New.Weil.PairTensorData",
-  "Lib.GLn.Dual.MixedCartan": "Lib.DiscreteSeries.ClassSum",
+  "Lib.GLn.Dual.MixedCartan": "Lib.DiscreteSeries.MixedCartan",
   "Lib.GLn.SchurModule.Bordering": "Lib.DiscreteSeries.Bordering",
   "Lib.GLn.SchurModule.Gram": "Lib.Weil.Gram",
   "Lib.GLn.SchurModule.Hook": "Lib.Weil.Gram",
@@ -252,14 +252,14 @@
   "Lib.GLn.SchurModule.WeightRepBasic": "Lib.DiscreteSeries.WeightRepBasic",
   "Lib.GaloisRep.BaseChange.BaseChangeEigenchar": "Lib.GaloisRep.BaseChangeEigenchar",
   "Lib.GaloisRep.BaseChange.BaseChangeLabel": "Lib.GaloisRep.LabelCompatibility",
-  "Lib.GaloisRep.BaseChange.BaseChangeLevel": "Lib.GaloisRep.BaseChangeEigenchar",
+  "Lib.GaloisRep.BaseChange.BaseChangeLevel": "Lib.GaloisRep.BaseChangeLevel",
   "Lib.GaloisRep.BaseChange.BaseChangePlaces": "Lib.GaloisRep.BaseChangePlaces",
-  "Lib.GaloisRep.BaseChange.BaseChangeWeight": "Lib.GaloisRep.BaseChangeEigenchar",
+  "Lib.GaloisRep.BaseChange.BaseChangeWeight": "Lib.GaloisRep.BaseChangeWeight",
   "Lib.GaloisRep.BaseChange.OrbitClassSum": "Lib.Adelic.OrbitClassSum",
   "Lib.GaloisRep.BaseChange.ParahoricColumns": "Lib.GaloisRep.ParahoricColumns",
-  "Lib.GaloisRep.BaseChange.TwistedTraceSum": "Lib.GaloisRep.BaseChangeEigenchar",
-  "Lib.GaloisRep.BaseChange.UnitaryRoots": "Lib.GaloisRep.BaseChangeEigenchar",
-  "Lib.GaloisRep.BaseChange.WeilDataExtension": "Lib.GaloisRep.BaseChangeEigenchar",
+  "Lib.GaloisRep.BaseChange.TwistedTraceSum": "Lib.GaloisRep.BaseChangeWeight",
+  "Lib.GaloisRep.BaseChange.UnitaryRoots": "Lib.GaloisRep.UnitaryRoots",
+  "Lib.GaloisRep.BaseChange.WeilDataExtension": "Lib.GaloisRep.WeilDataExtension",
   "Lib.GaloisRep.Division.MultiplicityFreeSum": "Lib.GaloisRep.AvatarCompatibility",
   "Lib.GaloisRep.EvenRank.ThetaLift": "Lib.GaloisRep.ThetaLift",
   "Lib.GaloisRep.Hilbert90.TameDescent": "Lib.Adelic.TameDescent",
@@ -285,7 +285,7 @@
   "Lib.General.Algebra.AdicRingHomExt": "Lib.ClassField.AdicRingHomExt",
   "Lib.General.Algebra.BlockFittingBound": "Lib.PadicHodge.RibetFirstOrder",
   "Lib.General.Algebra.CechDescent": "Lib.Cohomology.CechDescent",
-  "Lib.General.Algebra.DepthBounds": "Lib.ClassField.FormalParameter",
+  "Lib.General.Algebra.DepthBounds": "Lib.ClassField.DepthBounds",
   "Lib.General.Algebra.DisjointUnions": "Lib.Cohomology.BijectiveComparisons",
   "Lib.General.Algebra.FaithfulChar": "Lib.Adelic.LabelDegree",
   "Lib.General.Algebra.FittingDuality": "Lib.DiscreteSeries.FittingDuality",
@@ -1274,8 +1274,10 @@
    "Lib.GLn.Branching.BranchingVector"
   ],
   "Lib.DiscreteSeries.ClassSum": [
-   "Lib.GLn.Dual.MixedCartan",
    "Lib.GLn.Dual.ClassSum"
+  ],
+  "Lib.DiscreteSeries.MixedCartan": [
+   "Lib.GLn.Dual.MixedCartan"
   ],
   "Lib.DiscreteSeries.Bordering": [
    "Lib.GLn.SchurModule.Bordering"
@@ -1301,15 +1303,17 @@
    "Lib.GLn.SchurModule.WeightRepBasic"
   ],
   "Lib.GaloisRep.BaseChangeEigenchar": [
-   "Lib.GaloisRep.BaseChange.TwistedTraceSum",
-   "Lib.GaloisRep.BaseChange.BaseChangeWeight",
-   "Lib.GaloisRep.BaseChange.BaseChangeLevel",
-   "Lib.GaloisRep.BaseChange.UnitaryRoots",
-   "Lib.GaloisRep.BaseChange.WeilDataExtension",
    "Lib.GaloisRep.BaseChange.BaseChangeEigenchar"
+  ],
+  "Lib.GaloisRep.BaseChangeLevel": [
+   "Lib.GaloisRep.BaseChange.BaseChangeLevel"
   ],
   "Lib.GaloisRep.BaseChangePlaces": [
    "Lib.GaloisRep.BaseChange.BaseChangePlaces"
+  ],
+  "Lib.GaloisRep.BaseChangeWeight": [
+   "Lib.GaloisRep.BaseChange.TwistedTraceSum",
+   "Lib.GaloisRep.BaseChange.BaseChangeWeight"
   ],
   "Lib.Adelic.OrbitClassSum": [
    "Lib.GaloisRep.BaseChange.OrbitClassSum"
@@ -1317,6 +1321,12 @@
   "Lib.GaloisRep.ParahoricColumns": [
    "Lib.LocalGL.Iwahori.HeckeCounts",
    "Lib.GaloisRep.BaseChange.ParahoricColumns"
+  ],
+  "Lib.GaloisRep.UnitaryRoots": [
+   "Lib.GaloisRep.BaseChange.UnitaryRoots"
+  ],
+  "Lib.GaloisRep.WeilDataExtension": [
+   "Lib.GaloisRep.BaseChange.WeilDataExtension"
   ],
   "Lib.GaloisRep.ThetaLift": [
    "Lib.LocalGL.Tadic.ChainLemma",
@@ -1380,6 +1390,9 @@
   ],
   "Lib.Cohomology.CechDescent": [
    "Lib.General.Algebra.CechDescent"
+  ],
+  "Lib.ClassField.DepthBounds": [
+   "Lib.General.Algebra.DepthBounds"
   ],
   "Lib.DiscreteSeries.FittingDuality": [
    "Lib.General.Algebra.FittingDuality"
@@ -2068,7 +2081,6 @@
    "New.Columns.TwistedHeckeType"
   ],
   "Lib.ClassField.FormalParameter": [
-   "Lib.General.Algebra.DepthBounds",
    "New.Curve.FormalParameter"
   ],
   "New.Weil.IntegralVacuum": [

@@ -1,5 +1,6 @@
 import Lib.Adelic.Base
 
+-- part: Lib.ClassField.GaloisCohomology.ContinuousCocycles
 section
 /-! Part of: Galois cohomology in degrees ≤ 2: Shapiro, Hilbert 90, Kummer, symbols, Herbrand
 quotient (known result; see Lib.ClassField.GaloisCohomology.CyclicNorm).
@@ -65,6 +66,7 @@ def charRep M [AddCommGroup M] [Module R M] (χ : G →* Rˣ) := actionRep R M (
 end
 end
 
+-- part: Lib.ClassField.Places.GaloisDefs
 section
 /-! Part of: Hilbert ramification theory for infinite Galois extensions; ideles and ideal classes
 (known result; see Lib.ClassField.Places.LocalFrobenius).
@@ -204,6 +206,7 @@ abbrev cycCharIn := (map (algebraMap _ O).1).comp (cycChar (Γ := Γ) Ω l)
 end
 end
 
+-- part: Lib.ClassField.GaloisCohomology.CyclicClass
 section
 /-! Part of: Galois cohomology in degrees ≤ 2: Shapiro, Hilbert 90, Kummer, symbols, Herbrand
 quotient (known result; see Lib.ClassField.GaloisCohomology.CyclicNorm).

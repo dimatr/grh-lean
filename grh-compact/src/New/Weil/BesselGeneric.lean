@@ -4,6 +4,7 @@ import New.Weil.NamesAtSplitLevel
 import New.Weil.PairTensorData
 import New.Filling.FillingData
 
+-- part: New.Seesaw.AdmissibleEvaluation
 section
 /-! Part of: Seesaw identity for a chain of theta lifts (see New.Seesaw.SeesawTheorem).
 
@@ -218,6 +219,7 @@ lemma isAdmissibleEval_finEval (D : ArrowPair _ q Y Y' Y'') (hA : ∀ i b, D.zer
   obtain ⟨_ | _, _⟩ := i <;> cases l <;> first | cases h (e u) | simp [xV]
 end
 
+-- part: New.Seesaw.GoodDatumExists
 section
 /-! Part of: Seesaw identity for a chain of theta lifts (see New.Seesaw.SeesawTheorem).
 
@@ -355,6 +357,7 @@ lemma exists_isGoodDatum_of_invariant {w} (hw :
 end Data
 end
 
+-- part: New.Seesaw.BesselGeneric
 section
 /-! Set-up for this proof: general results applied to the objects of this proof.
 

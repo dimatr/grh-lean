@@ -1,6 +1,7 @@
 import Lib.Weil.Projections
 import Lib.Weil.DataProduct
 
+-- part: Lib.Weil.Fock.RealData
 section
 /-! Part of: Bargmann–Fock model of the harmonic (oscillator) representation of U(p,q) (known
 result; see Lib.Weil.Fock.OscillatorPair). -/
@@ -24,6 +25,7 @@ lemma theta_integrated : V.θ (V.integrated v f) = ∫ y, v y * f (realVec y) �
 end Space
 end
 
+-- part: Lib.Weil.Fock.EntireTheta
 section
 /-! Part of: Bargmann–Fock model of the harmonic (oscillator) representation of U(p,q) (known
 result; see Lib.Weil.Fock.OscillatorPair).

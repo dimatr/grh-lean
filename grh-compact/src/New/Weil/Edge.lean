@@ -4,6 +4,7 @@ import Lib.DiscreteSeries.LocalThetaCorrespondence
 import New.Weil.FourierCoefficient
 import Lib.GaloisRep.ReproducingKernel
 
+-- part: Lib.DiscreteSeries.Theta.JointHarmonicExists
 section
 /-! One general lemma (a derivation applied to a product of determinants), then joint harmonics for
 `FockDualPair`.
@@ -97,6 +98,7 @@ lemma IsMatch.exists_isJointHarmonic : ∃ Φ, IsJointHarmonic T l l' Φ :=
   (hm.swap.isLayering (.prodComm ..) (by grind [lowestKType_sub_vacuumWeight_eq_neg])) rfl⟩
 end
 
+-- part: Lib.Weil.Lift.Edge
 section
 /-! Known result: Joint harmonics and global theta lifts between discrete series types. Here the
 parameter has large gaps, and the types are given by integrable projector kernels. The lift is shown

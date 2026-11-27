@@ -2,6 +2,7 @@ import Lib.GaloisRep.HeckeOnLineStabiliser
 import Lib.GaloisRep.LocalTranslates
 import New.Weil.RallisFormula
 
+-- part: Lib.LocalGL.Tadic.ChainLemma
 section
 /-! Known result: Satake parameters of unitary unramified representations of GL_n come in strings.
 There is no classification here, and for a spherical Hecke eigenvector in a smooth unitary
@@ -185,6 +186,7 @@ lemma isRoot_string_of_norm {c k} (hc : P.IsRoot c) (h : ‖c‖ ^ 2 * w.q ^ k =
     (chain_lemma hB hx h0 e ht (v_uniformizer w)).1 _ (ih _ .refl hi.le) (by grind)
 end
 
+-- part: Lib.GaloisRep.EvenRank.ThetaLift
 section
 /-! Known result: the theta lift to larger rank, the step that reduces even rank to odd rank. Here a
 non-zero theta lift in the convergent range from definite U(n) to U(n+s), s > n, replaces endoscopic

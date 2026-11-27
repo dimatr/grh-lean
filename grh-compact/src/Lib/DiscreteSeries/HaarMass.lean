@@ -2,6 +2,7 @@ import Lib.DiscreteSeries.Unimodular
 import Lib.DiscreteSeries.RepresentationDefs
 import Lib.DiscreteSeries.CompactDualMeasure
 
+-- part: Lib.Adelic.QuotientMeasure.IwasawaIntegration
 section
 /-! Part of: Invariant integration on a quotient (Weil's formula), unfolding, unimodularity (known
 result; see Lib.Adelic.QuotientMeasure.Unimodular).
@@ -85,6 +86,7 @@ lemma integral_orbitMeasure_iwasawa (j : ∀ a, i a ∈ N → a = 1) {D} [Counta
     by simp⟩⟩).tsum_eq, lintegral_tsum, ← lintegral_orbitMeasure_lintegral (ν := @count S _)]
 end
 
+-- part: Lib.Adelic.QuotientMeasure.CocompactIntegrable
 section
 /-! Part of: Invariant integration on a quotient (Weil's formula), unfolding, unimodularity (known
 result; see Lib.Adelic.QuotientMeasure.Unimodular).
@@ -273,6 +275,7 @@ lemma cocompact_prod {Δ : Subgroup H} : Γ.Cocpt → Δ.Cocpt → (Γ.prod Δ).
   | ⟨_, c⟩, ⟨_, d⟩ => ⟨_, c.1.prod d.1, by simp_all [Γ.mem_prod, and_and_and_comm]⟩
 end
 
+-- part: Lib.DiscreteSeries.FlenstedJensen.RightDerivatives
 section
 /-! General lemmas of group theory (textbook or folklore).
 
@@ -387,6 +390,7 @@ end
 end
 end
 
+-- part: Lib.DiscreteSeries.Haar.HaarColumnChart
 section
 /-! Part of: Haar measure of U(J) in Cayley coordinates, volume of U(n), polynomial volume growth
 (known result; see Lib.DiscreteSeries.Haar.RegularRepL2).
@@ -443,6 +447,7 @@ lemma abs_det_logDerivU_col_eq_cayleyDensity θ : |(fst .. ∘ₗ (skewColumnEqu
     sum_eq_add_sum_subtype_ne _ k₀] <;> simp [skewOfReal] <;> grind
 end
 
+-- part: Lib.DiscreteSeries.Haar.SphereFibreIntegral
 section
 /-! Part of: Haar measure of U(J) in Cayley coordinates, volume of U(n), polynomial volume growth
 (known result; see Lib.DiscreteSeries.Haar.RegularRepL2).
@@ -479,6 +484,7 @@ lemma lintegral_cayleyDensity_skewColumnEquiv {n} [Fintype n] (k₀ : n) η {a} 
     ← Real.Gamma_nat_eq_factorial, *, rpow_neg, field, two_mul, mul_pow]; ring
 end
 
+-- part: Lib.DiscreteSeries.Haar.HaarMass
 section
 /-! Part of: Haar measure of U(J) in Cayley coordinates, volume of U(n), polynomial volume growth
 (known result; see Lib.DiscreteSeries.Haar.RegularRepL2).

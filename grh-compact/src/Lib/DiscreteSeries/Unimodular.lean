@@ -1,6 +1,7 @@
 import Lib.DiscreteSeries.SubgroupIntegral
 import Lib.DiscreteSeries.CircleMean
 
+-- part: Lib.Adelic.QuotientMeasure.Packing
 section
 /-! General lemmas of real and complex analysis (textbook or folklore).
 
@@ -148,6 +149,7 @@ lemma tsum_inv_pow_le_of_separated (hf : Pairwise (m ≤ ‖f · - f ·‖)) (h0
   grw [div_pow, le_div_iff₀, this.2, one_add_mul_le_pow, le_of_add_le_left hn, ← mul_pow] <;> bound
 end
 
+-- part: Lib.Adelic.QuotientMeasure.Unimodular
 section
 /-! Known result: invariant integration on a quotient (Weil's formula), unfolding and unimodularity.
 For second countable groups, the quotient integral is integration against a measurable weight of

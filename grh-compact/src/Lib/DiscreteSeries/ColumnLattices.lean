@@ -1,6 +1,7 @@
 import Lib.DiscreteSeries.PartialDerivComm
 import Lib.Adelic.AdelicRingDefs
 
+-- part: Lib.Adelic.Hecke.HeckeBasic
 section
 /-! Part of: Abstract Hecke operators of a pair (G,K), level eigenspaces, weighted class sums (known
 result; see Lib.Adelic.Hecke.ClassMean).
@@ -103,6 +104,7 @@ lemma IsBiInvariant.heckeFun_mem (hb : IsBiInvariant K f) :
   heckeFun π K f v ∈ levelSpace π K := by simp_all [↓heckeFun_mem_levelSpace]
 end
 
+-- part: Lib.General.LinearAlgebra.ColumnLattices
 section
 /-! General lemmas of linear algebra and matrices (textbook or folklore).
 

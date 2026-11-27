@@ -1,5 +1,6 @@
 import New.Weil.LabelIdempotents
 
+-- part: Lib.General.Groups.CentralConvolution
 section
 /-! General lemmas of group theory (textbook or folklore).
 
@@ -29,6 +30,7 @@ lemma IsCentralProj.sum_norm_conv_le (he : IsCentralProj e) {H} [Group H] [Finty
     congr(‖$h (.toLp 2 f)‖).trans_le (K.norm_starProjection_apply_le _)
 end
 
+-- part: New.Trace.BadShare
 section
 /-! Bad types have small share in the regular representation. For a product of groups GL_r(F_q),
 types that are not good have share at most a multiple of 1/q per factor plus a term decaying

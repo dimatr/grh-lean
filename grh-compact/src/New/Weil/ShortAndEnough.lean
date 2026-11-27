@@ -3,6 +3,7 @@ import New.Weil.SizeEstimates
 import New.Weil.FillingTheorem
 import New.Weil.RowVolume
 
+-- part: New.Columns.MarkedPrimeType
 section
 /-! Part of: Scaled Hecke operators repair divisibility at inert primes pairing tops (see
 New.Columns.LocalStatement).
@@ -72,6 +73,7 @@ theorem IsMarked.hasType_markOperator {P p} {D : Data P} [h₀ : Fact p.Prime] [
 end Data
 end
 
+-- part: New.Columns.LocalStatement
 section
 /-! Scaled Hecke operators repair divisibility at inert primes pairing tops. Each lift may lose
 divisibility at an inert prime p pairing two tops, but outside a sparse set of p the chain regains
@@ -379,6 +381,7 @@ lemma Data.exists_indexDvd_Bmu_divisible {β : ℤ} (hc : β < ite (p ∈ D.nons
     (by rintro rfl; simpa [chiK] using h D.lt_of_hasLogBound)) (by norm_cast at *; lia)
 end
 
+-- part: New.Seesaw.SeesawTheorem
 section
 /-! Seesaw identity for a chain of theta lifts. For ramified columns φ and every twist, the
 restricted definite chain of lifts of φ, with data of controlled support and denominators, is a
@@ -535,6 +538,7 @@ lemma seesaw : ∃ c : ℂˣ, ∀ ϑ, ∃ Ψ, IsGoodDatum ϑ Ψ ∧ ∀ φ,
 end Data
 end
 
+-- part: New.Endgame.ShortAndEnough
 section
 /-! Choice of the level prime. The level is a prime N, found in a short window, whose logarithm is
 within a small error of the total excess of the lifts' size over their expected divisibility, per

@@ -1,6 +1,7 @@
 import Lib.Cohomology.ProperSchemes
 import Lib.Cohomology.LineChernClass
 
+-- part: Lib.Cohomology.ProperBaseChange.FieldExtension
 section
 /-! Part of: Proper base change; invariance under extension of algebraically closed fields (known
 result; see Lib.Cohomology.ProperBaseChange.ProperBaseChange).
@@ -96,6 +97,7 @@ lemma IsProperOver.isOpen_zero_set_and_eq_zero (T :
     _ ↦ t.dvd_prod_of_mem _) ((map_comp ..).trans e :), M.prod_mem fun c _ ↦ c.2⟩
 end
 
+-- part: Lib.Cohomology.ProperBaseChange.PointwiseTests
 section
 /-! Part of: Proper base change; invariance under extension of algebraically closed fields (known
 result; see Lib.Cohomology.ProperBaseChange.ProperBaseChange).

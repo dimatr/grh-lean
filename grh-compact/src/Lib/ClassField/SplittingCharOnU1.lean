@@ -3,6 +3,7 @@ import Lib.ClassField.UnramifiedCharacters
 import Lib.ClassField.CharacterLevels
 import Lib.Weil.PairDefs
 
+-- part: Lib.ClassField.HeckeCharacter.CharacterConjugates
 section
 /-! Part of: Algebraic Hecke characters (type A₀); extension of the quadratic character of a CM
 field (known result; see Lib.ClassField.HeckeCharacter.SplittingCharExists).
@@ -156,6 +157,7 @@ lemma AutChar.HasWeight.exists_conj (h : μ.HasWeight e ψ) {σ : ℂ ≃+* ℂ}
   [h.2, ← norm_pos_iff, mul_zpow, MulEquivClass.map_finprod, *]; grind
 end
 
+-- part: Lib.ClassField.HeckeCharacter.SplittingCharOnU1
 section
 /-! Part of: Algebraic Hecke characters (type A₀); extension of the quadratic character of a CM
 field (known result; see Lib.ClassField.HeckeCharacter.SplittingCharExists).

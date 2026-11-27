@@ -1,6 +1,7 @@
 import Lib.PadicHodge.LongGap
 import Lib.PadicHodge.GoodCriterion
 
+-- part: New.Lift.FewLowJumps
 section
 /-! Part of: Length bound for crystalline classes with few low weights (see
 New.Lift.ExponentTheorems).
@@ -166,6 +167,7 @@ lemma exists_scaledCupBounds_few_low_jumps (hη : 1 ≤ η) : ∃ V : Submodule 
 end Lift.KummerChart.PairingSide
 end
 
+-- part: New.Lift.SparseThickLetters
 section
 /-! Rank-free exponents for crystalline classes at large weights. For crystalline lattices with
 weights in short windows near 0 and near large weights (no small negative weight, two sizes, or
@@ -454,6 +456,7 @@ lemma SidePairing.scaledCupBounds_two_sizes (hk : IsUnramified) (hp : 7 ≤ p) (
 end Lift.KummerChart.PairingSide
 end
 
+-- part: New.Lift.ExponentTheorems
 section
 /-! (In the statements a jump is a Hodge–Tate weight, and Z_f the crystalline cocycles.) An exponent
 independent of the ramification index for tame types. Over Q_ℓ, for potentially

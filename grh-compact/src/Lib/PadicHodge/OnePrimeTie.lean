@@ -4,6 +4,7 @@ import Lib.PadicHodge.HeckeAlgebra
 import Lib.GaloisRep.HeckeOnLineStabiliser
 import Lib.PadicHodge.RibetFirstOrder
 
+-- part: Lib.GaloisRep.LocalGlobal.TypeFrobenius
 section
 /-! Part of: Local-global compatibility at tame level, away from and at l (known result; see
 Lib.GaloisRep.LocalGlobal.LabelCompatibility).
@@ -86,6 +87,7 @@ lemma hecke_eq_frob_on_parahoricEigenspace χ (o : χ u.1 ≠ (0 : ℂ)) (hζ : 
     coe_normAbsChar_locField, norm_locField_eq_q_zpow, field, *] at l0
 end
 
+-- part: Lib.LocalGL.TaylorWiles.AuxPlaceOperators
 section
 /-! Known result: Taylor–Wiles freeness at auxiliary primes, up to the orders of the stabilisers.
 This file treats integral forms of principal level on a definite unitary group, for any finite
@@ -223,6 +225,7 @@ end BaseLevel
 end
 end
 
+-- part: New.Patching.OnePrime
 section
 /-! Part of: Deformed trace at one auxiliary level bounds the denominator (see
 New.Patching.OnePrimeTie).
@@ -342,6 +345,7 @@ lemma one_prime_first_order (a : H →* Multiplicative (ZMod m)) (B : _ →+ R) 
     k)] <;> simp [weightedSum, v, ← mul_sum, mul_sub, mul_assoc, @zsmul_eq_mul S, hn]
 end
 
+-- part: New.Patching.OnePrimeTie
 section
 /-! Deformed trace at one auxiliary level bounds the denominator. At one deep auxiliary level the
 trace to the old level is deformed in parameters, one per prime, tying tame inertia to Frobenius,

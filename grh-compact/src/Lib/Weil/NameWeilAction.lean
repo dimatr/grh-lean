@@ -1,6 +1,7 @@
 import Lib.Weil.EntireTheta
 import Lib.Weil.Names
 
+-- part: Lib.Weil.Construction.FinitePart
 section
 /-! Part of: Adelic Weil representation of a unitary group and the invariant theta functional (known
 result; see Lib.Weil.DualPair.PairSplitting).
@@ -74,6 +75,7 @@ attribute [irreducible] finitePart
 end Space
 end
 
+-- part: Lib.Weil.MixedModel.NameWeilAction
 section
 /-! Part of: Schrödinger and mixed models of the Weil representation; action of parabolic subgroups
 (known result; see Lib.Weil.MixedModel.ZeroTermLaw).

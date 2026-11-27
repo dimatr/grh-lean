@@ -16,6 +16,7 @@ import New.Weil.RowVolume
 import New.Weil.CrudeRows
 import New.Weil.ShortAndEnough
 
+-- part: New.Rows.HeckeValueHeight
 section
 /-! Each ratio of Hecke values repays one direction. At the chosen twists, with valuations bounded
 by test forms and class group characters, the inverse of a ratio of twisted to untwisted Hecke
@@ -254,6 +255,7 @@ lemma heightLe_inv_heckeValueProd_div {θ} (hf : D.IsFitFamily θ) j :
 end Data
 end
 
+-- part: New.Rows.LiftVolumeHeight
 section
 /-! The rows repay the cost of the idle directions. The volume of the chain of lifts on the D rows
 is a controlled factor times the volumes of m single lifts, and at the chosen twists each
@@ -382,6 +384,7 @@ lemma heightLe_liftVolume_ratio {θ} (O : D.IsFitFamily θ) (j : D.LiftIndex) :
 end Data
 end
 
+-- part: New.Selmer.BaseLevelOfLabel
 section
 /-! Set-up for this proof: records of the data and parameters of this proof, names for its objects.
 
@@ -455,6 +458,7 @@ lemma exists_baseLevel {ℓ} [ThePrime ℓ] [PadicIso ℓ] {P} {D : Data P} {r n
       (by open Calc in simp)))]; rfl⟩
 end
 
+-- part: New.Selmer.HeckeString
 section
 /-! Strings of roots of Hecke polynomials, from the eigenvalue 1 of a Galois representation.
 
@@ -543,6 +547,7 @@ lemma eventually_heckePoly_eq_string_mul (z : ∀ g i, ‖(normalisedRep O x.gal
     (a _ rfl i).trans_lt one_half_lt_one
 end
 
+-- part: New.Selmer.ReciprocityLaw
 section
 /-! Part of: Triangular Taylor–Wiles primes controlling the even classes (see
 New.Selmer.TrianglePrimes).
@@ -738,6 +743,7 @@ lemma exists_isLaw {r} e (hr : 0 < r) (hf : 4 ≤ Fintype.card (InfinitePlace E)
     ⟨g⁻¹, by simpa [e, β] using congr(IsUnit ($(α j) 1)), by simpa [← e] using! a⟩⟩
 end
 
+-- part: New.Selmer.RowsExist
 section
 /-! Set-up for this proof: general results applied to the objects of this proof.
 
@@ -827,6 +833,7 @@ lemma exists_hasRow_auxPair {p} (H : D.goodForms (D.spaceW D.m) ⊓ D.eigenPart 
     i; grind [Data.basisVec, paramW, decrPosition_paramW]
 end
 
+-- part: New.Selmer.TrianglePrimes
 section
 /-! Triangular Taylor–Wiles primes controlling the even classes. A count over the real subfield
 gives reciprocity laws for even classes in Tate twists, and Taylor–Wiles primes, equally many at
@@ -950,6 +957,7 @@ lemma exists_isPrimeTriangle {ℓ E} [ThePrime ℓ] [Field E] [UnramCMField E] t
     cycInv, u, cycChar_eq_one_of_mem_inertiaAbove, obeying, -Pi.add_apply] <;> intros <;> module
 end
 
+-- part: New.Selmer.DenominatorBound
 section
 /-! Denominator of projection to lifts, without the even part. For a twist with short Selmer groups,
 the ℓ-adic denominator of the projection to theta lifts, read by pairing integral forms with ones
@@ -1113,6 +1121,7 @@ theorem denominatorLe_rowBudget {P} {D : Data P} {ℓ} [ThePrime ℓ] (ι : Padi
     (weylGauge_le_one_of_integralAbove (ι := _) _ (by simpa using! this · ·))
 end
 
+-- part: New.Selmer.TwistForRows
 section
 /-! One anticyclotomic twist makes all Selmer groups short. For finitely many irreducible blocks of Galois representations of lifts, one finite-order anticyclotomic twist ramified at new primes makes, for each of its first m powers, all Selmer groups modulo a given power of ℓ short and the ratios of twisted to untwisted Hecke values barely divisible by ℓ, which limits congruences. Twists of ℓ-power order at new primes that kill a Selmer group or keep L-values barely divisible are known. Related work: Mazur–Rubin, Diophantine stability, 2018; Kriz–Nordentoft, Horizontal p-adic L-functions, 2023; Hida, Non-vanishing modulo p of Hecke L-values, 2004. -/
 
@@ -1173,6 +1182,7 @@ lemma exists_mFoldTwist_selmerLengthLe {P} (D : Data P) ℓ [ThePrime ℓ] (ι :
     mapDomain_mapRange _ _ _ _ (map_add _)⟩), by simpa [mapRel]]
 end
 
+-- part: New.Selmer.FitTwistsExist
 section
 /-! A twist with few congruences for each prime. For each prime ℓ and each identification of the
 complex numbers with the algebraic closure of the ℓ-adic numbers there is a twist whose first m
@@ -1236,6 +1246,7 @@ lemma exists_isFitFamily {P} (D : Data P) : ∃ θ, D.IsFitFamily θ := by
       h⟩, by simp [twist_one_spec], (H ..).2.1 (.inr _)⟩))⟩⟩, (.of_le s' fun _ ↦ H _ · |>.2.2 · · ·)
 end
 
+-- part: New.Endgame.LongForms
 section
 /-! Part of: The inequality (⋆): upper bound for weighted non-split primes (see New.Main).
 

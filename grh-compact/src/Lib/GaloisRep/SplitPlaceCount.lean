@@ -3,6 +3,7 @@ import Lib.GaloisRep.FrobeniusFilter
 import Lib.GaloisRep.LocalTranslates
 import Lib.GaloisRep.WildType
 
+-- part: Lib.GaloisRep.Main.AttachedDefs
 section
 /-! Part of: Galois representations attached to forms on definite unitary groups (known result; see
 Lib.GaloisRep.Main.AvatarCompatibility).
@@ -34,6 +35,7 @@ lemma isRoot_of_isRoot_charpoly {K} [Field K] {M : Matrix n n K} {P x} (h : Poly
   0) : M.charpoly.IsRoot x → P.IsRoot x := (by aesop) ∘ (·.dvd (charpoly_dvd_charpoly_aeval_comp P))
 end
 
+-- part: Lib.GaloisRep.Main.SplitPlaceCount
 section
 /-! Part of: Galois representations attached to forms on definite unitary groups (known result; see
 Lib.GaloisRep.Main.AvatarCompatibility).

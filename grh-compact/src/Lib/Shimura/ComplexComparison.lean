@@ -1,6 +1,7 @@
 import Lib.Shimura.ThetaOrthogonality
 import Lib.Shimura.ThetaFamily
 
+-- part: Lib.Shimura.Uniformisation.ThetaCoords
 section
 /-! Part of: Complex uniformisation of PEL abelian varieties; Appell–Humbert; finite class number
 (known result; see Lib.Shimura.Uniformisation.AppellHumbert).
@@ -143,6 +144,7 @@ lemma riemannForm_eq_of_isFrame [IsFullRankLattice L] {w} (r : (N.mul M.inv).IsF
 end HasThetaCoords
 end
 
+-- part: Lib.Shimura.ThetaGroup.ComplexComparison
 section
 /-! Part of: Theta group of an ample line bundle: span of sections, K(L), symmetric theta structures
 (known result; see Lib.Shimura.ThetaGroup.RigidFibres).

@@ -3,6 +3,7 @@ import Lib.DiscreteSeries.WeightRepBasic
 import Lib.Weil.DataProduct
 import Lib.DiscreteSeries.LocalThetaCorrespondence
 
+-- part: Lib.GLn.SchurModule.SchurContinuous
 section
 /-! Part of: Standard basis theorem for Schur (dual Weyl) modules over any ring, with character
 (known result; see Lib.GLn.SchurModule.MinorBasis).
@@ -17,6 +18,7 @@ Schur matrix S_κ(g) is continuous. -/
   funext (PolyRep.genericMatrixAt_map_evalMat g) ▸ (schur_map .refl ..).symm
 end
 
+-- part: Lib.GLn.SchurModule.SchurOrthogonality
 section
 /-! Lemmas on Weyl representations, their Gram form and the highest vector, used to turn algebraic
 forms into functions on G.

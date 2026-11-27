@@ -5,6 +5,7 @@ import New.Weil.IndexTypes
 import Statements
 import Lib.PadicHodge.LongForms
 
+-- part: Lib.Analytic.PolyaVinogradov.PolyaVinogradov
 section
 /-! Known result: the Pólya–Vinogradov inequality for sums of a non-principal Dirichlet character.
 It is proved here for initial intervals only, with the explicit bound 2√q(1+log q) for any
@@ -69,6 +70,7 @@ lemma polya_vinogradov (h : χ ≠ 1) (X : ℕ) : ‖∑ v ∈ Ioc 0 X, χ v‖ 
     Real.sin_two_mul, ← one_sub_mul_le_cos] <;> simp [field, pi_pos] <;> grind [le_sin_mul]
 end
 
+-- part: Lib.Analytic.DirichletTheta.MellinTheta
 section
 /-! Known result: the transformation formula and the Mellin transform of the theta series of a
 Dirichlet character. The transformation is proved only in absolute value, so no root number appears,
@@ -248,6 +250,7 @@ lemma thetaTailIntegral_zero_le_two_mul (hχ : χ.IsPrimitive) {T : ℝ} (hT : 0
     |>.trans_le (by positivity))
 end
 
+-- part: Lib.Analytic.Primes.AuxiliaryPrimes
 section
 /-! Known result: A prime in a long window (weak form of the Siegel-Walfisz theorem). From a small
 zero-free disc at 1, this file only finds one prime congruent to 1 modulo a power of a fixed
@@ -367,6 +370,7 @@ lemma exists_prime_modEq_one_log_mem (M A : ℕ) [NeZero M] (hM : 4 ∣ M) : ∀
     (by simp [a, indicator]; grind), key n (-4⁻¹) (by nlinarith)]] <;> bound
 end
 
+-- part: Lib.Analytic.QuadraticTwist.ZeroFreeTwist
 section
 /-! Known result: Zero density for quadratic twists by mean values over real characters. This file
 only finds one prime in a given class whose quadratic twists have no zero up to a given height right
@@ -574,6 +578,7 @@ lemma exists_entireL_quadTwist_ne_zero {β} y {a : ZMod N} (hβ : 1 / 2 < β) (h
   simp_all [Primes, subset_iff]; grind
 end
 
+-- part: New.Endgame.OneSidedCriterion
 section
 /-! A good second scale in every long window. If E and E' are O(e^v) and their transforms
 ∫E(v)e^((1−s)v)dv continue with no pole in Re s ≥ 1, then for large t and any X in [0, e^t] some u
@@ -673,6 +678,7 @@ lemma IsPolar.exists_window_sub_mul_le {E r E' r'} (h : IsPolar E r) (h' :
   contrapose! x; use ?_ <;> nlinarith
 end
 
+-- part: New.Data.DataExist
 section
 /-! Set-up for this proof: records of the data and parameters of this proof, names for its objects.
 
@@ -781,6 +787,7 @@ lemma exists_data P {ε : ℝ} (e0 : 0 < ε / 6) (e1 : ε < 1 / 100) : ∀ᶠ x 
   nlinarith only [hC, Y 3 5]
 end
 
+-- part: New.Main
 section
 /-! The inequality (⋆), an upper bound for weighted non-split primes. For admissible data with
 scales x and x₁, the product formula and height bounds for twisted volumes show that the normalised

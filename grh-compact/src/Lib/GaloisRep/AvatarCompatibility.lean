@@ -17,6 +17,7 @@ import Lib.GaloisRep.Lefschetz
 import Lib.GaloisRep.SplitPlaceCount
 import Lib.Cohomology.GaloisRep
 
+-- part: Lib.ClassField.Grunwald.Grunwald
 section
 /-! Part of: Grunwald–Wang theorem in prime exponent (known result; see
 Lib.GaloisRep.Main.AttachedDeterminant).
@@ -81,6 +82,7 @@ lemma QZChar.abelianLift_symmetrise a : abelianLift (symmetrise χ) (artinMap _ 
   rcases h : artinMap _ a; exact artinMap_star _ h ▸ rfl
 end
 
+-- part: Lib.GaloisRep.Division.MultiplicityFreeSum
 section
 /-! In one step of a known theorem
 (Galois representations for definite unitary groups),
@@ -299,6 +301,7 @@ lemma exists_rep_span_diagonal {ℓ} [ThePrime ℓ] [PadicIso ℓ] {E} [Field E]
       (by simp [← a, mul_intertwiner]) ⟨g, hg⟩).2) (f' (piMatrixUnit i c) *ᵥ Pi.single x 1))
 end
 
+-- part: Lib.GaloisRep.HodgeTateCocharacter.HodgeTateCocharacter
 section
 /-! Known result: The Hodge-Tate cocharacter lies in the algebraic monodromy group. The result is
 stated on coordinates in C_p, without algebraic groups or Tannakian categories. It says that a
@@ -330,6 +333,7 @@ lemma aeval_cocharacter_eq_zero {p} [ThePrime p] {n} [Fintype n] (κ : n → ℤ
     _), mul_zpow, smul_pow, prod_smul, smul_comm k] using congr(k • $u (⟨k, o⟩⁻¹ * g))
 end
 
+-- part: Lib.GaloisRep.LocalGlobal.TameExponent
 section
 /-! Part of: Local-global compatibility at tame level, away from and at l (known result; see
 Lib.GaloisRep.LocalGlobal.LabelCompatibility).
@@ -409,6 +413,7 @@ lemma exists_isTameExponent (hA : IsPlaceOver A w) f :
     (by rwa [← G.pow_iff_coprime n.pos, e, ·])⟩)
 end
 
+-- part: Lib.GaloisRep.Main.AttachedDeterminant
 section
 /-! Known result: Grunwald–Wang theorem in prime exponent. It is proved here for prime exponent over
 a totally complex field, and the character also agrees with the given one on units at all primes of
@@ -683,6 +688,7 @@ lemma Attached.exists_det_eq_avatar {E n} [Field E] [Fintype n] [CMType E] {κ �
     sphericalAt, maxCompactAt, Gf.supportedOn_star])]), ← Complex.ofReal_pow, field, ← pow_mul']⟩
 end
 
+-- part: Lib.LocalGL.Iwahori.ExponentOfLabel
 section
 /-! Part of: Exponents, U-operators and spherical vectors at pro-p Iwahori level; conjugacy in I t I
 (known result; see Lib.LocalGL.Tadic.ChainLemma).
@@ -739,6 +745,7 @@ lemma exists_sorted_of_detChar {F} [Field F] [Valued F _] [CompactSpace 𝒪[F]]
     (((σ.trans e.symm).prod_comp _).trans (prod_fiberwise' b fun a ↦ X - C (χ a _)).symm)⟩
 end
 
+-- part: Lib.Shimura.CongruenceRelation.CongruenceStep
 section
 /-! Known result: the pointwise step of the Eichler–Shimura congruence relation for GU(1,n−1) at a
 split place. Only the geometric step is treated, namely that at each geometric point of the special
@@ -862,6 +869,7 @@ lemma UniversalFamily.congruence_step {E k d d₀} [Field E] [CMBase E] {D R} [H
     ← (hp _).isGroupBaseChange.pullSection_comp_assoc, ← G, (hp _).comp_toFamily, ← q, hj, hp, t]
 end
 
+-- part: Lib.Shimura.IntegralModel.ModelExistence
 section
 /-! Known result: integral Kuga–Sato models for GU(1,n−1) with level covers and congruence relation.
 Here the smooth proper base is a closure of theta values with no moduli property, and the congruence
@@ -963,6 +971,7 @@ lemma exists_model {E} [Field E] [CMBase E] {d₀} [HasQuadSubfield _ E]
   simpa [cancel_epi] using t
 end
 
+-- part: Lib.Shimura.TraceFormula.DefiniteTrace
 section
 /-! Part of: Simple trace formula: Hecke trace on a definite group; non-elliptic terms vanish (known
 result; see Lib.Shimura.TraceFormula.MarkedEqDefinite).
@@ -1025,6 +1034,7 @@ lemma trace_definiteForms {𝔑} [Module.Finite ℂ W] (hN : IsNeat n 𝔑) a w 
   use by simp_all, fun H ↦ by grind [i ((γ g)⁻¹ * y) (by simpa), inv_mul_eq_one]
 end
 
+-- part: Lib.DiscreteSeries.Character.WeylTrace
 section
 /-! General lemmas of linear algebra and matrices (textbook or folklore).
 
@@ -1055,6 +1065,7 @@ lemma trace_weylRep κ e {g : ι → GL (Fin a) ℂ} {x : ι → Fin a ↪ ℂ}
     (weyl_character 1 _)
 end
 
+-- part: Lib.Shimura.Transfer.PELDataExistence
 section
 /-! Known result: Transfer of eigensystems between inner forms of a unitary group differing at a
 real place. It is shown here only that the Hecke eigensystem of a definite form occurs, in each
@@ -1374,6 +1385,7 @@ lemma exists_pel n {d E} [Field E] [NumberField E] [IsCMField E] [HasQuadSubfiel
     mk_eq_iff, ComplexEmbedding.conjugate_comp])
 end
 
+-- part: Lib.GaloisRep.Main.SeedRepresentation
 section
 /-! Part of: Galois representations attached to forms on definite unitary groups (known result; see
 Lib.GaloisRep.Main.AvatarCompatibility).
@@ -1535,6 +1547,7 @@ lemma exists_rep_of_cuspidal_type {ℓ E a d} [ThePrime ℓ] [PadicIso ℓ] [Fie
     (by simpa [d _, OccursIn] using! k t ·)) (by simp [c, jumps])]
 end
 
+-- part: Lib.GaloisRep.Main.AvatarCompatibility
 section
 /-! Known result: Galois representations attached to forms on definite unitary groups. For the
 standard definite form and a CM field with enough roots of unity, Hecke polynomials are l-adically

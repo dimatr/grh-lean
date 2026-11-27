@@ -5,6 +5,7 @@ import Lib.Cohomology.CrystallineCohomology
 import Lib.PadicHodge.CrystallineLimit
 import Lib.GaloisRep.Lefschetz
 
+-- part: Lib.Cohomology.Hodge.DiagonalClass
 section
 /-! Part of: Class of the diagonal and Künneth surjectivity in Hodge cohomology (Grothendieck
 symbols) (known result; see Lib.Cohomology.Hodge.FixedPointFormula).
@@ -61,6 +62,7 @@ lemma exists_diagonal_class {k} [Field k] [CharZero k] {X d} : @HasAtlas k _ d X
     erw [← (x _).map_comp _ (relFreeAb.restrict _ (by simp)), relFreeAb.map_comp] <;> rfl
 end
 
+-- part: Lib.Cohomology.Hodge.FixedPointFormula
 section
 /-! Known result: Class of the diagonal and Künneth surjectivity in Hodge cohomology (Grothendieck
 symbols). The setting here is smooth separated varieties with a finite atlas in characteristic 0,
@@ -188,6 +190,7 @@ lemma pointClass_eq_of_functions_eq {z z'} (e : ∀ g : X ⟶ affineSpace k 1, (
     formBasis.repr ·.1 i⟩), by intros; ext; congrm ⟨fun _ ↦ $(repr_withIndex_map ..)⟩⟩))))
 end
 
+-- part: Lib.Cohomology.PointClass.LinePointClass
 section
 /-! Part of: Hodge–Tate images of point classes are non-zero and detect degrees of zero-cycles
 (known result; see Lib.Cohomology.PointClass.GaloisRep).
@@ -334,6 +337,7 @@ lemma projSpace.exists_hodgeTateMap_pointClass_line : ∃ η, hodgeTateMap 1 (po
     TotalH.map_comp_assoc, (comp_assoc_of_eq rfl _).trans (cup_of ..), s] <;> simp +arith
 end
 
+-- part: Lib.Cohomology.PointClass.PointClassProduct
 section
 /-! Part of: Hodge–Tate images of point classes are non-zero and detect degrees of zero-cycles
 (known result; see Lib.Cohomology.PointClass.GaloisRep).
@@ -378,6 +382,7 @@ lemma IsPointSum.cup_pointClass {k} [Field k] [CharZero k] {d X Y} [HasAtlas d X
       G.map_eq_smul_pointClass]))
 end
 
+-- part: Lib.Cohomology.PointClass.ProjectivePointClass
 section
 /-! Part of: Hodge–Tate images of point classes are non-zero and detect degrees of zero-cycles
 (known result; see Lib.Cohomology.PointClass.GaloisRep).
@@ -444,6 +449,7 @@ lemma projSpace.hodgeTateMap_pointClass_ne_zero {p k} [Field k] [EmbeddedInQpBar
     congr(($(show 𝟙 genericCoeff = 0 by simpa [cup, e] using P (.mk₀ _)).1 _ ⟨_⟩).1)
 end
 
+-- part: Lib.PadicComparison.HodgeTate.HodgeTateVectors
 section
 /-! Known result: The Hodge–Tate map from Hodge cohomology to p-adic étale cohomology. Only the
 natural multiplicative map into the part of weight h is built here, from the torsor of lifts modulo
@@ -498,6 +504,7 @@ lemma exists_hasHodgeTateWeight {p h : ℕ} {R :
   apply (hasAtlas_algPoints d).isChartCovered.pairRestrictBijective
 end
 
+-- part: Lib.Shimura.Eigenspace.EigenQuotient
 section
 /-! Part of: Galois representation cut out of cohomology by a Hecke eigensystem; Eichler-Shimura
 (known result; see Lib.Cohomology.PointClass.GaloisRep).
@@ -600,6 +607,7 @@ lemma IsEigenQuotient.exists_word_kill_of_jump_eq_zero {γ : _ →ₐ[_] ℂ_[�
     x ·)).mono fun g _ ↦ by simpa [Λ, *, Finset.smul_sum, tensorAction] using congr(Λ $(hy g) z))))
 end
 
+-- part: Lib.Cohomology.PointClass.GaloisRep
 section
 /-! Known result: Hodge–Tate images of point classes are non-zero and detect degrees of zero-cycles.
 Only non-vanishing and linear independence of the distinct point classes are proved, without duality

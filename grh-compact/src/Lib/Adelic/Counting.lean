@@ -2,6 +2,7 @@ import Lib.Adelic.RootLemma
 import Lib.Adelic.HaarUnique
 import Lib.Adelic.CuspidalAtScalars
 
+-- part: New.TwistedHecke.FrobeniusFactors
 section
 /-! Part of: An approximate projector from averages over generic matrices (see
 New.TwistedHecke.ElementaryDivisors).
@@ -143,6 +144,7 @@ end TwistingData
 end
 end
 
+-- part: New.TwistedHecke.InterlacingCone
 section
 /-! Part of: Dimension bounds mod p from flags and a cone volume (see New.TwistedHecke.Counting).
 
@@ -282,6 +284,7 @@ lemma prod_mul_volume_inter_slab {N} [NeZero N] {v P} (hP : 1 < P) (D : ZMod N �
     ⟨by grind, WellFoundedGT.fix fun b I ↦ (h b).trans' (by grind [mul_nonneg])⟩⟩
 end
 
+-- part: New.TwistedHecke.Counting
 section
 /-! Dimension bounds mod p from flags and a cone volume. For the elementary divisor bound, counting
 flags against the volume of a cyclic interlacing cone shows that, mod p, forms whose exponents

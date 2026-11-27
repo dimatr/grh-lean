@@ -1,5 +1,6 @@
 import Lib.Adelic.CuspidalAtScalars
 
+-- part: Lib.LocalGL.Green.CuspidalInnerProduct
 section
 /-! Known result: The Brauer lift is a virtual character, and cuspidal times Steinberg is induced
 from a torus. Without Brauer induction, the character induced from the Coxeter torus is divided by
@@ -117,6 +118,7 @@ lemma rankInner_greenCuspidal_mulMu {L} [Field L] [Finite L] [Algebra k L] (φ :
 instance : Fact (ringChar k).Prime := ⟨CharP.prime_ringChar k⟩
 end
 
+-- part: Lib.LocalGL.Green.GreenTau
 section
 /-! Part of: Green's characters of GL_n(F_q) and the parabolic-induction ring (known result; see
 Lib.LocalGL.Green.LabelDegree).

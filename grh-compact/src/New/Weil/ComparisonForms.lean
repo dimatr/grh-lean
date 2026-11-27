@@ -2,6 +2,7 @@ import New.Weil.MemberOrthogonality
 import New.Weil.RowVolume
 import New.Weil.FillingTheorem
 
+-- part: New.Rows.CartanIntegrality
 section
 /-! Part of: Integral comparison forms seeing the twist through one number (see
 New.Rows.ComparisonForms).
@@ -73,6 +74,7 @@ lemma weylGauge_cartanProduct_le {s L} (H : V.IsGlued s L) h y η :
 end DividedSplitting
 end
 
+-- part: New.Rows.ComparisonForms
 section
 /-! Integral comparison forms seeing the twist through one number. There are forms on a definite unitary group, integral off the twist's conductor, short when untwisted and orthogonal as the congruence bound requires, whose descents to U(W_j) detect all good forms and see the twist only through one number made of Hecke L-values, and they cancel a lift's unknown volume. Integral forms pairing with a lift to an explicit L-value (pullback, seesaw) are known in low rank. Related work: Böcherer–Dummigan–Schulze-Pillot, Yoshida lifts and Selmer groups, 2012; Y.-S. Lee, Hida family of theta lift from U(1) to definite U(2), 2024; Prasanna, Integrality of a ratio of Petersson norms, 2006. -/
 

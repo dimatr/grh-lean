@@ -1,6 +1,7 @@
 import Lib.PadicHodge.RegularityFrobenius
 import Lib.PadicHodge.TameCocycles
 
+-- part: Lib.Cyclotomic.Kolyvagin.ComponentBound
 section
 /-! Known result: Stickelberger annihilation and the Kolyvagin–Rubin bound for odd twisted
 components. Here the value is taken at a negative integer in place of zero. For an integer X
@@ -453,6 +454,7 @@ lemma exists_detecting_points_component (hX : X ≠ 0) (hl : N + e + 3 < l) : �
   simpa [↓← cast_smul_eq_nsmul O, (X.coprime_ordCompl L.1 hX).cast.isUnit_of_dvd H] using z.2.2
 end
 
+-- part: Lib.Cyclotomic.OddSha.OddShaBound
 section
 /-! Known result: Bound for the odd part of a twisted Tate–Shafarevich group of an abelian CM field.
 Only an upper bound is proved here, without the main conjecture, and small primes are handled by a

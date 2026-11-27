@@ -5,6 +5,7 @@ import New.Filling.OpenCellBound
 import New.Weil.Heights
 import New.Weil.BadShare
 
+-- part: New.Filling.FixedLines
 section
 /-! Part of: Phase sums are sharply dominated by local Bessel kernels (see New.Filling.Moments).
 
@@ -150,6 +151,7 @@ lemma IsFillingLevel.exists_intermediateGroup_lines [WeilData E]
 end Filling
 end
 
+-- part: New.Filling.FiniteSystem
 section
 /-! Part of: Phase sums are sharply dominated by local Bessel kernels (see New.Filling.Moments).
 
@@ -443,6 +445,7 @@ lemma Filling.IsFillingLevel.exists_finite_sieveSystem {E 𝔰} [Field E] [CMTyp
     weylRatio, ← formIntegrandOne_eq Γ C, formIntegrandOne, ← sq, mul_pow]
 end
 
+-- part: New.Filling.ThinClasses
 section
 /-! Part of: Incoherent and degenerate pairs are negligible (see New.Filling.CrudeEnergy).
 
@@ -593,6 +596,7 @@ lemma Filling.tsum_amplitudeAbs_class_le (k : S.termDiscNorm γ ≤ S.N ^ numInf
   congr! 1; push_cast [besselEnergy, columnDim, div_pow, inv_pow]; field)
 end
 
+-- part: New.Filling.BlockBound
 section
 /-! Part of: Incoherent and degenerate pairs are negligible (see New.Filling.CrudeEnergy).
 
@@ -988,6 +992,7 @@ lemma enorm_amplitudeSum_le_classSize (hT : S.IsStable T) {j} (h : ∀ γ ∈ T,
 end Filling
 end
 
+-- part: New.Filling.CrudeEnergy
 section
 /-! Incoherent and degenerate pairs are negligible. The second moment of the Poincaré series expands
 over pairs of rational elements congruent mod g, and discriminant gains, lattice counts and a
@@ -1180,6 +1185,7 @@ lemma Filling.energy_le_of_linkEnergy_le R (h₂ : (∃ Λ, Λ ∉ R) →
     hasLevel_last]
 end
 
+-- part: New.Heights.OneDeterminant
 section
 /-! Few translates nearly span; height of one Gram determinant. If translates of a linear map spread
 modulo every subspace, a logarithm times the least possible number of them nearly span the target,
@@ -1330,6 +1336,7 @@ lemma one_determinant {θ : _ → Θ} {H : Θ → Type} [∀ ϑ, NormedAddCommGr
   simp [j, Z, field, mul_pow, Real.exp_neg, ← Real.exp_nsmul] at *; bound
 end
 
+-- part: New.Filling.Moments
 section
 /-! Second moment of the Poincaré series with constant one. For the normalised Poincaré series P on
 columns, the mean over level translates s of the squared Hilbert–Schmidt norm of P*sP is at most

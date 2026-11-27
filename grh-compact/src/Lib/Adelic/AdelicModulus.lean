@@ -5,6 +5,7 @@ import Lib.Adelic.RationalPoints
 import Lib.PadicHodge.GeneralisedIndex
 import Lib.Adelic.Kronecker
 
+-- part: Lib.Adelic.Adeles.AdelicAbs
 section
 /-! Part of: Adeles of a number field: base change, discreteness and compact quotient, modulus
 (known result; see Lib.Adelic.Adeles.IdeleHilbert90).
@@ -49,6 +50,7 @@ lemma ideleAbs_eq_one_of_mem_unitary [IsCMField E] (h : x.1 ∈ unitary _) : ide
   simpa using congr(√(ideleAbs $((Units.unitary_eq.ge h).1)))
 end
 
+-- part: Lib.Weil.Construction.GaussSumSign
 section
 /-! Part of: Adelic Weil representation of a unitary group and the invariant theta functional (known
 result; see Lib.Weil.DualPair.PairSplitting).
@@ -74,6 +76,7 @@ lemma eq_one_of_orbits {X} [AddCommGroup X] [Fintype X] (f : X → X) (F : X →
   rw [(_ : Finset.filter .. = s y), Finset.sum_insert] <;> grind (splits := 20)
 end
 
+-- part: Lib.General.Algebra.InertResidue
 section
 /-! A general count of the fixed points of an involution on a finite field, applied to finite places
 of a stably unramified CM field: a place with w̄ = w has norm r ^ 2 with r ≡ 3 mod 4, so a place of
@@ -106,6 +109,7 @@ lemma isSplit_of_q_prime (h : w.q.Prime) :
   w.IsSplit := by grind [exists_sq_eq_q_of_inert, h.pow_eq_iff]
 end
 
+-- part: Lib.Adelic.Adeles.AdelicModulus
 section
 /-! Part of: Adeles of a number field: base change, discreteness and compact quotient, modulus
 (known result; see Lib.Adelic.Adeles.IdeleHilbert90).

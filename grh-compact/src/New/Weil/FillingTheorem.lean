@@ -10,6 +10,7 @@ import New.Weil.LabelRigidity
 import New.Weil.Moments
 import New.Weil.RowDimension
 
+-- part: New.Filling.FillingAdmissible
 section
 /-! Set-up for this proof: size bookkeeping for the data of this proof.
 
@@ -92,6 +93,7 @@ instance : D.filling.IsAdmissible := by
 end Data
 end
 
+-- part: New.Seesaw.EqualLinesOrbit
 section
 /-! Part of: Seesaw identity for a chain of theta lifts (see New.Seesaw.SeesawTheorem).
 
@@ -198,6 +200,7 @@ lemma Grading.IsAdaptedAt.exists_mem_besselFin {E X ι} [Field E] [CMType E] [Fi
     IsAdaptedBasis]
 end
 
+-- part: New.Seesaw.LinesStep
 section
 /-! Part of: Seesaw identity for a chain of theta lifts (see New.Seesaw.SeesawTheorem).
 
@@ -291,6 +294,7 @@ lemma Grading.HasNearLines.step {Y' : Grading V' N X' s'} [WeilData E] {μ f a m
   grind [Y.N_spec, p.inv.3, q.inv.3, Pi.inv_apply]
 end
 
+-- part: New.Seesaw.StandardLatticeLevel
 section
 /-! Part of: Seesaw identity for a chain of theta lifts (see New.Seesaw.SeesawTheorem).
 
@@ -324,6 +328,7 @@ lemma Grading.inclXFin_mem_Kf {P u h} (hL : Y.SpansLattice a π u) (p : IsSplitS
     mem_Kf, *] using (r.isInt_conjTranspose.mul (this.mul r)).add .one
 end
 
+-- part: New.Seesaw.UnfoldingStages
 section
 /-! Part of: Seesaw identity for a chain of theta lifts (see New.Seesaw.SeesawTheorem).
 
@@ -434,6 +439,7 @@ lemma hasNearLines_of_unfoldStage_ne_zero (φ : D.ramifiedColumns) (y₀ :
 end Data
 end
 
+-- part: New.Filling.FillingTheorem
 section
 /-! Translates of the columns fill the rows. For every subspace F of the rows, some level translate of the projected Poincaré series keeps, modulo F, ramified columns of dimension at least nearly ½(1 − dim F/dim rows) times that of all columns, so rows exist and few translates span almost all rows, which gives the basis for the Gram determinant. Spanning by Poincaré series and the link between least second moment and tight frames are known. Related work: Petersson, Über die Entwicklungskoeffizienten der automorphen Formen, 1932; Benedetto–Fickus, Finite normalized tight frames, 2003; Muić, Compactly supported Poincaré series and existence of cusp forms, 2010. -/
 

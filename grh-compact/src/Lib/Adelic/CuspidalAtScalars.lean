@@ -1,6 +1,7 @@
 import Lib.Adelic.CuspidalFunction
 import Lib.Adelic.ValuedMatrix
 
+-- part: Lib.LocalGL.Green.FrobeniusOrbits
 section
 /-! Definitions for Green's characters of GL_n(k): τ_P, Ξ_c, labels, χ∘det, the reflection sum and
 the idempotents e_c. Then general lemmas on powers and Frobenius orbits of roots (textbook or
@@ -99,6 +100,7 @@ lemma exists_pow_card_pow_eq_of_root {y} : aeval y P = 0 → ∃ i < P.natDegree
 end
 end
 
+-- part: Lib.LocalGL.Green.CuspidalSupport
 section
 /-! General lemmas of linear algebra and matrices (textbook or folklore).
 
@@ -153,6 +155,7 @@ lemma greenCuspidal_congr {K} [Field K] [Algebra k K] η η' {a} (h : ∀ z, g.c
     pow_ne_zero, congr(aeval z $(charpoly_endOnSub_mul_endOnQuot _ W)), charpoly_natDegree])
 end
 
+-- part: Lib.LocalGL.Green.CuspidalAtScalars
 section
 /-! Part of: Green's characters of GL_n(F_q) and the parabolic-induction ring (known result; see
 Lib.LocalGL.Green.LabelDegree).

@@ -1,6 +1,7 @@
 import New.Weil.EquivariantCoefficients
 import New.Weil.BlockPartners
 
+-- part: New.Exchange.DeterminantVectors
 section
 /-! Part of: Exchange theorem for theta integrals of complementary rank (see
 New.Exchange.ExchangeTheorem).
@@ -147,6 +148,7 @@ lemma surjOn_cone_integral_detVectors β z (hz : 1 ≤ z) (hn : card n' = 2 * (k
 end
 end
 
+-- part: New.Exchange.SquareLawFourier
 section
 /-! Part of: Lift then descent is proportional to descent then lift (see New.Exchange.OneSquare).
 

@@ -2,6 +2,7 @@ import New.Weil.TestRings
 import Lib.Cohomology.CrystallineTests
 import Lib.ClassField.ThetaKernel
 
+-- part: Lib.General.Algebra.MultivariateHensel
 section
 /-! General lemmas of commutative and general algebra (textbook or folklore).
 
@@ -27,6 +28,7 @@ lemma IsAICLocal.multivariate_hensel {A} [CommRing A] [IsAICLocal A] {ι} [Finty
     P.g.aeval_def]⟩).comp P.equivRing.toAlgHom).comp (algHom ..) $(Z.aeval_val_relation ·)))⟩
 end
 
+-- part: Lib.PadicComparison.Descent.ReductionModP
 section
 /-! Part of: Almost acyclicity of the structure sheaf for the v-topology (known result; see
 Lib.PadicComparison.Descent.AlmostAcyclic).

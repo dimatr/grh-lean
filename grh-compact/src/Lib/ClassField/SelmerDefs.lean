@@ -4,6 +4,7 @@ import Lib.Adelic.LocalComponents
 import Lib.ClassField.CharacterLevels
 import Lib.GaloisRep.ArtinMapAtPlace
 
+-- part: Lib.General.NumberTheory.StableLattice
 section
 /-! General lemmas of algebraic number theory (textbook or folklore).
 
@@ -114,6 +115,7 @@ lemma eventually_exists_isLatticeIn {r :
          _, by tauto⟩ <;> simp [entrywise, Subtype.ext_iff, apply_ite]
 end
 
+-- part: Lib.ClassField.Places.SelmerDefs
 section
 /-! Part of: Bound for the odd part of a twisted Tate–Shafarevich group of an abelian CM field
 (known result; see Lib.Cyclotomic.OddSha.OddShaBound).

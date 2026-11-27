@@ -1,5 +1,6 @@
 import Lib.GaloisRep.IwahoriInjective
 
+-- part: Lib.LocalGL.Iwahori.HeckeCounts
 section
 /-! Part of: Exponents, U-operators and spherical vectors at pro-p Iwahori level; conjugacy in I t I
 (known result; see Lib.LocalGL.Tadic.ChainLemma).
@@ -180,6 +181,7 @@ lemma partialHecke_dual i (e : m + (i + j) = N) : partialHecke (ρ.comp invTrans
   one_ne_zero]).trans (apply_heckeFun hasFiniteCosets_partialCosets (by simp) hx _).2
 end
 
+-- part: Lib.GaloisRep.BaseChange.ParahoricColumns
 section
 /-! Part of: Cyclic base change of prime degree for definite unitary groups (weak lift, local
 matching) (known result; see Lib.GaloisRep.BaseChange.BaseChangeEigenchar).

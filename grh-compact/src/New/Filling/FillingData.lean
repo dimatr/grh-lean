@@ -9,6 +9,7 @@ import New.Filling.LocalTheorem
 import New.Weil.SteepParameters
 import New.Weil.LineCoordinates
 
+-- part: Lib.DiscreteSeries.Bruhat.ComplexFloorMeasure
 section
 /-! Part of: Isotropic flags in unitary groups: Heisenberg radicals, big Bruhat cell, Haar measure
 (known result; see Lib.DiscreteSeries.Bruhat.ComplexPlace).
@@ -72,6 +73,7 @@ lemma exists_chart_ascConv_cellLaw j : ∃ g : (Fin j → ℂ) → 𝔰.G₁, Me
   Fin.prod_univ_castSucc]; grind [cellChart, weylElem_succ, (commute_weylElem cellChart_mem).eq]⟩
 end
 
+-- part: New.Filling.ColumnCoords
 section
 /-! Set-up for this proof: dictionaries between two encodings of the same objects.
 
@@ -127,6 +129,7 @@ noncomputable def columnCoords : levelSpace (algFormRep kw 0) S.columnLevel ≃�
 end Filling.Fits
 end
 
+-- part: New.RealPlace.BesselCut
 section
 /-! Normalise a real-place Bessel function and cut it off. A Bessel function at a real place, an
 average of a discrete series coefficient that is large at one point, inherits the coefficient's
@@ -284,6 +287,7 @@ lemma HasPeakAt.exists_cut_isCutPair (hg : l.HasLargeGap A) {L : ℕ} (hL : ∀ 
   gcongr; simp [field, ← pow_add, ← pow_mul, -card_sum]; gcongr; nlinarith [NeZero.pos f]
 end
 
+-- part: New.RealPlace.ComplexGauge
 section
 /-! Part of: Tower method: pairings of kernels bounded floor by floor (see
 New.RealPlace.LocalTheorem).
@@ -496,6 +500,7 @@ noncomputable def RealPlaceSizes.gauge (hF : RealPlaceSizes 𝔰 ρ s b) (hρ : 
   simp [field]; bound
 end
 
+-- part: New.RealPlace.ComplexShells
 section
 /-! Part of: Real-place Bessel integrals: band limits, energy and open-cell bound (see
 New.Filling.FillingData).
@@ -642,6 +647,7 @@ end IsCutBessel
 end
 end
 
+-- part: New.RealPlace.BandLimits
 section
 /-! Part of: Real-place Bessel integrals: band limits, energy and open-cell bound (see
 New.Filling.FillingData).
@@ -768,6 +774,7 @@ lemma hasBandLimits_of_isCutBessel [Nonempty I]
   clear * - hF; obtain ⟨_, rfl⟩ := hF.mul_cube_lt_s.dest; lia
 end
 
+-- part: New.Filling.FillingData
 section
 /-! Band limits, energy and open-cell bound for real-place Bessel integrals. At a real place,
 integrals of a Bessel function on an indefinite unitary group against its translates have bounded

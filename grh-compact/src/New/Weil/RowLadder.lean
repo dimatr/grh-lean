@@ -2,6 +2,7 @@ import New.Weil.PairTensorData
 import New.Weil.OneSquare
 import New.Weil.CostOfSquares
 
+-- part: New.Exchange.GridMove
 section
 /-! Set-up for this proof: records of the data and parameters of this proof, names for its objects.
 
@@ -298,6 +299,7 @@ end Data
 end
 end
 
+-- part: New.Exchange.RowLadder
 section
 /-! Set-up for this proof: general results applied to the objects of this proof.
 

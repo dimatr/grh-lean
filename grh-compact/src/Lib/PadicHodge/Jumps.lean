@@ -1,5 +1,6 @@
 import Lib.PadicHodge.HodgeTateFrame
 
+-- part: Lib.PadicHodge.Limit.LimitDefs
 section
 /-! Part of: Limits of crystalline representations with bounded weights are crystalline (known
 result; see Lib.PadicHodge.Limit.LocalLimit).
@@ -34,6 +35,7 @@ noncomputable abbrev applyVec {m} [Fintype m] (u : T →ₗ[ℤ_[p]] Matrix m m 
   (Matrix.mulVecBilin _ ℤ_[p]).flip v ∘ₗ u
 end
 
+-- part: Lib.PadicHodge.Crystalline.Jumps
 section
 /-! Part of: Potentially crystalline representations, Hodge–Tate weights, Weil–Deligne Frobenius
 (known result; see Lib.PadicHodge.Crystalline.RegularityFrobenius).

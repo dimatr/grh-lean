@@ -4,6 +4,7 @@ import Lib.ClassField.JetChainRule
 import Lib.Weil.EntireTheta
 import New.Weil.DatumLevel
 
+-- part: Lib.Adelic.CuspForms.HeckePolyEval
 section
 /-! Set-up used by: Cusp forms: rapid decay, finite dimension, Poincaré series; algebraic modular
 forms.
@@ -15,6 +16,7 @@ lemma eval_heckePoly {E n} [Field E] [NumberField E] [Fintype n] (w : FinPlace E
   x⁻¹ := by erw [Polynomial.eval_finsetSum, Finset.mul_sum]; congr!; simp_all [pow_sub₀]; ring
 end
 
+-- part: Lib.Adelic.CuspForms.AlgebraicForms
 section
 /-! Part of: Cusp forms: rapid decay, finite dimension, Poincaré series; algebraic modular forms
 (known result; see Lib.Adelic.CuspForms.Petersson).
@@ -124,6 +126,7 @@ lemma _root_.isSphericalWith_toAlgForm_iff [WeilData E] {y w p} {u : _ ≠ w} : 
 end Space
 end
 
+-- part: Lib.General.Algebra.JetRename
 section
 /-! General lemmas of commutative and general algebra (textbook or folklore).
 
@@ -136,6 +139,7 @@ lemma jet_rename {σ τ R} (e : σ ↪ τ) [CommRing R] {P Q} (h : .rename e P =
   simp [MvPolynomial.rename_monomial, ← Finsupp.embDomain_eq_mapDomain, Finsupp.prod]) (by aesop)
 end
 
+-- part: Lib.Weil.CompactLift.BranchingPeriod
 section
 /-! Part of: Theta lift for a definite unitary pair as a class sum on algebraic modular forms (known
 result; see Lib.Weil.CompactLift.RallisFormula).

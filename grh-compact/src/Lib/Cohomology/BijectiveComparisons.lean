@@ -1,5 +1,6 @@
 import Lib.Cohomology.CechDescent
 
+-- part: Lib.General.Algebra.DisjointUnions
 section
 /-! General lemmas of commutative and general algebra (textbook or folklore). -/
 
@@ -18,6 +19,7 @@ lemma H.sigma_bijective {C} [Category C] {ι} X F n :
     F)⟩ ⟨exact_cokernel _⟩ (𝟙 _) _ <;> solve_by_elim [(exact_delta_f ..).1, eq_zero_of_injective]
 end
 
+-- part: Lib.Cohomology.Etale.BijectiveComparisons
 section
 /-! Part of: Descent of torsion étale cohomology along v-covers; excision, transfer, limits (known
 result; see Lib.Cohomology.Etale.ContinuityAtlas).

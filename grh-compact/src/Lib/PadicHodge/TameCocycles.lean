@@ -1,6 +1,7 @@
 import Lib.GaloisRep.Avatars
 import Lib.GaloisRep.GaussSums
 
+-- part: Lib.ClassField.GreenbergWiles.SelmerBasic
 section
 /-! Part of: Greenberg–Wiles formula, as a lower bound for the dual side (known result; see
 Lib.ClassField.GreenbergWiles.GreenbergWilesBound).
@@ -160,6 +161,7 @@ lemma SplitPlaces.mem_and_conj_mem g : g ∈ I → g ∈ U ∧ ∀ t, t⁻¹ * g
 end
 end
 
+-- part: Lib.ClassField.GreenbergWiles.EquivariantUnits
 section
 /-! General lemmas of algebraic number theory (textbook or folklore).
 
@@ -242,6 +244,7 @@ lemma dirichlet_fixedSUnits (Q :
   simp [← rk]
 end
 
+-- part: Lib.ClassField.GreenbergWiles.SplitPrimeReciprocity
 section
 /-! Part of: Greenberg–Wiles formula, as a lower bound for the dual side (known result; see
 Lib.ClassField.GreenbergWiles.GreenbergWilesBound).
@@ -367,6 +370,7 @@ lemma SplitPlaces.power_residue_reciprocity (γ : ι → G) (hγ : ∀ i, IsTame
     k, _, A' u, ·⟩)⟩, J (A' u) l⟩) <;> simp [funext_iff, ← map_nsmul]
 end
 
+-- part: Lib.ClassField.GreenbergWiles.ProjectiveCount
 section
 /-! Part of: Greenberg–Wiles formula, as a lower bound for the dual side (known result; see
 Lib.ClassField.GreenbergWiles.GreenbergWilesBound).
@@ -449,6 +453,7 @@ lemma SplitPlaces.card_trivialised_of_isHigmanProjective {G K R ι} [Group G] [T
   exact ⟨∑ j, ⟨_, hP j⟩, by simp [r, Prod.snd_sum, m, sum_comm, ← map_sum, hτ]⟩
 end
 
+-- part: Lib.ClassField.GreenbergWiles.GreenbergWilesBound
 section
 /-! Known result: Greenberg–Wiles formula, as a lower bound for the dual side. Only this lower bound
 is proved, under a hypothesis of a central element acting without fixed vectors. The dual Selmer
@@ -521,6 +526,7 @@ lemma SplitPlaces.hasFewCocycles_of_central {K R ι} [Field K] [EmbeddedNumberFi
     (congr($e.1.1 _) : π _ = _), *, index, mul_smul] using congr($E • a))⟩]
 end
 
+-- part: Lib.ClassField.GreenbergWiles.SelmerRelations
 section
 /-! Part of: Greenberg–Wiles formula, as a lower bound for the dual side (known result; see
 Lib.ClassField.GreenbergWiles.GreenbergWilesBound).
@@ -664,6 +670,7 @@ lemma exists_split_primes_relations N [AddCommGroup N] [Module (ZMod m) M] U (hU
 end selmerZ1
 end
 
+-- part: Lib.ClassField.GreenbergWiles.SelmerMembership
 section
 /-! Part of: Greenberg–Wiles formula, as a lower bound for the dual side (known result; see
 Lib.ClassField.GreenbergWiles.GreenbergWilesBound).
@@ -689,6 +696,7 @@ lemma selmerModule_mono (k : c ∈ selmerModule ρ S L B) (l : K ⊆ L) (h : ∀
   c ∈ selmerModule ρ T K B := by simp_all [mem_selmerModule_iff, obeying, inertiaAbove]; grind
 end
 
+-- part: Lib.ClassField.GaloisCohomology.TameCocycles
 section
 /-! Part of: Galois cohomology in degrees ≤ 2: Shapiro, Hilbert 90, Kummer, symbols, Herbrand
 quotient (known result; see Lib.ClassField.GaloisCohomology.CyclicNorm).

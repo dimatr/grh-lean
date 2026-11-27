@@ -1,6 +1,7 @@
 import Lib.Adelic.CongruenceLevel
 import Lib.GaloisRep.HeckeOperatorOfFunction
 
+-- part: Lib.General.Groups.CyclicSubrep
 section
 /-! General lemmas of group theory (textbook or folklore).
 
@@ -32,6 +33,7 @@ instance [TopologicalSpace G] [IsTopologicalGroup G] : IsSmoothRep (smoothVector
   ⟨(·.2.mono (by aesop))⟩
 end
 
+-- part: Lib.LocalGL.Iwahori.IwahoriConjugation
 section
 /-! Part of: Exponents, U-operators and spherical vectors at pro-p Iwahori level; conjugacy in I t I
 (known result; see Lib.LocalGL.Tadic.ChainLemma).
@@ -103,6 +105,7 @@ lemma exists_twisted_conj_diag [CompactSpace 𝒪[F]]
     by cases h.lt_or_gt <;> nlinarith [A 1, A (-1), by simpa [← log_lt_log] using ht ‹_›]).symm)
 end
 
+-- part: Lib.LocalGL.Iwahori.IwahoriInjective
 section
 /-! Part of: Exponents, U-operators and spherical vectors at pro-p Iwahori level; conjugacy in I t I
 (known result; see Lib.LocalGL.Tadic.ChainLemma).

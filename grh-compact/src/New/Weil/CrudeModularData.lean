@@ -3,6 +3,7 @@ import New.Weil.IntegralVacuum
 import New.Weil.TestRings
 import New.Weil.ColumnDefs
 
+-- part: Lib.CM.Reciprocity.SemilinearWeilLaw
 section
 /-! Known result: the Galois action on CM theta functions and on the finite Weil representation. It
 is stated here for Taylor series on a power of one CM curve, and Galois conjugation is a semilinear
@@ -83,6 +84,7 @@ lemma Space.semilinear_intertwines_weil {σ} {L : _ →ₛₗ[σ] V.finitePart} 
   erw [diagonal_const_mulVec u.1]; simp; ring
 end
 
+-- part: New.Curve.ConjugatesOfJets
 section
 /-! Also holds known results stated on this proof's data: Galois action on CM theta functions and on
 the finite Weil representation (known result; see Lib.CM.Reciprocity.SemilinearWeilLaw).
@@ -308,6 +310,7 @@ lemma exists_semilinear_isJetConjugate [i : V.IsStd] {R} (hR : Set.IsConjDisjoin
 end Parameters
 end
 
+-- part: New.Exchange.CrudeModularData
 section
 /-! Set-up for this proof: records of the data and parameters of this proof, names for its objects.
 

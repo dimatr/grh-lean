@@ -2,6 +2,7 @@ import Lib.Adelic.SubmoduleNormedSpace
 import Lib.DiscreteSeries.CircleMean
 import Lib.DiscreteSeries.Unimodular
 
+-- part: Lib.Adelic.QuotientMeasure.PeriodicMean
 section
 /-! Part of: Invariant integration on a quotient (Weil's formula), unfolding, unimodularity (known
 result; see Lib.Adelic.QuotientMeasure.Unimodular).
@@ -74,6 +75,7 @@ lemma quotMean_comp (h₀ : ∀ a ∈ A₀, φ a ∈ B₀) (hs : Surjective φ) 
   Unit) ⊤ h _ (φ.comp (.snd ..)) hφ.snd' (fun _ _ ↦ h₀) (by aesop_cat)]
 end
 
+-- part: Lib.General.Analysis.FundamentalDomain
 section
 /-! General lemmas of real and complex analysis (textbook or folklore).
 

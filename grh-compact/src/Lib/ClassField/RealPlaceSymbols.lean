@@ -4,6 +4,7 @@ import Lib.ClassField.SylowReduction
 import Lib.ClassField.TameInertia
 import Lib.ClassField.DecompositionLocal
 
+-- part: Lib.Adelic.Cartan.ProjectiveModules
 section
 /-! Known result: Finiteness of the cokernel of the Cartan map, and Higman's criterion. It is stated
 here for rational multiplicative functions on finite modules killed by a prime on which one element,
@@ -173,6 +174,7 @@ lemma IsMultiplicative.eq_one_of_isHigmanProjective :
 end DiscreteModule
 end
 
+-- part: Lib.ClassField.GaloisCohomology.CyclicNorm
 section
 /-! Known result: Galois cohomology in degrees ≤ 2, covering Shapiro, Hilbert 90, Kummer, symbols
 and the Herbrand quotient. Only explicit continuous cocycles are used, and Shapiro's lemma appears
@@ -340,6 +342,7 @@ lemma cyclicClass_eq_zero_iff_norm {χ : QZChar Γ} [J : IsProGalois (QZChar.ker
   simp [corestrictH0_ofBase_eq_norm, DiscreteUnits.ext_iff, Units.ext_iff]
 end
 
+-- part: Lib.ClassField.LocalDuality.RealPlaceSymbols
 section
 /-! Part of: Local Tate duality in degree 1, as an upper bound for orthogonal groups of cocycles
 (known result; see Lib.ClassField.LocalDuality.CrystallineDuality).

@@ -2,6 +2,7 @@ import Lib.DiscreteSeries.TwoFactorSetup
 import New.Weil.ModularDataDecay
 import New.Weil.GoodIdempotent
 
+-- part: New.DiscreteSeries.RestrictionLemma
 section
 /-! Discrete series coefficients near 1 and explicitly large Bessel functions. Near 1 a discrete
 series coefficient of U(p,q) is an explicit phase times a real factor in [0,1], with uniform error,
@@ -245,6 +246,7 @@ lemma IsSteep.exists_isTwoFactor_restriction {n X} [Fintype n] [Fintype X] {ε B
   simp [← Matrix.mul_assoc, entrywise, ω, f, inclMatrix, reindex_equiv e]⟩
 end
 
+-- part: New.Exchange.SteepParameters
 section
 /-! Set-up for this proof: records of the data and parameters of this proof, names for its objects.
 

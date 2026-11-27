@@ -4,6 +4,7 @@ import Lib.ClassField.AutCharLFunction
 import Lib.ClassField.FormalHeight
 import Lib.Shimura.FockThetaFunctions
 
+-- part: Lib.ClassField.HeckeCharacter.SplittingCharExists
 section
 /-! Known result: Algebraic Hecke characters (type A₀) and the extension of the quadratic character
 of a CM field. The result is stated here for tamely ramified characters of the norm-one torus of a
@@ -48,6 +49,7 @@ lemma nonempty_splittingChar {E : Type} [Field E] [CMType E] [StablyUnram E] (hE
     (eq_inv_of_mul_eq_one_right <| by simpa using! k ⟨⟨1, ·⟩, rfl⟩)⟩
 end
 
+-- part: New.Data.WeilDataOfE
 section
 /-! Set-up for this proof: records of the data and parameters of this proof, names for its objects.
 
@@ -291,6 +293,7 @@ noncomputable instance Parameters.instWeilDataE : WeilData (P.E s) := by
     exists_eq_principalIdele_mul_norm.2.2 <;> simp [← map_star_CM, pos]
 end
 
+-- part: New.Curve.PeriodDefs
 section
 /-! Set-up for this proof: records of the data and parameters of this proof, names for its objects.
 

@@ -1,5 +1,6 @@
 import Lib.GaloisRep.CMNorms
 
+-- part: Lib.Adelic.Landherr.SumOfTwoSquares
 section
 /-! Part of: Landherr's Hasse principle for hermitian forms; weak approximation for unitary groups
 (known result; see Lib.Adelic.Landherr.Landherr).
@@ -42,6 +43,7 @@ lemma exists_sq_add_sq_quadraticAlgebra {E} [Field.{0} E] [CMType E] [StablyUnra
       norm_maximalRealSubfield_eq_mul_star, RingOfIntegers.ext_iff]; grind]; ring))
 end
 
+-- part: Lib.Adelic.Landherr.Landherr
 section
 /-! Known result: Landherr's Hasse principle for hermitian forms, and weak approximation for unitary
 groups. The form here covers only adelically unimodular spaces of equal signature over a CM field

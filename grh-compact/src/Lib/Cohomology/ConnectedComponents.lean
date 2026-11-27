@@ -3,6 +3,7 @@ import Lib.Cohomology.Partitions
 import Lib.Cohomology.BijectiveComparisons
 import Lib.Cohomology.ReductionModP
 
+-- part: Lib.Cohomology.Etale.ContinuityAtlas
 section
 /-! Known result: Descent of torsion étale cohomology along v-covers, with excision, transfer and
 limits. Here cohomology is defined as Ext of presheaves on rings whose local rings are valuation
@@ -123,6 +124,7 @@ lemma IsCohomContinuous.of_atlas {q} (r : @IsRelAffine (reprBy T) Y q) (hq : Has
     .comp (.map uliftCoyoneda _) (.comp (.of_isIso ..) (r.baseChange isPullback_fibreProd.flip))]
 end
 
+-- part: Lib.General.Algebra.TensorCohomology
 section
 /-! General lemmas of commutative and general algebra (textbook or folklore).
 
@@ -195,6 +197,7 @@ lemma Comparison.IsBijective.baseChangeMap_bijective_iff (H : (ofModuleHom φ β
   (map_bijective bijective_id (H n)) bijective_id).symm.trans ((h ..).of_comp_iff _)
 end
 
+-- part: Lib.Cohomology.Etale.ConnectedComponents
 section
 /-! Part of: Descent of torsion étale cohomology along v-covers; excision, transfer, limits (known
 result; see Lib.Cohomology.Etale.ContinuityAtlas).

@@ -4,6 +4,7 @@ import New.Weil.ClassReps
 import Lib.DiscreteSeries.SmoothFormPairing
 import Lib.ClassField.UniformiserScalar
 
+-- part: Lib.DiscreteSeries.Holomorphic.HolomorphicMinor
 section
 /-! Part of: Holomorphic discrete series: highest coefficient and reproducing property (known
 result; see Lib.DiscreteSeries.Holomorphic.HolomorphicExtension).
@@ -75,6 +76,7 @@ lemma IsHolOfWeight.eq_holMinorsPi_mul (i : ∀ g, F g⁻¹ = conj (F g)) h : F 
     conj (hF.apply_mul_diagTorus y⁻¹ t), ← hF.circle_mean_holMinorsPi, *, -holMinorsPi]
 end
 
+-- part: Lib.DiscreteSeries.Holomorphic.HolomorphicChamber
 section
 /-! Part of: Holomorphic discrete series: highest coefficient and reproducing property (known
 result; see Lib.DiscreteSeries.Holomorphic.HolomorphicExtension).
@@ -115,6 +117,7 @@ lemma dsCoeff_eq_holMinors {n} [Fintype n] {ε o} (ho :
     (.mkPiAlgebra ..)).eq_holMinorsPi_mul ho (by simpa) (by simp [← dsCoeff_inv]) ![·]))
 end
 
+-- part: Lib.Adelic.CuspForms.LevelForms
 section
 /-! Part of: Cusp forms: rapid decay, finite dimension, Poincaré series; algebraic modular forms
 (known result; see Lib.Adelic.CuspForms.Petersson).

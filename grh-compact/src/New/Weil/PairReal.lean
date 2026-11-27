@@ -3,6 +3,7 @@ import Lib.Weil.LatticeComplement
 import Lib.GaloisRep.Petersson
 import New.Weil.PairSplitting
 
+-- part: Lib.Weil.MixedModel.NameModulus
 section
 /-! Part of: Schrödinger and mixed models of the Weil representation; action of parabolic subgroups
 (known result; see Lib.Weil.MixedModel.ZeroTermLaw).
@@ -192,6 +193,7 @@ end Modulus
 end
 end
 
+-- part: Lib.Weil.DualPair.PairReal
 section
 /-! Part of: Theta kernels of unitary dual pairs: functoriality, seesaw, growth, rapid decay (known
 result; see Lib.Weil.DualPair.KernelDecay).

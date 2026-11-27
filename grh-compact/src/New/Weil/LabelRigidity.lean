@@ -2,6 +2,7 @@ import New.Weil.TriangleArrows
 import Lib.GaloisRep.LabelCompatibility
 import New.Weil.LevelPlacesChosen
 
+-- part: New.Exchange.ChainNorms
 section
 /-! Part of: Injectivity and norm of a chain of theta lifts (see New.Exchange.TriangleArrows).
 
@@ -59,6 +60,7 @@ Proved from the norm formula `inner_iotaAtLevel`. -/
 end Data
 end
 
+-- part: New.GaloisRep.LabelUniqueness
 section
 /-! Part of: Good forms on different unitary groups have equal traces (see
 New.Trace.GoodFormTransfer).
@@ -118,6 +120,7 @@ lemma Data.occurringLabels_subsingleton {v : _ ↪ n} {S J χ' κ ν} {L : _ →
     isRoot_of_isRoot_charpoly ((B' h).1.1 l)⟩ ∘ isRoot_of_mem_roots
 end
 
+-- part: New.Trace.LabelRigidity
 section
 /-! Set-up for this proof: dictionaries between two encodings of the same objects.
 

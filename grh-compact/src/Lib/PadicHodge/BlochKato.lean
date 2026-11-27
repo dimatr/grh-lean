@@ -1,5 +1,6 @@
 import Lib.PadicHodge.KisinModuleDefs
 
+-- part: Lib.PadicHodge.Crystalline.PairingDefs
 section
 /-! Part of: Potentially crystalline representations, Hodge–Tate weights, Weil–Deligne Frobenius
 (known result; see Lib.PadicHodge.Crystalline.RegularityFrobenius). -/
@@ -84,6 +85,7 @@ end Lift
 end
 end
 
+-- part: Lib.PadicHodge.BlochKato.BlochKato
 section
 /-! Known result: The rank formula for the Bloch–Kato finite local condition and the size of its
 annihilator. The result is stated on cocycles of a lattice in a potentially crystalline

@@ -2,6 +2,7 @@ import Lib.DiscreteSeries.JointHarmonicUnique
 import Lib.DiscreteSeries.OscillatorPair
 import Lib.DiscreteSeries.KernelFixes
 
+-- part: Lib.DiscreteSeries.Theta.HoweArgument
 section
 /-! Part of: Theta correspondence of discrete series for real unitary dual pairs; joint harmonics
 (known result; see Lib.DiscreteSeries.Theta.LocalThetaCorrespondence).
@@ -38,6 +39,7 @@ lemma IsJointHarmonic.howe_argument {R C ι} [Fintype R] [Fintype C] [Fintype ι
     (hc _ _ H), ⟨w, t⟩, D⟩ hΦ.2.isPreJointHarmonic]) _) fun _ ↦ ofNat_le.2 ∘ le_totalDegree
 end
 
+-- part: Lib.DiscreteSeries.Theta.LocalThetaCorrespondence
 section
 /-! Known result: Theta correspondence of discrete series for real unitary dual pairs, and joint
 harmonics. Only matched parameters with large gaps are treated, on Fock space. The joint harmonic

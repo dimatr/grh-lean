@@ -1,6 +1,7 @@
 import New.Filling.BoxPartition
 import New.Filling.AmplitudeSums
 
+-- part: New.Filling.LinkPairing
 section
 /-! Part of: Incoherent and degenerate pairs are negligible (see New.Filling.CrudeEnergy).
 
@@ -318,6 +319,7 @@ lemma pairInvariant_mul_le (h' : γ' ∈ S.termsOver c s c') (hd : S.HasLevel j 
 end Filling
 end
 
+-- part: New.RealPlace.VolumeKernel
 section
 /-! Part of: Incoherent and degenerate pairs are negligible (see New.Filling.CrudeEnergy).
 
@@ -559,6 +561,7 @@ lemma frameX₀Part_unipotentOf_inv_mul q : frameX₀Part ((unipotentOf q)⁻¹ 
 end
 end
 
+-- part: New.Filling.SchurTest
 section
 /-! Part of: Incoherent and degenerate pairs are negligible (see New.Filling.CrudeEnergy).
 

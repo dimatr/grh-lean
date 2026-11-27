@@ -22,6 +22,8 @@ Upstream does not accept contributions; nothing is sent to lsernau/grh-lean.
     ./kit/run/00_setup.sh        once: networkx, elan + Lean v4.35.0, Mathlib cache (several GB)
     ./kit/run/10_restructure.sh  regenerate grh-compact/src (seconds); args pass through, e.g. --cap 50
     ./kit/run/20_build.sh        lake build Main; JOBS=N to set workers (LEAN_NUM_THREADS)
+    ./kit/run/25_fix_loop.sh     build; un-merge original modules whose part fails; regenerate;
+                                 rebuild; repeat (MAX_ROUNDS=6). Commits each round locally.
     ./kit/run/30_check.sh        static guard + all 5 theorems use only propext/Classical.choice/Quot.sound
     ./kit/run/40_score.sh        local 5-pillar score, baseline vs grh-compact
     ./kit/run/50_package.sh      submission/proof/src/** + tarball; prints the submit command
@@ -47,7 +49,13 @@ Send back `logs/errors-latest.txt` (condensed: message + source lines per error)
    left open closed first, so `open`/`variable`/`set_option`/local attributes stay scoped.
 2. Re-folders modules as Lib|New/<Cluster>/<Leaf>.lean, Cluster = Louvain community of the merged
    import graph (keeps the fixed lakefile's Lib.+ / New.+ globs valid).
-3. Statements.lean is copied byte-identical. RESTRUCTURE_MAP.json records old -> new modules.
+   The folder of every original module is persisted in kit/layout.json (committed), so
+   regeneration is identical on every machine and only touches files that really change.
+   Use --recluster to recompute it.
+3. kit/isolate.txt lists original modules kept out of merging: merging changes the context a
+   part elaborates in (union of imports, sibling lemmas), and a few simp/grind/aesop proofs break.
+   Each merged file marks its parts with `-- part: <OriginalModule>` comments for this mapping.
+4. Statements.lean is copied byte-identical. RESTRUCTURE_MAP.json records old -> new modules.
 
 Local score replica: baseline 51.27, after Phase A 72.41
 (P2 reuse, P3 taxonomy, P5 granularity at ~100; P1 tokens and P4 duplicate names unchanged).

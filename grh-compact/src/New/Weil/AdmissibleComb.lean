@@ -3,6 +3,7 @@ import New.Weil.ClassReps
 import Lib.ClassField.SplittingCharOnU1
 import New.Weil.PairSplitting
 
+-- part: New.Seesaw.IntegralAway
 section
 /-! Set-up for this proof: size bookkeeping for the data of this proof.
 
@@ -37,6 +38,7 @@ lemma AutChar.HasWeight.norm_padic_det {a : AutChar E} {e ψ s} [ha : a.HasWeigh
   funext_iff, ↓(norm_adeleExtension_eq_iff _ 1).2, mem_intGL_iff_det.1 (hg ..)]
 end
 
+-- part: New.Seesaw.AdmissibleComb
 section
 /-! Set-up for this proof: size bookkeeping for the data of this proof.
 

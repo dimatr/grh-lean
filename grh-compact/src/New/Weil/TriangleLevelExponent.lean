@@ -6,6 +6,7 @@ import New.Weil.LineCoordinates
 import New.Weil.ExchangeTheorem
 import New.Weil.PairTensorData
 
+-- part: New.Exchange.CharacterLiftNorm
 section
 /-! Set-up for this proof: general results applied to the objects of this proof.
 
@@ -257,6 +258,7 @@ lemma LValueData.inner_trivialLift_self_eq_L {k} (hM : 2 * k = card n) (hk : 1 <
   simp [O, algFormCoeff_apply, trivialLift, star_highestVector]
 end
 
+-- part: New.Rows.LineArithmetic
 section
 /-! Twisted theta forms lie on one line. Explicit theta forms on U(W_j), whose coefficient vectors
 are integral off the conductor and small when untwisted, are for every twist multiples of one
@@ -361,6 +363,7 @@ lemma Data.lineMultiplier_integral_and_small : ∃ c ≠ (0 : ℂ), ∀ i ϑ h, 
     inclMatrix] <;> split <;> simp [eq_comm]
 end
 
+-- part: New.Exchange.TriangleLevelExponent
 section
 /-! Set-up for this proof: size bookkeeping for the data of this proof.
 

@@ -4,6 +4,7 @@ import Lib.ClassField.IsogenyIntegrality
 import Lib.DiscreteSeries.PartialDerivComm
 import Lib.PadicHodge.BlocksAndCocycles
 
+-- part: Lib.General.Algebra.BlockFittingBound
 section
 /-! General lemmas of commutative and general algebra (textbook or folklore).
 
@@ -33,6 +34,7 @@ lemma exists_rows_addVal_det_le {O ι A d : Type} [CommRing O] [DVR O] [Fintype 
     *, mul_apply, Matrix.sum_apply, updateRow_apply]
 end
 
+-- part: New.Selmer.RibetCramer
 section
 /-! Part of: Ribet's method with congruent blocks and tied auxiliary primes (see
 New.Selmer.RibetElement).
@@ -114,6 +116,7 @@ noncomputable def ribetNormaliser (γ a : G) (y p : R) (θ : G →₀ ℕ) : G �
   .single (γ * a) 1 - .single a y + p • θ.linearCombination ℕ (.single · 1)
 end
 
+-- part: New.Selmer.RibetFirstOrder
 section
 /-! Part of: Ribet's method with congruent blocks and tied auxiliary primes (see
 New.Selmer.RibetElement).

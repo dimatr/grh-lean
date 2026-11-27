@@ -2,6 +2,7 @@ import Lib.DiscreteSeries.Nabla
 import Lib.DiscreteSeries.OscillatorDefs
 import Lib.DiscreteSeries.HighestVectors
 
+-- part: Lib.DiscreteSeries.Theta.FischerDecomposition
 section
 /-! Part of: Theta correspondence of discrete series for real unitary dual pairs; joint harmonics
 (known result; see Lib.DiscreteSeries.Theta.LocalThetaCorrespondence).
@@ -108,6 +109,7 @@ end
 end
 end
 
+-- part: Lib.DiscreteSeries.Theta.JointHarmonicUnique
 section
 /-! Part of: Theta correspondence of discrete series for real unitary dual pairs; joint harmonics
 (known result; see Lib.DiscreteSeries.Theta.LocalThetaCorrespondence).

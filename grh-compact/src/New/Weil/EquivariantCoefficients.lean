@@ -1,6 +1,7 @@
 import New.Weil.SingularForms
 import New.Weil.ThetaIntegralLaws
 
+-- part: Lib.SiegelWeil.StrongApproximation.EqualRankConstant
 section
 /-! Known result: Strong approximation for isotropic unitary groups. It is stated here for functions
 on the full unitary group, where invariance under rational points, a split place, the compact group
@@ -65,6 +66,7 @@ lemma IsAutFunction.apply_eq_apply_one {E n m : Type} [Field E] [CMType E] [Weil
     using (congr($e 1) : D (closurePart _ _ * 1) = _)) hD.1
 end
 
+-- part: Lib.Weil.MixedModel.EquivariantCoefficients
 section
 /-! Part of: Schrödinger and mixed models of the Weil representation; action of parabolic subgroups
 (known result; see Lib.Weil.MixedModel.ZeroTermLaw).

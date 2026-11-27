@@ -1,6 +1,7 @@
 import Lib.PadicHodge.DeterminantBound
 import New.Weil.LevelPlacesChosen
 
+-- part: New.Selmer.AptTupleDefs
 section
 /-! Set-up for this proof: records of the data and parameters of this proof, names for its objects.
 
@@ -118,6 +119,7 @@ structure IsLabelledColumn extends IsColumn (n := m) D k J S R where
 end
 end
 
+-- part: New.Selmer.AptTuples
 section
 /-! Set-up for this proof: size bookkeeping for the data of this proof.
 

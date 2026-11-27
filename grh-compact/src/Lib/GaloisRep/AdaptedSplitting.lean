@@ -1,6 +1,7 @@
 import Lib.Weil.ZeroTerm
 import Lib.GaloisRep.Landherr
 
+-- part: Lib.Weil.MixedModel.MixedModelIntegrable
 section
 /-! Part of: Schrödinger and mixed models of the Weil representation; action of parabolic subgroups
 (known result; see Lib.Weil.MixedModel.ZeroTermLaw).
@@ -28,6 +29,7 @@ function x ↦ f[x] of the mixed model is integrable on 𝔸^p. -/
 end Space.Splitting
 end
 
+-- part: Lib.Weil.MixedModel.ZeroTermLaw
 section
 /-! Known result: the Schrödinger and mixed models of the Weil representation and the action of
 parabolic subgroups. This file treats adelic unitary groups over a CM field and uses vectors with
@@ -136,6 +138,7 @@ lemma zeroTerm_omega (hi : D.iCoord * (g.mat * D.iAdelic) = g₀.mat) {a} (hk : 
 end Space.Splitting
 end
 
+-- part: Lib.Weil.MixedModel.HyperbolicSplitting
 section
 /-! Part of: Schrödinger and mixed models of the Weil representation; action of parabolic subgroups
 (known result; see Lib.Weil.MixedModel.ZeroTermLaw).
@@ -149,6 +152,7 @@ noncomputable def hyperbolicSplitting E p [Field E] [CMType E] [WeilData E] [Fin
   p := by use .fromRows 0 1, .fromRows 1 0, 0 <;> first | (ext ⟨⟩; done) | simp +arith
 end
 
+-- part: Lib.Weil.MixedModel.AdaptedSplitting
 section
 /-! Part of: Schrödinger and mixed models of the Weil representation; action of parabolic subgroups
 (known result; see Lib.Weil.MixedModel.ZeroTermLaw).

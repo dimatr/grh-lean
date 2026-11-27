@@ -1,5 +1,6 @@
 import Lib.Cohomology.HodgeTatePairs
 
+-- part: Lib.PadicComparison.HodgeTate.HodgeTateMap
 section
 /-! Part of: Hodge–Tate map from Hodge cohomology to p-adic étale cohomology (known result; see
 Lib.PadicComparison.HodgeTate.HodgeTateVectors).
@@ -114,6 +115,7 @@ lemma hodgeTateMap_cup l : hodgeTateMap l (N := abTensor N N') (_root_.cup exter
   (congrArg _ (Comparison.pull_cup (by simp) ..).symm)) _).symm.trans (contractionPow_cup ..)
 end
 
+-- part: Lib.PadicComparison.HodgeTate.GaloisTwist
 section
 /-! Part of: Hodge–Tate map from Hodge cohomology to p-adic étale cohomology (known result; see
 Lib.PadicComparison.HodgeTate.HodgeTateVectors).

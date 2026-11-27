@@ -1,5 +1,6 @@
 import Lib.PadicHodge.Letters
 
+-- part: Lib.PadicHodge.WachKisin.FrameTheorem
 section
 /-! Part of: Kisin lattice (Breuil–Kisin module) of a crystalline lattice (known result; see
 Lib.PadicHodge.WachKisin.PeriodMatrixFrame).
@@ -164,6 +165,7 @@ lemma frame_theorem : ((∀ (f : _ →ₗ[k.S] k.S) {ι : Type} [Fintype ι] (v 
 end Lift.KummerChart.JumpLattice
 end
 
+-- part: Lib.PadicHodge.WachGamma.GaloisOnFrames
 section
 /-! Part of: Kisin modules: Galois action trivial modulo the variable, Hodge–Tate weights read off
 (known result; see Lib.PadicHodge.WachGamma.Letters).
@@ -201,6 +203,7 @@ lemma smul_mem_kisinAinf : x ∈ kisinAinf → FrobGroup.inr g • x ∈ L.kisin
 end Lift.KummerChart.JumpLattice
 end
 
+-- part: New.Lift.ExponentLattices
 section
 /-! Part of: Cokernel bounds and vanishing cup products for Kisin modules (see New.Lift.LongGap).
 

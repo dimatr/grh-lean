@@ -9,6 +9,7 @@ import New.Weil.DegreeBounds
 import New.Weil.MonomialCoefficientVector
 import Lib.PadicHodge.HeckeStableSubspaces
 
+-- part: Lib.DiscreteSeries.Holomorphic.NearMaximum
 section
 /-! Known result: A cusp form is large only away from the cusps (Siegel's argument). The statement
 here is for unitary groups over a CM field, highest components of vector weights and forms of rapid
@@ -128,6 +129,7 @@ lemma exists_near_max {E n} [Field E] [CMType E] [Fintype n] {s : n → _} [None
   grind [BlockTriangular, of_apply]
 end
 
+-- part: Lib.Weil.Fock.ReproducingFormula
 section
 /-! Known result: the basis problem in the stable range, as a reproducing formula. In this unitary
 version at a fixed level, pairing with a holomorphic discrete series coefficient is a fixed finite
@@ -257,6 +259,7 @@ lemma reproducing_formula_modKernel [WeilData E] {𝔪 N} [Fact (N ≠ 0)] (hN :
     IsBoundedMeasurable.integrable_mul_comp (.of ψ.2.1.2.bounded ψ.2.1.1.1) hi (x * ⟨·, 1⟩)]
 end
 
+-- part: New.Exchange.AlgebraicPartConjugates
 section
 /-! This file: Galois conjugate of the lift is the lift for the conjugate Hecke character. Galois
 conjugates of the lift's squared norm: factorials over periods, error bounded below. -/
@@ -339,6 +342,7 @@ lemma Data.Pair.log_norm_map_norm_sq_trivialLift {P} (D : Data P) n [Fintype n] 
   ring; rfl
 end
 
+-- part: New.Weil.FockCoeffDecay
 section
 /-! Part of: Products of theta forms detect all good forms (see New.Rows.Separation).
 
@@ -375,6 +379,7 @@ lemma norm_realInner_realHeisOp_le {ι : Type} [Fintype ι] [Nonempty ι] {ε P 
     U.one_le_norm σ, add_sq_le]; linarith!
 end
 
+-- part: New.Rows.SparseThetaSum
 section
 /-! Part of: Products of theta forms detect all good forms (see New.Rows.Separation).
 
@@ -546,6 +551,7 @@ lemma norm_modKernel_sub_realInner_le [WeilData E] {a b γ γ' ψ ψ' 𝔪 g} (h
   linear_combination
 end
 
+-- part: New.Rows.NaturalFormNear
 section
 /-! Part of: Products of theta forms detect all good forms (see New.Rows.Separation).
 
@@ -690,6 +696,7 @@ lemma Data.exists_fNatural_approx {P} {D : Data P} (j : D.LiftIndex) :
       ← map_mul]; left; rfl
 end
 
+-- part: New.Rows.Separation
 section
 /-! Products of theta forms detect all good forms. For a finite family of choices with small
 integral data, a good form on U(W_j) orthogonal to all products of the twist-free theta forms with

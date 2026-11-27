@@ -1,6 +1,7 @@
 import Lib.DiscreteSeries.CircleMean
 import Lib.DiscreteSeries.FlatCharts
 
+-- part: New.RealPlace.FloorKernels
 section
 /-! Part of: Tower method: pairings of kernels bounded floor by floor (see
 New.RealPlace.LocalTheorem).
@@ -101,6 +102,7 @@ end IsPairingKernel
 end Level
 end
 
+-- part: New.RealPlace.WeightPlancherel
 section
 /-! Part of: Tower method: pairings of kernels bounded floor by floor (see
 New.RealPlace.LocalTheorem).

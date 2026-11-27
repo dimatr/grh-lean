@@ -2,6 +2,7 @@ import Lib.DiscreteSeries.SmoothFormPairing
 import Lib.DiscreteSeries.SchurOrthogonality2
 import Lib.GaloisRep.SortedExponents
 
+-- part: Lib.Adelic.CuspForms.FormRepresentation
 section
 /-! Part of: Cusp forms: rapid decay, finite dimension, Poincaré series; algebraic modular forms
 (known result; see Lib.Adelic.CuspForms.Petersson).
@@ -35,6 +36,7 @@ lemma finite_formTranslation_levelSpace {K : Subgroup _} (hK : K.IsOpen) (χ : K
 end Space
 end
 
+-- part: Lib.GaloisRep.LocalGlobal.LocalTranslates
 section
 /-! Part of: Local-global compatibility at tame level, away from and at l (known result; see
 Lib.GaloisRep.LocalGlobal.LabelCompatibility).

@@ -8,6 +8,7 @@ import Lib.GaloisRep.TraceComparison
 import New.Weil.GoodIdempotent
 import New.Weil.MemberKernels
 
+-- part: Lib.Adelic.Hecke.ClassSumBounds
 section
 /-! Part of: Abstract Hecke operators of a pair (G,K), level eigenspaces, weighted class sums (known
 result; see Lib.Adelic.Hecke.ClassMean).
@@ -33,6 +34,7 @@ lemma sqrt_weylNormSq_classSum_le (σ : ℂ ≃+* ℂ) (h : ∀ x, √(weylNormS
   simp [← algebraMap_smul ℂ]; grw [cast_inv_le_one, h]; simp
 end
 
+-- part: New.Rows.LineCoordinates
 section
 /-! Set-up for this proof: records of the data and parameters of this proof, names for its objects.
 

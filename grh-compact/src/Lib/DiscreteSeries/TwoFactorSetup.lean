@@ -1,6 +1,7 @@
 import Lib.DiscreteSeries.KernelFixes
 import Lib.DiscreteSeries.TailBounds
 
+-- part: Lib.General.LinearAlgebra.FramedCoefficient
 section
 /-! General lemmas of linear algebra and matrices (textbook or folklore).
 
@@ -150,6 +151,7 @@ lemma isIdempotentKernel_psiInFrame [Nonempty n]
 end
 end
 
+-- part: New.DiscreteSeries.MinorExpansion
 section
 /-! Part of: Discrete series coefficients near 1 and explicitly large Bessel functions (see
 New.DiscreteSeries.RestrictionLemma).
@@ -260,6 +262,7 @@ lemma exists_principalMinor_eq_exp (hg : l.HasGap h) (g : USign ε) : let X :=
     ← trace_star_mul_self_eq_norm_sq, inv_le_one₀] <;> ring_nf
 end
 
+-- part: New.DiscreteSeries.GaussianShape
 section
 /-! Part of: Discrete series coefficients near 1 and explicitly large Bessel functions (see
 New.DiscreteSeries.RestrictionLemma).
@@ -359,6 +362,7 @@ lemma dsCoeff_gaussian_shape [Nonempty n]
   nlinarith [hr k, le_mul_of_one_le_right this hT]
 end
 
+-- part: New.DiscreteSeries.TwoFactorSetup
 section
 /-! Part of: Discrete series coefficients near 1 and explicitly large Bessel functions (see
 New.DiscreteSeries.RestrictionLemma).

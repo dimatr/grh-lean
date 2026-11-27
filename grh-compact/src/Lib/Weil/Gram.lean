@@ -1,5 +1,6 @@
 import Lib.Weil.RationalRep
 
+-- part: Lib.GLn.SchurModule.Hook
 section
 /-! Part of: Standard basis theorem for Schur (dual Weyl) modules over any ring, with character
 (known result; see Lib.GLn.SchurModule.MinorBasis).
@@ -120,6 +121,7 @@ lemma hookNumber_le (h : ∑ τ, ∑ h ∈ range (N τ), h * κ τ h ≤ L) : ho
   grw [← cast_pow, ← factorial_le_pow, ← h]; simp [sum_range, pow_succ, mul_comm]
 end
 
+-- part: Lib.GLn.SchurModule.Gram
 section
 /-! Part of: Contravariant form on Weyl's lattice, Fischer product, irreducibility under U(n) (known
 result; see Lib.Adelic.CuspForms.DeltaForms).

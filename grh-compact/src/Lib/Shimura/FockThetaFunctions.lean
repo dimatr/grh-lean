@@ -2,6 +2,7 @@ import Lib.Weil.NameWeilAction
 import Lib.Shimura.ThetaOrthogonality
 import Lib.Adelic.PeriodLattice
 
+-- part: Lib.Weil.Construction.ConjugateJetDefs
 section
 /-! Part of: Adelic Weil representation of a unitary group and the invariant theta functional (known
 result; see Lib.Weil.DualPair.PairSplitting).
@@ -48,6 +49,7 @@ abbrev Space.IsJetConjugate [Field I] [CMType I] [WeilData I] {n : Type} [Fintyp
     (V.jetSeries t f).constantCoeff = V.θ (V.projReal f) := (jetSeries_apply ..).trans (by simp)
 end
 
+-- part: Lib.Weil.Construction.FockThetaFunctions
 section
 /-! Part of: Adelic Weil representation of a unitary group and the invariant theta functional (known
 result; see Lib.Weil.DualPair.PairSplitting).

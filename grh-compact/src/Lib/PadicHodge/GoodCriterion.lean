@@ -1,5 +1,6 @@
 import Lib.PadicHodge.HodgeTateProjectors
 
+-- part: Lib.PadicHodge.Limit.LocalLimit
 section
 /-! Limits of crystalline representations with bounded weights are crystalline. The hypothesis here
 is a uniform limit of traces with unbounded coefficients and ranks, and crystallinity is Liu's
@@ -118,6 +119,7 @@ lemma local_clauses_of_trace_limit {ℓ} [ThePrime ℓ] [PadicIso ℓ] {E m I : 
     fun f ↦ (E ..).trans (Z _ ▸ zero_mulVec v)] using! (V t₀ none hP v).symm
 end
 
+-- part: Lib.PadicHodge.Crystalline.GoodCriterion
 section
 /-! Part of: Potentially crystalline representations, Hodge–Tate weights, Weil–Deligne Frobenius
 (known result; see Lib.PadicHodge.Crystalline.RegularityFrobenius).

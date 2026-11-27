@@ -2,6 +2,7 @@ import New.Weil.BlockMatrices
 import Lib.DiscreteSeries.DeltaForms
 import New.Weil.LevelModulus
 
+-- part: New.Rows.PartnerCut
 section
 /-! Part of: Twisted theta forms lie on one line (see New.Rows.LineArithmetic).
 
@@ -46,6 +47,7 @@ lemma columnDatum_mul_ite_eq {F : _ → ℂ} (hF : ∀ A ∈ rowStabilizer φ w 
     Units.val_inj, rowStabilizer] <;> grind [mul_inv_cancel_left_of_invertible]
 end
 
+-- part: New.Rows.SemiInvariantNorm
 section
 /-! Part of: Twisted theta forms lie on one line (see New.Rows.LineArithmetic).
 
@@ -67,6 +69,7 @@ lemma HasWeightNormLe.prod {p ι} {s : Finset ι} {κ F b} :
     ⟨z, by grind [(weylNormSq_le_mul_of_toPoly_eq z).trans, weylNormSq_nonneg, mul_le_mul]⟩
 end
 
+-- part: New.Rows.StackedDeterminants
 section
 /-! Records of the data and parameters used below, and names for their objects.
 

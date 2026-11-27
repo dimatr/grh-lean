@@ -2,6 +2,7 @@ import Lib.PadicHodge.Valuation
 import Lib.PadicHodge.Jumps
 import Lib.PadicHodge.KummerChartExists
 
+-- part: Lib.General.Groups.ResidualIrreducibility
 section
 /-! General lemmas of group theory (textbook or folklore).
 
@@ -44,6 +45,7 @@ lemma IsLatticeIn.span_eq_top_of_tame_pair {G n} [Group G] [Fintype n] {γ φ q 
     equivFin _ _)) : ∑ p, c p • τ _ = 0) :)) ((τ φ ^ l.1) v))
 end
 
+-- part: Lib.PadicHodge.WachKisin.KummerChart
 section
 /-! Part of: Kisin lattice (Breuil–Kisin module) of a crystalline lattice (known result; see
 Lib.PadicHodge.WachKisin.PeriodMatrixFrame).

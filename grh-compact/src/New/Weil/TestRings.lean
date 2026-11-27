@@ -1,6 +1,7 @@
 import Lib.Cohomology.Defs
 import Lib.ClassField.AdicRingHomExt
 
+-- part: Lib.Cohomology.Etale.TestCohomology
 section
 /-! Part of: Descent of torsion étale cohomology along v-covers; excision, transfer, limits (known
 result; see Lib.Cohomology.Etale.ContinuityAtlas).
@@ -85,6 +86,7 @@ def unitPoints :=
 abbrev baseChangeOf := fibreProd s (reprMap φ)
 end
 
+-- part: Lib.Cohomology.Etale.TestRings
 section
 /-! Part of: Descent of torsion étale cohomology along v-covers; excision, transfer, limits (known
 result; see Lib.Cohomology.Etale.ContinuityAtlas).

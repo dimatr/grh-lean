@@ -1,5 +1,6 @@
 import Lib.Shimura.ProjectiveSpace
 
+-- part: Lib.General.Geometry.TensorPowers
 section
 /-! General lemmas of algebraic geometry (textbook or folklore).
 
@@ -103,6 +104,7 @@ lemma LineBundle.IsProjEmbedding.pow {s} (h : @IsProjEmbedding X S _ L s) {m} (h
   _ _ (.mk s) h.2.1 _ (fun _ ↦ 𝟙 _) _ (by tauto) (· ⟨_, hm.pos⟩)
 end
 
+-- part: Lib.Shimura.AbelianScheme.KernelRing
 section
 /-! Part of: Abelian schemes: isogenies finite flat, [m]*L = L^{m²}, Cartier, unramified torsion
 (known result; see Lib.Shimura.AbelianScheme.ThetaFamily).

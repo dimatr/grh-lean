@@ -3,6 +3,7 @@ import Lib.Adelic.HolomorphicIntegral
 import Lib.GaloisRep.AdeleNorm
 import Lib.Adelic.MatrixApprox
 
+-- part: Lib.ClassField.HeckeL.IdelicThetaSum
 section
 /-! Part of: Hecke L-functions: Euler product, continuation to s = 1, non-vanishing, prime densities
 (known result; see Lib.ClassField.HeckeL.HeckeContinuation).
@@ -108,6 +109,7 @@ lemma exists_abs_sub_thetaSum_le (h : 0 < r) (hr :
 end
 end
 
+-- part: Lib.ClassField.HeckeL.HeckeContinuation
 section
 /-! Known result: Euler product, continuation to s = 1, non-vanishing and prime densities for Hecke
 L-functions. Only real s is treated, and a non-trivial character of integral angular type is

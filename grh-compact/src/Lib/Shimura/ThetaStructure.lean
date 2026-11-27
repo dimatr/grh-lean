@@ -3,6 +3,7 @@ import Lib.Shimura.ConstantFunctions
 import Lib.Shimura.GroupBaseChange
 import Lib.Shimura.Specialisation
 
+-- part: Lib.Shimura.ThetaGroup.SectionLifts
 section
 /-! Part of: Theta group of an ample line bundle: span of sections, K(L), symmetric theta structures
 (known result; see Lib.Shimura.ThetaGroup.RigidFibres).
@@ -189,6 +190,7 @@ lemma IsSectionLift.injective [IsSchemeTheoreticallyDominant f] [QuasiCompact f]
   | ⟨_, _⟩, _, _, _ => H0_ext (·.ext_of_dominant f · L' (by simp_all [isUnit_iff_exists]; grind))
 end
 
+-- part: Lib.Shimura.ThetaGroup.ThetaStructure
 section
 /-! Part of: Theta group of an ample line bundle: span of sections, K(L), symmetric theta structures
 (known result; see Lib.Shimura.ThetaGroup.RigidFibres).

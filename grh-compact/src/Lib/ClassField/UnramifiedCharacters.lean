@@ -2,6 +2,7 @@ import Lib.Adelic.ArtinDefs
 import Lib.Adelic.Places
 import Lib.ClassField.AdicRingHomExt
 
+-- part: Lib.ClassField.Places.LocalFrobenius
 section
 /-! Known result: Hilbert ramification theory for infinite Galois extensions; ideles and ideal
 classes. Here places are valuation rings of an algebraic closure acted on by an abstract profinite
@@ -108,6 +109,7 @@ lemma frobenius_spec {K} [Field K] [Algebra K Ω] [L : IsLocalGalois Γ K A] : (
 end IsLocalGalois
 end
 
+-- part: Lib.ClassField.Places.LocalExtension
 section
 /-! Part of: Hilbert ramification theory for infinite Galois extensions; ideles and ideal classes
 (known result; see Lib.ClassField.Places.LocalFrobenius).
@@ -165,6 +167,7 @@ lemma IsLocalGalois.exists_ordRat_eq_intCast {x} (h : ∀ g ∈ inertiaGroup Γ 
   fun _ ↦ by simpa [o, o.2 (congr($(h · ·).1)), -id_eq] using! (p.val_pow_eq_iff_mul_ordRat L 1 _).1
 end
 
+-- part: Lib.ClassField.Places.UnramifiedCharacters
 section
 /-! Part of: Hilbert ramification theory for infinite Galois extensions; ideles and ideal classes
 (known result; see Lib.ClassField.Places.LocalFrobenius).

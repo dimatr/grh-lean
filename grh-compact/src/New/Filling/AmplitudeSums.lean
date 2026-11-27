@@ -2,6 +2,7 @@ import Lib.Adelic.PeriodLattice
 import New.Filling.BesselOrthonormal
 import New.Filling.BoxPartition
 
+-- part: Lib.General.NumberTheory.FundamentalDomains
 section
 /-! General lemmas of algebraic number theory (textbook or folklore).
 
@@ -77,6 +78,7 @@ lemma Filling.exists_fundamental_domain_im_skew [StablyUnram E] (t : _ → ℝ) 
   simp [star, IsCMField.ringOfIntegersComplexConj_eq_self_iff, ← funext_iff]; rfl
 end
 
+-- part: New.Filling.UnipotentCovolume
 section
 /-! Set-up for this proof: size bookkeeping for the data of this proof.
 
@@ -183,6 +185,7 @@ lemma Filling.lintegral_classCutoff_eq_unipCovolume {E} [Field E] [CMType E] [St
   field
 end
 
+-- part: New.Filling.AmplitudeSums
 section
 /-! Part of: Second moment of the Poincaré series with constant one (see New.Filling.Moments).
 

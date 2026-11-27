@@ -2,6 +2,7 @@ import Lib.Adelic.LocalHomUnit
 import New.Weil.AlgebraicPartDefs
 import New.Weil.TriangleLevelExponent
 
+-- part: New.Exchange.TriangleNorms
 section
 /-! Part of: Injectivity and norm of a chain of theta lifts (see New.Exchange.TriangleArrows).
 
@@ -69,6 +70,7 @@ lemma IsTriangle.inner_weightedChain_eq (hG : G) {U} [AddCommGroup U] [Module ‚Ñ
     inner_zero_left]
 end
 
+-- part: New.SiegelWeil.AuxPairVanishing
 section
 /-! Part of: Non-lifts sharing one Hecke root have zero theta periods (see
 New.Rows.MemberOrthogonality).
@@ -228,6 +230,7 @@ lemma AuxPair.descentsVanish_of_reflectionSum [WeilData E]
     simp +contextual [prod_eq_single i, e, ‚Üê Pi.one_def, C]
 end
 
+-- part: New.SiegelWeil.DescentsVanishPlanes
 section
 /-! Part of: Non-lifts sharing one Hecke root have zero theta periods (see
 New.Rows.MemberOrthogonality).
@@ -338,6 +341,7 @@ lemma descentsVanish_add_planes [IsBaseAdapted D] (hY : V.IsAutomorphic Y) {w} (
     (by simp)).integral_sourceTerm_eq_zero D' hf _
 end
 
+-- part: New.Exchange.CostOfSquares
 section
 /-! Set-up for this proof: general results applied to the objects of this proof.
 

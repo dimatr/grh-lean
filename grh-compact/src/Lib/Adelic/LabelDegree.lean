@@ -1,5 +1,6 @@
 import Lib.Adelic.GreenTau
 
+-- part: Lib.General.Algebra.FaithfulChar
 section
 /-! General lemmas of commutative and general algebra (textbook or folklore).
 
@@ -20,6 +21,7 @@ instance faithfulChar_injective {k} [Field k] [Finite k] : IsFaithfulMulChar _ (
     (MonoidAlgebra.lift ℤ _ _ ((teichmuller _).domRestrict k[x]))⟩
 end
 
+-- part: Lib.LocalGL.Green.LabelDegree
 section
 /-! Known result: Green's characters of GL_n(F_q) and the parabolic-induction ring. Its files treat
 only cuspidal characters and their products over squarefree polynomials, named through a fixed

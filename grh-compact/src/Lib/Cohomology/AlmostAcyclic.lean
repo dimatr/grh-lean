@@ -3,6 +3,7 @@ import Lib.Cohomology.ValuativeDensity
 import Lib.Cohomology.RelativeChains
 import Lib.Cohomology.PeriodLifting
 
+-- part: Lib.PadicComparison.Descent.TestCover
 section
 /-! Part of: Almost acyclicity of the structure sheaf for the v-topology (known result; see
 Lib.PadicComparison.Descent.AlmostAcyclic).
@@ -120,6 +121,7 @@ lemma hasFlatBaseChange_of_iso_reprBy {B Y} (e : algFunctor ⋙ reprBy B ≅ Y) 
   (FP.isClosedClass.iff_of_isIso (freeAb.map e.1)).1 (isAffinelyCovered_reprBy B).hasFlatBaseChange
 end
 
+-- part: Lib.PadicComparison.Descent.VDescent
 section
 /-! Part of: Almost acyclicity of the structure sheaf for the v-topology (known result; see
 Lib.PadicComparison.Descent.AlmostAcyclic).
@@ -374,6 +376,7 @@ lemma isCover_of_points (hN : ∀ x : N, pFlat • x = 0) {b b' : PerfectAlg _} 
 end
 end
 
+-- part: Lib.PadicComparison.Descent.AlmostAcyclic
 section
 /-! Known result: Almost acyclicity of the structure sheaf for the v-topology. It is stated here for
 any perfect algebra over the tilt of O_C, as cohomology on products of complete absolutely

@@ -1,5 +1,6 @@
 import Lib.Shimura.ComplexComparison
 
+-- part: Lib.Shimura.CongruenceRelation.KernelReduction
 section
 /-! Part of: Eichler–Shimura congruence relation for GU(1,n−1) at a split place: the pointwise step
 (known result; see Lib.Shimura.CongruenceRelation.CongruenceStep).
@@ -227,6 +228,7 @@ lemma exists_param_pow_card_eq_zero : let T := torsionBySet (𝓞 E) _ (ker x.ba
     rfl).2 (by simp) (by simp [← hp.2.map_zero, IsGroupBaseChange.pointEquiv, ← h, g]))
 end
 
+-- part: Lib.Shimura.Deformation.DrinfeldLifting
 section
 /-! Part of: Deformations of the PEL object have at most n-1 parameters (known result; see
 Lib.Shimura.Deformation.TangentBound).

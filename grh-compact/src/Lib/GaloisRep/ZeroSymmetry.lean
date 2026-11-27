@@ -1,5 +1,6 @@
 import Lib.Adelic.OstrowskiTaussky
 
+-- part: Lib.General.NumberTheory.ProcyclicImage
 section
 /-! General lemmas of algebraic number theory (textbook or folklore).
 
@@ -30,6 +31,7 @@ lemma exists_procyclic_generator {ℓ Γ} [Fact (Prime ℓ)] [Group Γ] [Topolog
     rfl⟩).1.1))) (by simp [↓← norm_p_pow, -norm_p, tendsto_add_atTop_iff_nat]))))
 end
 
+-- part: Lib.General.NumberTheory.ClassNumberBound
 section
 /-! General lemmas of algebraic number theory (textbook or folklore).
 
@@ -55,6 +57,7 @@ lemma classNumber_le F [Field F] [NumberField F] :
   bound [InfinitePlace.card_add_two_mul_card_eq_rank F]
 end
 
+-- part: Lib.General.Algebra.SumOverUnits
 section
 /-! General lemmas of commutative and general algebra (textbook or folklore).
 
@@ -65,6 +68,7 @@ lemma sum_eq_add_sum_units {N} [Fact N.Prime] {V} [AddCommMonoid V] (f : ZMod N 
   ∑ c : _ˣ, f c.1 := by simp [Fintype.sum_eq_add_sum_subtype_ne f 0, ← unitsEquivNeZero.sum_comp]
 end
 
+-- part: Lib.General.NumberTheory.ZeroSymmetry
 section
 /-! General lemmas of algebraic number theory (textbook or folklore).
 

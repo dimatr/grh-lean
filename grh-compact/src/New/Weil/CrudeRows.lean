@@ -2,6 +2,7 @@ import New.Weil.RowLadder
 import New.Weil.SteepParameters
 import New.Weil.TriangleArrows
 
+-- part: New.Exchange.GridFirstColumns
 section
 /-! Part of: Crude rows: integral twisted lifts and bounded conjugates (see New.Exchange.CrudeRows).
 
@@ -276,6 +277,7 @@ lemma exists_isTidy_diagonalPeriodForm_eq : ∃ C Λ, ∀ ϑ, IsTidy (4 * D.m) (
 end Data
 end
 
+-- part: New.Exchange.RowsReached
 section
 /-! Every row pairs with a restriction of explicit level. Every nonzero form of level g on the
 indefinite U(Y_0) pairs nontrivially with the restriction of a real translate of a form on a unitary
@@ -438,6 +440,7 @@ lemma Data.eq_zero_of_orthogonal_gridLevelForms {P} (D : Data P) : ∃ g,
   repeat use o D.nat_le_of_hasLogBound
 end
 
+-- part: New.Exchange.CrudeRows
 section
 /-! Crude rows, with integral twisted lifts and bounded conjugates. Forms of level g on the
 indefinite U(Y_0) are spanned by forms whose untwisted chain of

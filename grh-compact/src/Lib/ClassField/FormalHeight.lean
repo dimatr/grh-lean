@@ -2,6 +2,7 @@ import Lib.ClassField.IsogenyIntegrality
 import Lib.ClassField.QuadraticZeta
 import Lib.ClassField.LogTheta
 
+-- part: Lib.CM.MainTheorem.ConjugateCurve
 section
 /-! Part of: Main theorem of complex multiplication for elliptic curves, soft form (known result;
 see Lib.CM.FormalGroup.FormalHeight).
@@ -113,6 +114,7 @@ lemma exists_taylorVia_twistedTranslate_theta (e : D.a₁ = σ C.a₁) Ω (H : �
 end CMLattice
 end
 
+-- part: Lib.CM.FormalGroup.FormalHeight
 section
 /-! Known result: Height of the formal group of a CM curve. Only upper bounds are given here, over
 the integers of the p-adic complex numbers. An endomorphism of odd degree q has a unit coefficient

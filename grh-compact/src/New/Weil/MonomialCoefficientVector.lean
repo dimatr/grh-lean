@@ -6,6 +6,7 @@ import New.Weil.LevelPlacesChosen
 import New.Weil.BesselGeneric
 import New.Weil.RowLadder
 
+-- part: Lib.CM.LocalHeight.EulerAdditionFormula
 section
 /-! Part of: Local heights and Tate's trick; integrality of CM theta functions and torsion
 translates (known result; see Lib.CM.LocalHeight.IntegralParameter).
@@ -58,6 +59,7 @@ lemma translatedWpDeriv_add_mem_multiPhiRing :
 end CMLattice
 end
 
+-- part: New.Curve.KatzDivisibility
 section
 /-! Known results stated on this proof's data: Sharpness of Katz's divisibility for invariant
 derivatives on a CM formal group (known result; see Lib.General.Algebra.DepthBounds).
@@ -100,6 +102,7 @@ lemma CMLattice.katz_divisibility_limit {d} [PrimeSevenModEight d] (C :
   grw [← hS, H, ← rpow_le_norm_factorial, mul_div_right_comm, ← rpow_sub] <;> (try ring) <;> bound
 end
 
+-- part: New.Rows.GluedFormTheta
 section
 /-! Some jet is no more divisible than predicted. For orders near the weights w, every prime p and
 every p-adic embedding, some jet on a fixed number of copies, divided by one non-zero number with
@@ -477,6 +480,7 @@ lemma DividedSplitting.theta_stdClassSum_productForm h' c y η g : O.θ (stdClas
   mul_classSum, ↓V.theta_productForm H hb, ← modKernelBilin_apply, mul_sum, mul_assoc]
 end
 
+-- part: New.Selmer.RankOneDenominator
 section
 /-! Set-up for this proof: general results applied to the objects of this proof.
 
@@ -544,6 +548,7 @@ lemma DenominatorLe.rank_one_bound {l : PrimePadicIso} {β} (h :
     (Y.twistedCentralOp_trivialLift g⁻¹ ▸ m :)⟩⟩
 end
 
+-- part: New.Rows.MonomialCoefficientVector
 section
 /-! Set-up for this proof: general results applied to the objects of this proof.
 

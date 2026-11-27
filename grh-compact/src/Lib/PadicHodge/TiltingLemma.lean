@@ -1,5 +1,6 @@
 import Lib.PadicHodge.Corepresentable
 
+-- part: New.Selmer.LinePointPowers
 section
 /-! Part of: Tied conditions at new primes shrink Selmer groups (see New.Selmer.TwistTheorem).
 
@@ -96,6 +97,7 @@ lemma dvd_one_add_mul_pow_sub_one {ℓ O k N} [p : ThePrime ℓ] [CommRing O] t 
   simp [mul_pow, Dvd.dvd.mul_left, ← H, h]
 end
 
+-- part: New.Selmer.TiltingLemma
 section
 /-! Part of: Tied conditions at new primes shrink Selmer groups (see New.Selmer.TwistTheorem).
 

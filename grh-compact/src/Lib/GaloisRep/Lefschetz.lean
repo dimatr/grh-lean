@@ -3,6 +3,7 @@ import Lib.GaloisRep.WildType
 import Lib.GaloisRep.MarkedPairs
 import Lib.Shimura.DrinfeldLifting
 
+-- part: Lib.General.Geometry.SmoothnessCriterion
 section
 /-! General lemmas of algebraic geometry (textbook or folklore).
 
@@ -93,6 +94,7 @@ lemma smooth_of_immersion {d X R b u k} {φ : (Fin d → ℂ) → _} {V : Valuat
       (rank_eq_card_basis e)).trans _ 0 ..)))
 end
 
+-- part: Lib.Shimura.TraceFormula.MarkedEqDefinite
 section
 /-! Known result: the simple trace formula, with the Hecke trace on a definite group and the
 vanishing of non-elliptic terms. Here the group is a definite unitary similitude group, the level is
@@ -213,6 +215,7 @@ lemma sum_countTerm_marked_eq_definite {E n} [Field E] [Ψ : CMBase E] [Fintype 
   simp_all [s, Pi.mul_def, (c ..).inv_left.left_comm]
 end
 
+-- part: Lib.General.Geometry.Lefschetz
 section
 /-! General lemmas of algebraic geometry (textbook or folklore).
 

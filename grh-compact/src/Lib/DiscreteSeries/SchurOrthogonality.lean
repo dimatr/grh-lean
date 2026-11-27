@@ -4,6 +4,7 @@ import Lib.DiscreteSeries.HolomorphicExtension
 import Lib.DiscreteSeries.SmoothMatrices
 import Lib.DiscreteSeries.AnalyticVectors
 
+-- part: Lib.DiscreteSeries.CuspKernel.BumpConvolution
 section
 /-! General lemmas of real and complex analysis (textbook or folklore).
 
@@ -72,6 +73,7 @@ lemma rightDeriv_smear {α f} (e : smear F hF α = f.1) X : smear F hF (bumpDeri
 end
 end
 
+-- part: Lib.DiscreteSeries.FlenstedJensen.PsiBasic
 section
 /-! Part of: Flensted-Jensen's function: coefficient of the lowest K-type of a discrete series
 (known result; see Lib.DiscreteSeries.FlenstedJensen.KTypeProjection).
@@ -129,6 +131,7 @@ lemma dsCoeff_of_mem_maxCompactU {k} (hk : k ∈ maxCompactU ε) : l.dsCoeff k =
   hg.isKDominant_lowestKType).integral_mul_conj_weightMinors hg.neg.1 hg.isKDominant_lowestKType]
 end
 
+-- part: Lib.DiscreteSeries.FlenstedJensen.KTypeProjection
 section
 /-! Known result: Flensted-Jensen's function, the coefficient of the lowest K-type of a discrete
 series. It is treated for U(p,q) and parameters with a gap, with the integrand written by principal
@@ -199,6 +202,7 @@ lemma integral_conj_weightMinors_mul_dsCoeff {n} [Fintype n] {ε l h} (hg : @Has
   simp [zero_pow_eq]; grind
 end
 
+-- part: Lib.DiscreteSeries.FlenstedJensen.PsiSmooth
 section
 /-! Part of: Flensted-Jensen's function: coefficient of the lowest K-type of a discrete series
 (known result; see Lib.DiscreteSeries.FlenstedJensen.KTypeProjection).
@@ -224,6 +228,7 @@ functions on that group. -/
     Continuous f → Continuous (l.dsCoeff <| f ·) := (SmoothU.continuous l.dsCoeffSmooth).comp
 end
 
+-- part: Lib.DiscreteSeries.FlenstedJensen.CasimirOnPsi
 section
 /-! Part of: Flensted-Jensen's function: coefficient of the lowest K-type of a discrete series
 (known result; see Lib.DiscreteSeries.FlenstedJensen.KTypeProjection).
@@ -271,6 +276,7 @@ lemma casimir_dsCoeffSmooth {l : @HCParam n ε} [hg : l.HasGap h] :
     field, hg.isKDominant_neg_paramAddRho.weightMinors_mul_borel hg.1]))))))))).1.value)
 end
 
+-- part: Lib.General.LinearAlgebra.BlockDiagonalDet
 section
 /-! General lemmas of linear algebra and matrices (textbook or folklore).
 
@@ -303,6 +309,7 @@ lemma sq_le_norm_det_blockDiagPart [Nonempty n] :
   grw [← subset_univ {i, j}, (by simp : ∀ a, ‖a‖ ≤ ‖a‖ + ‖a‖⁻¹)] <;> grind [one_le_cosh, sq]
 end
 
+-- part: Lib.DiscreteSeries.FlenstedJensen.PsiDecay
 section
 /-! Part of: Flensted-Jensen's function: coefficient of the lowest K-type of a discrete series
 (known result; see Lib.DiscreteSeries.FlenstedJensen.KTypeProjection).
@@ -358,6 +365,7 @@ lemma norm_dsCoeff_le_pow [Nonempty n] : ‖l.dsCoeff g‖ ≤ (2 / ‖g.1.1‖)
   norm_dsCoeff_sq_mul_det_pow_le_one hg hc]
 end
 
+-- part: Lib.DiscreteSeries.CuspKernel.SchurOrthogonality
 section
 /-! Part of: Schur orthogonality; coefficients of integrable discrete series are cusp forms (known
 result; see Lib.DiscreteSeries.CuspKernel.CircleMean).

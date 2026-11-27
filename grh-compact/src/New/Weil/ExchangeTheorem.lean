@@ -7,6 +7,7 @@ import New.Weil.Flip
 import New.Weil.SquareLawFourier
 import New.Weil.LevelModulus
 
+-- part: Lib.SiegelWeil.Tower.ConstantTerm
 section
 /-! Part of: Tower property: constant term of a theta lift along an isotropic line (known result;
 see Lib.SiegelWeil.Tower.LargeSideConstantTerm).
@@ -167,6 +168,7 @@ lemma exists_unfold_constant_term : ∃ c ≠ (0 : ℝ), ∀ a b f g, let F h :=
 end
 end
 
+-- part: Lib.SiegelWeil.Tower.LineGaussSum
 section
 /-! Part of: Tower property: constant term of a theta lift along an isotropic line (known result;
 see Lib.SiegelWeil.Tower.LargeSideConstantTerm).
@@ -227,6 +229,7 @@ lemma exists_lineTerm_localDatum X [IsBaseAdapted A] [IsBaseAdapted X] : ∃ l :
   grind [invOnUnits_mul, mul_mem, invOnUnits]
 end
 
+-- part: Lib.SiegelWeil.Tower.LargeSideConstantTerm
 section
 /-! Tower property for the constant term of a theta lift along an isotropic line. In the literature
 the lifted form is cuspidal, while here it is a character and the data are ramified. The isotropic
@@ -392,6 +395,7 @@ lemma exists_constant_term_thetaLarge {b} [Fintype b] σ' (σ : b ⊕ r ≃ n) (
     hγ, TameLocalChar.ResidueRing, Nat.card_pi] at w ⊢ <;> field (disch := simp [w])
 end
 
+-- part: Lib.Weil.MixedModel.RapidSections
 section
 /-! Part of: Schrödinger and mixed models of the Weil representation; action of parabolic subgroups
 (known result; see Lib.Weil.MixedModel.ZeroTermLaw).
@@ -467,6 +471,7 @@ lemma MixedModel.exists_section {ι ι'} [Fintype ι] [Fintype ι'] {ε : ι →
     norm_le_norm_sub_add w (A x y), le_opNorm, hB x h, le_abs_self B]; ring; bound)
 end
 
+-- part: New.Exchange.NonnegativeVanishing
 section
 /-! Part of: Exchange theorem for theta integrals of complementary rank (see
 New.Exchange.ExchangeTheorem).
@@ -571,6 +576,7 @@ lemma centreCoeff_eq_zero_of_not_negative {E} [Field E] [CMType E] [H : WeilData
           simp [p, U]; apply Matrix.one_mul))⟩, _, ⟨by simpa, by simp⟩, rfl⟩) _)
 end
 
+-- part: New.Exchange.PartnersMatch
 section
 /-! Part of: Exchange theorem for theta integrals of complementary rank (see
 New.Exchange.ExchangeTheorem).
@@ -598,6 +604,7 @@ lemma IsPartner.mem_matchingPairs {a b n} [Fintype a] [Fintype b] [Fintype n] {F
     (exists_invLastRows_iff_transpose e).trans (valPair.exists_firstCols_iff _)]
 end
 
+-- part: New.Exchange.StableSpaces
 section
 /-! Part of: Exchange theorem for theta integrals of complementary rank (see
 New.Exchange.ExchangeTheorem).
@@ -687,6 +694,7 @@ lemma IntegralFrame.partner_mem_of_unimodular_vanishing {ψ} {M : Submodule ℂ 
     smul_smul, ← mul_assoc, -MulMemClass.mk_mul_mk]
 end
 
+-- part: New.Exchange.ExchangeDifference
 section
 /-! Part of: Exchange theorem for theta integrals of complementary rank (see
 New.Exchange.ExchangeTheorem).
@@ -747,6 +755,7 @@ lemma exists_isEquivariantLift σ (hn : 2 ∣ card n) {v v'} (hv : IsRapidDatum 
     pairWeil_integrated_fin, pairWeil_name_on] <;> simp_all [r.1, spaceChar_rankTwist]
 end
 
+-- part: New.Exchange.StandardCoefficients
 section
 /-! Part of: Exchange theorem for theta integrals of complementary rank (see
 New.Exchange.ExchangeTheorem).
@@ -825,6 +834,7 @@ convert w.2.2; simpa using! congr($(inv_mul_eq_of_eq_mul f).map _)
 all_goals simp [← coe_snd, ← Matrix.map_mul, sub_mul, *]))) 0)) k.1)⟩).2
 end
 
+-- part: New.Exchange.LowRankIdentity
 section
 /-! Part of: Exchange theorem for theta integrals of complementary rank (see
 New.Exchange.ExchangeTheorem).
@@ -1029,6 +1039,7 @@ lemma stdExchange_of_periods [IsBaseAdapted D₁] {σ' v v'} (l : _ → ℂ) (hn
     mul_zero]
 end
 
+-- part: New.Exchange.RealPair
 section
 /-! Part of: Exchange theorem for theta integrals of complementary rank (see
 New.Exchange.ExchangeTheorem).
@@ -1161,6 +1172,7 @@ lemma exists_stdExchange_top {t t'} {W : Space E a t} (D₁ :
   field [prod_eq_zero_iff]
 end
 
+-- part: New.Exchange.EqualRankValue
 section
 /-! Part of: Exchange theorem for theta integrals of complementary rank (see
 New.Exchange.ExchangeTheorem).
@@ -1369,6 +1381,7 @@ lemma exists_equalRankThetaRatio_value k (hk : card n = 2 * k + 2 * negCount s) 
   rw [this]; clear * - hc hb; grind [lValueProdInt, lValueProdInt_pos]
 end
 
+-- part: New.Exchange.ExchangeTheorem
 section
 /-! Exchange theorem for theta integrals of complementary rank. If the ranks and negative signs of hermitian spaces V, V' over a CM field add up to those of W (few negative), with rk V − rk V' = 2e ≥ 0, then theta integrals over U(V) and U(V') agree on matched ramified data up to a nonzero constant sized by the conductor and Hecke L-values at 1,…,e, so theta lifts can be exchanged. Equal theta lifts of characters of complementary groups are known for trivial characters (Siegel–Weil) and for O(3), O(1) to Mp(2). Related work: Snitz, Theta correspondence of automorphic characters (thesis), 2003; Erez, Matchings of theta lifts of automorphic characters, arXiv 2401.13469, 2024; Gan–Qiu–Takeda, The regularized Siegel–Weil formula (second term identity), 2014. -/
 

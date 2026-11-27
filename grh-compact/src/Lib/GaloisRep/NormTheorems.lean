@@ -2,6 +2,7 @@ import Lib.GaloisRep.NormAbsValue
 import Lib.Adelic.HeckeContinuation
 import Lib.GaloisRep.ArtinMapAtPlace
 
+-- part: Lib.ClassField.Global.AlbertBrauerHasseNoether
 section
 /-! Known result: Global class field theory, covering Albert–Brauer–Hasse–Noether, reciprocity,
 existence and norms. Only finite ideles are used, real places are handled by total positivity, and
@@ -295,6 +296,7 @@ lemma albert_brauer_hasse_noether α (h : ∀ {A : ClosurePlace} {v : FinPlace K
       (h v.1.isPlaceOver_placeOver))).elim (⟨·, ·.2⟩))
 end
 
+-- part: Lib.ClassField.Global.ArtinReciprocity
 section
 /-! Part of: Global class field theory: Albert–Brauer–Hasse–Noether, reciprocity, existence, norms
 (known result; see Lib.ClassField.Global.AlbertBrauerHasseNoether).
@@ -437,6 +439,7 @@ lemma char_artinMap_principalIdele_eq_one_iff {χ} (h : ∀ c, IsComplexConj c �
     e.le ·)))))).congr_left.trans (l b)
 end
 
+-- part: Lib.ClassField.Global.NormTheorems
 section
 /-! Part of: Global class field theory: Albert–Brauer–Hasse–Noether, reciprocity, existence, norms
 (known result; see Lib.ClassField.Global.AlbertBrauerHasseNoether).

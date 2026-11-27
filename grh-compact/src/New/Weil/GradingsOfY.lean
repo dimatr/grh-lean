@@ -3,6 +3,7 @@ import New.Weil.EdgePair
 import New.Weil.SharpData
 import New.Weil.AlgebraicPartDefs
 
+-- part: New.Seesaw.IntegralAsCosetSum
 section
 /-! Part of: Unfolded periods as finite sums with controlled denominators (see
 New.Seesaw.SeesawTheorem).
@@ -111,6 +112,7 @@ lemma Grading.exists_integral_eq_sum_over_cut [WeilData E]
     ENNReal.inv_mul_cancel_left, haarMeasure_self] <;> simp [*]
 end
 
+-- part: New.Seesaw.DoubleLiftValue
 section
 /-! Part of: Seesaw identity for a chain of theta lifts (see New.Seesaw.SeesawTheorem).
 
@@ -229,6 +231,7 @@ lemma ArrowPair.integral_constTermAtT_mul (D : ArrowPair X'' q Y Y' Y'') : ∃ z
     Finset.sum_comm, kAdelic, Matrix.mul_assoc]
 end
 
+-- part: New.Seesaw.GradingsOfY
 section
 /-! Set-up for this proof: records of the data and parameters of this proof, names for its objects.
 

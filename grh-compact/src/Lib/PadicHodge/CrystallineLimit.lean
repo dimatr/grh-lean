@@ -3,6 +3,7 @@ import Lib.ClassField.DeRhamFiltration
 import Lib.PadicHodge.PeriodMatrixBasis
 import Lib.PadicHodge.RegularityFrobenius
 
+-- part: Lib.PadicHodge.BlochKato.CocycleContinuity
 section
 /-! Part of: Bloch–Kato finite local condition: rank formula and size of its annihilator (known
 result; see Lib.PadicHodge.BlochKato.BlochKato).
@@ -86,6 +87,7 @@ lemma crysCocycles.eventually_eq_pow_smul [Module.Finite ℤ_[p] T] (h : IsPotCr
     e.equivFun.surjective.exists, e.ext_elem_iff]
 end
 
+-- part: Lib.PadicHodge.PeriodRings.FundamentalKernel
 section
 /-! Part of: Fontaine's period rings and the fundamental exact sequence (known result; see
 Lib.PadicHodge.PeriodRings.BdR).
@@ -125,6 +127,7 @@ lemma Bcris.exists_padic_eq_of_frobEnd_fixed {y : Bcris} (h : frobEnd y = y) {x 
     ← algebraMap_apply] using congr(($e : BdR)))
 end
 
+-- part: Lib.PadicHodge.WachKisin.PeriodMatrixFrame
 section
 /-! Known result: Kisin lattice (Breuil–Kisin module) of a crystalline lattice. This file proves
 only the existence of a free lattice of finite height inside A_inf that spans the crystalline
@@ -255,6 +258,7 @@ lemma IsPeriodMatrix.exists_frame {U h v} (hU : c.IsPeriodMatrix U h v) : ∃ (Q
 end Lift.Chart
 end
 
+-- part: Lib.PadicHodge.WachKisin.CrystallinePeriodMatrix
 section
 /-! Part of: Kisin lattice (Breuil–Kisin module) of a crystalline lattice (known result; see
 Lib.PadicHodge.WachKisin.PeriodMatrixFrame).
@@ -337,6 +341,7 @@ lemma Lift.Chart.IsChartOf.exists_isPeriodMatrix (h : IsCrystalline ρ) e (hab :
     ((↑(W M) * diagonal t * (W M).2) *ᵥ (↑) ∘ (V *ᵥ y)) i = _).dvd
 end
 
+-- part: Lib.PadicHodge.Comparison.CrystallineLimit
 section
 /-! Dwork's trick, as an integral crystalline comparison with a uniform denominator. The statement
 here is integral over A_max. It uses one multiplier, invertible in B_max, that depends only on the

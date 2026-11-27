@@ -1,5 +1,6 @@
 import Lib.DiscreteSeries.ZerosCostDegree
 
+-- part: New.TwistedHecke.TwistingData
 section
 /-! Part of: A Frobenius-twisted Hecke operator has small elementary divisors (see
 New.Columns.TwistedHeckeType).
@@ -155,6 +156,7 @@ end TwistingData
 end
 end
 
+-- part: New.TwistedHecke.DeepFormCost
 section
 /-! Part of: Dimension bounds mod p from flags and a cone volume (see New.TwistedHecke.Counting).
 
@@ -248,6 +250,7 @@ lemma TwistingData.exists_le_weight_of_mem_deepForms [CharP K T.p] {n r τ F} (h
     apply_ite (DFunLike.coe _), -coe_eval₂Hom, show ∀ t, ¬r ≤ ρ t ∧ r ≤ σ t by lia, Prod.ext_iff]
 end
 
+-- part: New.TwistedHecke.ClassMeans
 section
 /-! General lemmas of commutative and general algebra (textbook or folklore).
 
@@ -385,6 +388,7 @@ lemma ClassMean.exists_mean {p : ℕ} (pp : p.Prime) (hp : ¬IsUnit (p : O)) f (
   simp [trace_eq_matrix_trace O b, toMatrix_apply]
 end
 
+-- part: New.TwistedHecke.RootLemma
 section
 /-! A term least in all frames obeys Frobenius inequalities. When a Levi group acts on polynomials
 in a circle of variable sets by Frobenius twists and inverse transposes in turn, a term least for

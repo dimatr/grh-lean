@@ -2,6 +2,7 @@ import Lib.Cohomology.CechDescent
 import New.Weil.TestRings
 import Lib.Cohomology.BijectiveComparisons
 
+-- part: Lib.Cohomology.Etale.FilteredColimits
 section
 /-! Part of: Descent of torsion étale cohomology along v-covers; excision, transfer, limits (known
 result; see Lib.Cohomology.Etale.ContinuityAtlas).
@@ -72,6 +73,7 @@ lemma ContinuousUpTo.of_cech {A : Jᵒᵖ ⥤ _} (a : Cone A) (hp : ∀ j, IsCov
 end
 end
 
+-- part: Lib.Cohomology.Etale.TestEnvelope
 section
 /-! Part of: Descent of torsion étale cohomology along v-covers; excision, transfer, limits (known
 result; see Lib.Cohomology.Etale.ContinuityAtlas).
@@ -136,6 +138,7 @@ lemma exists_functorial_test (R : J → _) : ∃ E, ∃ θ : 𝟭 CommRingCat �
 end Envelope
 end
 
+-- part: Lib.Cohomology.Etale.AcyclicTests
 section
 /-! Part of: Descent of torsion étale cohomology along v-covers; excision, transfer, limits (known
 result; see Lib.Cohomology.Etale.ContinuityAtlas).

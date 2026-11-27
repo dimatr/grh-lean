@@ -1,6 +1,7 @@
 import Lib.Shimura.ThetaOrthogonality
 import Lib.Shimura.ThetaFamily
 
+-- part: Lib.Shimura.GoodReduction.HermitianAction
 section
 /-! Part of: Good reduction of unitary PEL abelian varieties, in analytic form (no toric
 degeneration) (known result; see Lib.Shimura.GoodReduction.ArcReduction).
@@ -114,6 +115,7 @@ end IsHermitianAction
 end
 end
 
+-- part: Lib.Shimura.GoodReduction.GaussUnfolding
 section
 /-! General lemmas of algebraic number theory (textbook or folklore).
 
@@ -207,6 +209,7 @@ lemma isSelfAdjoint_quotMean_pow [IsDomain R] [Module.Finite ℤ R]
 end IsHermitianAction
 end
 
+-- part: Lib.Shimura.GoodReduction.PeakContraction
 section
 /-! Part of: Good reduction of unitary PEL abelian varieties, in analytic form (no toric
 degeneration) (known result; see Lib.Shimura.GoodReduction.ArcReduction).

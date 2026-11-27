@@ -2,6 +2,7 @@ import Lib.Adelic.AdditiveCharDefs
 import New.Filling.LocalDefs
 import Lib.Weil.AdelicSum
 
+-- part: Lib.General.NumberTheory.LocalProduct
 section
 /-! General lemmas of algebraic number theory (textbook or folklore).
 
@@ -27,6 +28,7 @@ noncomputable instance :
 lemma mem_O_locProd {x : LocProd P} : x ∈ SemilocalField.O ↔ ∀ i, v (x i) ≤ 1 := Set.mem_univ_pi
 end
 
+-- part: Lib.Adelic.Adeles.ExtensionByZero
 section
 /-! General lemmas of algebraic number theory (textbook or folklore).
 

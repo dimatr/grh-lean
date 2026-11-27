@@ -3,6 +3,7 @@ import Lib.Adelic.Frames
 import Lib.Shimura.KernelRing
 import Lib.Weil.AdditiveCharBasic
 
+-- part: Lib.Shimura.ThetaModuli.CutOutIdeals
 section
 /-! Part of: Moduli of abelian varieties by theta values (theta-null embedding, universal family)
 (known result; see Lib.Shimura.ThetaModuli.UniversalFamily).
@@ -130,6 +131,7 @@ lemma map_eq_and_flat_of_isCutOut [Field K] {ψ : κ → A →+* K} {r i σ c I�
 end
 end
 
+-- part: Lib.Shimura.IntegralModel.GroupBaseChange
 section
 /-! Part of: Integral Kuga–Sato models for GU(1,n−1) with level covers and congruence relation
 (known result; see Lib.Shimura.IntegralModel.ModelExistence).

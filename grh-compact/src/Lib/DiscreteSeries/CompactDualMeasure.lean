@@ -1,5 +1,6 @@
 import Lib.DiscreteSeries.UnitaryNorm
 
+-- part: Lib.DiscreteSeries.Haar.SkewCoordinates
 section
 /-! Part of: Haar measure of U(J) in Cayley coordinates, volume of U(n), polynomial volume growth
 (known result; see Lib.DiscreteSeries.Haar.RegularRepL2).
@@ -41,6 +42,7 @@ omit [Fintype n]
 end
 end
 
+-- part: Lib.DiscreteSeries.Haar.LogDerivative
 section
 /-! General lemmas of measure and integration (textbook or folklore).
 
@@ -135,6 +137,7 @@ lemma HasGaussianIntegral.exists_measurePreserving_equiv (f : Matrix n n ℝ →
   ⟨e.symm, measurePreserving _ (hf _ ▸ congr(q $(e.4 ·))), rfl⟩
 end
 
+-- part: Lib.DiscreteSeries.Haar.CompactDualMeasure
 section
 /-! Part of: Haar measure of U(J) in Cayley coordinates, volume of U(n), polynomial volume growth
 (known result; see Lib.DiscreteSeries.Haar.RegularRepL2).
