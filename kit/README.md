@@ -24,6 +24,8 @@ Upstream does not accept contributions; nothing is sent to lsernau/grh-lean.
     ./kit/run/20_build.sh        lake build Main; JOBS=N to set workers (LEAN_NUM_THREADS)
     ./kit/run/25_fix_loop.sh     build; un-merge original modules whose part fails; regenerate;
                                  rebuild; repeat (MAX_ROUNDS=6). Commits each round locally.
+    ./kit/run/60_dedup.sh        P4: plan renames of duplicate lemma names (needs a finished build);
+                                 --apply renames via the .ilean index, rebuilds, checks, commits
     ./kit/run/30_check.sh        static guard + all 5 theorems use only propext/Classical.choice/Quot.sound
     ./kit/run/40_score.sh        local 5-pillar score, baseline vs grh-compact
     ./kit/run/50_package.sh      submission/proof/src/** + tarball; prints the submit command
@@ -60,9 +62,16 @@ Send back `logs/errors-latest.txt` (condensed: message + source lines per error)
 Local score replica: baseline 51.27, after Phase A 72.41
 (P2 reuse, P3 taxonomy, P5 granularity at ~100; P1 tokens and P4 duplicate names unchanged).
 
+## P4 (tools/dedup_rename.py)
+Every built module's .ilean lists the definition and all usage positions (0-based line, UTF-16
+column) of every constant, including `h.mul` field notation, `.mul`, `open … in`, `@X.mul`,
+simp/rw lists, `attribute […]` and `export`. In each duplicate group the most-used declaration
+keeps its name; the others become `<ns>.<nsLowerCamel>_<leaf>` (IsRapid.mul -> IsRapid.isRapid_mul),
+so field notation keeps working. A constant is skipped if any of its ranges does not end with the
+old leaf, if it is @[to_additive], or if it lives in Main/Statements. Tested on a toy project with
+all usage forms above. After --apply, 10_restructure/25_fix_loop refuse to run (FORCE=1 overrides).
+
 ## Not yet in the kit
-- P4 (duplicate leaf names, +7.5 max): renaming dot-notation lemmas (`IsRapid.mul` …) needs
-  call-site fixes through compile errors.
 - P1 (tokens, 40% weight): real proof shortening.
 - Independent kernel replay (Comparator + nanoda, see the repo README) — optional before submitting.
 
