@@ -70,9 +70,11 @@ def gate_static(project, root, mods, raw):
     if "Main" not in mods:
         issues.append("src/Main.lean missing")
     for p in project.rglob("*"):
+        if {".lake", ".git"} & set(p.relative_to(project).parts):
+            continue  # build cache and dependencies are not submitted
         if p.is_symlink():
             issues.append(f"symlink: {p}")
-        elif p.suffix in BINARY_EXT and ".lake" not in p.parts:
+        elif p.suffix in BINARY_EXT:
             issues.append(f"binary: {p}")
     for m, s in raw.items():
         if m == "Statements":
