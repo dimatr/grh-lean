@@ -1,4 +1,4 @@
-import Lib.General.LinearAlgebra.PartnerAlgebra
+import New.Filling.PartnerAlgebra
 import New.Filling.NearTerms
 
 /-! Agreeing characters force shared vectors up the flag. For a rational element under which the

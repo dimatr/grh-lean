@@ -1,6 +1,6 @@
 import New.Filling.EichlerFlag
-import New.RealPlace.WeightPlancherel
-import Lib.Adelic.Adeles.FinitePlaceDensity
+import Lib.DiscreteSeries.WeightPlancherel
+import New.Filling.FinitePlaceDensity
 
 /-! Set-up for this proof: records of the data and parameters of this proof, names for its objects.
 

@@ -1,5 +1,5 @@
 import New.Filling.EichlerFlag
-import Lib.DiscreteSeries.CuspKernel.BesselSchurBound
+import New.Filling.BesselSchurBound
 
 /-! Part of: Real-place Bessel integrals: band limits, energy and open-cell bound (see
 New.Filling.FillingData).

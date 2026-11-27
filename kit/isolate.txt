@@ -1,0 +1,11 @@
+# Original modules kept out of merging (they fail to elaborate inside a merged file).
+# Grown automatically by kit/run/25_fix_loop.sh; format: Module  # where it failed
+Lib.GLn.Dual.MixedCartan  # build 2026-11-27, unsolved goals (Lib/Weil/ClassSum.lean:37 on D's tree)
+Lib.General.Algebra.DepthBounds  # build 2026-11-27, unsolved goals (FormalParameter.lean:73)
+Lib.GaloisRep.BaseChange.BaseChangeLevel  # build 2026-11-27, simp maxRecDepth (BaseChangeEigenchar.lean:331)
+Lib.GaloisRep.BaseChange.WeilDataExtension  # build 2026-11-27, unsolved goals/aesop (BaseChangeEigenchar.lean:670)
+Lib.GaloisRep.LocalGlobal.TameExponent  # build 2026-11-27 round 2: IsLabelledAt (untyped binders) elaborated differently in merged file; broke callers LabelCompatibility, LevelPlacesChosen
+New.Selmer.OnePlaceDefect  # src/Lib/PadicHodge/RibetElement.lean:106
+New.Selmer.RibetElement  # src/Lib/PadicHodge/RibetElement.lean:339
+New.TwistedHecke.ElementaryDivisors  # src/New/Weil/TwistedHeckeType.lean:612
+Lib.Analytic.QuadraticTwist.ZeroFreeTwist  # src/Lib/ClassField/Main.lean:499
