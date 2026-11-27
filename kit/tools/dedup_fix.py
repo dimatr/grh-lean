@@ -45,7 +45,7 @@ msgs, cur = [], None
 for l in a.log.read_text(errors="replace").splitlines():
     m = HEAD.search(l)
     if m:
-        cur = [m.group(4)]; msgs.append((m.group(1), int(m.group(2)), cur)); continue
+        cur = [m.group(4)]; msgs.append((m.group(1), int(m.group(2)), int(m.group(3)), cur)); continue
     if cur is not None and re.match(r"^\s*(error|warning|info|✖|⚠|✔|ℹ|Build|Some required)", l):
         cur = None
     elif cur is not None:
@@ -53,11 +53,13 @@ for l in a.log.read_text(errors="replace").splitlines():
 RELEVANT = re.compile(r"Unknown constant|Unknown identifier|does not contain|Invalid field|overloaded")
 
 pick = {}
-for f, line, body in msgs:
+explained = set()
+for f, line, col, body in msgs:
     text = "\n".join(body)
     if not RELEVANT.search(text):
         continue
     names = set(re.findall(r"`([^`\s]+)`", text)) | set(re.findall(r"Unknown constant `?([\w.'!?]+)", text))
+    before = len(pick)
     for t in names:
         lf = leaf(t)
         for cand in {lf, re.sub(r"_(iff|apply|assoc|def|symm_apply)$", "", lf)}:
@@ -66,6 +68,8 @@ for f, line, body in msgs:
     for o, n in live.items():
         if re.search(rf"(?<!{IDC}){re.escape(leaf(n))}(?!{IDC})", text):
             pick.setdefault(o, f"{f}:{line} new name `{leaf(n)}` in message")
+    if len(pick) > before:          # this error pointed at a rename: it is explained
+        explained.add((f, line, col))
 # fallback: an error whose message names no renamed constant (tactic failure, macro, field
 # notation through a renamed type) -> undo the renames used inside its enclosing declaration
 mm = re.search(r'^srcDir\s*=\s*"([^"]+)"', (a.project / "lakefile.toml").read_text(), re.M) \
@@ -74,10 +78,13 @@ SRC_DIR = mm.group(1) if mm else "."
 DECL_START = re.compile(r"^(?:@\[|(?:private |protected |noncomputable |nonrec |scoped |local )*"
                         r"(?:theorem|lemma|def|abbrev|instance|structure|class|inductive|example|opaque)\b)")
 new_rx = {o: re.compile(rf"(?<!{IDC}){re.escape(leaf(n))}(?!{IDC})") for o, n in live.items()}
-explained = {(f, l) for f, l, body in msgs if RELEVANT.search("\n".join(body))}
-for f, line, body in msgs:
-    if (f, line) in explained:
+for f, line, col, body in msgs:
+    if (f, line, col) in explained:
         continue
+    text = "\n".join(body)
+    for o, rx in new_rx.items():       # new name shown in the message, e.g. in the printed goal
+        if rx.search(text):
+            pick.setdefault(o, f"{f}:{line} new name in message/goal")
     p = a.project / f
     if not p.exists():
         p = a.project / SRC_DIR / pathlib.Path(f).relative_to(pathlib.Path(f).parts[0])
