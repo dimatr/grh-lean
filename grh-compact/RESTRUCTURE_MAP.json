@@ -1,10 +1,10 @@
 {
  "report": {
   "modules_before": 794,
-  "modules_after": 472,
-  "merged_groups": 150,
+  "modules_after": 474,
+  "merged_groups": 151,
   "largest_group": 13,
-  "decls_per_file": 20.985169491525422
+  "decls_per_file": 20.89662447257384
  },
  "module_map": {
   "Lib.Adelic.Adeles.AdditiveCharBasic": "Lib.Weil.AdditiveCharBasic",
@@ -63,11 +63,11 @@
   "Lib.Adelic.Witt.FrameAction": "Lib.DiscreteSeries.FrameAction",
   "Lib.Adelic.Witt.MaximalCompact": "Lib.Weil.LatticeComplement",
   "Lib.Adelic.Witt.SpaceOperations": "Lib.Weil.SpaceOperations",
-  "Lib.Analytic.DirichletTheta.MellinTheta": "Lib.ClassField.Main",
+  "Lib.Analytic.DirichletTheta.MellinTheta": "Lib.ClassField.AuxiliaryPrimes",
   "Lib.Analytic.Landau.PolarLandau": "Lib.ClassField.PolarLandau",
-  "Lib.Analytic.PolyaVinogradov.PolyaVinogradov": "Lib.ClassField.Main",
-  "Lib.Analytic.Primes.AuxiliaryPrimes": "Lib.ClassField.Main",
-  "Lib.Analytic.QuadraticTwist.ZeroFreeTwist": "Lib.ClassField.Main",
+  "Lib.Analytic.PolyaVinogradov.PolyaVinogradov": "Lib.ClassField.AuxiliaryPrimes",
+  "Lib.Analytic.Primes.AuxiliaryPrimes": "Lib.ClassField.AuxiliaryPrimes",
+  "Lib.Analytic.QuadraticTwist.ZeroFreeTwist": "Lib.ClassField.ZeroFreeTwist",
   "Lib.CM.FormalGroup.FormalHeight": "Lib.ClassField.FormalHeight",
   "Lib.CM.Genus.QuadraticZeta": "Lib.ClassField.QuadraticZeta",
   "Lib.CM.KroneckerLimit.LogTheta": "Lib.ClassField.LogTheta",
@@ -935,6 +935,14 @@
   ],
   "Lib.ClassField.PolarLandau": [
    "Lib.Analytic.Landau.PolarLandau"
+  ],
+  "Lib.ClassField.AuxiliaryPrimes": [
+   "Lib.Analytic.PolyaVinogradov.PolyaVinogradov",
+   "Lib.Analytic.DirichletTheta.MellinTheta",
+   "Lib.Analytic.Primes.AuxiliaryPrimes"
+  ],
+  "Lib.ClassField.ZeroFreeTwist": [
+   "Lib.Analytic.QuadraticTwist.ZeroFreeTwist"
   ],
   "Lib.ClassField.FormalHeight": [
    "Lib.CM.MainTheorem.ConjugateCurve",
@@ -2327,10 +2335,6 @@
    "New.Lift.LongGap"
   ],
   "Lib.ClassField.Main": [
-   "Lib.Analytic.PolyaVinogradov.PolyaVinogradov",
-   "Lib.Analytic.DirichletTheta.MellinTheta",
-   "Lib.Analytic.Primes.AuxiliaryPrimes",
-   "Lib.Analytic.QuadraticTwist.ZeroFreeTwist",
    "New.Endgame.OneSidedCriterion",
    "New.Data.DataExist",
    "New.Main"
