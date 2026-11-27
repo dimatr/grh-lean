@@ -12,6 +12,8 @@ new.eq_1 follow automatically). Which renames to undo is read from the error mes
     (also with a generated suffix _iff/_apply/_assoc/_def removed), e.g. `Hall.ext_iff` -> Hall.ext;
     `Exists.refl` (expected type guessed) -> every renamed `…refl`;
   - any NEW leaf that appears in such a message, e.g. `S.filling_IsNear γ` -> undo filling_IsNear.
+  - fallback, for errors whose message names no renamed constant (tactic failures, macros,
+    field notation through a renamed type): undo the renames used inside the enclosing declaration.
 Over-undoing is harmless (one duplicate name more); under-undoing costs another round.
 Exit 0: undid something. Exit 1: nothing new to undo (send the errors to Claude).
 """
@@ -64,6 +66,34 @@ for f, line, body in msgs:
     for o, n in live.items():
         if re.search(rf"(?<!{IDC}){re.escape(leaf(n))}(?!{IDC})", text):
             pick.setdefault(o, f"{f}:{line} new name `{leaf(n)}` in message")
+# fallback: an error whose message names no renamed constant (tactic failure, macro, field
+# notation through a renamed type) -> undo the renames used inside its enclosing declaration
+mm = re.search(r'^srcDir\s*=\s*"([^"]+)"', (a.project / "lakefile.toml").read_text(), re.M) \
+    if (a.project / "lakefile.toml").exists() else None
+SRC_DIR = mm.group(1) if mm else "."
+DECL_START = re.compile(r"^(?:@\[|(?:private |protected |noncomputable |nonrec |scoped |local )*"
+                        r"(?:theorem|lemma|def|abbrev|instance|structure|class|inductive|example|opaque)\b)")
+new_rx = {o: re.compile(rf"(?<!{IDC}){re.escape(leaf(n))}(?!{IDC})") for o, n in live.items()}
+explained = {(f, l) for f, l, body in msgs if RELEVANT.search("\n".join(body))}
+for f, line, body in msgs:
+    if (f, line) in explained:
+        continue
+    p = a.project / f
+    if not p.exists():
+        p = a.project / SRC_DIR / pathlib.Path(f).relative_to(pathlib.Path(f).parts[0])
+    if not p.exists():
+        continue
+    L = p.read_text().split("\n")
+    s0 = line - 1
+    while s0 > 0 and not DECL_START.match(L[s0]):
+        s0 -= 1
+    e0 = line
+    while e0 < len(L) and not DECL_START.match(L[e0]):
+        e0 += 1
+    chunk = "\n".join(L[s0:e0])
+    for o, rx in new_rx.items():
+        if rx.search(chunk):
+            pick.setdefault(o, f"{f}:{line} used in the failing declaration")
 for o in a.revert:
     if o in live:
         pick.setdefault(o, "explicit")
