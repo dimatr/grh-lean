@@ -1,10 +1,10 @@
 {
  "report": {
   "modules_before": 794,
-  "modules_after": 466,
+  "modules_after": 467,
   "merged_groups": 151,
   "largest_group": 13,
-  "decls_per_file": 21.255364806866954
+  "decls_per_file": 21.20985010706638
  },
  "module_map": {
   "Lib.Adelic.Adeles.AdditiveCharBasic": "Lib.Weil.AdditiveCharBasic",
@@ -269,7 +269,7 @@
   "Lib.GaloisRep.LocalGlobal.LabelCompatibility": "Lib.GaloisRep.LabelCompatibility",
   "Lib.GaloisRep.LocalGlobal.LocalTranslates": "Lib.GaloisRep.LocalTranslates",
   "Lib.GaloisRep.LocalGlobal.ParahoricTypeLabel": "Lib.GaloisRep.LabelCompatibility",
-  "Lib.GaloisRep.LocalGlobal.TameExponent": "Lib.GaloisRep.AvatarCompatibility",
+  "Lib.GaloisRep.LocalGlobal.TameExponent": "Lib.GaloisRep.TameExponent",
   "Lib.GaloisRep.LocalGlobal.TypeFrobenius": "Lib.PadicHodge.OnePrimeTie",
   "Lib.GaloisRep.Main.AttachedDefs": "Lib.GaloisRep.SplitPlaceCount",
   "Lib.GaloisRep.Main.AttachedDeterminant": "Lib.GaloisRep.AvatarCompatibility",
@@ -1350,6 +1350,9 @@
    "Lib.Adelic.CuspForms.FormRepresentation",
    "Lib.GaloisRep.LocalGlobal.LocalTranslates"
   ],
+  "Lib.GaloisRep.TameExponent": [
+   "Lib.GaloisRep.LocalGlobal.TameExponent"
+  ],
   "Lib.GaloisRep.AvatarCompatibility": [
    "Lib.Shimura.TraceFormula.DefiniteTrace",
    "Lib.DiscreteSeries.Character.WeylTrace",
@@ -1358,7 +1361,6 @@
    "Lib.ClassField.Grunwald.Grunwald",
    "Lib.GaloisRep.Main.AttachedDeterminant",
    "Lib.GaloisRep.Division.MultiplicityFreeSum",
-   "Lib.GaloisRep.LocalGlobal.TameExponent",
    "Lib.Shimura.CongruenceRelation.CongruenceStep",
    "Lib.Shimura.IntegralModel.ModelExistence",
    "Lib.GaloisRep.HodgeTateCocharacter.HodgeTateCocharacter",
