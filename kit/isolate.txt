@@ -5,3 +5,6 @@ Lib.General.Algebra.DepthBounds  # build 2026-11-27, unsolved goals (FormalParam
 Lib.GaloisRep.BaseChange.BaseChangeLevel  # build 2026-11-27, simp maxRecDepth (BaseChangeEigenchar.lean:331)
 Lib.GaloisRep.BaseChange.WeilDataExtension  # build 2026-11-27, unsolved goals/aesop (BaseChangeEigenchar.lean:670)
 Lib.GaloisRep.LocalGlobal.TameExponent  # build 2026-11-27 round 2: IsLabelledAt (untyped binders) elaborated differently in merged file; broke callers LabelCompatibility, LevelPlacesChosen
+New.Selmer.OnePlaceDefect  # src/Lib/PadicHodge/RibetElement.lean:106
+New.Selmer.RibetElement  # src/Lib/PadicHodge/RibetElement.lean:339
+New.TwistedHecke.ElementaryDivisors  # src/New/Weil/TwistedHeckeType.lean:612

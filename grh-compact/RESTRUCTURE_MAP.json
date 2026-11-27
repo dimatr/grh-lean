@@ -1,10 +1,10 @@
 {
  "report": {
   "modules_before": 794,
-  "modules_after": 467,
-  "merged_groups": 151,
+  "modules_after": 472,
+  "merged_groups": 150,
   "largest_group": 13,
-  "decls_per_file": 21.20985010706638
+  "decls_per_file": 20.985169491525422
  },
  "module_map": {
   "Lib.Adelic.Adeles.AdditiveCharBasic": "Lib.Weil.AdditiveCharBasic",
@@ -589,7 +589,7 @@
   "New.Columns.SizeEstimates": "New.Weil.SizeEstimates",
   "New.Columns.TwistedHeckeType": "New.Weil.TwistedHeckeType",
   "New.Core.ClassCountBound": "New.Weil.SizeEstimates",
-  "New.Core.ModuleIndex": "New.Weil.TwistedHeckeType",
+  "New.Core.ModuleIndex": "New.Weil.ModuleIndex",
   "New.Curve.ConjugateGenerator": "Lib.ClassField.AdmissibleData",
   "New.Curve.ConjugatesOfJets": "New.Weil.CrudeModularData",
   "New.Curve.DepthPairs": "New.Weil.ColumnDefs",
@@ -758,7 +758,7 @@
   "New.Selmer.BaseLevelOfLabel": "Lib.PadicHodge.LongForms",
   "New.Selmer.BlocksAndCocycles": "Lib.PadicHodge.BlocksAndCocycles",
   "New.Selmer.Corepresentable": "Lib.PadicHodge.Corepresentable",
-  "New.Selmer.CrystallineBound": "Lib.PadicHodge.RibetElement",
+  "New.Selmer.CrystallineBound": "Lib.PadicHodge.CrystallineBound",
   "New.Selmer.CrystallineRank": "Lib.PadicHodge.CrystallineRank",
   "New.Selmer.DenominatorBound": "Lib.PadicHodge.LongForms",
   "New.Selmer.DeterminantBound": "Lib.PadicHodge.DeterminantBound",
@@ -769,7 +769,7 @@
   "New.Selmer.LabelledColumns": "Lib.PadicHodge.LabelledColumns",
   "New.Selmer.LevelPlacesChosen": "New.Weil.LevelPlacesChosen",
   "New.Selmer.LinePointPowers": "Lib.PadicHodge.TiltingLemma",
-  "New.Selmer.OnePlaceDefect": "Lib.PadicHodge.RibetElement",
+  "New.Selmer.OnePlaceDefect": "Lib.PadicHodge.OnePlaceDefect",
   "New.Selmer.RankOneDenominator": "New.Weil.MonomialCoefficientVector",
   "New.Selmer.ReciprocityLaw": "Lib.PadicHodge.LongForms",
   "New.Selmer.RibetCramer": "Lib.PadicHodge.RibetFirstOrder",
@@ -778,7 +778,7 @@
   "New.Selmer.RootsOfUnityPoints": "Lib.PadicHodge.RowBalanced",
   "New.Selmer.RowBalanced": "Lib.PadicHodge.RowBalanced",
   "New.Selmer.RowsExist": "Lib.PadicHodge.LongForms",
-  "New.Selmer.TateTwistSteps": "Lib.PadicHodge.RibetElement",
+  "New.Selmer.TateTwistSteps": "Lib.PadicHodge.TateTwistSteps",
   "New.Selmer.ThickSpacing": "Lib.PadicHodge.CrystallineRank",
   "New.Selmer.TiltingLemma": "Lib.PadicHodge.TiltingLemma",
   "New.Selmer.TrianglePrimes": "Lib.PadicHodge.LongForms",
@@ -794,7 +794,7 @@
   "New.TwistedHecke.ClassMeans": "Lib.Adelic.RootLemma",
   "New.TwistedHecke.Counting": "Lib.Adelic.Counting",
   "New.TwistedHecke.DeepFormCost": "Lib.Adelic.RootLemma",
-  "New.TwistedHecke.ElementaryDivisors": "New.Weil.TwistedHeckeType",
+  "New.TwistedHecke.ElementaryDivisors": "New.Weil.ElementaryDivisors",
   "New.TwistedHecke.FrobeniusFactors": "Lib.Adelic.Counting",
   "New.TwistedHecke.InterlacingCone": "Lib.Adelic.Counting",
   "New.TwistedHecke.RootLemma": "Lib.Adelic.RootLemma",
@@ -2076,11 +2076,12 @@
    "New.Columns.SizeEstimates"
   ],
   "New.Weil.TwistedHeckeType": [
-   "New.Core.ModuleIndex",
    "New.Curve.JetDivisibility",
    "New.Seesaw.LiftCharacters",
-   "New.TwistedHecke.ElementaryDivisors",
    "New.Columns.TwistedHeckeType"
+  ],
+  "New.Weil.ModuleIndex": [
+   "New.Core.ModuleIndex"
   ],
   "Lib.ClassField.FormalParameter": [
    "New.Curve.FormalParameter"
@@ -2458,6 +2459,9 @@
   "Lib.PadicHodge.Corepresentable": [
    "New.Selmer.Corepresentable"
   ],
+  "Lib.PadicHodge.CrystallineBound": [
+   "New.Selmer.CrystallineBound"
+  ],
   "Lib.PadicHodge.CrystallineRank": [
    "New.Selmer.ThickSpacing",
    "Lib.ClassField.LocalDuality.CrystallineDuality",
@@ -2478,10 +2482,10 @@
   "New.Weil.LevelPlacesChosen": [
    "New.Selmer.LevelPlacesChosen"
   ],
+  "Lib.PadicHodge.OnePlaceDefect": [
+   "New.Selmer.OnePlaceDefect"
+  ],
   "Lib.PadicHodge.RibetElement": [
-   "New.Selmer.TateTwistSteps",
-   "New.Selmer.CrystallineBound",
-   "New.Selmer.OnePlaceDefect",
    "New.Selmer.RibetElement"
   ],
   "Lib.PadicHodge.RibetFirstOrder": [
@@ -2493,6 +2497,9 @@
    "New.Selmer.RootsOfUnityPoints",
    "New.Selmer.TwistTheorem",
    "New.Selmer.RowBalanced"
+  ],
+  "Lib.PadicHodge.TateTwistSteps": [
+   "New.Selmer.TateTwistSteps"
   ],
   "Lib.PadicHodge.TiltingLemma": [
    "New.Selmer.LinePointPowers",
@@ -2521,6 +2528,9 @@
    "New.TwistedHecke.FrobeniusFactors",
    "New.TwistedHecke.InterlacingCone",
    "New.TwistedHecke.Counting"
+  ],
+  "New.Weil.ElementaryDivisors": [
+   "New.TwistedHecke.ElementaryDivisors"
   ],
   "Lib.Adelic.RootLemma": [
    "New.TwistedHecke.TwistingData",
