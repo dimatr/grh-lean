@@ -2,11 +2,11 @@
 # P4: rename duplicate theorem/lemma leaf names using Lean's reference index (.ilean).
 #   ./kit/run/60_dedup.sh              dry run: plan + report (kit/dedup/report.json), no edits
 #   ./kit/run/60_dedup.sh --apply      apply, rebuild, check axioms, score, commit locally
-#   KINDS=theorem,lemma,def ./kit/run/60_dedup.sh [--apply]   also rename duplicate defs
+#   KINDS=theorem,lemma ./kit/run/60_dedup.sh [--apply]   theorems and lemmas only
 # Needs a successful build first (the .ilean files are its output). After --apply the tree
 # under grh-compact/src is the source of truth: 10_restructure / 25_fix_loop refuse to run.
 source "$(dirname "$0")/env.sh"
-KINDS="${KINDS:-theorem,lemma}"
+KINDS="${KINDS:-theorem,lemma,def}"   # def included: the .ilean count matches the published 4.22% only with defs
 mkdir -p "$KIT/dedup"
 say "P4 plan (kinds: $KINDS)"
 "$PY" "$KIT/tools/dedup_rename.py" "$WORK" --kinds "$KINDS" --report "$KIT/dedup/report.json"

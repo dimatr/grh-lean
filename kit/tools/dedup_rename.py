@@ -7,9 +7,11 @@ Needs a finished build: every module's .ilean (in <project>/.lake/build/lib/lean
 definition range and every usage range of every constant, including `h.mul`-style field
 notation, `.mul`, `open … in mul`, `@X.mul`, simp/rw lists, `attribute […]` and `export`.
 
-For each group of theorem/lemma declarations sharing a leaf name, the one with the most usages
+For each group of declarations (--kinds, default theorem,lemma) sharing a leaf name, the one with the most usages
 keeps its name; every other one gets  <ns>.<nsLeafLowerCamel>_<leaf>  (e.g. IsRapid.mul ->
-IsRapid.isRapid_mul), so field notation `h.isRapid_mul` keeps working. New leaves are made
+IsRapid.isRapid_mul), so field notation `h.isRapid_mul` keeps working; a root-level declaration gets its module name
+as prefix. Lean-generated companions of a renamed def (foo.eq_1, foo.eq_def, …) are renamed
+at every usage too. New leaves are made
 globally unique against every declaration leaf in the project.
 
 Safety: per constant, ALL its ranges (definition + usages) are checked to end with the old leaf
@@ -153,9 +155,7 @@ for lf, names in sorted(dups.items()):
         kind, attrs = thm[n]
         if "to_additive" in attrs:
             skipped.append((n, "to_additive")); continue
-        ns = namespace(n)
-        if not ns:
-            skipped.append((n, "root namespace, no prefix")); continue
+        ns = namespace(n) or [refs[n]["defmod"].split(".")[-1]]   # root decl: module name as prefix
         cand = None
         for depth in range(1, len(ns) + 1):
             pre = "_".join(p[:1].lower() + p[1:] for p in ns[-depth:])
@@ -167,13 +167,19 @@ for lf, names in sorted(dups.items()):
             while f"{lf}_{k}" in taken:
                 k += 1
             cand = f"{lf}_{k}"
-        ranges = [refs[n]["def"]] + refs[n]["uses"]
-        bad = [(m_, r) for m_, r in ranges if not (text_at(m_, r) or "").endswith(lf)]
+        # (module, range, old tail, new tail): the constant itself, plus Lean-generated companions
+        # (foo.eq_1, foo.eq_def, foo.induct, ...) whose names derive from it
+        ranges = [(m_, r, lf, cand) for m_, r in [refs[n]["def"]] + refs[n]["uses"]]
+        for aux, ar in refs.items():
+            if aux.startswith(n + ".") and aux not in decls:
+                suf = aux[len(n):]
+                ranges += [(m_, r, lf + suf, cand + suf) for m_, r in ar["uses"]]
+        bad = [(m_, r, o) for m_, r, o, _ in ranges if not (text_at(m_, r) or "").endswith(o)]
         if bad:
-            m_, r = bad[0]
-            skipped.append((n, f"range text {text_at(m_, r)!r} at {m_}:{r[0] + 1}")); continue
+            m_, r, o = bad[0]
+            skipped.append((n, f"range text {text_at(m_, r)!r} (expected …{o}) at {m_}:{r[0] + 1}")); continue
         taken.add(cand)
-        plan[n] = (cand, sorted(set((m_, tuple(r)) for m_, r in ranges)))
+        plan[n] = (cand, sorted(set((m_, tuple(r), o, w) for m_, r, o, w in ranges)))
 
 renamed = set(plan)
 after_groups = collections.Counter(leaf(n) if n not in plan else plan[n][0] for n in thm)
@@ -186,7 +192,8 @@ def rate(names, ren=None):
 
 print(f"kinds {sorted(KINDS)}: decls {N}; duplicate leaf groups {len(dups)}; dup rate {before:.3f}% "
       f"-> {after:.3f}%  (S_dedup {S(before):.1f} -> {S(after):.1f})")
-print(f"renames {len(plan)}, edits {sum(len(r) for _, r in plan.values())}, skipped {len(skipped)}")
+print(f"renames {len(plan)} ({collections.Counter(thm[n][0] for n in plan)}), "
+      f"edits {sum(len(r) for _, r in plan.values())}, skipped {len(skipped)}")
 print(f"dup rate theorem+lemma {rate(tl):.3f}% -> {rate(tl, plan):.3f}%   "
       f"theorem+lemma+def {rate(tld):.3f}% -> {rate(tld, plan):.3f}%")
 for n, why in skipped[:25]:
@@ -203,8 +210,8 @@ if not a.apply:
 # ---- apply: per file, edits from the end so earlier positions stay valid ----------------------
 per_file = collections.defaultdict(list)
 for n, (new_leaf, ranges) in plan.items():
-    for mod, r in ranges:
-        per_file[mod].append((r, leaf(n), new_leaf))
+    for mod, r, old_tail, new_tail in ranges:
+        per_file[mod].append((r, old_tail, new_tail))
 for mod, edits in per_file.items():
     L = lines[mod]
     for (l0, c0, l1, c1), old, new in sorted(edits, key=lambda e: (e[0][0], e[0][1]), reverse=True):
